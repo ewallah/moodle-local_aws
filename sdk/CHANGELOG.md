@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 3.229.2 - 2022-07-01
+
+* `Aws\` - Change service namespace generation to use the service id instead of service full name for parity across SDKs
+* `Aws\DatabaseMigrationService` - Added new features for AWS DMS version 3.4.7 that includes new endpoint settings for S3, OpenSearch, Postgres, SQLServer and Oracle.
+* `Aws\RDS` - Adds support for additional retention periods to Performance Insights.
+
+## 3.229.1 - 2022-06-30
+
+* `Aws\Athena` - This feature introduces the API support for Athena's parameterized query and BatchGetPreparedStatement API.
+* `Aws\CustomerProfiles` - This release adds the optional MinAllowedConfidenceScoreForMerging parameter to the CreateDomain, UpdateDomain, and GetAutoMergingPreview APIs in Customer Profiles. This parameter is used as a threshold to influence the profile auto-merging step of the Identity Resolution process.
+* `Aws\EMR` - This release adds support for the ExecutionRoleArn parameter in the AddJobFlowSteps and DescribeStep APIs. Customers can use ExecutionRoleArn to specify the IAM role used for each job they submit using the AddJobFlowSteps API.
+* `Aws\Glue` - This release adds tag as an input of CreateDatabase
+* `Aws\MWAA` - Documentation updates for Amazon Managed Workflows for Apache Airflow.
+* `Aws\Pricing` - Documentation update for GetProducts Response.
+* `Aws\WellArchitected` - Added support for UpdateGlobalSettings API. Added status filter to ListWorkloadShares and ListLensShares.
+* `Aws\WorkMail` - This release adds support for managing user availability configurations in Amazon WorkMail.
+* `Aws\kendra` - Amazon Kendra now provides a data source connector for alfresco
+
+## 3.229.0 - 2022-06-29
+
+* `Aws\AppStream` - Includes support for StreamingExperienceSettings in CreateStack and UpdateStack APIs
+* `Aws\EMR` - This release introduces additional optional parameter "Throughput" to VolumeSpecification to enable user to configure throughput for gp3 ebs volumes.
+* `Aws\ElasticLoadBalancingv2` - This release adds two attributes for ALB. One, helps to preserve the host header and the other helps to modify, preserve, or remove the X-Forwarded-For header in the HTTP request.
+* `Aws\MediaLive` - This release adds support for automatic renewal of MediaLive reservations at the end of each reservation term. Automatic renewal is optional. This release also adds support for labelling accessibility-focused audio and caption tracks in HLS outputs.
+* `Aws\RedshiftServerless` - Add new API operations for Amazon Redshift Serverless, a new way of using Amazon Redshift without needing to manually manage provisioned clusters. The new operations let you interact with Redshift Serverless resources, such as create snapshots, list VPC endpoints, delete resource policies, and more.
+* `Aws\SageMaker` - This release adds: UpdateFeatureGroup, UpdateFeatureMetadata, DescribeFeatureMetadata APIs; FeatureMetadata type in Search API; LastModifiedTime, LastUpdateStatus, OnlineStoreTotalSizeBytes in DescribeFeatureGroup API.
+* `Aws\Translate` - Added ListLanguages API which can be used to list the languages supported by Translate.
+
+## 3.228.5 - 2022-06-28
+
+* `Aws\DataSync` - AWS DataSync now supports Amazon FSx for NetApp ONTAP locations.
+* `Aws\EC2` - This release adds a new spread placement group to EC2 Placement Groups: host level spread, which spread instances between physical hosts, available to Outpost customers only. CreatePlacementGroup and DescribePlacementGroups APIs were updated with a new parameter: SpreadLevel to support this feature.
+* `Aws\FinSpaceData` - Release new API GetExternalDataViewAccessDetails
+* `Aws\Polly` - Add 4 new neural voices - Pedro (es-US), Liam (fr-CA), Daniel (de-DE) and Arthur (en-GB).
+
+## 3.228.4 - 2022-06-27
+
+* `Aws\IoT` - This release ease the restriction for the input of tag value to align with AWS standard, now instead of min length 1, we change it to min length 0.
+
 ## 3.228.3 - 2022-06-24
 
 * `Aws\Glue` - This release enables the new ListCrawls API for viewing the AWS Glue Crawler run history.
