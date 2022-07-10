@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## 3.231.2 - 2022-07-08
+
+* `Aws\Backup` - This release adds support for authentication using IAM user identity instead of passed IAM role, identified by excluding the IamRoleArn field in the StartRestoreJob API. This feature applies to only resource clients with a destructive restore nature (e.g. SAP HANA).
+
+## 3.231.1 - 2022-07-07
+
+* `Aws\ChimeSDKMeetings` - Adds support for AppKeys and TenantIds in Amazon Chime SDK WebRTC sessions
+* `Aws\DatabaseMigrationService` - New api to migrate event subscriptions to event bridge rules
+* `Aws\IoT` - This release adds support to register a CA certificate without having to provide a verification certificate. This also allows multiple AWS accounts to register the same CA in the same region.
+* `Aws\IoTWireless` - Adds 5 APIs: PutPositionConfiguration, GetPositionConfiguration, ListPositionConfigurations, UpdatePosition, GetPosition for the new Positioning Service feature which enables customers to configure solvers to calculate position of LoRaWAN devices, or specify position of LoRaWAN devices & gateways.
+* `Aws\SageMaker` - Heterogeneous clusters: the ability to launch training jobs with multiple instance types. This enables running component of the training job on the instance type that is most suitable for it. e.g. doing data processing and augmentation on CPU instances and neural network training on GPU instances
+
+## 3.231.0 - 2022-07-06
+
+* `Aws\CloudFormation` - My AWS Service (placeholder) - Add a new feature Account-level Targeting for StackSet operation
+* `Aws\Script` - Support for removing unused AWS services via Composer.
+* `Aws\Synthetics` - This release introduces Group feature, which enables users to group cross-region canaries.
+
+## 3.230.0 - 2022-07-05
+
+* `Aws\ConfigService` - Updating documentation service limits
+* `Aws\LexModelsV2` - This release introduces additional optional parameters "messageSelectionStrategy" to PromptSpecification, which enables the users to configure the bot to play messages in orderly manner.
+* `Aws\QuickSight` - This release allows customers to programmatically create QuickSight accounts with Enterprise and Enterprise + Q editions. It also releases allowlisting domains for embedding QuickSight dashboards at runtime through the embedding APIs.
+* `Aws\RDS` - Adds waiters support for DBCluster.
+* `Aws\RolesAnywhere` - IAM Roles Anywhere allows your workloads such as servers, containers, and applications to obtain temporary AWS credentials and use the same IAM roles and policies that you have configured for your AWS workloads to access AWS resources.
+* `Aws\SSMIncidents` - Adds support for tagging incident-record on creation by providing incident tags in the template within a response-plan.
+
 ## 3.229.2 - 2022-07-01
 
 * `Aws\` - Change service namespace generation to use the service id instead of service full name for parity across SDKs
