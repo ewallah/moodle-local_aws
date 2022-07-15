@@ -23,16 +23,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-<<<<<<< HEAD
 namespace local_aws;
 
 use advanced_testcase;
-use \local_aws\admin_settings_aws_region;
-=======
-namespace local_aws\tests;
-
 use local_aws\admin_settings_aws_region;
->>>>>>> 3c75ef7bc16d63da167f9cf5630f04c3845fb083
 
 /**
  * Testcase for the list of AWS regions admin setting.
@@ -42,18 +36,11 @@ use local_aws\admin_settings_aws_region;
  * @copyright  2020 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-<<<<<<< HEAD
 class admin_settings_aws_region_test extends advanced_testcase {
 
     /**
      * Test that output_html() method works and returns HTML string with expected content.
      * @covers \local_aws\admin_settings_aws_region
-=======
-class admin_settings_aws_region_testcase extends \advanced_testcase {
-
-    /**
-     * Test that output_html() method works and returns HTML string with expected content.
->>>>>>> 3c75ef7bc16d63da167f9cf5630f04c3845fb083
      */
     public function test_output_html() {
         $this->resetAfterTest();
@@ -63,12 +50,8 @@ class admin_settings_aws_region_testcase extends \advanced_testcase {
         $this->assertTrue(strpos($html, 'Test visible name') !== false);
         $this->assertTrue(strpos($html, 'Test description') !== false);
         $this->assertTrue(strpos($html, 'Default: Test default setting') !== false);
-<<<<<<< HEAD
         $this->assertTrue(
             strpos($html, '<input type="text" list="s__test_aws_region" name="s__test_aws_region" value=""') !== false);
-=======
-        $this->assertTrue(strpos($html, '<input type="text" list="s__test_aws_region" name="s__test_aws_region" value=""') !== false);
->>>>>>> 3c75ef7bc16d63da167f9cf5630f04c3845fb083
         $this->assertTrue(strpos($html, '<datalist id="s__test_aws_region">') !== false);
         $this->assertTrue(strpos($html, '<option value="') !== false);
     }

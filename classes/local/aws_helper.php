@@ -25,13 +25,10 @@
 
 namespace local_aws\local;
 
-<<<<<<< HEAD
-=======
 use Aws\CommandInterface;
 use Aws\AwsClient;
 use Psr\Http\Message\RequestInterface;
 
->>>>>>> 3c75ef7bc16d63da167f9cf5630f04c3845fb083
 /**
  * This class contains functions that help plugins to interact with the AWS SDK.
  *
@@ -75,11 +72,7 @@ class aws_helper {
      * @param AwsClient $client
      * @return AwsClient
      */
-<<<<<<< HEAD
-    public static function configure_client_proxy(\AWS\AwsClient $client): \AWS\AwsClient {
-=======
     public static function configure_client_proxy(AwsClient $client): AwsClient {
->>>>>>> 3c75ef7bc16d63da167f9cf5630f04c3845fb083
         $client->getHandlerList()->appendBuild(self::get_callable_middleware(), 'proxy_bypass');
         return $client;
     }
