@@ -25,6 +25,11 @@
 
 namespace local_aws\privacy;
 
+<<<<<<< HEAD
+=======
+use core_privacy\local\metadata\null_provider;
+use core_privacy\local\legacy_polyfill;
+>>>>>>> 3c75ef7bc16d63da167f9cf5630f04c3845fb083
 /**
  * Class provider
  * @author    Ilya Tregubov (ilyatregubov@catalyst-au.net)

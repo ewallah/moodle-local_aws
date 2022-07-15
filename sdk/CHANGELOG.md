@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## 3.231.6 - 2022-07-14
+
+* `Aws\Athena` - This release updates data types that contain either QueryExecutionId, NamedQueryId or ExpectedBucketOwner. Ids must be between 1 and 128 characters and contain only non-whitespace characters. ExpectedBucketOwner must be 12-digit string.
+* `Aws\CodeArtifact` - This release introduces Package Origin Controls, a mechanism used to counteract Dependency Confusion attacks. Adds two new APIs, PutPackageOriginConfiguration and DescribePackage, and updates the ListPackage, DescribePackageVersion and ListPackageVersion APIs in support of the feature.
+* `Aws\ConfigService` - Update ResourceType enum with values for Route53Resolver, Batch, DMS, Workspaces, Stepfunctions, SageMaker, ElasticLoadBalancingV2, MSK types
+* `Aws\EC2` - This release adds flow logs for Transit Gateway to allow customers to gain deeper visibility and insights into network traffic through their Transit Gateways.
+* `Aws\FMS` - Adds support for strict ordering in stateful rule groups in Network Firewall policies.
+* `Aws\Glue` - This release adds an additional worker type for Glue Streaming jobs.
+* `Aws\Inspector2` - This release adds support for Inspector V2 scan configurations through the get and update configuration APIs. Currently this allows configuring ECR automated re-scan duration to lifetime or 180 days or 30 days.
+* `Aws\NimbleStudio` - Amazon Nimble Studio adds support for IAM-based access to AWS resources for Nimble Studio components and custom studio components. Studio Component scripts use these roles on Nimble Studio workstation to mount filesystems, access S3 buckets, or other configured resources in the Studio's AWS account
+* `Aws\Outposts` - This release adds the ShipmentInformation and AssetInformationList fields to the GetOrder API response.
+* `Aws\SageMaker` - This release adds support for G5, P4d, and C6i instance types in Amazon SageMaker Inference and increases the number of hyperparameters that can be searched from 20 to 30 in Amazon SageMaker Automatic Model Tuning
+* `Aws\kendra` - This release adds AccessControlConfigurations which allow you to redefine your document level access control without the need for content re-indexing.
+
+## 3.231.5 - 2022-07-13
+
+* `Aws\AppConfig` - Adding Create, Get, Update, Delete, and List APIs for new two new resources: Extensions and ExtensionAssociations.
+
+## 3.231.4 - 2022-07-12
+
+* `Aws\NetworkManager` - This release adds general availability API support for AWS Cloud WAN.
+
+## 3.231.3 - 2022-07-11
+
+* `Aws\EC2` - Build, manage, and monitor a unified global network that connects resources running across your cloud and on-premises environments using the AWS Cloud WAN APIs.
+* `Aws\Redshift` - This release adds a new --snapshot-arn field for describe-cluster-snapshots, describe-node-configuration-options, restore-from-cluster-snapshot, authorize-snapshot-acsess, and revoke-snapshot-acsess APIs. It allows customers to give a Redshift snapshot ARN or a Redshift Serverless ARN as input.
+* `Aws\RedshiftServerless` - Removed prerelease language for GA launch.
+
 ## 3.231.2 - 2022-07-08
 
 * `Aws\Backup` - This release adds support for authentication using IAM user identity instead of passed IAM role, identified by excluding the IamRoleArn field in the StartRestoreJob API. This feature applies to only resource clients with a destructive restore nature (e.g. SAP HANA).
