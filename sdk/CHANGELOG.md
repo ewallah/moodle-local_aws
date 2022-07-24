@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.231.12 - 2022-07-22
+
+* `Aws\Account` - This release enables customers to manage the primary contact information for their AWS accounts. For more information, see https://docs.aws.amazon.com/accounts/latest/reference/API_Operations.html
+* `Aws\EC2` - Added support for EC2 M1 Mac instances. For more information, please visit aws.amazon.com/mac.
+* `Aws\IoTDeviceAdvisor` - Added new service feature (Early access only) - Long Duration Test, where customers can test the IoT device to observe how it behaves when the device is in operation for longer period.
+* `Aws\MediaLive` - Link devices now support remote rebooting. Link devices now support maintenance windows. Maintenance windows allow a Link device to install software updates without stopping the MediaLive channel. The channel will experience a brief loss of input from the device while updates are installed.
+* `Aws\RDS` - This release adds the "ModifyActivityStream" API with support for audit policy state locking and unlocking.
+* `Aws\TranscribeService` - Remove unsupported language codes for StartTranscriptionJob and update VocabularyFileUri for UpdateMedicalVocabulary
+
+## 3.231.11 - 2022-07-21
+
+* `Aws\Athena` - This feature allows customers to retrieve runtime statistics for completed queries
+* `Aws\CloudWatch` - Adding support for the suppression of Composite Alarm actions
+* `Aws\Credentials` - fixes issue with attempt count when refreshing credentials
+* `Aws\DatabaseMigrationService` - Documentation updates for Database Migration Service (DMS).
+* `Aws\DocDB` - Enable copy-on-write restore type
+* `Aws\EC2InstanceConnect` - This release includes a new exception type "EC2InstanceUnavailableException" for SendSSHPublicKey and SendSerialConsoleSSHPublicKey APIs.
+* `Aws\FraudDetector` - The release introduces Account Takeover Insights (ATI) model. The ATI model detects fraud relating to account takeover. This release also adds support for new variable types: ARE_CREDENTIALS_VALID and SESSION_ID and adds new structures to Model Version APIs.
+* `Aws\IoTSiteWise` - Added asynchronous API to ingest bulk historical and current data into IoT SiteWise.
+* `Aws\NetworkFirewall` - Network Firewall now supports referencing dynamic IP sets from stateful rule groups, for IP sets stored in Amazon VPC prefix lists.
+* `Aws\RDS` - Adds support for creating an RDS Proxy for an RDS for MariaDB database.
+* `Aws\kendra` - Amazon Kendra now provides Oauth2 support for SharePoint Online. For more information, see https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html
+
+## 3.231.10 - 2022-07-20
+
+* `Aws\ACMPCA` - AWS Certificate Manager (ACM) Private Certificate Authority (PCA) documentation updates
+* `Aws\IoT` - GA release the ability to enable/disable IoT Fleet Indexing for Device Defender and Named Shadow information, and search them through IoT Fleet Indexing APIs. This includes Named Shadow Selection as a part of the UpdateIndexingConfiguration API.
+
+## 3.231.9 - 2022-07-19
+
+* `Aws\DevOpsGuru` - Added new APIs for log anomaly detection feature.
+* `Aws\Glue` - Documentation updates for AWS Glue Job Timeout and Autoscaling
+* `Aws\SageMaker` - Fixed an issue with cross account QueryLineage
+* `Aws\SagemakerEdgeManager` - Amazon SageMaker Edge Manager provides lightweight model deployment feature to deploy machine learning models on requested devices.
+* `Aws\WorkSpaces` - Increased the character limit of the login message from 850 to 2000 characters.
+
+## 3.231.8 - 2022-07-18
+
+* `Aws\ApplicationDiscoveryService` - Add AWS Agentless Collector details to the GetDiscoverySummary API response
+* `Aws\EC2` - Documentation updates for Amazon EC2.
+* `Aws\ElastiCache` - Adding AutoMinorVersionUpgrade in the DescribeReplicationGroups API
+* `Aws\KMS` - Added support for the SM2 KeySpec in China Partition Regions
+* `Aws\MediaPackage` - This release adds "IncludeIframeOnlyStream" for Dash endpoints and increases the number of supported video and audio encryption presets for Speke v2
+* `Aws\SSOAdmin` - AWS SSO now supports attaching customer managed policies and a permissions boundary to your permission sets. This release adds new API operations to manage and view the customer managed policies and the permissions boundary for a given permission set.
+* `Aws\SageMaker` - Amazon SageMaker Edge Manager provides lightweight model deployment feature to deploy machine learning models on requested devices.
+
 ## 3.231.7 - 2022-07-15
 
 * `Aws\CloudWatchEvidently` - This release adds support for the new segmentation feature.
