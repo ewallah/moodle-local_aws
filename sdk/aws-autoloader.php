@@ -1411,6 +1411,7 @@ $mapping = array(
     'Aws\data\macie\2017-12-19\paginators-1.json' => __DIR__ . '/Aws/data/macie/2017-12-19/paginators-1.json.php',
     'Aws\data\macie2\2020-01-01\api-2.json' => __DIR__ . '/Aws/data/macie2/2020-01-01/api-2.json.php',
     'Aws\data\macie2\2020-01-01\paginators-1.json' => __DIR__ . '/Aws/data/macie2/2020-01-01/paginators-1.json.php',
+    'Aws\data\macie2\2020-01-01\waiters-2.json' => __DIR__ . '/Aws/data/macie2/2020-01-01/waiters-2.json.php',
     'Aws\data\managedblockchain\2018-09-24\api-2.json' => __DIR__ . '/Aws/data/managedblockchain/2018-09-24/api-2.json.php',
     'Aws\data\managedblockchain\2018-09-24\paginators-1.json' => __DIR__ . '/Aws/data/managedblockchain/2018-09-24/paginators-1.json.php',
     'Aws\data\manifest.json' => __DIR__ . '/Aws/data/manifest.json.php',
