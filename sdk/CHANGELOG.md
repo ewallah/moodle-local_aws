@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 3.235.15 - 2022-09-23
+
+* `Aws\AppRunner` - AWS App Runner adds a Node.js 16 runtime.
+* `Aws\EC2` - Letting external AWS customers provide ImageId as a Launch Template override in FleetLaunchTemplateOverridesRequest
+* `Aws\LexModelsV2` - This release introduces additional optional parameters promptAttemptsSpecification to PromptSpecification, which enables the users to configure interrupt setting and Audio, DTMF and Text input configuration for the initial and retry prompt played by the Bot
+* `Aws\Lightsail` - This release adds Instance Metadata Service (IMDS) support for Lightsail instances.
+* `Aws\NimbleStudio` - Amazon Nimble Studio adds support for on-demand Amazon Elastic Compute Cloud (EC2) G3 and G5 instances, allowing customers to utilize additional GPU instance types for their creative projects.
+* `Aws\SSM` - This release adds new SSM document types ConformancePackTemplate and CloudFormation
+* `Aws\WAFV2` - Add the default specification for ResourceType in ListResourcesForWebACL.
+
+## 3.235.14 - 2022-09-22
+
+* `Aws\BackupGateway` - Changes include: new GetVirtualMachineApi to fetch a single user's VM, improving ListVirtualMachines to fetch filtered VMs as well as all VMs, and improving GetGatewayApi to now also return the gateway's MaintenanceStartTime.
+* `Aws\DeviceFarm` - This release adds the support for VPC-ENI based connectivity for private devices on AWS Device Farm.
+* `Aws\EC2` - Documentation updates for Amazon EC2.
+* `Aws\Glue` - Added support for S3 Event Notifications for Catalog Target Crawlers.
+* `Aws\IdentityStore` - Documentation updates for the Identity Store CLI Reference.
+
+## 3.235.13 - 2022-09-21
+
+* `Aws\Comprehend` - Amazon Comprehend now supports synchronous mode for targeted sentiment API operations.
+* `Aws\S3Control` - S3 on Outposts launches support for object versioning for Outposts buckets. With S3 Versioning, you can preserve, retrieve, and restore every version of every object stored in your buckets. You can recover from both unintended user actions and application failures.
+* `Aws\SageMaker` - SageMaker now allows customization on Canvas Application settings, including enabling/disabling time-series forecasting and specifying an Amazon Forecast execution role at both the Domain and UserProfile levels.
+
+## 3.235.12 - 2022-09-20
+
+* `Aws\EC2` - This release adds support for blocked paths to Amazon VPC Reachability Analyzer.
+
+## 3.235.11 - 2022-09-19
+
+* `Aws\CloudTrail` - This release includes support for importing existing trails into CloudTrail Lake.
+* `Aws\EC2` - This release adds CapacityAllocations field to DescribeCapacityReservations
+* `Aws\MediaConnect` - This change allows the customer to use the SRT Caller protocol as part of their flows
+* `Aws\RDS` - This release adds support for Amazon RDS Proxy with SQL Server compatibility.
+
 ## 3.235.10 - 2022-09-16
 
 * `Aws\CodeStarNotifications` - This release adds tag based access control for the UntagResource API.
