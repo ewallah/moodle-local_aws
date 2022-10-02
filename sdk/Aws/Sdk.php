@@ -302,6 +302,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionIoTEventsData(array $args = [])
  * @method \Aws\IoTFleetHub\IoTFleetHubClient createIoTFleetHub(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTFleetHub(array $args = [])
+ * @method \Aws\IoTFleetWise\IoTFleetWiseClient createIoTFleetWise(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionIoTFleetWise(array $args = [])
  * @method \Aws\IoTJobsDataPlane\IoTJobsDataPlaneClient createIoTJobsDataPlane(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTJobsDataPlane(array $args = [])
  * @method \Aws\IoTSecureTunneling\IoTSecureTunnelingClient createIoTSecureTunneling(array $args = [])
@@ -414,6 +416,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHub(array $args = [])
  * @method \Aws\MigrationHubConfig\MigrationHubConfigClient createMigrationHubConfig(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHubConfig(array $args = [])
+ * @method \Aws\MigrationHubOrchestrator\MigrationHubOrchestratorClient createMigrationHubOrchestrator(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMigrationHubOrchestrator(array $args = [])
  * @method \Aws\MigrationHubRefactorSpaces\MigrationHubRefactorSpacesClient createMigrationHubRefactorSpaces(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHubRefactorSpaces(array $args = [])
  * @method \Aws\MigrationHubStrategyRecommendations\MigrationHubStrategyRecommendationsClient createMigrationHubStrategyRecommendations(array $args = [])
@@ -635,7 +639,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.235.15';
+    const VERSION = '3.237.1';
 
     /** @var array Arguments for creating clients */
     private $args;
