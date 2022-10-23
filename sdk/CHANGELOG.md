@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 3.240.0 - 2022-10-21
+
+* `Aws\Aws` - Adds artifacts for endpoint resolution per the AWS Endpoints V2 initiative.
+* `Aws\CognitoIdentityProvider` - This release adds a new "DeletionProtection" field to the UserPool in Cognito. Application admins can configure this value with either ACTIVE or INACTIVE value. Setting this field to ACTIVE will prevent a user pool from accidental deletion.
+* `Aws\S3` - S3 on Outposts launches support for automatic bucket-style alias. You can use the automatic access point alias instead of an access point ARN for any object-level operation in an Outposts bucket.
+* `Aws\SageMaker` - CreateInferenceRecommenderjob API now supports passing endpoint details directly, that will help customers to identify the max invocation and max latency they can achieve for their model and the associated endpoint along with getting recommendations on other instances.
+
+## 3.239.2 - 2022-10-20
+
+* `Aws\CloudWatchRUM` - CloudWatch RUM now supports Extended CloudWatch Metrics with Additional Dimensions
+* `Aws\DevOpsGuru` - This release adds information about the resources DevOps Guru is analyzing.
+* `Aws\GlobalAccelerator` - Global Accelerator now supports AddEndpoints and RemoveEndpoints operations for standard endpoint groups.
+* `Aws\ResilienceHub` - In this release, we are introducing support for regional optimization for AWS Resilience Hub applications. It also includes a few documentation updates to improve clarity.
+
+## 3.239.1 - 2022-10-19
+
+* `Aws\ChimeSDKMessaging` - Documentation updates for Chime Messaging SDK
+* `Aws\CloudTrail` - This release includes support for exporting CloudTrail Lake query results to an Amazon S3 bucket.
+* `Aws\ConfigService` - This release adds resourceType enums for AppConfig, AppSync, DataSync, EC2, EKS, Glue, GuardDuty, SageMaker, ServiceDiscovery, SES, Route53 types.
+* `Aws\Connect` - This release adds API support for managing phone numbers that can be used across multiple AWS regions through telephony traffic distribution.
+* `Aws\EventBridge` - Updates internal logic for constructing API endpoints. We have added rule-based endpoints and internal model parameters.
+* `Aws\ManagedBlockchain` - Adding new Accessor APIs for Amazon Managed Blockchain
+* `Aws\S3` - Updates internal logic for constructing API endpoints. We have added rule-based endpoints and internal model parameters.
+* `Aws\S3Control` - Updates internal logic for constructing API endpoints. We have added rule-based endpoints and internal model parameters.
+* `Aws\SupportApp` - This release adds the RegisterSlackWorkspaceForOrganization API. You can use the API to register a Slack workspace for an AWS account that is part of an organization.
+* `Aws\WorkSpacesWeb` - WorkSpaces Web now supports user access logging for recording session start, stop, and URL navigation.
+
+## 3.239.0 - 2022-10-18
+
+* `Aws\Api` - Parse json error code if it is present in HTTP response header
+* `Aws\FraudDetector` - Documentation Updates for Amazon Fraud Detector
+* `Aws\SESv2` - This release allows subscribers to enable Dedicated IPs (managed) to send email via a fully managed dedicated IP experience. It also adds identities' VerificationStatus in the response of GetEmailIdentity and ListEmailIdentities APIs, and ImportJobs counts in the response of ListImportJobs API.
+* `Aws\SageMaker` - This change allows customers to enable data capturing while running a batch transform job, and configure monitoring schedule to monitoring the captured data.
+* `Aws\ServiceDiscovery` - Updated the ListNamespaces API to support the NAME and HTTP_NAME filters, and the BEGINS_WITH filter condition.
+
+## 3.238.6 - 2022-10-17
+
+* `Aws\Greengrass` - This change allows customers to specify FunctionRuntimeOverride in FunctionDefinitionVersion. This configuration can be used if the runtime on the device is different from the AWS Lambda runtime specified for that function.
+* `Aws\SageMaker` - This release adds support for C7g, C6g, C6gd, C6gn, M6g, M6gd, R6g, and R6gn Graviton instance types in Amazon SageMaker Inference.
+
 ## 3.238.5 - 2022-10-14
 
 * `Aws\MediaConvert` - MediaConvert now supports specifying the minimum percentage of the HRD buffer available at the end of each encoded video segment.
