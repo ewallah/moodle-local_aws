@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## 3.242.1 - 2022-11-11
+
+* `Aws\Glue` - Added links related to enabling job bookmarks.
+* `Aws\IoT` - This release add new api listRelatedResourcesForAuditFinding and new member type IssuerCertificates for Iot device device defender Audit.
+* `Aws\LicenseManager` - AWS License Manager now supports onboarded Management Accounts or Delegated Admins to view granted licenses aggregated from all accounts in the organization.
+* `Aws\MarketplaceCatalog` - Added three new APIs to support tagging and tag-based authorization: TagResource, UntagResource, and ListTagsForResource. Added optional parameters to the StartChangeSet API to support tagging a resource while making a request to create it.
+* `Aws\Rekognition` - Adding support for ImageProperties feature to detect dominant colors and image brightness, sharpness, and contrast, inclusion and exclusion filters for labels and label categories, new fields to the API response, "aliases" and "categories"
+* `Aws\SSMIncidents` - RelatedItems now have an ID field which can be used for referencing them else where. Introducing event references in TimelineEvent API and increasing maximum length of "eventData" to 12K characters.
+* `Aws\SecurityHub` - Documentation updates for Security Hub
+
+## 3.242.0 - 2022-11-10
+
+* `Aws\AutoScaling` - This release adds a new price capacity optimized allocation strategy for Spot Instances to help customers optimize provisioning of Spot Instances via EC2 Auto Scaling, EC2 Fleet, and Spot Fleet. It allocates Spot Instances based on both spare capacity availability and Spot Instance price.
+* `Aws\EC2` - This release adds a new price capacity optimized allocation strategy for Spot Instances to help customers optimize provisioning of Spot Instances via EC2 Auto Scaling, EC2 Fleet, and Spot Fleet. It allocates Spot Instances based on both spare capacity availability and Spot Instance price.
+* `Aws\ECS` - This release adds support for task scale-in protection with updateTaskProtection and getTaskProtection APIs. UpdateTaskProtection API can be used to protect a service managed task from being terminated by scale-in events and getTaskProtection API to get the scale-in protection status of a task.
+* `Aws\ElasticsearchService` - Amazon OpenSearch Service now offers managed VPC endpoints to connect to your Amazon OpenSearch Service VPC-enabled domain in a Virtual Private Cloud (VPC). This feature allows you to privately access OpenSearch Service domain without using public IPs or requiring traffic to traverse the Internet.
+* `Aws\ResourceExplorer2` - Text only updates to some Resource Explorer descriptions.
+* `Aws\Scheduler` - AWS introduces the new Amazon EventBridge Scheduler. EventBridge Scheduler is a serverless scheduler that allows you to create, run, and manage tasks from one central, managed service.
+
+## 3.241.1 - 2022-11-09
+
+* `Aws\Connect` - This release adds new fields SignInUrl, UserArn, and UserId to GetFederationToken response payload.
+* `Aws\ConnectCases` - This release adds the ability to disable templates through the UpdateTemplate API. Disabling templates prevents customers from creating cases using the template. For more information see https://docs.aws.amazon.com/cases/latest/APIReference/Welcome.html
+* `Aws\EC2` - Amazon EC2 Trn1 instances, powered by AWS Trainium chips, are purpose built for high-performance deep learning training. u-24tb1.112xlarge and u-18tb1.112xlarge High Memory instances are purpose-built to run large in-memory databases.
+* `Aws\GroundStation` - This release adds the preview of customer-provided ephemeris support for AWS Ground Station, allowing space vehicle owners to provide their own position and trajectory information for a satellite.
+* `Aws\MediaPackageVod` - This release adds "IncludeIframeOnlyStream" for Dash endpoints.
+* `Aws\TranscribeStreaming` - This will release hi-IN and th-TH
+
+## 3.241.0 - 2022-11-08
+
+* `Aws\ACM` - Support added for requesting elliptic curve certificate key algorithm types P-256 (EC_prime256v1) and P-384 (EC_secp384r1).
+* `Aws\BillingConductor` - This release adds the Recurring Custom Line Item feature along with a new API ListCustomLineItemVersions.
+* `Aws\EC2` - This release enables sharing of EC2 Placement Groups across accounts and within AWS Organizations using Resource Access Manager
+* `Aws\FMS` - AWS Firewall Manager now supports importing existing AWS Network Firewall firewalls into Firewall Manager policies.
+* `Aws\Lightsail` - This release adds support for Amazon Lightsail to automate the delegation of domains registered through Amazon Route 53 to Lightsail DNS management and to automate record creation for DNS validation of Lightsail SSL/TLS certificates.
+* `Aws\OpenSearchService` - Amazon OpenSearch Service now offers managed VPC endpoints to connect to your Amazon OpenSearch Service VPC-enabled domain in a Virtual Private Cloud (VPC). This feature allows you to privately access OpenSearch Service domain without using public IPs or requiring traffic to traverse the Internet.
+* `Aws\Polly` - Amazon Polly adds new voices: Elin (sv-SE), Ida (nb-NO), Laura (nl-NL) and Suvi (fi-FI). They are available as neural voices only.
+* `Aws\ResourceExplorer2` - This is the initial SDK release for AWS Resource Explorer. AWS Resource Explorer lets your users search for and discover your AWS resources across the AWS Regions in your account.
+* `Aws\Route53` - Amazon Route 53 now supports the Europe (Zurich) Region (eu-central-2) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region.
+
+## 3.240.11 - 2022-11-07
+
+* `Aws\Athena` - Adds support for using Query Result Reuse
+* `Aws\AutoScaling` - This release adds support for two new attributes for attribute-based instance type selection - NetworkBandwidthGbps and AllowedInstanceTypes.
+* `Aws\CloudTrail` - This release includes support for configuring a delegated administrator to manage an AWS Organizations organization CloudTrail trails and event data stores, and AWS Key Management Service encryption of CloudTrail Lake event data stores.
+* `Aws\EC2` - This release adds support for two new attributes for attribute-based instance type selection - NetworkBandwidthGbps and AllowedInstanceTypes.
+* `Aws\ElastiCache` - Added support for IPv6 and dual stack for Memcached and Redis clusters. Customers can now launch new Redis and Memcached clusters with IPv6 and dual stack networking support.
+* `Aws\LexModelsV2` - Amazon Lex now supports new APIs for viewing and editing Custom Vocabulary in bots.
+* `Aws\MediaConvert` - The AWS Elemental MediaConvert SDK has added support for setting the SDR reference white point for HDR conversions and conversion of HDR10 to DolbyVision without mastering metadata.
+* `Aws\SSM` - This release includes support for applying a CloudWatch alarm to multi account multi region Systems Manager Automation
+* `Aws\WAFV2` - The geo match statement now adds labels for country and region. You can match requests at the region level by combining a geo match statement with label match statements.
+* `Aws\WellArchitected` - This release adds support for integrations with AWS Trusted Advisor and AWS Service Catalog AppRegistry to improve workload discovery and speed up your workload reviews.
+* `Aws\WorkSpaces` - This release adds protocols attribute to workspaces properties data type. This enables customers to migrate workspaces from PC over IP (PCoIP) to WorkSpaces Streaming Protocol (WSP) using create and modify workspaces public APIs.
+
 ## 3.240.10 - 2022-11-04
 
 * `Aws\CloudWatchLogs` - Doc-only update for bug fixes and support of export to buckets encrypted with SSE-KMS
