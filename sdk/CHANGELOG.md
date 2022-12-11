@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## 3.252.6 - 2022-12-09
+
+* `Aws\CloudWatchLogs` - Doc-only update for CloudWatch Logs, for Tagging Permissions clarifications
+* `Aws\IoTFleetWise` - Deprecated assignedValue property for actuators and attributes. Added a message to invalid nodes and invalid decoder manifest exceptions.
+* `Aws\MediaLive` - Link devices now support buffer size (latency) configuration. A higher latency value means a longer delay in transmitting from the device to MediaLive, but improved resiliency. A lower latency value means a shorter delay, but less resiliency.
+* `Aws\MediaPackageVod` - This release provides the approximate number of assets in a packaging group.
+
+## 3.252.5 - 2022-12-08
+
+* `Aws\AutoScaling` - Adds support for metric math for target tracking scaling policies, saving you the cost and effort of publishing a custom metric to CloudWatch. Also adds support for VPC Lattice by adding the Attach/Detach/DescribeTrafficSources APIs and a new health check type to the CreateAutoScalingGroup API.
+* `Aws\IoTTwinMaker` - This release adds the following new features: 1) New APIs for managing a continuous sync of assets and asset models from AWS IoT SiteWise. 2) Support user friendly names for component types (ComponentTypeName) and properties (DisplayName).
+* `Aws\MigrationHubStrategyRecommendations` - This release adds known application filtering, server selection for assessments, support for potential recommendations, and indications for configuration and assessment status. For more information, see the AWS Migration Hub documentation at https://docs.aws.amazon.com/migrationhub/index.html
+
+## 3.252.4 - 2022-12-07
+
+* `Aws\CloudFront` - Introducing UpdateDistributionWithStagingConfig that can be used to promote the staging configuration to the production.
+* `Aws\CostExplorer` - This release adds the LinkedAccountName field to the GetAnomalies API response under RootCause
+* `Aws\EKS` - Adds support for EKS add-ons configurationValues fields and DescribeAddonConfiguration function
+* `Aws\EndpointDiscovery` - Re-enables endpoint discovery for services/operations that require it.
+* `Aws\KMS` - Updated examples and exceptions for External Key Store (XKS).
+
+## 3.252.3 - 2022-12-06
+
+* `Aws\BillingConductor` - This release adds the Tiering Pricing Rule feature.
+* `Aws\Connect` - This release provides APIs that enable you to programmatically manage rules for Contact Lens conversational analytics and third party applications. For more information, see https://docs.aws.amazon.com/connect/latest/APIReference/rules-api.html
+* `Aws\DynamoDB` - Endpoint Ruleset update: Use http instead of https for the "local" region.
+* `Aws\DynamoDBStreams` - Endpoint Ruleset update: Use http instead of https for the "local" region.
+* `Aws\RDS` - This release adds the BlueGreenDeploymentNotFoundFault to the AddTagsToResource, ListTagsForResource, and RemoveTagsFromResource operations.
+* `Aws\SageMakerFeatureStoreRuntime` - For online + offline Feature Groups, added ability to target PutRecord and DeleteRecord actions to only online store, or only offline store. If target store parameter is not specified, actions will apply to both stores.
+
+## 3.252.2 - 2022-12-05
+
+* `Aws\CostExplorer` - This release introduces two new APIs that offer a 1-click experience to refresh Savings Plans recommendations. The two APIs are StartSavingsPlansPurchaseRecommendationGeneration and ListSavingsPlansPurchaseRecommendationGeneration.
+* `Aws\EC2` - Documentation updates for EC2.
+* `Aws\RDS` - This release adds the InvalidDBInstanceStateFault to the RestoreDBClusterFromSnapshot operation.
+* `Aws\TranscribeService` - Amazon Transcribe now supports creating custom language models in the following languages: Japanese (ja-JP) and German (de-DE).
+* `Aws\ivschat` - Adds PendingVerification error type to messaging APIs to block the resource usage for accounts identified as being fraudulent.
+
 ## 3.252.1 - 2022-12-02
 
 * `Aws\AppSync` - Fixes the URI for the evaluatecode endpoint to include the /v1 prefix (ie. "/v1/dataplane-evaluatecode").
