@@ -352,6 +352,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionKinesisVideoMedia(array $args = [])
  * @method \Aws\KinesisVideoSignalingChannels\KinesisVideoSignalingChannelsClient createKinesisVideoSignalingChannels(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionKinesisVideoSignalingChannels(array $args = [])
+ * @method \Aws\KinesisVideoWebRTCStorage\KinesisVideoWebRTCStorageClient createKinesisVideoWebRTCStorage(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionKinesisVideoWebRTCStorage(array $args = [])
  * @method \Aws\Kms\KmsClient createKms(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionKms(array $args = [])
  * @method \Aws\LakeFormation\LakeFormationClient createLakeFormation(array $args = [])
@@ -368,6 +370,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionLexRuntimeV2(array $args = [])
  * @method \Aws\LicenseManager\LicenseManagerClient createLicenseManager(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionLicenseManager(array $args = [])
+ * @method \Aws\LicenseManagerLinuxSubscriptions\LicenseManagerLinuxSubscriptionsClient createLicenseManagerLinuxSubscriptions(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionLicenseManagerLinuxSubscriptions(array $args = [])
  * @method \Aws\LicenseManagerUserSubscriptions\LicenseManagerUserSubscriptionsClient createLicenseManagerUserSubscriptions(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionLicenseManagerUserSubscriptions(array $args = [])
  * @method \Aws\Lightsail\LightsailClient createLightsail(array $args = [])
@@ -673,7 +677,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.253.4';
+    const VERSION = '3.255.3';
 
     /** @var array Arguments for creating clients */
     private $args;

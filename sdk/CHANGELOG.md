@@ -1,5 +1,58 @@
 # CHANGELOG
 
+## 3.255.3 - 2022-12-23
+
+* `Aws\Connect` - Support for Routing Profile filter, SortCriteria, and grouping by Routing Profiles for GetCurrentMetricData API. Support for RoutingProfiles, UserHierarchyGroups, and Agents as filters, NextStatus and AgentStatusName for GetCurrentUserData. Adds ApproximateTotalCount to both APIs.
+* `Aws\ConnectParticipant` - Amazon Connect Chat introduces the Message Receipts feature. This feature allows agents and customers to receive message delivered and read receipts after they send a chat message.
+* `Aws\Detective` - This release adds a missed AccessDeniedException type to several endpoints.
+* `Aws\FSx` - Fix a bug where a recent release might break certain existing SDKs.
+* `Aws\Inspector2` - Amazon Inspector adds support for scanning NodeJS 18.x and Go 1.x AWS Lambda function runtimes.
+
+## 3.255.2 - 2022-12-22
+
+* `Aws\ComputeOptimizer` - This release enables AWS Compute Optimizer to analyze and generate optimization recommendations for ecs services running on Fargate.
+* `Aws\Connect` - Amazon Connect Chat introduces the Idle Participant/Autodisconnect feature, which allows users to set timeouts relating to the activity of chat participants, using the new UpdateParticipantRoleConfig API.
+* `Aws\IoTDeviceAdvisor` - This release adds the following new features: 1) Documentation updates for IoT Device Advisor APIs. 2) Updated required request parameters for IoT Device Advisor APIs. 3) Added new service feature: ability to provide the test endpoint when customer executing the StartSuiteRun API.
+* `Aws\KinesisVideoWebRTCStorage` - Amazon Kinesis Video Streams offers capabilities to stream video and audio in real-time via WebRTC to the cloud for storage, playback, and analytical processing. Customers can use our enhanced WebRTC SDK and cloud APIs to enable real-time streaming, as well as media ingestion to the cloud.
+* `Aws\RDS` - Add support for managing master user password in AWS Secrets Manager for the DBInstance and DBCluster.
+* `Aws\SecretsManager` - Documentation updates for Secrets Manager
+* `Aws\Signature` - Rollback MD5 breaking change
+
+## 3.255.1 - 2022-12-22
+
+* `Aws\Connect` - Amazon Connect Chat now allows for JSON (application/json) message types to be sent as part of the initial message in the StartChatContact API.
+* `Aws\ConnectParticipant` - Amazon Connect Chat now allows for JSON (application/json) message types to be sent in the SendMessage API.
+* `Aws\LicenseManagerLinuxSubscriptions` - AWS License Manager now offers cross-region, cross-account tracking of commercial Linux subscriptions on AWS. This includes subscriptions purchased as part of EC2 subscription-included AMIs, on the AWS Marketplace, or brought to AWS via Red Hat Cloud Access Program.
+* `Aws\Macie2` - This release adds support for analyzing Amazon S3 objects that use the S3 Glacier Instant Retrieval (Glacier_IR) storage class.
+* `Aws\S3` - Fixes bug where MD5 header is not added for PutObject and UploadPart
+* `Aws\SSM` - Doc-only updates for December 2022.
+* `Aws\SageMaker` - This release enables adding RStudio Workbench support to an existing Amazon SageMaker Studio domain. It allows setting your RStudio on SageMaker environment configuration parameters and also updating the RStudioConnectUrl and RStudioPackageManagerUrl parameters for existing domains
+* `Aws\Scheduler` - Updated the ListSchedules and ListScheduleGroups APIs to allow the NamePrefix field to start with a number. Updated the validation for executionRole field to support any role name.
+* `Aws\Support` - Documentation updates for the AWS Support API
+* `Aws\Transfer` - This release adds support for Decrypt as a workflow step type.
+
+## 3.254.1 - 2022-12-20
+
+* `Aws\Batch` - Adds isCancelled and isTerminated to DescribeJobs response.
+* `Aws\EC2` - Adds support for pagination in the EC2 DescribeImages API.
+* `Aws\LookoutEquipment` - This release adds support for listing inference schedulers by status.
+* `Aws\MediaLive` - This release adds support for two new features to AWS Elemental MediaLive. First, you can now burn-in timecodes to your MediaLive outputs. Second, we now now support the ability to decode Dolby E audio when it comes in on an input.
+* `Aws\NimbleStudio` - Amazon Nimble Studio now supports configuring session storage volumes and persistence, as well as backup and restore sessions through launch profiles.
+* `Aws\ResourceExplorer2` - Documentation updates for AWS Resource Explorer.
+* `Aws\Route53Domains` - Use Route 53 domain APIs to change owner, create/delete DS record, modify IPS tag, resend authorization. New: AssociateDelegationSignerToDomain, DisassociateDelegationSignerFromDomain, PushDomain, ResendOperationAuthorization. Updated: UpdateDomainContact, ListOperations, CheckDomainTransferability.
+* `Aws\SageMaker` - Amazon SageMaker Autopilot adds support for new objective metrics in CreateAutoMLJob API.
+* `Aws\Signature` - Fix an issue where attempting to sign an invalid header in with SigV4a would cause a seg fault
+* `Aws\TranscribeService` - Enable our batch transcription jobs for Swedish and Vietnamese.
+
+## 3.254.0 - 2022-12-19
+
+* `Aws\Athena` - Add missed InvalidRequestException in GetCalculationExecutionCode,StopCalculationExecution APIs. Correct required parameters (Payload and Type) in UpdateNotebook API. Change Notebook size from 15 Mb to 10 Mb.
+* `Aws\ECS` - This release adds support for alarm-based rollbacks in ECS, a new feature that allows customers to add automated safeguards for Amazon ECS service rolling updates.
+* `Aws\KinesisVideo` - Amazon Kinesis Video Streams offers capabilities to stream video and audio in real-time via WebRTC to the cloud for storage, playback, and analytical processing. Customers can use our enhanced WebRTC SDK and cloud APIs to enable real-time streaming, as well as media ingestion to the cloud.
+* `Aws\KinesisVideoWebRTCStorage` - Amazon Kinesis Video Streams offers capabilities to stream video and audio in real-time via WebRTC to the cloud for storage, playback, and analytical processing. Customers can use our enhanced WebRTC SDK and cloud APIs to enable real-time streaming, as well as media ingestion to the cloud.
+* `Aws\RDS` - Add support for --enable-customer-owned-ip to RDS create-db-instance-read-replica API for RDS on Outposts.
+* `Aws\SageMaker` - AWS Sagemaker - Sagemaker Images now supports Aliases as secondary identifiers for ImageVersions. SageMaker Images now supports additional metadata for ImageVersions for better images management.
+
 ## 3.253.4 - 2022-12-16
 
 * `Aws\Appflow` - This release updates the ListConnectorEntities API action so that it returns paginated responses that customers can retrieve with next tokens.
