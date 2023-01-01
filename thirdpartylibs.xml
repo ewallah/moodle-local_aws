@@ -3,7 +3,7 @@
     <library>
         <location>sdk</location>
         <name>AWS SDK for PHP</name>
-        <version>3.255.3</version>
+        <version>3.255.7</version>
         <license>Apache</license>
         <licenseversion>2.0</licenseversion>
     </library>
