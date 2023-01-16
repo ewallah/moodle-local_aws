@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        moodle-branch: ['master', MOODLE_400_STABLE, 'MOODLE_311_STABLE']
+        moodle-branch: ['master', MOODLE_401_STABLE]
         php: ['8.0']
         database: ['mysqli']
 
@@ -71,4 +71,4 @@ jobs:
         run: moodle-plugin-ci --ansi grunt
 
       - name: phpunit 
-        run: moodle-plugin-ci --ansi phpunit
+        run: moodle-plugin-ci --ansi phpunit --coverage-text
