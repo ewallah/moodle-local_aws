@@ -1703,6 +1703,7 @@ $mapping = array(
     'Aws\data\groundstation\2019-05-23\endpoint-rule-set-1.json' => __DIR__ . '/Aws/data/groundstation/2019-05-23/endpoint-rule-set-1.json.php',
     'Aws\data\groundstation\2019-05-23\endpoint-tests-1.json' => __DIR__ . '/Aws/data/groundstation/2019-05-23/endpoint-tests-1.json.php',
     'Aws\data\groundstation\2019-05-23\paginators-1.json' => __DIR__ . '/Aws/data/groundstation/2019-05-23/paginators-1.json.php',
+    'Aws\data\groundstation\2019-05-23\waiters-2.json' => __DIR__ . '/Aws/data/groundstation/2019-05-23/waiters-2.json.php',
     'Aws\data\guardduty\2017-11-28\api-2.json' => __DIR__ . '/Aws/data/guardduty/2017-11-28/api-2.json.php',
     'Aws\data\guardduty\2017-11-28\endpoint-rule-set-1.json' => __DIR__ . '/Aws/data/guardduty/2017-11-28/endpoint-rule-set-1.json.php',
     'Aws\data\guardduty\2017-11-28\endpoint-tests-1.json' => __DIR__ . '/Aws/data/guardduty/2017-11-28/endpoint-tests-1.json.php',
