@@ -35,9 +35,13 @@ use local_aws\local\aws_helper;
  * @author     Peter Burnett <peterburnett@catalyst-au.net>
  * @copyright  2020 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @covers \local_aws\local\aws_helper
  */
 class aws_helper_test extends \advanced_testcase {
 
+    /**
+     * Testcase for the proxy.
+     */
     public function test_get_proxy_string() {
         global $CFG;
         $this->resetAfterTest();
