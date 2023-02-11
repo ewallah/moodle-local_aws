@@ -22,6 +22,12 @@ jobs:
           path: this-plugin
           ref: main
 
+      - name: Double Guzzle
+        if: ${{ matrix.moodle-branch == 'master'}}
+        run: |
+          sed -i '/GuzzleHttp/d' plugin/sdk/aws-autoloader.php
+          sed -i '/Psr/d' plugin/sdk/aws-autoloader.php
+
       - name: setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -31,7 +37,8 @@ jobs:
 
       - name: composer
         run: |
-           composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci ^3
+           composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci dev-master
+           echo "NVM_DIR=$HOME/.nvm" >> $GITHUB_ENV
            echo $(cd ci/bin; pwd) >> $GITHUB_PATH
            echo $(cd ci/vendor/bin; pwd) >> $GITHUB_PATH
            sudo locale-gen en_AU.UTF-8
