@@ -37,7 +37,7 @@ jobs:
 
       - name: composer
         run: |
-           composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci dev-master
+           composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci ^3
            echo "NVM_DIR=$HOME/.nvm" >> $GITHUB_ENV
            echo $(cd ci/bin; pwd) >> $GITHUB_PATH
            echo $(cd ci/vendor/bin; pwd) >> $GITHUB_PATH
@@ -45,7 +45,7 @@ jobs:
            sudo systemctl start mysql.service
 
       - name: install Moodle
-        run: moodle-plugin-ci install --db-user=root --db-pass=root --db-host=127.0.0.1
+        run: moodle-plugin-ci install --db-user=root --db-pass=root --db-host=127.0.0.1  --plugin this-plugin
         env:
           DB: ${{ matrix.database }}
           MOODLE_BRANCH: ${{ matrix.moodle-branch }}
