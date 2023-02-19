@@ -2175,6 +2175,7 @@ $mapping = array(
     'Aws\data\pricing\2017-10-15\endpoint-tests-1.json' => __DIR__ . '/Aws/data/pricing/2017-10-15/endpoint-tests-1.json.php',
     'Aws\data\pricing\2017-10-15\paginators-1.json' => __DIR__ . '/Aws/data/pricing/2017-10-15/paginators-1.json.php',
     'Aws\data\privatenetworks\2021-12-03\api-2.json' => __DIR__ . '/Aws/data/privatenetworks/2021-12-03/api-2.json.php',
+    'Aws\data\privatenetworks\2021-12-03\defaults-1.json' => __DIR__ . '/Aws/data/privatenetworks/2021-12-03/defaults-1.json.php',
     'Aws\data\privatenetworks\2021-12-03\endpoint-rule-set-1.json' => __DIR__ . '/Aws/data/privatenetworks/2021-12-03/endpoint-rule-set-1.json.php',
     'Aws\data\privatenetworks\2021-12-03\endpoint-tests-1.json' => __DIR__ . '/Aws/data/privatenetworks/2021-12-03/endpoint-tests-1.json.php',
     'Aws\data\privatenetworks\2021-12-03\paginators-1.json' => __DIR__ . '/Aws/data/privatenetworks/2021-12-03/paginators-1.json.php',
