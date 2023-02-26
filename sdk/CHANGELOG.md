@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 3.260.3 - 2023-02-24
+
+* `Aws\Connect` - StartTaskContact API now supports linked task creation with a new optional RelatedContactId parameter
+* `Aws\ConnectCases` - This release adds the ability to delete domains through the DeleteDomain API. For more information see https://docs.aws.amazon.com/cases/latest/APIReference/Welcome.html
+* `Aws\Redshift` - Documentation updates for Redshift API bringing it in line with IAM best practices.
+* `Aws\SecurityHub` - New Security Hub APIs and updates to existing APIs that help you consolidate control findings and enable and disable controls across all supported standards
+* `Aws\ServiceCatalog` - Documentation updates for Service Catalog
+
+## 3.260.2 - 2023-02-23
+
+* `Aws\Appflow` - This release enables the customers to choose whether to use Private Link for Metadata and Authorization call when using a private Salesforce connections
+* `Aws\ECS` - This release supports deleting Amazon ECS task definitions that are in the INACTIVE state.
+* `Aws\GuardDuty` - Updated API and data types descriptions for CreateFilter, UpdateFilter, and TriggerDetails.
+* `Aws\IoTWireless` - In this release, we add additional capabilities for the FUOTA which allows user to configure the fragment size, the sending interval and the redundancy ratio of the FUOTA tasks
+* `Aws\LocationService` - This release adds support for using Maps APIs with an API Key in addition to AWS Cognito. This includes support for adding, listing, updating and deleting API Keys.
+* `Aws\Macie2` - This release adds support for a new finding type, Policy:IAMUser/S3BucketSharedWithCloudFront, and S3 bucket metadata that indicates if a bucket is shared with an Amazon CloudFront OAI or OAC.
+* `Aws\ManagedGrafana` - Doc-only update. Updated information on attached role policies for customer provided roles
+* `Aws\WAFV2` - You can now associate an AWS WAF v2 web ACL with an AWS App Runner service.
+
+## 3.260.1 - 2023-02-22
+
+* `Aws\ChimeSDKVoice` - This release introduces support for Voice Connector media metrics in the Amazon Chime SDK Voice namespace
+* `Aws\CloudFront` - CloudFront now supports block lists in origin request policies so that you can forward all headers, cookies, or query string from viewer requests to the origin *except* for those specified in the block list.
+* `Aws\CloudWatchRUM` - CloudWatch RUM now supports CloudWatch Custom Metrics
+* `Aws\DataSync` - AWS DataSync has relaxed the minimum length constraint of AccessKey for Object Storage locations to 1.
+* `Aws\OpenSearchService` - This release lets customers configure Off-peak window and software update related properties for a new/existing domain. It enhances the capabilities of StartServiceSoftwareUpdate API; adds 2 new APIs - ListScheduledActions & UpdateScheduledAction; and allows Auto-tune to make use of Off-peak window.
+* `Aws\SSM` - Document only update for Feb 2023
+
+## 3.260.0 - 2023-02-21
+
+* `Aws\QuickSight` - S3 data sources now accept a custom IAM role.
+* `Aws\ResilienceHub` - In this release we improved resilience hub application creation and maintenance by introducing new resource and app component crud APIs, improving visibility and maintenance of application input sources and added support for additional information attributes to be provided by customers.
+* `Aws\SecurityHub` - Documentation updates for AWS Security Hub
+* `Aws\Tnb` - This is the initial SDK release for AWS Telco Network Builder (TNB). AWS Telco Network Builder is a network automation service that helps you deploy and manage telecom networks.
+
+## 3.259.1 - 2023-02-20
+
+* `Aws\AuditManager` - This release introduces a ServiceQuotaExceededException to the UpdateAssessmentFrameworkShare API operation.
+* `Aws\Connect` - Reasons for failed diff has been approved by SDK Reviewer
+
 ## 3.259.0 - 2023-02-17
 
 * `Aws\` - Emit a warning to users on PHP versions 7.2.4 and below that we are ending support for this language version on 08/15/2023
