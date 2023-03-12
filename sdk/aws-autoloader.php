@@ -967,6 +967,7 @@ $mapping = array(
     'Aws\data\accessanalyzer\2019-11-01\endpoint-tests-1.json' => __DIR__ . '/Aws/data/accessanalyzer/2019-11-01/endpoint-tests-1.json.php',
     'Aws\data\accessanalyzer\2019-11-01\paginators-1.json' => __DIR__ . '/Aws/data/accessanalyzer/2019-11-01/paginators-1.json.php',
     'Aws\data\account\2021-02-01\api-2.json' => __DIR__ . '/Aws/data/account/2021-02-01/api-2.json.php',
+    'Aws\data\account\2021-02-01\defaults-1.json' => __DIR__ . '/Aws/data/account/2021-02-01/defaults-1.json.php',
     'Aws\data\account\2021-02-01\endpoint-rule-set-1.json' => __DIR__ . '/Aws/data/account/2021-02-01/endpoint-rule-set-1.json.php',
     'Aws\data\account\2021-02-01\endpoint-tests-1.json' => __DIR__ . '/Aws/data/account/2021-02-01/endpoint-tests-1.json.php',
     'Aws\data\account\2021-02-01\paginators-1.json' => __DIR__ . '/Aws/data/account/2021-02-01/paginators-1.json.php',
