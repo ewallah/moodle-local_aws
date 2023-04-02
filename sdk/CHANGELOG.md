@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## 3.263.1 - 2023-03-31
+
+* `Aws\EC2` - Documentation updates for EC2 On Demand Capacity Reservations
+* `Aws\InternetMonitor` - This release adds a new feature for Amazon CloudWatch Internet Monitor that enables customers to deliver internet measurements to Amazon S3 buckets as well as CloudWatch Logs.
+* `Aws\ResilienceHub` - Adding EKS related documentation for appTemplateBody
+* `Aws\S3` - Documentation updates for Amazon S3
+* `Aws\SMS` - Deprecating AWS Server Migration Service.
+* `Aws\SageMakerFeatureStoreRuntime` - In this release, you can now chose between soft delete and hard delete when calling the DeleteRecord API, so you have more flexibility when it comes to managing online store data.
+
+## 3.263.0 - 2023-03-30
+
+* `Aws\Athena` - Make DefaultExecutorDpuSize and CoordinatorDpuSize fields optional in StartSession
+* `Aws\AutoScaling` - Amazon EC2 Auto Scaling now supports Elastic Load Balancing traffic sources with the AttachTrafficSources, DetachTrafficSources, and DescribeTrafficSources APIs. This release also introduces a new activity status, "WaitingForConnectionDraining", for VPC Lattice to the DescribeScalingActivities API.
+* `Aws\Batch` - This feature allows Batch on EKS to support configuration of Pod Labels through Metadata for Batch on EKS Jobs.
+* `Aws\ComputeOptimizer` - This release adds support for HDD EBS volume types and io2 Block Express. We are also adding support for 61 new instance types and instances that have non consecutive runtime.
+* `Aws\Credentials` - Fixes a bug with the new SSO login flow where the wrong index was being looked at for the SSO client provider region
+* `Aws\EC2` - This release adds support for Tunnel Endpoint Lifecycle control, a new feature that provides Site-to-Site VPN customers with better visibility and control of their VPN tunnel maintenance updates.
+* `Aws\EMR` - Updated DescribeCluster and ListClusters API responses to include ErrorDetail that specifies error code, programmatically accessible error data,and an error message. ErrorDetail provides the underlying reason for cluster failure and recommends actions to simplify troubleshooting of EMR clusters.
+* `Aws\Glue` - This release adds support for AWS Glue Data Quality, which helps you evaluate and monitor the quality of your data and includes the API for creating, deleting, or updating data quality rulesets, runs and evaluations.
+* `Aws\GuardDuty` - Added EKS Runtime Monitoring feature support to existing detector, finding APIs and introducing new Coverage APIs
+* `Aws\IVS` - Amazon Interactive Video Service (IVS) now offers customers the ability to configure IVS channels to allow insecure RTMP ingest.
+* `Aws\NetworkFirewall` - AWS Network Firewall added TLS inspection configurations to allow TLS traffic inspection.
+* `Aws\SageMakerGeospatial` - Amazon SageMaker geospatial capabilities now supports server-side encryption with customer managed KMS key and SageMaker notebooks with a SageMaker geospatial image in a Amazon SageMaker Domain with VPC only mode.
+* `Aws\Token` - Removes an instance of the utf8_encode function that was deprecated as of 8.2
+* `Aws\VPCLattice` - General Availability (GA) release of Amazon VPC Lattice
+* `Aws\WellArchitected` - AWS Well-Architected SDK now supports getting consolidated report metrics and generating a consolidated report PDF.
+* `Aws\drs` - Adding a field to the replication configuration APIs to support the auto replicate new disks feature. We also deprecated RetryDataReplication.
+* `Aws\imagebuilder` - Adds support for new image workflow details and image vulnerability detection.
+* `Aws\kendra` - AWS Kendra now supports featured results for a query.
+
+## 3.262.4 - 2023-03-29
+
+* `Aws\OpenSearchServerless` - This release includes two new exception types "ServiceQuotaExceededException" and "OcuLimitExceededException".
+* `Aws\RDS` - Add support for creating a read replica DB instance from a Multi-AZ DB cluster.
+
+## 3.262.3 - 2023-03-28
+
+* `Aws\IoTDataPlane` - Add endpoint ruleset support for cn-north-1.
+* `Aws\SSMContacts` - This release adds 12 new APIs as part of Oncall Schedule feature release, adds support for a new contact type: ONCALL_SCHEDULE. Check public documentation for AWS ssm-contacts for more information
+* `Aws\SSMIncidents` - Increased maximum length of "TriggerDetails.rawData" to 10K characters and "IncidentSummary" to 8K characters.
+
+## 3.262.2 - 2023-03-27
+
+* `Aws\AppRegistry` - In this release, we started supporting ARN in applicationSpecifier and attributeGroupSpecifier. GetAttributeGroup, ListAttributeGroups and ListAttributeGroupsForApplication APIs will now have CreatedBy field in the response.
+* `Aws\Athena` - Enforces a minimal level of encryption for the workgroup for query and calculation results that are written to Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by the administrator or higher when they submit queries.
+* `Aws\ChimeSDKVoice` - Documentation updates for Amazon Chime SDK Voice.
+* `Aws\Connect` - This release introduces support for RelatedContactId in the StartChatContact API. Interactive message and interactive message response have been added to the list of supported message content types for this API as well.
+* `Aws\ConnectParticipant` - This release provides an update to the SendMessage API to handle interactive message response content-types.
+* `Aws\IoTWireless` - Introducing new APIs that enable Sidewalk devices to communicate with AWS IoT Core through Sidewalk gateways. This will empower AWS customers to connect Sidewalk devices with other AWS IoT Services, creating possibilities for seamless integration and advanced device management.
+* `Aws\MediaLive` - AWS Elemental MediaLive now supports ID3 tag insertion for audio only HLS output groups. AWS Elemental Link devices now support tagging.
+* `Aws\SageMaker` - Fixed some improperly rendered links in SDK documentation.
+* `Aws\SecurityHub` - Added new resource detail objects to ASFF, including resources for AwsEksCluster, AWSS3Bucket, AwsEc2RouteTable and AwsEC2Instance.
+* `Aws\VoiceID` - Amazon Connect Voice ID now supports multiple fraudster watchlists. Every domain has a default watchlist where all existing fraudsters are placed by default. Custom watchlists may now be created, managed, and evaluated against for known fraudster detection.
+
 ## 3.262.1 - 2023-03-24
 
 * `Aws\CloudWatch` - Doc-only update to correct alarm actions list
