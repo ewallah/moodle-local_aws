@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 3.263.11 - 2023-04-14
+
+* `Aws\ECS` - This release supports ephemeral storage for AWS Fargate Windows containers.
+* `Aws\Lambda` - This release adds SnapStart related exceptions to InvokeWithResponseStream API. IAM access related documentation is also added for this API.
+* `Aws\MigrationHubRefactorSpaces` - Doc only update for Refactor Spaces environments without network bridge feature.
+* `Aws\RDS` - This release adds support of modifying the engine mode of database clusters.
+
+## 3.263.10 - 2023-04-13
+
+* `Aws\ChimeSDKVoice` - This release adds tagging support for Voice Connectors and SIP Media Applications
+* `Aws\MediaConnect` - Gateway is a new feature of AWS Elemental MediaConnect. Gateway allows the deployment of on-premises resources for the purpose of transporting live video to and from the AWS Cloud.
+
+## 3.263.9 - 2023-04-12
+
+* `Aws\GroundStation` - AWS Ground Station Wideband DigIF GA Release
+* `Aws\ManagedBlockchain` - Removal of the Ropsten network. The Ethereum foundation ceased support of Ropsten on December 31st, 2022..
+
+## 3.263.8 - 2023-04-11
+
+* `Aws\ECRPublic` - This release will allow using registry alias as registryId in BatchDeleteImage request.
+* `Aws\EMRServerless` - This release extends GetJobRun API to return job run timeout (executionTimeoutMinutes) specified during StartJobRun call (or default timeout of 720 minutes if none was specified).
+* `Aws\EventBridge` - EventBridge PutTarget support for multiple SQL arguments on RedshiftDataParameters
+* `Aws\IoT` - Re-release to remove unexpected API changes
+* `Aws\IoTDataPlane` - This release adds support for MQTT5 user properties when calling the AWS IoT GetRetainedMessage API
+* `Aws\WAFV2` - For web ACLs that protect CloudFront protections, the default request body inspection size is now 16 KB, and you can use the new association configuration to increase the inspection size further, up to 64 KB. Sizes over 16 KB can incur additional costs.
+
+## 3.263.7 - 2023-04-10
+
+* `Aws\Connect` - This release adds the ability to configure an agent's routing profile to receive contacts from multiple channels at the same time via extending the UpdateRoutingProfileConcurrency, CreateRoutingProfile and DescribeRoutingProfile APIs.
+* `Aws\ECS` - This release adds support for enabling FIPS compliance on Amazon ECS Fargate tasks
+* `Aws\MarketplaceCatalog` - Added three new APIs to support resource sharing: GetResourcePolicy, PutResourcePolicy, and DeleteResourcePolicy. Added new OwnershipType field to ListEntities request to let users filter on entities that are shared with them. Increased max page size of ListEntities response from 20 to 50 results.
+* `Aws\MediaConvert` - AWS Elemental MediaConvert SDK now supports conversion of 608 paint-on captions to pop-on captions for SCC sources.
+* `Aws\Omics` - Remove unexpected API changes.
+* `Aws\Rekognition` - This release adds support for Face Liveness APIs in Amazon Rekognition. Updates UpdateStreamProcessor to return ResourceInUseException Exception. Minor updates to API documentation.
+
 ## 3.263.6 - 2023-04-07
 
 * `Aws\DLM` - Updated timestamp format for GetLifecyclePolicy API
