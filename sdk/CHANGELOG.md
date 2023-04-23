@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 3.268.16 - 2023-04-21
+
+* `Aws\Connect` - This release adds a new API CreateParticipant. For Amazon Connect Chat, you can use this new API to customize chat flow experiences.
+* `Aws\ECS` - Documentation update to address various Amazon ECS tickets.
+* `Aws\FMS` - AWS Firewall Manager adds support for multiple administrators. You can now delegate more than one administrator per organization.
+
+## 3.263.14 - 2023-04-20
+
+* `Aws\Chime` - Adds support for Hindi and Thai languages and additional Amazon Transcribe parameters to the StartMeetingTranscription API.
+* `Aws\ChimeSDKMediaPipelines` - This release adds support for specifying the recording file format in an S3 recording sink configuration.
+* `Aws\ChimeSDKMeetings` - Adds support for Hindi and Thai languages and additional Amazon Transcribe parameters to the StartMeetingTranscription API.
+* `Aws\GameLift` - Amazon GameLift supports creating Builds for Windows 2016 operating system.
+* `Aws\GuardDuty` - This release adds support for the new Lambda Protection feature.
+* `Aws\IoT` - Support additional OTA states in GetOTAUpdate API
+* `Aws\SageMaker` - Amazon SageMaker Canvas adds ModelRegisterSettings support for CanvasAppSettings.
+* `Aws\Snowball` - Adds support for Amazon S3 compatible storage. AWS Snow Family customers can now use Amazon S3 compatible storage on Snowball Edge devices. Also adds support for V3_5S. This is a refreshed AWS Snowball Edge Storage Optimized device type with 210TB SSD (customer usable).
+* `Aws\WAFV2` - You can now create encrypted API keys to use in a client application integration of the JavaScript CAPTCHA API . You can also retrieve a list of your API keys and the JavaScript application integration URL.
+
+## 3.263.13 - 2023-04-19
+
+* `Aws\Comprehend` - This release supports native document models for custom classification, in addition to plain-text models. You train native document models using documents (PDF, Word, images) in their native format.
+* `Aws\ECS` - This release supports the Account Setting "TagResourceAuthorization" that allows for enhanced Tagging security controls.
+* `Aws\RAM` - This release adds support for customer managed permissions. Customer managed permissions enable customers to author and manage tailored permissions for resources shared using RAM.
+* `Aws\RDS` - Adds support for the ImageId parameter of CreateCustomDBEngineVersion to RDS Custom for Oracle
+* `Aws\S3` - Provides support for "Snow" Storage class.
+* `Aws\S3` - Removes ACL from bucket creation in S3 Streamwrapper.
+* `Aws\S3Control` - Provides support for overriding endpoint when region is "snow". This will enable bucket APIs for Amazon S3 Compatible storage on Snow Family devices.
+* `Aws\SecretsManager` - Documentation updates for Secrets Manager
+* `Aws\SecurityHub` - Update that adds SDK code examples for Security Hub
+
+## 3.263.12 - 2023-04-17
+
+* `Aws\Appflow` - This release adds a Client Token parameter to the following AppFlow APIs: Create/Update Connector Profile, Create/Update Flow, Start Flow, Register Connector, Update Connector Registration. The Client Token parameter allows idempotent operations for these APIs.
+* `Aws\DynamoDB` - Documentation updates for DynamoDB API
+* `Aws\EMRServerless` - The GetJobRun API has been updated to include the job's billed resource utilization. This utilization shows the aggregate vCPU, memory and storage that AWS has billed for the job run. The billed resources include a 1-minute minimum usage for workers, plus additional storage over 20 GB per worker.
+* `Aws\InternetMonitor` - This release includes a new configurable value, TrafficPercentageToMonitor, which allows users to adjust the amount of traffic monitored by percentage
+* `Aws\IoTWireless` - Supports the new feature of LoRaWAN roaming, allows to configure MaxEirp for LoRaWAN gateway, and allows to configure PingSlotPeriod for LoRaWAN multicast group
+* `Aws\Lambda` - Add Python 3.10 (python3.10) support to AWS Lambda
+* `Aws\drs` - Changed existing APIs and added new APIs to support using an account-level launch configuration template with AWS Elastic Disaster Recovery.
+
 ## 3.263.11 - 2023-04-14
 
 * `Aws\ECS` - This release supports ephemeral storage for AWS Fargate Windows containers.
