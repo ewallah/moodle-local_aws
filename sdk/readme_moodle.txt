@@ -5,7 +5,6 @@
 
 SDKDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-
 find $SDKDIR -mindepth 1 -maxdepth 1 | grep -v readme_moodle.txt | xargs rm -rf
 wget -O $SDKDIR/sdk.zip "http://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip"
 unzip $SDKDIR/sdk.zip -d $SDKDIR
@@ -21,8 +20,15 @@ echo $SDKDIR
 VERS=$(sed '3q;d' CHANGELOG.md | awk '{print $2}')
 echo $VERS
 cd ..
-sed -i -e '30s/.*/$plugin->release   = "'$VERS'";/' version.php
+sed -i -e '30s/.*/$plugin->release = "'$VERS'";/' version.php
 sed -i -e '6s/.*/        <version>'$VERS'<\/version>/' thirdpartylibs.xml
+git checkout main
 git add sdk
 git commit -am $VERS
-git push ewa
+#git push ewa
+git checkout dev
+sed -i -e '/GuzzleHttp\\/d' $SDKDIR/aws-autoloader.php
+sed -i -e '/Psr\\Http\\/d' $SDKDIR/aws-autoloader.php
+git commit -am $VERS
+#git push ewa
+
