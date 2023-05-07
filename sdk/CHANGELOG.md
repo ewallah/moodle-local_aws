@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.269.7 - 2023-05-05
+
+* `Aws\EC2` - This release adds support the inf2 and trn1n instances. inf2 instances are purpose built for deep learning inference while trn1n instances are powered by AWS Trainium accelerators and they build on the capabilities of Trainium-powered trn1 instances.
+* `Aws\Inspector2` - Amazon Inspector now allows customers to search its vulnerability intelligence database if any of the Inspector scanning types are activated.
+* `Aws\MediaTailor` - This release adds support for AFTER_LIVE_EDGE mode configuration for avail suppression, and adding a fill-policy setting that sets the avail suppression to PARTIAL_AVAIL or FULL_AVAIL_ONLY when AFTER_LIVE_EDGE is enabled.
+* `Aws\SQS` - Revert previous SQS protocol change.
+
+## 3.269.6 - 2023-05-04
+
+* `Aws\CloudWatch` - Adds support for filtering by metric names in CloudWatch Metric Streams.
+* `Aws\ConfigService` - Updated ResourceType enum with new resource types onboarded by AWS Config in April 2023.
+* `Aws\Connect` - Remove unused InvalidParameterException from CreateParticipant API
+* `Aws\ECS` - Documentation update for new error type NamespaceNotFoundException for CreateCluster and UpdateCluster
+* `Aws\NetworkFirewall` - This release adds support for the Suricata REJECT option in midstream exception configurations.
+* `Aws\OpenSearchService` - DescribeDomainNodes: A new API that provides configuration information for nodes part of the domain
+* `Aws\QuickSight` - Add support for Topic, Dataset parameters and VPC
+* `Aws\Rekognition` - This release adds a new attribute FaceOccluded. Additionally, you can now select attributes individually (e.g. ["DEFAULT", "FACE_OCCLUDED", "AGE_RANGE"] instead of ["ALL"]), which can reduce response time.
+* `Aws\S3` - Documentation updates for Amazon S3
+* `Aws\SQS` - This release enables customers to call SQS using AWS JSON-1.0 protocol.
+* `Aws\SageMaker` - We added support for ml.inf2 and ml.trn1 family of instances on Amazon SageMaker for deploying machine learning (ML) models for Real-time and Asynchronous inference. You can use these instances to achieve high performance at a low cost for generative artificial intelligence (AI) models.
+* `Aws\SecurityHub` - Add support for Finding History.
+
+## 3.269.5 - 2023-05-03
+
+* `Aws\AppSync` - Private API support for AWS AppSync. With Private APIs, you can now create GraphQL APIs that can only be accessed from your Amazon Virtual Private Cloud ("VPC").
+* `Aws\EC2` - Adds an SDK paginator for GetNetworkInsightsAccessScopeAnalysisFindings
+* `Aws\Inspector2` - This feature provides deep inspection for linux based instance
+* `Aws\IoTTwinMaker` - This release adds a field for GetScene API to return error code and message from dependency services.
+* `Aws\NetworkFirewall` - AWS Network Firewall now supports policy level HOME_NET variable overrides.
+* `Aws\OpenSearchService` - Amazon OpenSearch Service adds the option to deploy a domain across multiple Availability Zones, with each AZ containing a complete copy of data and with nodes in one AZ acting as a standby. This option provides 99.99% availability and consistent performance in the event of infrastructure failure.
+* `Aws\WellArchitected` - This release deepens integration with AWS Service Catalog AppRegistry to improve workload resource discovery.
+
+## 3.269.4 - 2023-05-02
+
+* `Aws\Appflow` - This release adds new API to cancel flow executions.
+* `Aws\Connect` - Amazon Connect Service Rules API update: Added OnContactEvaluationSubmit event source to support user configuring evaluation form rules.
+* `Aws\ECS` - Documentation only update to address Amazon ECS tickets.
+* `Aws\ResilienceHub` - This release will improve resource level transparency in applications by discovering previously hidden resources.
+* `Aws\SageMaker` - Amazon Sagemaker Autopilot supports training models with sample weights and additional objective metrics.
+* `Aws\kendra` - AWS Kendra now supports configuring document fields/attributes via the GetQuerySuggestions API. You can now base query suggestions on the contents of document fields.
+
+## 3.269.3 - 2023-05-01
+
+* `Aws\ComputeOptimizer` - support for tag filtering within compute optimizer. ability to filter recommendation results by tag and tag key value pairs. ability to filter by inferred workload type added.
+* `Aws\KMS` - This release makes the NitroEnclave request parameter Recipient and the response field for CiphertextForRecipient available in AWS SDKs. It also adds the regex pattern for CloudHsmClusterId validation.
+
 ## 3.269.2 - 2023-04-28
 
 * `Aws\Appflow` - Adds Jwt Support for Salesforce Credentials.
