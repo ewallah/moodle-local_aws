@@ -1,5 +1,36 @@
 # CHANGELOG
 
+## 3.269.11 - 2023-05-11
+
+* `Aws\Connect` - This release updates GetMetricDataV2 API, to support metric data up-to last 35 days
+* `Aws\ElastiCache` - Added support to modify the cluster mode configuration for the existing ElastiCache ReplicationGroups. Customers can now modify the configuration from cluster mode disabled to cluster mode enabled.
+* `Aws\ElasticsearchService` - This release fixes DescribePackages API error with null filter value parameter.
+* `Aws\Health` - Add support for regional endpoints
+* `Aws\IVSRealTime` - Add methods for inspecting and debugging stages: ListStageSessions, GetStageSession, ListParticipants, GetParticipant, and ListParticipantEvents.
+* `Aws\Omics` - This release provides support for Ready2Run and GPU workflows, an improved read set filter, the direct upload of read sets into Omics Storage, and annotation parsing for analytics stores.
+* `Aws\OpenSearchService` - This release fixes DescribePackages API error with null filter value parameter.
+* `Aws\Route53Resolver` - Update FIPS endpoints for GovCloud (US) regions in SDK.
+* `Aws\Support` - This release adds 2 new Support APIs, DescribeCreateCaseOptions and DescribeSupportedLanguages. You can use these new APIs to get available support languages.
+
+## 3.269.10 - 2023-05-10
+
+* `Aws\EMR` - EMR Studio now supports programmatically executing a Notebooks on an EMR on EKS cluster. In addition, notebooks can now be executed by specifying its location in S3.
+* `Aws\RDS` - Amazon Relational Database Service (RDS) updates for the new Aurora I/O-Optimized storage type for Amazon Aurora DB clusters
+* `Aws\SWF` - This release adds a new API parameter to exclude old history events from decision tasks.
+
+## 3.269.9 - 2023-05-09
+
+* `Aws\ApplicationAutoScaling` - With this release, Amazon SageMaker Serverless Inference customers can use Application Auto Scaling to auto scale the provisioned concurrency of their serverless endpoints.
+* `Aws\Glue` - This release adds AmazonRedshift Source and Target nodes in addition to DynamicTransform OutputSchemas
+* `Aws\SageMaker` - This release includes support for (1) Provisioned Concurrency for Amazon SageMaker Serverless Inference and (2) UpdateEndpointWeightsAndCapacities API for Serverless endpoints.
+
+## 3.269.8 - 2023-05-08
+
+* `Aws\Glue` - Support large worker types G.4x and G.8x for Glue Spark
+* `Aws\GuardDuty` - Add AccessDeniedException 403 Error message code to support 3 Tagging related APIs
+* `Aws\IoTSiteWise` - Provide support for 20,000 max results for GetAssetPropertyValueHistory/BatchGetAssetPropertyValueHistory and 15 minute aggregate resolution for GetAssetPropertyAggregates/BatchGetAssetPropertyAggregates
+* `Aws\STS` - Documentation updates for AWS Security Token Service.
+
 ## 3.269.7 - 2023-05-05
 
 * `Aws\EC2` - This release adds support the inf2 and trn1n instances. inf2 instances are purpose built for deep learning inference while trn1n instances are powered by AWS Trainium accelerators and they build on the capabilities of Trainium-powered trn1 instances.
