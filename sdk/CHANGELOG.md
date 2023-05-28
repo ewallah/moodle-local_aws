@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## 3.271.3 - 2023-05-26
+
+* `Aws\Connect` - Documentation update for a new Initiation Method value in DescribeContact API
+* `Aws\IoTWireless` - Add Multicast Group support in Network Analyzer Configuration.
+* `Aws\SageMaker` - Added ml.p4d and ml.inf1 as supported instance type families for SageMaker Notebook Instances.
+
+## 3.271.2 - 2023-05-25
+
+* `Aws\ApplicationAutoScaling` - With this release, ElastiCache customers will be able to use predefined metricType "ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage" for their ElastiCache instances.
+* `Aws\CodePipeline` - Add PollingDisabledAt time information in PipelineMetadata object of GetPipeline API.
+* `Aws\GameLift` - GameLift FleetIQ users can now filter game server claim requests to exclude servers on instances that are draining.
+* `Aws\Glue` - Added ability to create data quality rulesets for shared, cross-account Glue Data Catalog tables. Added support for dataset comparison rules through a new parameter called AdditionalDataSources. Enhanced the data quality results with a map containing profiled metric values.
+* `Aws\MigrationHubRefactorSpaces` - This SDK update allows for path parameter syntax to be passed to the CreateRoute API. Path parameter syntax require parameters to be enclosed in {} characters. This update also includes a new AppendSourcePath field which lets users forward the source path to the Service URL endpoint.
+* `Aws\SageMaker` - Amazon SageMaker Automatic Model Tuning now supports enabling Autotune for tuning jobs which can choose tuning job configurations.
+
+## 3.271.1 - 2023-05-24
+
+* `Aws\AppSync` - This release introduces AppSync Merged APIs, which provide the ability to compose multiple source APIs into a single federated/merged API.
+* `Aws\Connect` - Amazon Connect Evaluation Capabilities: validation improvements
+* `Aws\CostandUsageReportService` - Add support for split cost allocation data on a report.
+* `Aws\SageMaker` - SageMaker now provides an instantaneous deployment recommendation through the DescribeModel API
+
+## 3.271.0 - 2023-05-23
+
+* `Aws\` - Added support for calling TranslateDocument API.
+* `Aws\` - Added ModelNameEquals, ModelPackageVersionArnEquals in request and ModelName, SamplePayloadUrl, ModelPackageVersionArn in response of ListInferenceRecommendationsJobs API. Added Invocation timestamps in response of DescribeInferenceRecommendationsJob API & ListInferenceRecommendationsJobSteps API.
+* `Aws\` - Fixes issue that could cause calls to GetAdminScope and ListAdminAccountsForOrganization to return a 500 Internal Server error.
+
+## 3.270.1 - 2023-05-22
+
+* `Aws\Backup` - Added support for tags on restore.
+* `Aws\Pinpoint` - Amazon Pinpoint is deprecating the tags parameter in the UpdateSegment, UpdateCampaign, UpdateEmailTemplate, UpdateSmsTemplate, UpdatePushTemplate, UpdateInAppTemplate and UpdateVoiceTemplate. Amazon Pinpoint will end support tags parameter by May 22, 2023.
+* `Aws\QuickSight` - Add support for Asset Bundle, Geospatial Heatmaps.
+
 ## 3.270.0 - 2023-05-19
 
 * `Aws\Backup` - Add ResourceArn, ResourceType, and BackupVaultName to ListRecoveryPointsByLegalHold API response.
