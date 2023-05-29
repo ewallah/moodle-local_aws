@@ -9,8 +9,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        moodle-branch: ['master', MOODLE_401_STABLE]
-        php: ['8.0']
+        moodle-branch: ['master', MOODLE_401_STABLE, MOODLE_402_STABLE]
+        php: ['8.1']
         database: ['mysqli']
 
     name: ${{ matrix.moodle-branch }}  php ${{ matrix.php }}
@@ -22,13 +22,6 @@ jobs:
           path: this-plugin
           ref: main
 
-      - name: Double Guzzle
-        if: ${{ matrix.moodle-branch == 'master'}}
-        run: |
-          sed -i '/GuzzleHttp/d' this-plugin/sdk/aws-autoloader.php
-          sed -i '/Psr/d' this-plugin/sdk/aws-autoloader.php
-          sed -i -e 's/\\GuzzleHttp\\default_user_agent\(\)/ "PHP\\\\" \. PHP_VERSION/g' this-plugin/sdk/Aws/Handler/GuzzleV6/GuzzleHandler.php
-
       - name: setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -38,7 +31,7 @@ jobs:
 
       - name: composer
         run: |
-           composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci ^3
+           composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci ^4
            echo "NVM_DIR=$HOME/.nvm" >> $GITHUB_ENV
            echo $(cd ci/bin; pwd) >> $GITHUB_PATH
            echo $(cd ci/vendor/bin; pwd) >> $GITHUB_PATH
