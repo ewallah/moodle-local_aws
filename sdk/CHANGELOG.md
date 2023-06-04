@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 3.271.7 - 2023-06-02
+
+* `Aws\Athena` - This release introduces the DeleteCapacityReservation API and the ability to manage capacity reservations using CloudFormation
+* `Aws\CloudTrail` - This feature allows users to start and stop event ingestion on a CloudTrail Lake event data store.
+* `Aws\SageMaker` - This release adds Selective Execution feature that allows SageMaker Pipelines users to run selected steps in a pipeline.
+* `Aws\WAFV2` - Added APIs to describe managed products. The APIs retrieve information about rule groups that are managed by AWS and by AWS Marketplace sellers.
+
+## 3.271.6 - 2023-06-01
+
+* `Aws\AlexaForBusiness` - Alexa for Business has been deprecated and is no longer supported.
+* `Aws\Appflow` - Added ability to select DataTransferApiType for DescribeConnector and CreateFlow requests when using Async supported connectors. Added supportedDataTransferType to DescribeConnector/DescribeConnectors/ListConnector response.
+* `Aws\CustomerProfiles` - This release introduces calculated attribute related APIs.
+* `Aws\IVS` - API Update for IVS Advanced Channel type
+* `Aws\SageMaker` - Amazon Sagemaker Autopilot adds support for Parquet file input to NLP text classification jobs.
+* `Aws\WAFV2` - Corrected the information for the header order FieldToMatch setting
+
+## 3.271.5 - 2023-05-31
+
+* `Aws\ConfigService` - Resource Types Exclusion feature launch by AWS Config
+* `Aws\FraudDetector` - This release enables publishing event predictions from Amazon Fraud Detector (AFD) to Amazon EventBridge. For example, after getting predictions from AFD, Amazon EventBridge rules can be configured to trigger notification through an SNS topic, send a message with SES, or trigger Lambda workflows.
+* `Aws\HealthLake` - This release adds a new request parameter to the CreateFHIRDatastore API operation. IdentityProviderConfiguration specifies how you want to authenticate incoming requests to your Healthlake Data Store.
+* `Aws\MainframeModernization` - Adds an optional create-only 'roleArn' property to Application resources. Enables PS and PO data set org types.
+* `Aws\RDS` - This release adds support for changing the engine for Oracle using the ModifyDbInstance API
+* `Aws\ServiceCatalog` - Documentation updates for ServiceCatalog.
+* `Aws\WorkSpacesWeb` - WorkSpaces Web now allows you to control which IP addresses your WorkSpaces Web portal may be accessed from.
+
+## 3.271.4 - 2023-05-30
+
+* `Aws\ChimeSDKVoice` - Added optional CallLeg field to StartSpeakerSearchTask API request
+* `Aws\Glue` - Added Runtime parameter to allow selection of Ray Runtime
+* `Aws\GroundStation` - Updating description of GetMinuteUsage to be clearer.
+* `Aws\IoTFleetWise` - Campaigns now support selecting Timestream or S3 as the data destination, Signal catalogs now support "Deprecation" keyword released in VSS v2.1 and "Comment" keyword released in VSS v3.0
+* `Aws\LocationService` - This release adds API support for political views for the maps service APIs: CreateMap, UpdateMap, DescribeMap.
+* `Aws\MemoryDB` - Amazon MemoryDB for Redis now supports AWS Identity and Access Management authentication access to Redis clusters starting with redis-engine version 7.0
+* `Aws\Personalize` - This release provides support for the exclusion of certain columns for training when creating a solution and creating or updating a recommender with Amazon Personalize.
+* `Aws\Polly` - Amazon Polly adds 2 new voices - Sofie (da-DK) and Niamh (en-IE)
+* `Aws\SecurityHub` - Added new resource detail objects to ASFF, including resources for AwsGuardDutyDetector, AwsAmazonMqBroker, AwsEventSchemasRegistry, AwsAppSyncGraphQlApi and AwsStepFunctionStateMachine.
+* `Aws\SecurityLake` - Log sources are now versioned. AWS log sources and custom sources will now come with a version identifier that enables producers to vend multiple schema versions to subscribers. Security Lake API have been refactored to more closely align with AWS API conventions.
+* `Aws\WAFV2` - This SDK release provides customers the ability to use Header Order as a field to match.
+
 ## 3.271.3 - 2023-05-26
 
 * `Aws\Connect` - Documentation update for a new Initiation Method value in DescribeContact API
