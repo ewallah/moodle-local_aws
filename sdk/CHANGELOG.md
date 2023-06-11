@@ -1,5 +1,53 @@
 # CHANGELOG
 
+## 3.272.1 - 2023-06-09
+
+* `Aws\ACMPCA` - Document-only update to refresh CLI documentation for AWS Private CA. No change to the service.
+* `Aws\Connect` - This release adds search APIs for Prompts, Quick Connects and Hours of Operations, which can be used to search for those resources within a Connect Instance.
+* `Aws\S3` - Fixes a bug with checksum calculation of CRC32 in flexible checksums
+
+## 3.272.0 - 2023-06-08
+
+* `Aws\Athena` - You can now define custom spark properties at start of the session for use cases like cluster encryption, table formats, and general Spark tuning.
+* `Aws\ComprehendMedical` - This release supports a new set of entities and traits.
+* `Aws\PaymentCryptography` - Initial release of AWS Payment Cryptography Control Plane service for creating and managing cryptographic keys used during card payment processing.
+* `Aws\PaymentCryptographyData` - Initial release of AWS Payment Cryptography DataPlane Plane service for performing cryptographic operations typically used during card payment processing.
+* `Aws\ServiceCatalog` - New parameter added in ServiceCatalog DescribeProvisioningArtifact api - IncludeProvisioningArtifactParameters. This parameter can be used to return information about the parameters used to provision the product
+* `Aws\TimestreamWrite` - This release adds the capability for customers to define how their data should be partitioned, optimizing for certain access patterns. This definition will take place as a part of the table creation.
+
+## 3.271.10 - 2023-06-07
+
+* `Aws\CloudFormation` - AWS CloudFormation StackSets is updating the deployment experience for all stackset operations to skip suspended AWS accounts during deployments. StackSets will skip target AWS accounts that are suspended and set the Detailed Status of the corresponding stack instances as SKIPPED_SUSPENDED_ACCOUNT
+* `Aws\CloudWatchLogs` - This change adds support for account level data protection policies using 3 new APIs, PutAccountPolicy, DeleteAccountPolicy and DescribeAccountPolicy. DescribeLogGroup API has been modified to indicate if account level policy is applied to the LogGroup via "inheritedProperties" list in the response.
+* `Aws\CustomerProfiles` - This release introduces event stream related APIs.
+* `Aws\DirectConnect` - This update corrects the jumbo frames mtu values from 9100 to 8500 for transit virtual interfaces.
+* `Aws\EMRContainers` - EMR on EKS adds support for log rotation of Spark container logs with EMR-6.11.0 onwards, to the StartJobRun API.
+* `Aws\IoTDeviceAdvisor` - AWS IoT Core Device Advisor now supports new Qualification Suite test case list. With this update, customers can more easily create new qualification test suite with an empty rootGroup input.
+
+## 3.271.9 - 2023-06-06
+
+* `Aws\Connect` - GetMetricDataV2 API is now available in AWS GovCloud(US) region.
+* `Aws\EMR` - This release provides customers the ability to specify an allocation strategies amongst PRICE_CAPACITY_OPTIMIZED, CAPACITY_OPTIMIZED, LOWEST_PRICE, DIVERSIFIED for Spot instances in Instance Feet cluster. This enables customers to choose an allocation strategy best suited for their workload.
+* `Aws\IAM` - This release updates the AccountAlias regex pattern with the same length restrictions enforced by the length constraint.
+* `Aws\Inspector2` - Adds new response properties and request parameters for 'last scanned at' on the ListCoverage operation. This feature allows you to search and view the date of which your resources were last scanned by Inspector.
+* `Aws\IoT` - Adding IoT Device Management Software Package Catalog APIs to register, store, and report system software packages, along with their versions and metadata in a centralized location.
+* `Aws\IoTDataPlane` - Update thing shadow name regex to allow '$' character
+* `Aws\LexModelsV2` - This release adds support for Lex Developers to create test sets and to execute those test-sets against their bots.
+* `Aws\QuickSight` - QuickSight support for pivot table field collapse state, radar chart range scale and multiple scope options in conditional formatting.
+* `Aws\SQS` - Amazon SQS adds three new APIs - StartMessageMoveTask, CancelMessageMoveTask, and ListMessageMoveTasks to automate redriving messages from dead-letter queues to source queues or a custom destination.
+* `Aws\signer` - AWS Signer is launching Container Image Signing, a new feature that enables you to sign and verify container images. This feature enables you to validate that only container images you approve are used in your enterprise.
+
+## 3.271.8 - 2023-06-05
+
+* `Aws\CloudFormation` - AWS CloudFormation StackSets provides customers with three new APIs to activate, deactivate, and describe AWS Organizations trusted access which is needed to get started with service-managed StackSets.
+* `Aws\EC2` - Making InstanceTagAttribute as the required parameter for the DeregisterInstanceEventNotificationAttributes and RegisterInstanceEventNotificationAttributes APIs.
+* `Aws\FraudDetector` - Added new variable types, new DateTime data type, and new rules engine functions for interacting and working with DateTime data types.
+* `Aws\KMS` - This release includes feature to import customer's asymmetric (RSA and ECC) and HMAC keys into KMS. It also includes feature to allow customers to specify number of days to schedule a KMS key deletion as a policy condition key.
+* `Aws\Keyspaces` - This release adds support for MRR GA launch, and includes multiregion support in create-keyspace, get-keyspace, and list-keyspace.
+* `Aws\Lambda` - Add Ruby 3.2 (ruby3.2) Runtime support to AWS Lambda.
+* `Aws\MWAA` - This release adds ROLLING_BACK and CREATING_SNAPSHOT environment statuses for Amazon MWAA environments.
+* `Aws\finspace` - Releasing new Managed kdb Insights APIs
+
 ## 3.271.7 - 2023-06-02
 
 * `Aws\Athena` - This release introduces the DeleteCapacityReservation API and the ability to manage capacity reservations using CloudFormation
