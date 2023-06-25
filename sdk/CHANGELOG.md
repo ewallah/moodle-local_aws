@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## 3.273.7 - 2023-06-23
+
+* `Aws\DevOpsGuru` - This release adds support for encryption via customer managed keys.
+* `Aws\FSx` - Update to Amazon FSx documentation.
+* `Aws\RDS` - Documentation improvements for create, describe, and modify DB clusters and DB instances.
+* `Aws\VerifiedPermissions` - Added improved descriptions and new code samples to SDK documentation.
+
+## 3.273.6 - 2023-06-22
+
+* `Aws\ChimeSDKIdentity` - AppInstanceBots can be configured to be invoked or not using the Target or the CHIME.mentions attribute for ChannelMessages
+* `Aws\ChimeSDKMessaging` - ChannelMessages can be made visible to sender and intended recipient rather than all channel members with the target attribute. For example, a user can send messages to a bot and receive messages back in a group channel without other members seeing them.
+* `Aws\SFN` - Adds support for Versions and Aliases. Adds 8 operations: PublishStateMachineVersion, DeleteStateMachineVersion, ListStateMachineVersions, CreateStateMachineAlias, DescribeStateMachineAlias, UpdateStateMachineAlias, DeleteStateMachineAlias, ListStateMachineAliases
+* `Aws\kendra` - Introducing Amazon Kendra Retrieve API that can be used to retrieve relevant passages or text excerpts given an input query.
+
+## 3.273.5 - 2023-06-21
+
+* `Aws\DynamoDB` - Documentation updates for DynamoDB
+* `Aws\EMR` - This release introduces a new Amazon EMR EPI called ListSupportedInstanceTypes that returns a list of all instance types supported by a given EMR release.
+* `Aws\Inspector2` - This release adds support for Software Bill of Materials (SBOM) export and the general availability of code scanning for AWS Lambda functions.
+* `Aws\MQ` - The Cross Region Disaster Recovery feature allows to replicate a brokers state from one region to another in order to provide customers with multi-region resiliency in the event of a regional outage.
+* `Aws\MediaConvert` - This release introduces the bandwidth reduction filter for the HEVC encoder, increases the limits of outputs per job, and updates support for the Nagra SDK to version 1.14.7.
+* `Aws\SageMaker` - This release provides support in SageMaker for output files in training jobs to be uploaded without compression and enable customer to deploy uncompressed model from S3 to real-time inference Endpoints. In addition, ml.trn1n.32xlarge is added to supported instance type list in training job.
+* `Aws\Transfer` - This release adds a new parameter StructuredLogDestinations to CreateServer, UpdateServer APIs.
+
+## 3.273.4 - 2023-06-20
+
+* `Aws\Appflow` - This release adds new API to reset connector metadata cache
+* `Aws\ConfigService` - Updated ResourceType enum with new resource types onboarded by AWS Config in May 2023.
+* `Aws\EC2` - Adds support for targeting Dedicated Host allocations by assetIds in AWS Outposts
+* `Aws\Lambda` - This release adds RecursiveInvocationException to the Invoke API and InvokeWithResponseStream API.
+* `Aws\Redshift` - Added support for custom domain names for Redshift Provisioned clusters. This feature enables customers to create a custom domain name and use ACM to generate fully secure connections to it.
+
+## 3.273.3 - 2023-06-19
+
+* `Aws\CloudFormation` - Specify desired CloudFormation behavior in the event of ChangeSet execution failure using the CreateChangeSet OnStackFailure parameter
+* `Aws\EC2` - API changes to AWS Verified Access to include data from trust providers in logs
+* `Aws\ECS` - Documentation only update to address various tickets.
+* `Aws\Glue` - This release adds support for creating cross region table/database resource links
+* `Aws\Pricing` - This release updates the PriceListArn regex pattern.
+* `Aws\Route53Domains` - Update MaxItems upper bound to 1000 for ListPricesRequest
+* `Aws\SageMaker` - Amazon Sagemaker Autopilot releases CreateAutoMLJobV2 and DescribeAutoMLJobV2 for Autopilot customers with ImageClassification, TextClassification and Tabular problem type config support.
+
 ## 3.273.2 - 2023-06-16
 
 * `Aws\Account` - Improve pagination support for ListRegions
