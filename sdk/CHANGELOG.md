@@ -1,5 +1,58 @@
 # CHANGELOG
 
+## 3.275.1 - 2023-06-30
+
+* `Aws\ECS` - Added new field "credentialspecs" to the ecs task definition to support gMSA of windows/linux in both domainless and domain-joined mode
+* `Aws\IVS` - Corrects the HTTP response code in the generated docs for PutMetadata and DeleteRecordingConfiguration APIs.
+* `Aws\MediaConvert` - This release includes improved color handling of overlays and general updates to user documentation.
+* `Aws\PrometheusService` - AWS SDK service model generation tool version upgrade.
+* `Aws\SageMaker` - This release adds support for rolling deployment in SageMaker Inference.
+* `Aws\Transfer` - Add outbound Basic authentication support to AS2 connectors
+* `Aws\VerifiedPermissions` - This release corrects several broken links in the documentation.
+
+## 3.275.0 - 2023-06-29
+
+* `Aws\` - Adds support for automatically compressing request bodies when a service supports it.
+* `Aws\AppStream` - This release introduces app block builder, allowing customers to provision a resource to package applications into an app block
+* `Aws\Chime` - The Amazon Chime SDK APIs in the Chime namespace are no longer supported. Customers should use APIs in the dedicated Amazon Chime SDK namespaces: ChimeSDKIdentity, ChimeSDKMediaPipelines, ChimeSDKMeetings, ChimeSDKMessaging, and ChimeSDKVoice.
+* `Aws\CleanRooms` - This release adds support for the OR operator in RSQL join match conditions and the ability to control which operators (AND, OR) are allowed in a join match condition.
+* `Aws\DynamoDB` - This release adds ReturnValuesOnConditionCheckFailure parameter to PutItem, UpdateItem, DeleteItem, ExecuteStatement, BatchExecuteStatement and ExecuteTransaction APIs. When set to ALL_OLD, API returns a copy of the item as it was when a conditional write failed
+* `Aws\GameLift` - Amazon GameLift now supports game builds that use the Amazon Linux 2023 (AL2023) operating system.
+* `Aws\Glue` - This release adds support for AWS Glue Crawler with Iceberg Tables, allowing Crawlers to discover Iceberg Tables in S3 and register them in Glue Data Catalog for query engines to query against.
+* `Aws\SageMaker` - Adding support for timeseries forecasting in the CreateAutoMLJobV2 API.
+
+## 3.274.1 - 2023-06-28
+
+* `Aws\InternetMonitor` - This release adds a new feature for Amazon CloudWatch Internet Monitor that enables customers to set custom thresholds, for performance and availability drops, for triggering when to create a health event.
+* `Aws\KinesisAnalyticsV2` - Support for new runtime environment in Kinesis Data Analytics Studio: Zeppelin-0.10, Apache Flink-1.15
+* `Aws\Lambda` - Surface ResourceConflictException in DeleteEventSourceMapping
+* `Aws\Omics` - Add Common Workflow Language (CWL) as a supported language for Omics workflows
+* `Aws\RDS` - Amazon Relational Database Service (RDS) now supports joining a RDS for SQL Server instance to a self-managed Active Directory.
+* `Aws\S3` - The S3 LISTObjects, ListObjectsV2 and ListObjectVersions API now supports a new optional header x-amz-optional-object-attributes. If header contains RestoreStatus as the value, then S3 will include Glacier restore status i.e. isRestoreInProgress and RestoreExpiryDate in List response.
+* `Aws\SageMaker` - This release adds support for Model Cards Model Registry integration.
+
+## 3.274.0 - 2023-06-27
+
+* `Aws\AppFabric` - Initial release of AWS AppFabric for connecting SaaS applications for better productivity and security.
+* `Aws\Appflow` - This release adds support to bypass SSO with the SAPOData connector when connecting to an SAP instance.
+* `Aws\EMRServerless` - This release adds support to update the release label of an EMR Serverless application to upgrade it to a different version of Amazon EMR via UpdateApplication API.
+* `Aws\IVS` - IVS customers can now revoke the viewer session associated with an auth token, to prevent and stop playback using that token.
+* `Aws\KinesisVideo` - General Availability (GA) release of Kinesis Video Streams at Edge, enabling customers to provide a configuration for the Kinesis Video Streams EdgeAgent running on an on-premise IoT device. Customers can now locally record from cameras and stream videos to the cloud on a configured schedule.
+* `Aws\Macie2` - This release adds support for configuring new classification jobs to use the set of managed data identifiers that we recommend for jobs. For the managed data identifier selection type (managedDataIdentifierSelector), specify RECOMMENDED.
+* `Aws\PrivateNetworks` - This release allows Private5G customers to choose different commitment plans (60-days, 1-year, 3-years) when placing new orders, enables automatic renewal option for 1-year and 3-years commitments. It also allows customers to update the commitment plan of an existing radio unit.
+* `Aws\SSM` - Systems Manager doc-only update for June 2023.
+* `Aws\SageMaker` - Introducing TTL for online store records in feature groups.
+* `Aws\SageMakerFeatureStoreRuntime` - Introducing TTL for online store records for feature groups.
+* `Aws\VerifiedPermissions` - This update fixes several broken links to the Cedar documentation.
+
+## 3.273.8 - 2023-06-26
+
+* `Aws\Connect` - This release provides a way to search for existing tags within an instance. Before tagging a resource, ensure consistency by searching for pre-existing key:value pairs.
+* `Aws\Glue` - Timestamp Starting Position For Kinesis and Kafka Data Sources in a Glue Streaming Job
+* `Aws\GuardDuty` - Add support for user.extra.sessionName in Kubernetes Audit Logs Findings.
+* `Aws\IAM` - Support for a new API "GetMFADevice" to present MFA device metadata such as device certifications
+* `Aws\Pinpoint` - Added time zone estimation support for journeys
+
 ## 3.273.7 - 2023-06-23
 
 * `Aws\DevOpsGuru` - This release adds support for encryption via customer managed keys.
