@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## 3.276.3 - 2023-07-21
+
+* `Aws\Glue` - This release adds support for AWS Glue Crawler with Apache Hudi Tables, allowing Crawlers to discover Hudi Tables in S3 and register them in Glue Data Catalog for query engines to query against.
+* `Aws\MediaConvert` - This release includes improvements to Preserve 444 handling, compatibility of HEVC sources without frame rates, and general improvements to MP4 outputs.
+* `Aws\RDS` - Adds support for the DBSystemID parameter of CreateDBInstance to RDS Custom for Oracle.
+* `Aws\WorkSpaces` - Fixed VolumeEncryptionKey descriptions
+
+## 3.276.2 - 2023-07-20
+
+* `Aws\CodeCatalyst` - This release adds support for updating and deleting spaces and projects in Amazon CodeCatalyst. It also adds support for creating, getting, and deleting source repositories in CodeCatalyst projects.
+* `Aws\ConnectCases` - This release adds the ability to assign a case to a queue or user.
+* `Aws\LexModelsV2` - This release updates type for Channel field in SessionSpecification and UtteranceSpecification
+* `Aws\Route53Resolver` - This release adds support for Route 53 On Outposts, a new feature that allows customers to run Route 53 Resolver and Resolver endpoints locally on their Outposts.
+* `Aws\S3` - Improve performance of S3 clients by simplifying and optimizing endpoint resolution.
+* `Aws\SageMaker` - Cross account support for SageMaker Feature Store
+* `Aws\SageMakerFeatureStoreRuntime` - Cross account support for SageMaker Feature Store
+* `Aws\SecurityLake` - Adding support for Tags on Create and Resource Tagging API.
+* `Aws\TranscribeService` - Added API argument --toxicity-detection to startTranscriptionJob API, which allows users to view toxicity scores of submitted audio.
+
+## 3.276.1 - 2023-07-20
+
+* `Aws\SavingsPlans` - Savings Plans endpoints update
+
+## 3.276.0 - 2023-07-19
+
+* `Aws\CloudFormation` - SDK and documentation updates for GetTemplateSummary API (unrecognized resources)
+* `Aws\EC2` - Amazon EC2 documentation updates.
+* `Aws\ManagedGrafana` - Amazon Managed Grafana now supports grafanaVersion update for existing workspaces with UpdateWorkspaceConfiguration API. DescribeWorkspaceConfiguration API additionally returns grafanaVersion. A new ListVersions API lists available versions or, if given a workspaceId, the versions it can upgrade to.
+* `Aws\MedicalImaging` - General Availability (GA) release of AWS Health Imaging, enabling customers to store, transform, and analyze medical imaging data at petabyte-scale.
+* `Aws\RAM` - This release adds support for securely sharing with AWS service principals.
+* `Aws\SsmSap` - Added support for SAP Hana High Availability discovery (primary and secondary nodes) and Backint agent installation with SSM for SAP.
+* `Aws\WAFV2` - Added the URI path to the custom aggregation keys that you can specify for a rate-based rule.
+
+## 3.275.9 - 2023-07-18
+
+* `Aws\CodeGuruSecurity` - Documentation updates for CodeGuru Security.
+* `Aws\Connect` - GetMetricDataV2 API: Update to include Contact Lens Conversational Analytics Metrics
+* `Aws\ElasticsearchService` - Regex Validation on the ElasticSearch Engine Version attribute
+* `Aws\LexModelsV2` - This release adds support for Lex Developers to view analytics for their bots.
+* `Aws\MainframeModernization` - Allows UpdateEnvironment to update the environment to 0 host capacity. New GetSignedBluinsightsUrl API
+* `Aws\Snowball` - Adds support for RACK_5U_C. This is the first AWS Snow Family device designed to meet U.S. Military Ruggedization Standards (MIL-STD-810H) with 208 vCPU device in a portable, compact 5U, half-rack width form-factor.
+* `Aws\Translate` - Added DOCX word document support to TranslateDocument API
+
+## 3.275.8 - 2023-07-17
+
+* `Aws\CodeArtifact` - Doc only update for AWS CodeArtifact
+* `Aws\DocDB` - Added major version upgrade option in ModifyDBCluster API
+* `Aws\EC2` - Add Nitro TPM support on DescribeInstanceTypes
+* `Aws\Glue` - Adding new supported permission type flags to get-unfiltered endpoints that callers may pass to indicate support for enforcing Lake Formation fine-grained access control on nested column attributes.
+* `Aws\IVS` - This release provides the flexibility to configure what renditions or thumbnail qualities to record when creating recording configuration.
+* `Aws\LakeFormation` - Adds supports for ReadOnlyAdmins and AllowFullTableExternalDataAccess. Adds NESTED_PERMISSION and NESTED_CELL_PERMISSION to SUPPORTED_PERMISSION_TYPES enum. Adds CREATE_LF_TAG on catalog resource and ALTER, DROP, and GRANT_WITH_LF_TAG_EXPRESSION on LF Tag resource.
+
 ## 3.275.7 - 2023-07-13
 
 * `Aws\CognitoIdentityProvider` - API model updated in Amazon Cognito
