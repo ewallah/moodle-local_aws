@@ -35,9 +35,19 @@ use local_aws\admin_settings_aws_region;
  * @author     Mikhail Golenkov <mikhailgolenkov@catalyst-au.net>
  * @copyright  2020 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @covers     \local_aws\admin_settings_aws_region
  */
 class admin_settings_aws_region_test extends advanced_testcase {
 
+    /**
+     * Cleanup after all tests are executed.
+     *
+     * @return void
+     */
+    public function tearDown(): void {
+        $admin = admin_get_root();
+        $admin->purge_children(true);
+    }
     /**
      * Test that output_html() method works and returns HTML string with expected content.
      * @covers \local_aws\admin_settings_aws_region

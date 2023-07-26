@@ -21,6 +21,7 @@
  * @author    Peter Burnett <peterburnett@catalyst-au.net>
  * @copyright 2020 Catalyst IT
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @covers    \local_aws\local\aws_helper
  */
 
 namespace local_aws\local;
@@ -61,7 +62,7 @@ class aws_helper_test extends advanced_testcase {
 
         // Now change to SOCKS proxy.
         $CFG->proxytype = 'SOCKS5';
-        $this->assertEquals('socks5://user:password@127.0.0.1:1337', \local_aws\local\aws_helper::get_proxy_string());
+        $this->assertEquals('socks5://user:password@127.0.0.1:1337', aws_helper::get_proxy_string());
     }
 
     /**
