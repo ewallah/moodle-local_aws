@@ -1,5 +1,36 @@
 # CHANGELOG
 
+## 3.279.2 - 2023-08-18
+
+* `Aws\SecurityHub` - Added Inspector Lambda code Vulnerability section to ASFF, including GeneratorDetails, EpssScore, ExploitAvailable, and CodeVulnerabilities.
+* `Aws\CodeCommit` - Add new ListFileCommitHistory operation to retrieve commits which introduced changes to a specific file.
+
+## 3.279.1 - 2023-08-17
+
+* `Aws\EC2` - Adds support for SubnetConfigurations to allow users to select their own IPv4 and IPv6 addresses for Interface VPC endpoints
+* `Aws\GameLift` - Amazon GameLift updates its instance types support.
+
+## 3.279.0 - 2023-08-16
+
+* `Aws\` - This version ends support for PHP versions below 7.2.5
+* `Aws\CloudWatch` - Doc-only update to incorporate several doc bug fixes
+* `Aws\LexModelsV2` - This release updates the Custom Vocabulary Weight field to support a value of 0.
+
+## 3.278.3 - 2023-08-15
+
+* `Aws\PI` - AWS Performance Insights for Amazon RDS is launching Performance Analysis On Demand, a new feature that allows you to analyze database performance metrics and find out the performance issues. You can now use SDK to create, list, get, delete, and manage tags of performance analysis reports.
+* `Aws\SageMaker` - SageMaker Inference Recommender now provides SupportedResponseMIMETypes from DescribeInferenceRecommendationsJob response
+* `Aws\EC2` - Documentation updates for Elastic Compute Cloud (EC2).
+* `Aws\ChimeSDKMeetings` - Updated API documentation to include additional exceptions.
+* `Aws\Glue` - AWS Glue Crawlers can now accept SerDe overrides from a custom csv classifier. The two SerDe options are LazySimpleSerDe and OpenCSVSerDe. In case, the user wants crawler to do the selection, "None" can be selected for this purpose.
+* `Aws\Route53Domains` - Provide explanation if CheckDomainTransferability return false. Provide requestId if a request is already submitted. Add sensitive protection for customer information
+
+## 3.278.2 - 2023-08-14
+
+* `Aws\Omics` - This release provides support for annotation store versioning and cross account sharing for Omics Analytics
+* `Aws\MediaPackage` - Fix SDK logging of certain fields.
+* `Aws\Transfer` - Documentation updates for AWS Transfer Family
+
 ## 3.278.1 - 2023-08-11
 
 * `Aws\QuickSight` - New Authentication method for Account subscription - IAM Identity Center. Hierarchy layout support, default column width support and related style properties for pivot table visuals. Non-additive topic field aggregations for Topic API
