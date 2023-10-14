@@ -184,7 +184,7 @@ class MockHandler implements \Countable
     /**
      * Returns the number of remaining items in the queue.
      */
-    public function count(): int: int
+    public function count(): int
     {
         return \count($this->queue);
     }
