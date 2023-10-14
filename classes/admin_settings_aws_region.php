@@ -45,7 +45,7 @@ class admin_settings_aws_region extends \admin_setting_configtext {
      * @param string $query
      * @return string
      */
-    public function output_html($data, $query='') {
+    public function output_html($data, $query = '') {
         global $CFG;
 
         $default = $this->get_defaultsetting();

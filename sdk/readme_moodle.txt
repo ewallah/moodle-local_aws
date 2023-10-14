@@ -13,7 +13,7 @@ sed -i -e 's/require/require_once/g' $SDKDIR/aws-autoloader.php
 sed -i -e 's#GuzzleHttp/functions.php#GuzzleHttp/functions_include.php#g' $SDKDIR/aws-autoloader.php
 sed -i -e 's#GuzzleHttp/Psr7/functions.php#GuzzleHttp/Psr7/functions_include.php#g' $SDKDIR/aws-autoloader.php
 sed -i -e 's#GuzzleHttp/Promise/functions.php#GuzzleHttp/Promise/functions_include.php#g' $SDKDIR/aws-autoloader.php
-sed -i -e 's#public function count()#public function count(): int#g' $SDKDIR/GuzzleHttp/Handler/MockHandler.php
+# sed -i -e 's#public function count()#public function count(): int#g' $SDKDIR/GuzzleHttp/Handler/MockHandler.php
 rm $SDKDIR/sdk.zip
 echo
 echo 'Go update version.php'
