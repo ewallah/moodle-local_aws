@@ -1,5 +1,70 @@
 # CHANGELOG
 
+## 3.283.9 - 2023-10-20
+
+* `Aws\AppConfig` - Update KmsKeyIdentifier constraints to support AWS KMS multi-Region keys.
+* `Aws\ApplicationDiscoveryService` - This release introduces three new APIs: StartBatchDeleteConfigurationTask, DescribeBatchDeleteConfigurationTask, and BatchDeleteAgents.
+* `Aws\AppIntegrationsService` - Updated ScheduleConfig to be an optional input to CreateDataIntegration to support event driven downloading of files from sources such as Amazon s3 using Amazon Connect AppIntegrations.
+* `Aws\MedicalImaging` - Updates on documentation links
+* `Aws\Connect` - This release adds support for updating phone number metadata, such as phone number description.
+* `Aws\SSM` - This release introduces a new API: DeleteOpsItem. This allows deletion of an OpsItem.
+
+## 3.283.8 - 2023-10-19
+
+* `Aws\` - Removes the GameSparks service, which is no longer active as of 10/19/2023.
+* `Aws\SecretsManager` - Documentation updates for Secrets Manager
+* `Aws\OpenSearchService` - Added Cluster Administrative options for node restart, opensearch process restart and opensearch dashboard restart for Multi-AZ without standby domains
+* `Aws\QuickSight` - This release adds the following: 1) Trino and Starburst Database Connectors 2) Custom total for tables and pivot tables 3) Enable restricted folders 4) Add rolling dates for time equality filters 5) Refine DataPathValue and introduce DataPathType 6) Add SeriesType to ReferenceLineDataConfiguration
+* `Aws\VerifiedPermissions` - Improving Amazon Verified Permissions Create experience
+* `Aws\Neptunedata` - Doc changes to add IAM action mappings for the data actions.
+* `Aws\WorkSpaces` - Documentation updates for WorkSpaces
+* `Aws\Omics` - This change enables customers to retrieve failure reasons with detailed status messages for their failed runs
+* `Aws\ManagedBlockchainQuery` - This release adds support for Ethereum Sepolia network
+* `Aws\ServiceCatalog` - Introduce support for EXTERNAL product and provisioning artifact type in CreateProduct and CreateProvisioningArtifact APIs.
+* `Aws\EC2` - Amazon EC2 C7a instances, powered by 4th generation AMD EPYC processors, are ideal for high performance, compute-intensive workloads such as high performance computing. Amazon EC2 R7i instances are next-generation memory optimized and powered by custom 4th Generation Intel Xeon Scalable processors.
+
+## 3.283.7 - 2023-10-18
+
+* `Aws\ConnectWisdomService` - This release adds an max limit of 25 recommendation ids for NotifyRecommendationsReceived API.
+* `Aws\DynamoDB` - Updating descriptions for several APIs.
+* `Aws\RDS` - This release adds support for upgrading the storage file system configuration on the DB instance using a blue/green deployment or a read replica.
+* `Aws\Cloud9` - Update to imageId parameter behavior and dates updated.
+* `Aws\kendra` - Changes for a new feature in Amazon Kendra's Query API to Collapse/Expand query results
+
+## 3.283.6 - 2023-10-18
+
+* `Aws\ConnectWisdomService` - This release adds an max limit of 25 recommendation ids for NotifyRecommendationsReceived API.
+* `Aws\DynamoDB` - Updating descriptions for several APIs.
+* `Aws\RDS` - This release adds support for upgrading the storage file system configuration on the DB instance using a blue/green deployment or a read replica.
+* `Aws\Cloud9` - Update to imageId parameter behavior and dates updated.
+* `Aws\kendra` - Changes for a new feature in Amazon Kendra's Query API to Collapse/Expand query results
+
+## 3.283.5 - 2023-10-17
+
+* `Aws\CodePipeline` - Add retryMode ALL_ACTIONS to RetryStageExecution API that retries a failed stage starting from first action in the stage
+* `Aws\GuardDuty` - Add domainWithSuffix finding field to dnsRequestAction
+* `Aws\GlobalAccelerator` - Fixed error where ListCustomRoutingEndpointGroups did not have a paginator
+* `Aws\ECS` - Documentation only updates to address Amazon ECS tickets.
+* `Aws\Kafka` - AWS Managed Streaming for Kafka is launching MSK Replicator, a new feature that enables customers to reliably replicate data across Amazon MSK clusters in same or different AWS regions. You can now use SDK to create, list, describe, delete, update, and manage tags of MSK Replicators.
+* `Aws\ApplicationDiscoveryService` - This release introduces three new APIs: StartBatchDeleteConfigurationTask, DescribeBatchDeleteConfigurationTask, and BatchDeleteAgents.
+* `Aws\Route53RecoveryControlConfig` - Adds permissions for GetResourcePolicy to support returning details about AWS Resource Access Manager resource policies for shared resources.
+* `Aws\Route53RecoveryCluster` - Adds Owner field to ListRoutingControls API.
+
+## 3.283.4 - 2023-10-16
+
+* `Aws\Script` - Adds retry mechanism to removeunusedservices script.
+* `Aws\ManagedBlockchainQuery` - This release introduces two new APIs: GetAssetContract and ListAssetContracts. This release also adds support for Bitcoin Testnet.
+* `Aws\XRay` - This releases enhances GetTraceSummaries API to support new TimeRangeType Service to query trace summaries by segment end time.
+* `Aws\drs` - Updated exsiting API to allow AWS Elastic Disaster Recovery support of launching recovery into existing EC2 instances.
+* `Aws\CloudFormation` - SDK and documentation updates for UpdateReplacePolicy
+* `Aws\Transfer` - Documentation updates for AWS Transfer Family
+* `Aws\OpenSearchService` - This release allows customers to list and associate optional plugin packages with compatible Amazon OpenSearch Service clusters for enhanced functionality.
+* `Aws\RedshiftServerless` - Added support for managing credentials of serverless namespace admin using AWS Secrets Manager.
+* `Aws\SESv2` - This release provides enhanced visibility into your SES identity verification status. This will offer you more actionable insights, enabling you to promptly address any verification-related issues.
+* `Aws\Redshift` - Added support for managing credentials of provisioned cluster admin using AWS Secrets Manager.
+* `Aws\MediaPackageV2` - This release allows customers to manage MediaPackage v2 resource using CloudFormation.
+* `Aws\EntityResolution` - This launch expands our matching techniques to include provider-based matching to help customer match, link, and enhance records with minimal data movement. With data service providers, we have removed the need for customers to build bespoke integrations,.
+
 ## 3.283.3 - 2023-10-12
 
 * `Aws\EC2` - This release adds Ubuntu Pro as a supported platform for On-Demand Capacity Reservations and adds support for setting an Amazon Machine Image (AMI) to disabled state. Disabling the AMI makes it private if it was previously shared, and prevents new EC2 instance launches from it.
