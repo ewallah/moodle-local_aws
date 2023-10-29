@@ -1,5 +1,49 @@
 # CHANGELOG
 
+## 3.283.14 - 2023-10-27
+
+* `Aws\Pinpoint` - Updated documentation to describe the case insensitivity for EndpointIds.
+* `Aws\WAFV2` - Updates the descriptions for the calls that manage web ACL associations, to provide information for customer-managed IAM policies.
+* `Aws\Neptune` - Update TdeCredentialPassword type to SensitiveString
+* `Aws\EMR` - Updated CreateCluster API request and DescribeCluster API responses to include EbsRootVolumeIops, and EbsRootVolumeThroughput attributes that specify the user configured root volume IOPS and throughput for Amazon EBS root device volume. This feature will be available from Amazon EMR releases 6.15.0
+* `Aws\Redshift` - added support to create a dual stack cluster
+
+## 3.283.13 - 2023-10-26
+
+* `Aws\SsmSap` - AWS Systems Manager for SAP added support for registration and discovery of SAP ABAP applications
+* `Aws\SNS` - Message Archiving and Replay is now supported in Amazon SNS for FIFO topics.
+* `Aws\Redshift` - Add Redshift APIs GetResourcePolicy, DeleteResourcePolicy, PutResourcePolicy and DescribeInboundIntegrations for the new Amazon Redshift Zero-ETL integration feature, which can be used to control data ingress into Redshift namespace, and view inbound integrations.
+* `Aws\OpenSearchService` - You can specify ipv4 or dualstack IPAddressType for cluster endpoints. If you specify IPAddressType as dualstack, the new endpoint will be visible under the 'EndpointV2' parameter and will support IPv4 and IPv6 requests. Whereas, the 'Endpoint' will continue to serve IPv4 requests.
+* `Aws\AppStream` - This release introduces multi-session fleets, allowing customers to provision more than one user session on a single fleet instance.
+* `Aws\Transfer` - No API changes from previous release. This release migrated the model to Smithy keeping all features unchanged.
+* `Aws\EC2` - Launching GetSecurityGroupsForVpc API. This API gets security groups that can be associated by the AWS account making the request with network interfaces in the specified VPC.
+* `Aws\SageMaker` - Amazon Sagemaker Autopilot now supports Text Generation jobs.
+* `Aws\NetworkFirewall` - Network Firewall now supports inspection of outbound SSL/TLS traffic.
+
+## 3.283.12 - 2023-10-25
+
+* `Aws\ConnectCases` - Increase maximum length of CommentBody to 3000, and increase maximum length of StringValue to 1500
+* `Aws\IAM` - Updates to GetAccessKeyLastUsed action to replace NoSuchEntity error with AccessDeniedException error.
+* `Aws\GroundStation` - This release will allow KMS alias names to be used when creating Mission Profiles
+
+## 3.283.11 - 2023-10-24
+
+* `Aws\` - Updates aws-crt-php dependency due to breaking changes introduced by the latest MacOS platform update
+* `Aws\MigrationHubStrategyRecommendations` - This release introduces multi-data-source feature in Migration Hub Strategy Recommendations. This feature now supports vCenter as a data source to fetch inventory in addition to ADS and Import from file workflow that is currently supported with MHSR collector.
+* `Aws\EKS` - Added support for Cluster Subnet and Security Group mutability.
+* `Aws\OpenSearchServerless` - This release includes the following new APIs: CreateLifecyclePolicy, UpdateLifecyclePolicy, BatchGetLifecyclePolicy, DeleteLifecyclePolicy, ListLifecyclePolicies and BatchGetEffectiveLifecyclePolicy to support the data lifecycle management feature.
+* `Aws\CodePipeline` - Add ability to trigger pipelines from git tags, define variables at pipeline level and new pipeline type V2.
+* `Aws\EC2` - This release updates the documentation for InstanceInterruptionBehavior and HibernationOptionsRequest to more accurately describe the behavior of these two parameters when using Spot hibernation.
+* `Aws\IAM` - Add the partitional endpoint for IAM in iso-f.
+* `Aws\MigrationHubConfig` - This release introduces DeleteHomeRegionControl API that customers can use to delete the Migration Hub Home Region configuration
+
+## 3.283.10 - 2023-10-23
+
+* `Aws\NetworkManager` - This release adds API support for Tunnel-less Connect (NoEncap Protocol) for AWS Cloud WAN
+* `Aws\Rekognition` - Amazon Rekognition introduces StartMediaAnalysisJob, GetMediaAnalysisJob, and ListMediaAnalysisJobs operations to run a bulk analysis of images with a Detect Moderation model.
+* `Aws\RedshiftServerless` - This release adds support for customers to see the patch version and workgroup version in Amazon Redshift Serverless.
+* `Aws\MarketplaceCommerceAnalytics` - The StartSupportDataExport operation has been deprecated as part of the Product Support Connection deprecation. As of December 2022, Product Support Connection is no longer supported.
+
 ## 3.283.9 - 2023-10-20
 
 * `Aws\AppConfig` - Update KmsKeyIdentifier constraints to support AWS KMS multi-Region keys.
