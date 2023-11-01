@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## 3.283.16 - 2023-10-31
+
+* `Aws\EC2` - Capacity Blocks for ML are a new EC2 purchasing option for reserving GPU instances on a future date to support short duration machine learning (ML) workloads. Capacity Blocks automatically place instances close together inside Amazon EC2 UltraClusters for low-latency, high-throughput networking.
+* `Aws\Neptunedata` - Minor change to not retry CancelledByUserException
+* `Aws\Amplify` - Add backend field to CreateBranch and UpdateBranch requests. Add pagination support for ListApps, ListDomainAssociations, ListBranches, and ListJobs
+* `Aws\ApplicationInsights` - Automate attaching managed policies
+* `Aws\MainframeModernization` - Added name filter ability for ListDataSets API, added ForceUpdate for Updating environment and BatchJob submission using S3BatchJobIdentifier
+* `Aws\Translate` - Added support for Brevity translation settings feature.
+
+## 3.283.15 - 2023-10-30
+
+* `Aws\finspace` - Introducing new API UpdateKxClusterCodeConfiguration, introducing new cache types for clusters and introducing new deployment modes for updating clusters.
+* `Aws\DataExchange` - We added a new API action: SendDataSetNotification.
+* `Aws\Connect` - This release adds InstanceId field for phone number APIs.
+* `Aws\ResilienceHub` - Introduced the ability to filter applications by their last assessment date and time and have included metrics for the application's estimated workload Recovery Time Objective (RTO) and estimated workload Recovery Point Objective (RPO).
+* `Aws\MediaPackageV2` - This feature allows customers to create a combination of manifest filtering, startover and time delay configuration that applies to all egress requests by default.
+* `Aws\S3Outposts` - Updated ListOutpostsWithS3 API response to include S3OutpostArn for use with AWS RAM.
+* `Aws\ConnectWisdomService` - This release added necessary API documents on creating a Wisdom knowledge base to integrate with S3.
+* `Aws\RedshiftServerless` - Added support for custom domain names for Amazon Redshift Serverless workgroups. This feature enables customers to create a custom domain name and use ACM to generate fully secure connections to it.
+* `Aws\DataSync` - Platform version changes to support AL1 deprecation initiative.
+* `Aws\RDS` - This release launches the CreateIntegration, DeleteIntegration, and DescribeIntegrations APIs to manage zero-ETL Integrations.
+
 ## 3.283.14 - 2023-10-27
 
 * `Aws\Pinpoint` - Updated documentation to describe the case insensitivity for EndpointIds.
