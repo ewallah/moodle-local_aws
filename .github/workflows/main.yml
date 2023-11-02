@@ -15,7 +15,7 @@ jobs:
         include:
           - php: 8.2
             moodle-branch: master
-            database: pgsql
+            database: mysqli
 
     name: ${{ matrix.moodle-branch }}  php ${{ matrix.php }}
 
