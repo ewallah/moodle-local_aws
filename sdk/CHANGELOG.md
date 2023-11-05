@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## 3.284.0 - 2023-11-03
+
+* `Aws\LaunchWizard` - AWS Launch Wizard is a service that helps reduce the time it takes to deploy applications to the cloud while providing a guided deployment experience.
+* `Aws\Connect` - Amazon Connect Chat introduces Create Persistent Contact Association API, allowing customers to choose when to resume previous conversations from previous chats, eliminating the need to repeat themselves and allowing agents to provide personalized service with access to entire conversation history.
+* `Aws\ConfigService` - Updated ResourceType enum with new resource types onboarded by AWS Config in October 2023.
+* `Aws\IoTWireless` - Added LoRaWAN version 1.0.4 support
+
+## 3.283.18 - 2023-11-02
+
+* `Aws\Glue` - This release introduces Google BigQuery Source and Target in AWS Glue CodeGenConfigurationNode.
+* `Aws\Connect` - GetMetricDataV2 API: Update to include new metrics PERCENT_NON_TALK_TIME, PERCENT_TALK_TIME, PERCENT_TALK_TIME_AGENT, PERCENT_TALK_TIME_CUSTOMER
+* `Aws\NetworkFirewall` - This release introduces the stateless rule analyzer, which enables you to analyze your stateless rules for asymmetric routing.
+* `Aws\GameLift` - Amazon GameLift adds support for shared credentials, which allows applications that are deployed on managed EC2 fleets to interact with other AWS resources.
+* `Aws\QuickSight` - This release introduces Float Decimal Type as SubType in QuickSight SPICE datasets and Custom week start and Custom timezone options in Analysis and Dashboard.
+* `Aws\AppRunner` - AWS App Runner now supports using dual-stack address type for the public endpoint of your incoming traffic.
+
+## 3.283.17 - 2023-11-01
+
+* `Aws\Redshift` - Added support for Multi-AZ deployments for Provisioned RA3 clusters that provide 99.99% SLA availability.
+* `Aws\SageMaker` - Support for batch transform input in Model dashboard
+* `Aws\Connect` - Adds the BatchGetFlowAssociation API which returns flow associations (flow-resource) corresponding to the list of resourceArns supplied in the request. This release also adds IsDefault, LastModifiedRegion and LastModifiedTime fields to the responses of several Describe and List APIs.
+* `Aws\GlobalAccelerator` - Global Accelerator now support accelerators with cross account endpoints.
+* `Aws\RDS` - This release adds support for customized networking resources to Amazon RDS Custom.
+
 ## 3.283.16 - 2023-10-31
 
 * `Aws\EC2` - Capacity Blocks for ML are a new EC2 purchasing option for reserving GPU instances on a future date to support short duration machine learning (ML) workloads. Capacity Blocks automatically place instances close together inside Amazon EC2 UltraClusters for low-latency, high-throughput networking.
