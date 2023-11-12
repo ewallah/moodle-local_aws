@@ -1,5 +1,64 @@
 # CHANGELOG
 
+## 3.285.4 - 2023-11-10
+
+* `Aws\MediaConvert` - This release includes the ability to specify any input source as the primary input for corresponding follow modes, and allows users to specify fit and fill behaviors without resizing content.
+* `Aws\EC2` - EC2 adds API updates to enable ENA Express at instance launch time.
+* `Aws\CostandUsageReportService` - This release adds support for tagging and customers can now tag report definitions. Additionally, ReportStatus is now added to report definition to show when the last delivered time stamp and if it succeeded or not.
+* `Aws\FMS` - Adds optimizeUnassociatedWebACL flag to ManagedServiceData, updates third-party firewall examples, and other minor documentation updates.
+* `Aws\ControlTower` - AWS Control Tower supports tagging for enabled controls. This release introduces TagResource, UntagResource and ListTagsForResource APIs to manage tags in existing enabled controls. It updates EnabledControl API to tag resources at creation time.
+* `Aws\RDS` - Updates Amazon RDS documentation for zero-ETL integrations.
+* `Aws\MarketplaceEntitlementService` - Add paginators to GetEntitlements.
+
+## 3.285.3 - 2023-11-09
+
+* `Aws\Comprehend` - This release adds support for toxicity detection and prompt safety classification.
+* `Aws\CloudWatchLogs` - Update to support new APIs for delivery of logs from AWS services.
+* `Aws\EKS` - Adding EKS Anywhere subscription related operations.
+* `Aws\Omics` - Support UBAM filetype for Omics Storage and make referenceArn optional
+* `Aws\EC2` - AWS EBS now supports Block Public Access for EBS Snapshots. This release introduces the EnableSnapshotBlockPublicAccess, DisableSnapshotBlockPublicAccess and GetSnapshotBlockPublicAccessState APIs to manage account-level public access settings for EBS Snapshots in an AWS Region.
+* `Aws\Connect` - This release adds the ability to integrate customer lambda functions with Connect attachments for scanning and updates the ListIntegrationAssociations API to support filtering on IntegrationArn.
+* `Aws\CloudFormation` - Added new ConcurrencyMode feature for AWS CloudFormation StackSets for faster deployments to target accounts.
+* `Aws\Lambda` - Add Custom runtime on Amazon Linux 2023 (provided.al2023) support to AWS Lambda.
+* `Aws\CloudTrail` - The Insights in Lake feature lets customers enable CloudTrail Insights on a source CloudTrail Lake event data store and create a destination event data store to collect Insights events based on unusual management event activity in the source event data store.
+
+## 3.285.2 - 2023-11-09
+
+* `Aws\SQS` - This release enables customers to call SQS using AWS JSON-1.0 protocol and bug fix.
+
+## 3.285.1 - 2023-11-08
+
+* `Aws\RDS` - This Amazon RDS release adds support for patching the OS of an RDS Custom for Oracle DB instance. You can now upgrade the database or operating system using the modify-db-instance command.
+* `Aws\ResilienceHub` - AWS Resilience Hub enhances Resiliency Score, providing actionable recommendations to improve application resilience. Amazon Elastic Kubernetes Service (EKS) operational recommendations have been added to help improve the resilience posture of your applications.
+* `Aws\LexModelsV2` - AWS Lex now supports selective log capture in conversation logs. When you enable this option within the conversation log settings, only the utterances that trigger intents and slots specified in session attributes will be logged.
+* `Aws\SQS` - This release enables customers to call SQS using AWS JSON-1.0 protocol.
+* `Aws\ConnectCases` - This release adds the ability to add/view comment authors through CreateRelatedItem and SearchRelatedItems API. For more information see https://docs.aws.amazon.com/cases/latest/APIReference/Welcome.html
+* `Aws\GuardDuty` - Added API support for new GuardDuty EKS Audit Log finding types.
+* `Aws\Omics` - Adding Run UUID and Run Output URI: GetRun and StartRun API response has two new fields "uuid" and "runOutputUri".
+* `Aws\RedshiftServerless` - Added a new parameter in the workgroup that helps you control your cost for compute resources. This feature provides a ceiling for RPUs that Amazon Redshift Serverless can scale up to. When automatic compute scaling is required, having a higher value for MaxRPU can enhance query throughput.
+* `Aws\Lambda` - Add Node 20 (nodejs20.x) support to AWS Lambda.
+* `Aws\DataSync` - This change allows for 0 length access keys and secret keys for object storage locations. Users can now pass in empty string credentials.
+* `Aws\Connect` - This release clarifies in our public documentation that InstanceId is a requirement for SearchUsers API requests.
+
+## 3.285.0 - 2023-11-07
+
+* `Aws\Credentials` - In the EcsCredentialProvider, adds support for additional token auth source as well as support/validation for local link addresses
+* `Aws\RDS` - This Amazon RDS release adds support for the multi-tenant configuration. In this configuration, an RDS DB instance can contain multiple tenant databases. In RDS for Oracle, a tenant database is a pluggable database (PDB).
+* `Aws\DataExchange` - Updated SendDataSetNotificationRequest Comment to be maximum length 4096.
+* `Aws\DLM` - Added support for pre and post scripts in Amazon Data Lifecycle Manager EBS snapshot lifecycle policies.
+
+## 3.284.1 - 2023-11-06
+
+* `Aws\` - Adds middleware which, for query compatible services, ensures input values are cast to their modeled type
+* `Aws\MWAA` - This release adds support for Apache Airflow version 2.7.2. This version release includes support for deferrable operators and triggers.
+* `Aws\CodeBuild` - AWS CodeBuild now supports AWS Lambda compute.
+* `Aws\IAM` - Add partitional endpoint for iso-e.
+* `Aws\Connect` - Added new API that allows Amazon Connect Outbound Campaigns to create contacts in Amazon Connect when ingesting your dial requests.
+* `Aws\Route53` - Add partitional endpoints for iso-e and iso-f.
+* `Aws\CostExplorer` - This release extends the GetReservationPurchaseRecommendation API to support recommendations for Amazon MemoryDB reservations.
+* `Aws\DocDB` - Update the input of CreateDBInstance and ModifyDBInstance to support setting CA Certificates. Update the output of DescribeDBInstance and DescribeDBEngineVersions to show current and supported CA certificates.
+* `Aws\Polly` - Amazon Polly adds new US English voices - Danielle and Gregory. Danielle and Gregory are available as Neural voices only.
+
 ## 3.284.0 - 2023-11-03
 
 * `Aws\LaunchWizard` - AWS Launch Wizard is a service that helps reduce the time it takes to deploy applications to the cloud while providing a guided deployment experience.
