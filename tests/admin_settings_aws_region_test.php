@@ -52,7 +52,7 @@ class admin_settings_aws_region_test extends advanced_testcase {
      * Test that output_html() method works and returns HTML string with expected content.
      * @covers \local_aws\admin_settings_aws_region
      */
-    public function test_output_html() {
+    public function test_output_html(): void {
         $this->resetAfterTest();
         $setting = new admin_settings_aws_region('test_aws_region',
             'Test visible name', 'Test description', 'Test default setting');

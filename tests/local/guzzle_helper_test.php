@@ -44,7 +44,7 @@ class guzzle_helper_test extends \advanced_testcase {
      * Test that the Middleware is added to the HandlerStack for the Guzzle client.
      * @covers \local_aws\local\guzzle_helper
      */
-    public function test_configure_client_proxy_adds_middleware() {
+    public function test_configure_client_proxy_adds_middleware(): void {
         // Create client with mock response.
         $mockhandler = new MockHandler([
             new Response(200, [], 'Mock response'),
@@ -65,7 +65,7 @@ class guzzle_helper_test extends \advanced_testcase {
      * Test proxy is used for a request.
      * @covers \local_aws\local\guzzle_helper
      */
-    public function test_configure_client_proxy_with_proxied_request() {
+    public function test_configure_client_proxy_with_proxied_request(): void {
         global $CFG;
         // Set default proxy settings.
         $CFG->proxyhost = 'proxyhost';
@@ -91,7 +91,7 @@ class guzzle_helper_test extends \advanced_testcase {
      * Test no proxy used if request is in proxy bypass list.
      * @covers \local_aws\local\guzzle_helper
      */
-    public function test_configure_client_proxy_with_bypassed_proxied_request() {
+    public function test_configure_client_proxy_with_bypassed_proxied_request(): void {
         global $CFG;
         // Set default proxy settings.
         $CFG->proxyhost = 'proxyhost';
@@ -116,7 +116,7 @@ class guzzle_helper_test extends \advanced_testcase {
      * Test no proxy used if none is configured.
      * @covers \local_aws\local\guzzle_helper
      */
-    public function test_configure_client_proxy_with_no_proxy_configured() {
+    public function test_configure_client_proxy_with_no_proxy_configured(): void {
         global $CFG;
         // Set default proxy settings.
         $CFG->proxyhost = '';

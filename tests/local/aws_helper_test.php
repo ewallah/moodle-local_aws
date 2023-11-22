@@ -47,7 +47,7 @@ class aws_helper_test extends advanced_testcase {
      * Test the proxy string.
      * @covers \local_aws\local\aws_helper
      */
-    public function test_get_proxy_string() {
+    public function test_get_proxy_string(): void {
         global $CFG;
         $this->resetAfterTest();
         // Confirm with no config an emtpy string is returned.
@@ -70,7 +70,7 @@ class aws_helper_test extends advanced_testcase {
      * @covers \local_aws\local\aws_helper
      * @covers \local_aws\local\client_factory
      */
-    public function test_configure_client_proxy() {
+    public function test_configure_client_proxy(): void {
         $this->resetAfterTest();
         set_config('proxyhost', '127.0.0.1');
         set_config('proxyport', 1337);
