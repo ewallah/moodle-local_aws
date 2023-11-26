@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## 3.288.1 - 2023-11-22
+
+* `Aws\s3` - Disables transformation of request URI paths with dot segments
+* `Aws\S3Control` - Amazon S3 Batch Operations now manages buckets or prefixes in a single step.
+* `Aws\SageMaker` - This feature adds the end user license agreement status as a model access configuration parameter.
+* `Aws\Kinesis` - This release adds support for resource based policies on streams and consumers.
+
+## 3.288.0 - 2023-11-21
+
+* `Aws\CloudFrontKeyValueStore` - This release adds support for CloudFront KeyValueStore, a globally managed key value datastore associated with CloudFront Functions.
+* `Aws\CloudFront` - This release adds support for CloudFront KeyValueStore, a globally managed key value datastore associated with CloudFront Functions.
+* `Aws\S3` - Add support for automatic date based partitioning in S3 Server Access Logs.
+* `Aws\EC2` - Documentation updates for Amazon EC2.
+* `Aws\IoTSiteWise` - Adds 1/ user-defined unique identifier for asset and model metadata, 2/ asset model components, and 3/ query API for asset metadata and telemetry data. Supports 4/ multi variate anomaly detection using Amazon Lookout for Equipment, 5/ warm storage tier, and 6/ buffered ingestion of time series data.
+* `Aws\IoTTwinMaker` - This release adds following support. 1. New APIs for metadata bulk operations. 2. Modify the component type API to support composite component types - nesting component types within one another. 3. New list APIs for components and properties. 4. Support the larger scope digital twin modeling.
+* `Aws\InspectorScan` - This release adds support for the new Amazon Inspector Scan API. The new Inspector Scan API can synchronously scan SBOMs adhering to the CycloneDX v1.5 format.
+
+## 3.287.1 - 2023-11-20
+
+* `Aws\Credentials` - Adds hostname resolution for the EcsCredentialProvider.
+* `Aws\EC2` - This release adds support for Security group referencing over Transit gateways, enabling you to simplify Security group management and control of instance-to-instance traffic across VPCs that are connected by Transit gateway.
+* `Aws\DocDB` - Amazon DocumentDB updates for new cluster storage configuration: Amazon DocumentDB I/O-Optimized.
+* `Aws\CodeStarconnections` - This release updates a few CodeStar Connections related APIs.
+
 ## 3.287.0 - 2023-11-17
 
 * `Aws\` - Removes the original Macie service, which has been deprecated.
