@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## 3.293.7 - 2023-12-08
+
+* `Aws\CloudWatch` - Adds support for the OpenTelemetry 1.0 output format in CloudWatch Metric Streams.
+* `Aws\EC2` - M2 Mac instances are built on Apple M2 Mac mini computers. I4i instances are powered by 3rd generation Intel Xeon Scalable processors. C7i compute optimized, M7i general purpose and R7i memory optimized instances are powered by custom 4th Generation Intel Xeon Scalable processors.
+* `Aws\finspace` - Releasing Scaling Group, Dataview, and Volume APIs
+
+## 3.293.6 - 2023-12-07
+
+* `Aws\EndpointV2` - Adds endpoint resolution middleware and refactors endpoint resolution logic
+* `Aws\CodeDeploy` - This release adds support for two new CodeDeploy features: 1) zonal deployments for Amazon EC2 in-place deployments, 2) deployments triggered by Auto Scaling group termination lifecycle hook events.
+
+## 3.293.5 - 2023-12-06
+
+* `Aws\Connect` - Releasing Tagging Support for Instance Management APIS
+* `Aws\PaymentCryptography` - AWS Payment Cryptography IPEK feature release
+* `Aws\EC2` - Releasing the new cpuManufacturer attribute within the DescribeInstanceTypes API response which notifies our customers with information on who the Manufacturer is for the processor attached to the instance, for example: Intel.
+* `Aws\Comprehend` - Documentation updates for Trust and Safety features.
+* `Aws\Backup` - AWS Backup - Features: Add VaultType to the output of DescribeRecoveryPoint, ListRecoveryPointByBackupVault API and add ResourceType to the input of ListRestoreJobs API
+
+## 3.293.4 - 2023-12-05
+
+* `Aws\CleanRoomsML` - Updated service title from cleanroomsml to CleanRoomsML.
+* `Aws\Athena` - Adding IdentityCenter enabled request for interactive query
+* `Aws\CloudFormation` - Documentation update, December 2023
+* `Aws\EC2` - Adds A10G, T4G, and H100 as accelerator name options and Habana as an accelerator manufacturer option for attribute based selection
+
+## 3.293.3 - 2023-12-04
+
+* `Aws\MediaLive` - Adds support for custom color correction on channels using 3D LUT files.
+* `Aws\Braket` - This release enhances service support to create quantum tasks and hybrid jobs associated with Braket Direct Reservations.
+* `Aws\AppRegistry` - Documentation-only updates for Dawn
+* `Aws\BillingConductor` - This release adds the ability to specify a linked account of the billing group for the custom line item resource.
+* `Aws\Cloud9` - This release adds the requirement to include the imageId parameter in the CreateEnvironmentEC2 API call.
+* `Aws\CloudFormation` - Including UPDATE_* states as a success status for CreateStack waiter.
+* `Aws\finspace` - Release General Purpose type clusters
+
 ## 3.293.2 - 2023-12-01
 
 * `Aws\RecycleBin` - Added resource identifier in the output and updated error handling.
