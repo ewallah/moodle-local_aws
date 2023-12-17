@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## 3.294.1 - 2023-12-15
+
+* `Aws\Signature` - Fixes issues with CloudfrontKeyValueStore sigv4a operations.
+* `Aws\KMS` - Documentation updates for AWS Key Management Service
+* `Aws\ConnectCases` - Increase number of fields that can be included in CaseEventIncludedData from 50 to 200
+* `Aws\Connect` - Adds relatedContactId field to StartOutboundVoiceContact API input. Introduces PauseContact API and ResumeContact API for Task contacts. Adds pause duration, number of pauses, timestamps for last paused and resumed events to DescribeContact API response. Adds new Rule type and new Rule action.
+* `Aws\SageMaker` - This release 1) introduces a new API: DeleteCompilationJob , and 2) adds InfraCheckConfig for Create/Describe training job API
+* `Aws\RDS` - Updates Amazon RDS documentation by adding code examples
+* `Aws\Cloud9` - Updated Cloud9 API documentation for AL2023 release
+
+## 3.294.0 - 2023-12-14
+
+* `Aws\GameLift` - Amazon GameLift adds the ability to add and update the game properties of active game sessions.
+* `Aws\BillingConductor` - Billing Conductor is releasing a new API, GetBillingGroupCostReport, which provides the ability to retrieve/view the Billing Group Cost Report broken down by attributes for a specific billing group.
+* `Aws\OpenSearchService` - Updating documentation for Amazon OpenSearch Service support for new zero-ETL integration with Amazon S3.
+* `Aws\QuickSight` - Update Dashboard Links support; SingleAxisOptions support; Scatterplot Query limit support.
+* `Aws\ControlTower` - Documentation updates for AWS Control Tower.
+* `Aws\AppStream` - This release includes support for images of Windows Server 2022 platform.
+* `Aws\B2bi` - Documentation updates for AWS B2B Data Interchange
+* `Aws\Connect` - This release adds support for more granular billing using tags (key:value pairs)
+* `Aws\NeptuneGraph` - This is the initial SDK release for Amazon Neptune Analytics
+* `Aws\Firehose` - This release, 1) adds configurable buffering hints for the Splunk destination, and 2) reduces the minimum configurable buffering interval for supported destinations
+* `Aws\IoT` - This release adds the ability to self-manage certificate signing in AWS IoT Core fleet provisioning using the new certificate provider resource.
+* `Aws\WorkSpaces` - Updated note to ensure customers understand running modes.
+
 ## 3.293.10 - 2023-12-13
 
 * `Aws\` - Updates trace middleware such that it does not always expect a request.
