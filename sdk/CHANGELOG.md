@@ -1,5 +1,54 @@
 # CHANGELOG
 
+## 3.295.0 - 2023-12-22
+
+* `Aws\Omics` - Provides minor corrections and an updated description of APIs.
+* `Aws\SecretsManager` - Update endpoint rules and examples.
+* `Aws\LakeFormation` - This release adds additional configurations on GetTemporaryGlueTableCredentials for Query Session Context.
+* `Aws\S3` - Added additional examples for some operations.
+* `Aws\Glue` - This release adds additional configurations for Query Session Context on the following APIs: GetUnfilteredTableMetadata, GetUnfilteredPartitionMetadata, GetUnfilteredPartitionsMetadata.
+* `Aws\BedrockAgent` - Adding Claude 2.1 support to Bedrock Agents
+* `Aws\NetworkMonitor` - CloudWatch Network Monitor is a new service within CloudWatch that will help network administrators and operators continuously monitor network performance metrics such as round-trip-time and packet loss between their AWS-hosted applications and their on-premises locations.
+* `Aws\MediaConnect` - This release adds the DescribeSourceMetadata API. This API can be used to view the stream information of the flow's source.
+
+## 3.294.5 - 2023-12-21
+
+* `Aws\NeptuneGraph` - Adds Waiters for successful creation and deletion of Graph, Graph Snapshot, Import Task and Private Endpoints for Neptune Analytics
+* `Aws\PrometheusService` - This release updates Amazon Managed Service for Prometheus APIs to support customer managed KMS keys.
+* `Aws\RDS` - This release adds support for using RDS Data API with Aurora PostgreSQL Serverless v2 and provisioned DB clusters.
+* `Aws\CodeCommit` - AWS CodeCommit now supports customer managed keys from AWS Key Management Service. UpdateRepositoryEncryptionKey is added for updating the key configuration. CreateRepository, GetRepository, BatchGetRepositories are updated with new input or output parameters.
+* `Aws\RDSDataService` - This release adds support for using RDS Data API with Aurora PostgreSQL Serverless v2 and provisioned DB clusters.
+* `Aws\MediaLive` - MediaLive now supports the ability to configure the audio that an AWS Elemental Link UHD device produces, when the device is configured as the source for a flow in AWS Elemental MediaConnect.
+* `Aws\SageMaker` - Amazon SageMaker Training now provides model training container access for debugging purposes. Amazon SageMaker Search now provides the ability to use visibility conditions to limit resource access to a single domain or multiple domains.
+* `Aws\BedrockAgent` - This release introduces Amazon Aurora as a vector store on Knowledge Bases for Amazon Bedrock
+* `Aws\AppIntegrationsService` - The Amazon AppIntegrations service adds DeleteApplication API for deleting applications, and updates APIs to support third party applications reacting to workspace events and make data requests to Amazon Connect for agent and contact events.
+* `Aws\Connect` - Adds APIs to manage User Proficiencies and Predefined Attributes. Enhances StartOutboundVoiceContact API input. Introduces SearchContacts API. Enhances DescribeContact API. Adds an API to update Routing Attributes in QueuePriority and QueueTimeAdjustmentSeconds.
+
+## 3.294.4 - 2023-12-20
+
+* `Aws\EKS` - Add support for cluster insights, new EKS capability that surfaces potentially upgrade impacting issues.
+* `Aws\AppStream` - This release introduces configurable clipboard, allowing admins to specify the maximum length of text that can be copied by the users from their device to the remote session and vice-versa.
+* `Aws\GuardDuty` - This release 1) introduces a new API: GetOrganizationStatistics , and 2) adds a new UsageStatisticType TOP_ACCOUNTS_BY_FEATURE for GetUsageStatistics API
+* `Aws\Route53` - Amazon Route 53 now supports the Canada West (Calgary) Region (ca-west-1) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region.
+* `Aws\MediaTailor` - Adds the ability to configure time shifting on MediaTailor channels using the TimeShiftConfiguration field
+* `Aws\ManagedBlockchainQuery` - Adding Confirmation Status and Execution Status to GetTransaction Response.
+
+## 3.294.3 - 2023-12-19
+
+* `Aws\ChimeSDKMeetings` - Add meeting features to specify a maximum camera resolution, a maximum content sharing resolution, and a maximum number of attendees for a given meeting.
+* `Aws\FSx` - Added support for FSx for OpenZFS on-demand data replication across AWS accounts and/or regions.Added the IncludeShared attribute for DescribeSnapshots.Added the CopyStrategy attribute for OpenZFSVolumeConfiguration.
+* `Aws\AppSync` - This release adds additional configurations on GraphQL APIs for limits on query depth, resolver count, and introspection
+* `Aws\RDS` - RDS - The release adds two new APIs: DescribeDBRecommendations and ModifyDBRecommendation
+* `Aws\EC2` - Provision BYOIPv4 address ranges and advertise them by specifying the network border groups option in Los Angeles, Phoenix and Dallas AWS Local Zones.
+* `Aws\MarketplaceCatalog` - AWS Marketplace now supports a new API, BatchDescribeEntities, which returns metadata and content for multiple entities.
+
+## 3.294.2 - 2023-12-18
+
+* `Aws\QuickSight` - A docs-only release to add missing entities to the API reference.
+* `Aws\Route53Resolver` - Add DOH protocols in resolver endpoints.
+* `Aws\CognitoIdentityProvider` - Amazon Cognito now supports trigger versions that define the fields in the request sent to pre token generation Lambda triggers.
+* `Aws\EKS` - Add support for EKS Cluster Access Management.
+
 ## 3.294.1 - 2023-12-15
 
 * `Aws\Signature` - Fixes issues with CloudfrontKeyValueStore sigv4a operations.
