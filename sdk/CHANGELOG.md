@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 3.295.4 - 2023-12-29
+
+* `Aws\LocationService` - This release introduces a new parameter to bypasses an API key's expiry conditions and delete the key.
+* `Aws\QuickSight` - Add LinkEntityArn support for different partitions; Add UnsupportedUserEditionException in UpdateDashboardLinks API; Add support for New Reader Experience Topics
+* `Aws\AppRunner` - AWS App Runner adds Python 3.11 and Node.js 18 runtimes.
+
+## 3.295.3 - 2023-12-28
+
+* `Aws\KinesisVideoArchivedMedia` - NoDataRetentionException thrown when GetImages requested for a Stream that does not retain data (that is, has a DataRetentionInHours of 0).
+* `Aws\SageMaker` - Amazon SageMaker Studio now supports Docker access from within app container
+* `Aws\CodeStarconnections` - New integration with the GitLab self-managed provider type.
+
+## 3.295.2 - 2023-12-27
+
+* `Aws\EMR` - Add support for customers to modify cluster attribute auto-terminate post cluster launch
+
+## 3.295.1 - 2023-12-26
+
+* `Aws\IAM` - Documentation updates for AWS Identity and Access Management (IAM).
+
 ## 3.295.0 - 2023-12-22
 
 * `Aws\Omics` - Provides minor corrections and an updated description of APIs.
