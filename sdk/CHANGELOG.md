@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 3.295.7 - 2024-01-05
+
+* `Aws\Connect` - Minor trait updates for User APIs
+* `Aws\RedshiftServerless` - use_fips_ssl and require_ssl parameter support for Workgroup, UpdateWorkgroup, and CreateWorkgroup
+* `Aws\QConnect` - Marked SearchQuickResponses API as readonly.
+* `Aws\KMS` - Documentation updates for AWS Key Management Service (KMS).
+
+## 3.295.6 - 2024-01-04
+
+* `Aws\DocDB` - Adding PerformanceInsightsEnabled and PerformanceInsightsKMSKeyId fields to DescribeDBInstances Response.
+* `Aws\SageMaker` - Adding support for provisioned throughput mode for SageMaker Feature Groups
+* `Aws\ECS` - This release adds support for managed instance draining which facilitates graceful termination of Amazon ECS instances.
+* `Aws\ElasticsearchService` - This release adds support for new or existing Amazon OpenSearch domains to enable TLS 1.3 or TLS 1.2 with perfect forward secrecy cipher suites for domain endpoints.
+* `Aws\ServiceCatalog` - Added Idempotency token support to Service Catalog AssociateServiceActionWithProvisioningArtifact, DisassociateServiceActionFromProvisioningArtifact, DeleteServiceAction API
+* `Aws\ConfigService` - Updated ResourceType enum with new resource types onboarded by AWS Config in November and December 2023.
+* `Aws\Lightsail` - This release adds support to set up an HTTPS endpoint on an instance.
+* `Aws\OpenSearchService` - This release adds support for new or existing Amazon OpenSearch domains to enable TLS 1.3 or TLS 1.2 with perfect forward secrecy cipher suites for domain endpoints.
+
+## 3.295.5 - 2024-01-03
+
+* `Aws\Connect` - Amazon Connect, Contact Lens Evaluation API increase evaluation notes max length to 3072.
+* `Aws\MediaConvert` - This release includes video engine updates including HEVC improvements, support for ingesting VP9 encoded video in MP4 containers, and support for user-specified 3D LUTs.
+
 ## 3.295.4 - 2023-12-29
 
 * `Aws\LocationService` - This release introduces a new parameter to bypasses an API key's expiry conditions and delete the key.
