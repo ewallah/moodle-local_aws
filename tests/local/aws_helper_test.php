@@ -63,6 +63,8 @@ class aws_helper_test extends advanced_testcase {
         // Now change to SOCKS proxy.
         $CFG->proxytype = 'SOCKS5';
         $this->assertEquals('socks5://user:password@127.0.0.1:1337', aws_helper::get_proxy_string());
+        $CFG->proxytype = null;
+        $this->assertEquals('', aws_helper::get_proxy_string());
     }
 
     /**
@@ -77,8 +79,11 @@ class aws_helper_test extends advanced_testcase {
         set_config('proxytype', 'http');
         set_config('proxyuser', 'user');
         set_config('proxypassword', 'password');
-        $s3 = client_factory::get_client('\Aws\S3\S3Client', ['version' => 'latest', 'region' => 'us-west-2']);
+        $arr = ['version' => 'latest', 'region' => 'us-west-2'];
+        $s3 = client_factory::get_client('\Aws\S3\S3Client', $arr);
         aws_helper::configure_client_proxy($s3);
-        set_config('proxytype', 'SOCKS5');
+        $this->expectException(\moodle_exception::class);
+        $arr['http'] = ['tst' => 1];
+        $s3 = client_factory::get_client('\GuzzleHttp\Client', $arr);
     }
 }

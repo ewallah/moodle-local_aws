@@ -45,9 +45,11 @@ class client_factory {
         // Modify the opts to add HTTP timeouts.
         if (empty($opts['http'])) {
             $opts['http'] = ['connect_timeout' => HOURSECS];
-        } else if (is_array($opts['http'] && !array_key_exists('connect_timeout', $opts['http']))) {
-            // Try not to override existing settings.
-            $opts['http']['connect_timeout'] = HOURSECS;
+        } else if (is_array($opts['http'])) {
+            if (!array_key_exists('connect_timeout', $opts['http'])) {
+                // Try not to override existing settings.
+                $opts['http']['connect_timeout'] = HOURSECS;
+            }
         }
 
         // Blindly trust the call here. If it exceptions, the raw message is the most useful.
