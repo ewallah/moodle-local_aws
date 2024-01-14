@@ -1,5 +1,42 @@
 # CHANGELOG
 
+## 3.296.0 - 2024-01-12
+
+* `Aws\ConnectParticipant` - Introduce new Supervisor participant role
+* `Aws\S3Control` - S3 On Outposts team adds dualstack endpoints support for S3Control and S3Outposts API calls.
+* `Aws\LocationService` - Location SDK documentation update. Added missing fonts to the MapConfiguration data type. Updated note for the SubMunicipality property in the place data type.
+* `Aws\Transfer` - AWS Transfer Family now supports static IP addresses for SFTP & AS2 connectors and for async MDNs on AS2 servers.
+* `Aws\Connect` - Supervisor Barge for Chat is now supported through the MonitorContact API.
+* `Aws\MWAA` - This Amazon MWAA feature release includes new fields in CreateWebLoginToken response model. The new fields IamIdentity and AirflowIdentity will let you match identifications, as the Airflow identity length is currently hashed to 64 characters.
+* `Aws\SupplyChain` - This release includes APIs CreateBillOfMaterialsImportJob and GetBillOfMaterialsImportJob.
+
+## 3.295.10 - 2024-01-11
+
+* `Aws\CloudFront` - Throw exception when an empty signature for signed url is generated.
+* `Aws\SecretsManager` - Doc only update for Secrets Manager
+* `Aws\EC2` - This release adds support for adding an ElasticBlockStorage volume configurations in ECS RunTask/StartTask/CreateService/UpdateService APIs. The configuration allows for attaching EBS volumes to ECS Tasks.
+* `Aws\WorkSpaces` - Added AWS Workspaces RebootWorkspaces API - Extended Reboot documentation update
+* `Aws\ECS` - This release adds support for adding an ElasticBlockStorage volume configurations in ECS RunTask/StartTask/CreateService/UpdateService APIs. The configuration allows for attaching EBS volumes to ECS Tasks.
+* `Aws\EventBridge` - Adding AppSync as an EventBridge Target
+* `Aws\IoTFleetWise` - The following dataTypes have been removed: CUSTOMER_DECODED_INTERFACE in NetworkInterfaceType; CUSTOMER_DECODED_SIGNAL_INFO_IS_NULL in SignalDecoderFailureReason; CUSTOMER_DECODED_SIGNAL_NETWORK_INTERFACE_INFO_IS_NULL in NetworkInterfaceFailureReason; CUSTOMER_DECODED_SIGNAL in SignalDecoderType
+* `Aws\IoT` - Add ConflictException to Update APIs of AWS IoT Software Package Catalog
+
+## 3.295.9 - 2024-01-10
+
+* `Aws\QConnect` - QueryAssistant and GetRecommendations will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024 you will need to create a new Assistant in the Connect console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into your applications.
+* `Aws\ConnectCampaignService` - Minor pattern updates for Campaign and Dial Request API fields.
+* `Aws\CloudWatchLogs` - Add support for account level subscription filter policies to PutAccountPolicy, DescribeAccountPolicies, and DeleteAccountPolicy APIs. Additionally, PutAccountPolicy has been modified with new optional "selectionCriteria" parameter for resource selection.
+* `Aws\Route53` - Route53 now supports geoproximity routing in AWS regions
+* `Aws\ConnectWisdomService` - QueryAssistant and GetRecommendations will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024 you will need to create a new Assistant in the Connect console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into your applications.
+* `Aws\LocationService` - This release adds API support for custom layers for the maps service APIs: CreateMap, UpdateMap, DescribeMap.
+* `Aws\RedshiftServerless` - Updates to ConfigParameter for RSS workgroup, removal of use_fips_ssl
+
+## 3.295.8 - 2024-01-08
+
+* `Aws\EC2` - Amazon EC2 R7iz bare metal instances are powered by custom 4th generation Intel Xeon Scalable processors.
+* `Aws\Route53Resolver` - This release adds support for query type configuration on firewall rules that enables customers for granular action (ALLOW, ALERT, BLOCK) by DNS query type.
+* `Aws\CodeBuild` - Aws CodeBuild now supports new compute type BUILD_GENERAL1_XLARGE
+
 ## 3.295.7 - 2024-01-05
 
 * `Aws\Connect` - Minor trait updates for User APIs
