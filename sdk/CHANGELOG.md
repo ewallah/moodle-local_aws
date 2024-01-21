@@ -1,5 +1,46 @@
 # CHANGELOG
 
+## 3.296.6 - 2024-01-19
+
+* `Aws\Athena` - Introducing new NotebookS3LocationUri parameter to Athena ImportNotebook API. Payload is no longer required and either Payload or NotebookS3LocationUri needs to be provided (not both) for a successful ImportNotebook API call. If both are provided, an InvalidRequestException will be thrown.
+* `Aws\DynamoDB` - This release adds support for including ApproximateCreationDateTimePrecision configurations in EnableKinesisStreamingDestination API, adds the same as an optional field in the response of DescribeKinesisStreamingDestination, and adds support for a new UpdateKinesisStreamingDestination API.
+* `Aws\QConnect` - Increased Quick Response name max length to 100
+* `Aws\CodeBuild` - Release CodeBuild Reserved Capacity feature
+
+## 3.296.5 - 2024-01-18
+
+* `Aws\CloudTrail` - This release adds a new API ListInsightsMetricData to retrieve metric data from CloudTrail Insights.
+* `Aws\Connect` - GetMetricDataV2 now supports 3 groupings
+* `Aws\SageMakerFeatureStoreRuntime` - Increase BatchGetRecord limits from 10 items to 100 items
+* `Aws\drs` - Removed invalid and unnecessary default values.
+* `Aws\Firehose` - Allow support for Snowflake as a Kinesis Data Firehose delivery destination.
+* `Aws\B2bi` - Increasing TestMapping inputFileContent file size limit to 5MB and adding file size limit 250KB for TestParsing input file. This release also includes exposing InternalServerException for Tag APIs.
+
+## 3.296.4 - 2024-01-17
+
+* `Aws\DynamoDB` - Updating note for enabling streams for UpdateTable.
+* `Aws\Keyspaces` - This release adds support for Multi-Region Replication with provisioned tables, and Keyspaces auto scaling APIs
+
+## 3.296.3 - 2024-01-17
+
+* `Aws\DynamoDB` - Updating note for enabling streams for UpdateTable.
+* `Aws\Keyspaces` - This release adds support for Multi-Region Replication with provisioned tables, and Keyspaces auto scaling APIs
+
+## 3.296.2 - 2024-01-16
+
+* `Aws\Rekognition` - This release adds ContentType and TaxonomyLevel attributes to DetectModerationLabels and GetMediaAnalysisJob API responses.
+* `Aws\IoTFleetWise` - Updated APIs: SignalNodeType query parameter has been added to ListSignalCatalogNodesRequest and ListVehiclesResponse has been extended with attributes field.
+* `Aws\SecurityHub` - Documentation updates for AWS Security Hub
+* `Aws\PaymentCryptography` - Provide an additional option for key exchange using RSA wrap/unwrap in addition to tr-34/tr-31 in ImportKey and ExportKey operations. Added new key usage (type) TR31_M1_ISO_9797_1_MAC_KEY, for use with Generate/VerifyMac dataplane operations with ISO9797 Algorithm 1 MAC calculations.
+* `Aws\Macie2` - This release adds support for analyzing Amazon S3 objects that are encrypted using dual-layer server-side encryption with AWS KMS keys (DSSE-KMS). It also adds support for reporting DSSE-KMS details in statistics and metadata about encryption settings for S3 buckets and objects.
+* `Aws\IoT` - Revert release of LogTargetTypes
+* `Aws\PersonalizeRuntime` - Documentation updates for Amazon Personalize
+* `Aws\Personalize` - Documentation updates for Amazon Personalize.
+
+## 3.296.1 - 2024-01-14
+
+* `Aws\SageMaker` - This release will have ValidationException thrown if certain invalid app types are provided. The release will also throw ValidationException if more than 10 account ids are provided in VpcOnlyTrustedAccounts.
+
 ## 3.296.0 - 2024-01-12
 
 * `Aws\ConnectParticipant` - Introduce new Supervisor participant role
