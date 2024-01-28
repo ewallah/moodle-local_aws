@@ -1,5 +1,42 @@
 # CHANGELOG
 
+## 3.297.2 - 2024-01-26
+
+* `Aws\Inspector2` - This release adds ECR container image scanning based on their lastRecordedPullTime.
+* `Aws\Connect` - Update list and string length limits for predefined attributes.
+* `Aws\SageMaker` - Amazon SageMaker Automatic Model Tuning now provides an API to programmatically delete tuning jobs.
+
+## 3.297.1 - 2024-01-25
+
+* `Aws\S3` - Fixes warning in S3 client when region is not provided in constructor
+* `Aws\Lightsail` - This release adds support for IPv6-only instance plans.
+* `Aws\ACMPCA` - AWS Private CA now supports an option to omit the CDP extension from issued certificates, when CRL revocation is enabled.
+
+## 3.297.0 - 2024-01-24
+
+* `Aws\Credentials` - Adds support for specifying custom IMDS endpoint when using the InstanceProfileProvider.
+* `Aws\EC2` - Introduced a new clientToken request parameter on CreateNetworkAcl and CreateRouteTable APIs. The clientToken parameter allows idempotent operations on the APIs.
+* `Aws\ECS` - Documentation updates for Amazon ECS.
+* `Aws\Outposts` - DeviceSerialNumber parameter is now optional in StartConnection API
+* `Aws\StorageGateway` - Add DeprecationDate and SoftwareVersion to response of ListGateways.
+* `Aws\RDS` - This release adds support for Aurora Limitless Database.
+
+## 3.296.8 - 2024-01-23
+
+* `Aws\Inspector2` - This release adds support for CIS scans on EC2 instances.
+
+## 3.296.7 - 2024-01-22
+
+* `Aws\CloudFrontKeyValueStore` - This release improves upon the DescribeKeyValueStore API by returning two additional fields, Status of the KeyValueStore and the FailureReason in case of failures during creation of KeyValueStore.
+* `Aws\EC2` - Documentation updates for Amazon EC2.
+* `Aws\Organizations` - Doc only update for quota increase change
+* `Aws\ConnectCases` - This release adds the ability to view audit history on a case and introduces a new parameter, performedBy, for CreateCase and UpdateCase API's.
+* `Aws\finspace` - Allow customer to set zip default through command line arguments.
+* `Aws\RDS` - Introduced support for the InsufficientDBInstanceCapacityFault error in the RDS CreateDBCluster API method. This provides enhanced error handling, ensuring a more robust experience when creating database clusters with insufficient instance capacity.
+* `Aws\AppConfigData` - Fix FIPS Endpoints in aws-us-gov.
+* `Aws\Cloud9` - Doc-only update around removing AL1 from list of available AMIs for Cloud9
+* `Aws\ECS` - This release adds support for Transport Layer Security (TLS) and Configurable Timeout to ECS Service Connect. TLS facilitates privacy and data security for inter-service communications, while Configurable Timeout allows customized per-request timeout and idle timeout for Service Connect services.
+
 ## 3.296.6 - 2024-01-19
 
 * `Aws\Athena` - Introducing new NotebookS3LocationUri parameter to Athena ImportNotebook API. Payload is no longer required and either Payload or NotebookS3LocationUri needs to be provided (not both) for a successful ImportNotebook API call. If both are provided, an InvalidRequestException will be thrown.
