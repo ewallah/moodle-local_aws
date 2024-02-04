@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 3.298.2 - 2024-02-02
+
+* `Aws\DynamoDB` - Any number of users can execute up to 50 concurrent restores (any type of restore) in a given account.
+* `Aws\SageMaker` - Amazon SageMaker Canvas adds GenerativeAiSettings support for CanvasAppSettings.
+
+## 3.298.1 - 2024-02-01
+
+* `Aws\IVS` - This release introduces a new resource Playback Restriction Policy which can be used to geo-restrict or domain-restrict channel stream playback when associated with a channel. New APIs to support this resource were introduced in the form of Create/Delete/Get/Update/List.
+* `Aws\ManagedBlockchainQuery` - This release adds support for transactions that have not reached finality. It also removes support for the status property from the response of the GetTransaction operation. You can use the confirmationStatus and executionStatus properties to determine the status of the transaction.
+* `Aws\MediaConvert` - This release includes support for broadcast-mixed audio description tracks.
+* `Aws\NeptuneGraph` - Adding new APIs in SDK for Amazon Neptune Analytics. These APIs include operations to execute, cancel, list queries and get the graph summary.
+* `Aws\CognitoIdentityProvider` - Added CreateIdentityProvider and UpdateIdentityProvider details for new SAML IdP features
+
+## 3.298.0 - 2024-01-31
+
+* `Aws\` - Adds support for the PHP 8.3 runtime
+* `Aws\SSM` - This release adds an optional Duration parameter to StateManager Associations. This allows customers to specify how long an apply-only-on-cron association execution should run. Once the specified Duration is out all the ongoing cancellable commands or automations are cancelled.
+* `Aws\Glue` - Update page size limits for GetJobRuns and GetTriggers APIs.
+* `Aws\CloudFormation` - CloudFormation IaC generator allows you to scan existing resources in your account and select resources to generate a template for a new or existing CloudFormation stack.
+* `Aws\ElasticLoadBalancingv2` - This release enables unhealthy target draining intervals for Network Load Balancers.
+
+## 3.297.4 - 2024-01-30
+
+* `Aws\DataZone` - Add new skipDeletionCheck to DeleteDomain. Add new skipDeletionCheck to DeleteProject which also automatically deletes dependent objects
+* `Aws\Route53` - Update the SDKs for text changes in the APIs.
+
+## 3.297.3 - 2024-01-29
+
+* `Aws\Snowball` - Modified description of createaddress to include direction to add path when providing a JSON file.
+* `Aws\MWAA` - This release adds MAINTENANCE environment status for Amazon MWAA environments.
+* `Aws\RDS` - Introduced support for the InsufficientDBInstanceCapacityFault error in the RDS RestoreDBClusterFromSnapshot and RestoreDBClusterToPointInTime API methods. This provides enhanced error handling, ensuring a more robust experience.
+* `Aws\AutoScaling` - EC2 Auto Scaling customers who use attribute based instance-type selection can now intuitively define their Spot instances price protection limit as a percentage of the lowest priced On-Demand instance type.
+* `Aws\Comprehend` - Comprehend PII analysis now supports Spanish input documents.
+* `Aws\EC2` - EC2 Fleet customers who use attribute based instance-type selection can now intuitively define their Spot instances price protection limit as a percentage of the lowest priced On-Demand instance type.
+
 ## 3.297.2 - 2024-01-26
 
 * `Aws\Inspector2` - This release adds ECR container image scanning based on their lastRecordedPullTime.
