@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## 3.300.4 - 2024-02-23
+
+* `Aws\QLDB` - Clarify possible values for KmsKeyArn and EncryptionDescription.
+* `Aws\CloudWatchRUM` - Doc-only update for new RUM metrics that were added
+* `Aws\RDS` - Add pattern and length based validations for DBShardGroupIdentifier
+* `Aws\AppSync` - Documentation only updates for AppSync
+
+## 3.300.3 - 2024-02-22
+
+* `Aws\InternetMonitor` - This release adds IPv4 prefixes to health events
+* `Aws\KinesisVideo` - Increasing NextToken parameter length restriction for List APIs from 512 to 1024.
+
+## 3.300.2 - 2024-02-21
+
+* `Aws\MediaLive` - MediaLive now supports the ability to restart pipelines in a running channel.
+* `Aws\IoTEvents` - Increase the maximum length of descriptions for Inputs, Detector Models, and Alarm Models
+* `Aws\SSM` - This release adds support for sharing Systems Manager parameters with other AWS accounts.
+* `Aws\LookoutEquipment` - This release adds a field exposing model quality to read APIs for models. It also adds a model quality field to the API response when creating an inference scheduler.
+
+## 3.300.1 - 2024-02-20
+
+* `Aws\DynamoDB` - Publishing quick fix for doc only update.
+* `Aws\Lambda` - Add .NET 8 (dotnet8) Runtime support to AWS Lambda.
+* `Aws\Firehose` - This release updates a few Firehose related APIs.
+
+## 3.300.0 - 2024-02-19
+
+* `Aws\Keyspaces` - Documentation updates for Amazon Keyspaces
+* `Aws\Chatbot` - This release adds support for AWS Chatbot. You can now monitor, operate, and troubleshoot your AWS resources with interactive ChatOps using the AWS SDK.
+* `Aws\Amplify` - This release contains API changes that enable users to configure their Amplify domains with their own custom SSL/TLS certificate.
+* `Aws\IVS` - Changed description for latencyMode in Create/UpdateChannel and Channel/ChannelSummary.
+* `Aws\MediaTailor` - MediaTailor: marking #AdBreak.OffsetMillis as required.
+* `Aws\ConfigService` - Documentation updates for the AWS Config CLI
+
 ## 3.299.1 - 2024-02-16
 
 * `Aws\Firehose` - This release adds support for Data Message Extraction for decompressed CloudWatch logs, and to use a custom file extension or time zone for S3 destinations.
