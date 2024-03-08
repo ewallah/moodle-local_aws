@@ -31,7 +31,7 @@ use local_aws\local\guzzle_helper;
  * @copyright  2023 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class guzzle_helper_test extends \advanced_testcase {
+final class guzzle_helper_test extends \advanced_testcase {
 
     /**
      * This method runs before every test.
