@@ -1,5 +1,50 @@
 # CHANGELOG
 
+## 3.300.14 - 2024-03-08
+
+* `Aws\EndpointV2` - Updates auth scheme selection criteria
+* `Aws\CloudTrail` - Added exceptions to CreateTrail, DescribeTrails, and ListImportFailures APIs.
+* `Aws\Transfer` - Added DES_EDE3_CBC to the list of supported encryption algorithms for messages sent with an AS2 connector.
+* `Aws\BedrockAgentRuntime` - Documentation update for Bedrock Runtime Agent
+* `Aws\CodeBuild` - This release adds support for a new webhook event: PULL_REQUEST_CLOSED.
+* `Aws\CognitoIdentityProvider` - Add ConcurrentModificationException to SetUserPoolMfaConfig
+* `Aws\GuardDuty` - Add RDS Provisioned and Serverless Usage types
+* `Aws\Batch` - This release adds JobStateTimeLimitActions setting to the Job Queue API. It allows you to configure an action Batch can take for a blocking job in front of the queue after the defined period of time. The new parameter applies for ECS, EKS, and FARGATE Job Queues.
+
+## 3.300.13 - 2024-03-07
+
+* `Aws\Snowball` - Doc-only update for change to EKS-Anywhere ordering.
+* `Aws\Lambda` - Documentation updates for AWS Lambda
+* `Aws\WAFV2` - You can increase the max request body inspection size for some regional resources. The size setting is in the web ACL association config. Also, the AWSManagedRulesBotControlRuleSet EnableMachineLearning setting now takes a Boolean instead of a primitive boolean type, for languages like Java.
+* `Aws\AppConfig` - AWS AppConfig now supports dynamic parameters, which enhance the functionality of AppConfig Extensions by allowing you to provide parameter values to your Extensions at the time you deploy your configuration.
+* `Aws\WorkSpaces` - Added note for user decoupling
+* `Aws\EC2` - This release adds an optional parameter to RegisterImage and CopyImage APIs to support tagging AMIs at the time of creation.
+* `Aws\RDS` - Updates Amazon RDS documentation for io2 storage for Multi-AZ DB clusters
+* `Aws\PaymentCryptographyData` - AWS Payment Cryptography EMV Decrypt Feature Release
+* `Aws\ManagedGrafana` - Adds support for the new GrafanaToken as part of the Amazon Managed Grafana Enterprise plugins upgrade to associate your AWS account with a Grafana Labs account.
+
+## 3.300.12 - 2024-03-06
+
+* `Aws\Redshift` - Update for documentation only. Covers port ranges, definition updates for data sharing, and definition updates to cluster-snapshot documentation.
+* `Aws\RDS` - Updated the input of CreateDBCluster and ModifyDBCluster to support setting CA certificates. Updated the output of DescribeDBCluster to show current CA certificate setting value.
+* `Aws\imagebuilder` - Add PENDING status to Lifecycle Execution resource status. Add StartTime and EndTime to ListLifecycleExecutionResource API response.
+* `Aws\VerifiedPermissions` - Deprecating details in favor of configuration for GetIdentitySource and ListIdentitySources APIs.
+* `Aws\DynamoDB` - Doc only updates for DynamoDB documentation
+* `Aws\MWAA` - Amazon MWAA adds support for Apache Airflow v2.8.1.
+
+## 3.300.11 - 2024-03-05
+
+* `Aws\SESv2` - Adds support for providing custom headers within SendEmail and SendBulkEmail for SESv2.
+* `Aws\Chatbot` - Minor update to documentation.
+* `Aws\Organizations` - This release contains an endpoint addition
+* `Aws\APIGateway` - Documentation updates for Amazon API Gateway
+
+## 3.300.10 - 2024-03-04
+
+* `Aws\CloudFormation` - Add DetailedStatus field to DescribeStackEvents and DescribeStacks APIs
+* `Aws\Organizations` - Documentation update for AWS Organizations
+* `Aws\FSx` - Added support for creating FSx for NetApp ONTAP file systems with up to 12 HA pairs, delivering up to 72 GB/s of read throughput and 12 GB/s of write throughput.
+
 ## 3.300.9 - 2024-03-01
 
 * `Aws\AccessAnalyzer` - Fixed a typo in description field.
