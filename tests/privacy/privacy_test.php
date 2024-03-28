@@ -34,7 +34,6 @@ namespace local_aws\privacy;
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class privacy_test extends \advanced_testcase {
-
     /**
      * Test privacy.
      * @covers \local_aws\privacy\provider

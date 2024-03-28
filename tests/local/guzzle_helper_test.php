@@ -32,7 +32,6 @@ use local_aws\local\guzzle_helper;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class guzzle_helper_test extends \advanced_testcase {
-
     /**
      * This method runs before every test.
      */
