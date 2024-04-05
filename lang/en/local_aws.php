@@ -23,6 +23,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = "Amazon's SDK for PHP";
 $string['clientnotfound'] = 'AWS Service client not found. Client must be fully qualified classname e.g. \Aws\S3\S3Client';
+$string['pluginname'] = "Amazon's SDK for PHP";
 $string['privacy:metadata'] = 'The local aws plugin does not store any personal data. However, it allows other plugins to pass data to AWS services.';
