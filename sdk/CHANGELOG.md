@@ -1,5 +1,48 @@
 # CHANGELOG
 
+## 3.303.4 - 2024-04-05
+
+* `Aws\QuickSight` - Adding IAMIdentityCenterInstanceArn parameter to CreateAccountSubscription
+* `Aws\ResourceGroups` - Added a new QueryErrorCode RESOURCE_TYPE_NOT_SUPPORTED that is returned by the ListGroupResources operation if the group query contains unsupported resource types.
+* `Aws\VerifiedPermissions` - Adding BatchIsAuthorizedWithToken API which supports multiple authorization requests against a PolicyStore given a bearer token.
+
+## 3.303.3 - 2024-04-04
+
+* `Aws\VerifiedPermissions` - Adds GroupConfiguration field to Identity Source API's
+* `Aws\B2bi` - Adding support for X12 5010 HIPAA EDI version and associated transaction sets.
+* `Aws\EC2` - Amazon EC2 G6 instances powered by NVIDIA L4 Tensor Core GPUs can be used for a wide range of graphics-intensive and machine learning use cases. Gr6 instances also feature NVIDIA L4 GPUs and can be used for graphics workloads with higher memory requirements.
+* `Aws\EMRContainers` - This release adds support for integration with EKS AccessEntry APIs to enable automatic Cluster Access for EMR on EKS.
+* `Aws\CleanRooms` - Feature: New schemaStatusDetails field to the existing Schema object that displays a status on Schema API responses to show whether a schema is queryable or not. New BatchGetSchemaAnalysisRule API to retrieve multiple schemaAnalysisRules using a single API call.
+* `Aws\IVS` - API update to include an SRT ingest endpoint and passphrase for all channels.
+
+## 3.303.2 - 2024-04-03
+
+* `Aws\CleanRoomsML` - The release includes a public SDK for AWS Clean Rooms ML APIs, making them globally available to developers worldwide.
+* `Aws\Transfer` - Add ability to specify Security Policies for SFTP Connectors
+* `Aws\GroundStation` - This release adds visibilityStartTime and visibilityEndTime to DescribeContact and ListContacts responses.
+* `Aws\MedicalImaging` - SearchImageSets API now supports following enhancements - Additional support for searching on UpdatedAt and SeriesInstanceUID - Support for searching existing filters between dates/times - Support for sorting the search result by Ascending/Descending - Additional parameters returned in the response
+* `Aws\Lambda` - Add Ruby 3.3 (ruby3.3) support to AWS Lambda
+* `Aws\DocDB` - This release adds Global Cluster Switchover capability which enables you to change your global cluster's primary AWS Region, the region that serves writes, while preserving the replication between all regions in the global cluster.
+* `Aws\DataZone` - This release supports the feature of dataQuality to enrich asset with dataQualityResult in Amazon DataZone.
+* `Aws\CloudFormation` - This release would return a new field - PolicyAction in cloudformation's existed DescribeChangeSetResponse, showing actions we are going to apply on the physical resource (e.g., Delete, Retain) according to the user's template
+* `Aws\MediaLive` - Cmaf Ingest outputs are now supported in Media Live
+
+## 3.303.1 - 2024-04-02
+
+* `Aws\ivschat` - Doc-only update. Changed "Resources" to "Key Concepts" in docs and updated text.
+* `Aws\SecurityHub` - Documentation updates for AWS Security Hub
+* `Aws\RolesAnywhere` - This release increases the limit on the roleArns request parameter for the *Profile APIs that support it. This parameter can now take up to 250 role ARNs.
+* `Aws\ECS` - Documentation only update for Amazon ECS.
+* `Aws\Glue` - Adding View related fields to responses of read-only Table APIs.
+
+## 3.303.0 - 2024-04-01
+
+* `Aws\CloudWatch` - This release adds support for CloudWatch Anomaly Detection on cross-account metrics. SingleMetricAnomalyDetector and MetricDataQuery inputs to Anomaly Detection APIs now take an optional AccountId field.
+* `Aws\EMR` - This release fixes a broken link in the documentation.
+* `Aws\Deadline` - AWS Deadline Cloud is a new fully managed service that helps customers set up, deploy, and scale rendering projects in minutes, so they can improve the efficiency of their rendering pipelines and take on more projects.
+* `Aws\DataZone` - This release supports the feature of AI recommendations for descriptions to enrich the business data catalog in Amazon DataZone.
+* `Aws\Lightsail` - This release adds support to upgrade the TLS version of the distribution.
+
 ## 3.302.0 - 2024-03-29
 
 * `Aws\NeptuneGraph` - Add the new API Start-Import-Task for Amazon Neptune Analytics.
