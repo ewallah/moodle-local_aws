@@ -1,5 +1,38 @@
 # CHANGELOG
 
+## 3.304.8 - 2024-04-19
+
+* `Aws\Personalize` - This releases auto training capability while creating a solution and automatically syncing latest solution versions when creating/updating a campaign
+* `Aws\InternetMonitor` - This update introduces the GetInternetEvent and ListInternetEvents APIs, which provide access to internet events displayed on the Amazon CloudWatch Internet Weather Map.
+* `Aws\Glue` - Adding RowFilter in the response for GetUnfilteredTableMetadata API
+
+## 3.304.7 - 2024-04-18
+
+* `Aws\drs` - Outpost ARN added to Source Server and Recovery Instance
+* `Aws\WorkSpaces` - Adds new APIs for managing and sharing WorkSpaces BYOL configuration across accounts.
+* `Aws\RolesAnywhere` - This release introduces the PutAttributeMapping and DeleteAttributeMapping APIs. IAM Roles Anywhere now provides the capability to define a set of mapping rules, allowing customers to specify which data is extracted from their X.509 end-entity certificates.
+* `Aws\GuardDuty` - Added IPv6Address fields for local and remote IP addresses
+* `Aws\EMRServerless` - This release adds the capability to publish detailed Spark engine metrics to Amazon Managed Service for Prometheus (AMP) for enhanced monitoring for Spark jobs.
+* `Aws\QuickSight` - This release adds support for the Cross Sheet Filter and Control features, and support for warnings in asset imports for any permitted errors encountered during execution
+* `Aws\SageMaker` - Removed deprecated enum values and updated API documentation.
+
+## 3.304.6 - 2024-04-17
+
+* `Aws\QBusiness` - This release adds support for IAM Identity Center (IDC) as the identity gateway for Q Business. It also allows users to provide an explicit intent for Q Business to identify how the Chat request should be handled.
+* `Aws\EC2` - Documentation updates for Elastic Compute Cloud (EC2).
+
+## 3.304.5 - 2024-04-16
+
+* `Aws\BedrockAgent` - For Create Agent API, the agentResourceRoleArn parameter is no longer required.
+* `Aws\EntityResolution` - Cross Account Resource Support .
+* `Aws\WellArchitected` - AWS Well-Architected now has a Connector for Jira to allow customers to efficiently track workload risks and improvement efforts and create closed-loop mechanisms.
+* `Aws\EMRServerless` - This release adds support for shuffle optimized disks that allow larger disk sizes and higher IOPS to efficiently run shuffle heavy workloads.
+* `Aws\MainframeModernization` - Adding new ListBatchJobRestartPoints API and support for restart batch job.
+* `Aws\MediaPackageV2` - Dash v2 is a MediaPackage V2 feature to support egressing on DASH manifest format.
+* `Aws\IoTWireless` - Add PublicGateways in the GetWirelessStatistics call response, indicating the LoRaWAN public network accessed by the device.
+* `Aws\LakeFormation` - This release adds Lake Formation managed RAM support for the 4 APIs - "DescribeLakeFormationIdentityCenterConfiguration", "CreateLakeFormationIdentityCenterConfiguration", "DescribeLakeFormationIdentityCenterConfiguration", and "DeleteLakeFormationIdentityCenterConfiguration"
+* `Aws\Outposts` - This release adds new APIs to allow customers to configure their Outpost capacity at order-time.
+
 ## 3.304.4 - 2024-04-12
 
 * `Aws\HealthLake` - Added new CREATE_FAILED status for data stores. Added new errorCause to DescribeFHIRDatastore API and ListFHIRDatastores API response for additional insights into data store creation and deletion workflows.
