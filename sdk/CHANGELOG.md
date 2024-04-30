@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## 3.305.4 - 2024-04-26
+
+* `Aws\OAM` - This release introduces support for Source Accounts to define which Metrics and Logs to share with the Monitoring Account
+* `Aws\RDS` - SupportsLimitlessDatabase field added to describe-db-engine-versions to indicate whether the DB engine version supports Aurora Limitless Database.
+* `Aws\Support` - Releasing minor endpoint updates.
+* `Aws\MarketplaceEntitlementService` - Releasing minor endpoint updates.
+* `Aws\CodePipeline` - Add ability to manually and automatically roll back a pipeline stage to a previously successful execution.
+* `Aws\ConnectCampaignService` - This release adds support for specifying if Answering Machine should wait for prompt sound.
+* `Aws\CognitoIdentityProvider` - Add LimitExceededException to SignUp errors
+
+## 3.305.3 - 2024-04-25
+
+* `Aws\Credentials` - Makes the SSO token to be refreshed when required and allowed by the rules states on the sso token provider specs.
+* `Aws\FMS` - AWS Firewall Manager adds support for network ACL policies to manage Amazon Virtual Private Cloud (VPC) network access control lists (ACLs) for accounts in your organization.
+* `Aws\SFN` - Add new ValidateStateMachineDefinition operation, which performs syntax checking on the definition of a Amazon States Language (ASL) state machine.
+* `Aws\IVSRealTime` - Bug Fix: IVS Real Time does not support ARNs using the `svs` prefix.
+* `Aws\AppSync` - UpdateGraphQLAPI documentation update and datasource introspection secret arn update
+* `Aws\IVS` - Bug Fix: IVS does not support arns with the `svs` prefix
+* `Aws\RDS` - Updates Amazon RDS documentation for setting local time zones for RDS for Db2 DB instances.
+
+## 3.305.2 - 2024-04-24
+
+* `Aws\EntityResolution` - Support Batch Unique IDs Deletion.
+* `Aws\DataSync` - This change allows users to disable and enable the schedules associated with their tasks.
+* `Aws\EMRContainers` - EMRonEKS Service support for SecurityConfiguration enforcement for Spark Jobs.
+* `Aws\EC2` - Launching capability for customers to enable or disable automatic assignment of public IPv4 addresses to their network interface
+* `Aws\SSM` - Add SSM DescribeInstanceProperties API to public AWS SDK.
+* `Aws\GameLift` - Amazon GameLift releases container fleets support for public preview. Deploy Linux-based containerized game server software for hosting on Amazon GameLift.
+
+## 3.305.1 - 2024-04-23
+
+* `Aws\BedrockAgentRuntime` - This release introduces zero-setup file upload support for the RetrieveAndGenerate API. This allows you to chat with your data without setting up a Knowledge Base.
+* `Aws\PI` - Clarifies how aggregation works for GetResourceMetrics in the Performance Insights API.
+* `Aws\WorkSpacesWeb` - Added InstanceType and MaxConcurrentSessions parameters on CreatePortal and UpdatePortal Operations as well as the ability to read Customer Managed Key & Additional Encryption Context parameters on supported resources (Portal, BrowserSettings, UserSettings, IPAccessSettings)
+* `Aws\BedrockAgent` - Introducing the ability to create multiple data sources per knowledge base, specify S3 buckets as data sources from external accounts, and exposing levers to define the deletion behavior of the underlying vector store data.
+* `Aws\Bedrock` - This release introduces Model Evaluation and Guardrails for Amazon Bedrock.
+* `Aws\RDS` - Fix the example ARN for ModifyActivityStreamRequest
+* `Aws\EC2` - This release introduces EC2 AMI Deregistration Protection, a new AMI property that can be enabled by customers to protect an AMI against an unintended deregistration. This release also enables the AMI owners to view the AMI 'LastLaunchedTime' in DescribeImages API.
+* `Aws\BedrockRuntime` - This release introduces Guardrails for Amazon Bedrock.
+* `Aws\CostExplorer` - Added additional metadata that might be applicable to your reservation recommendations.
+
+## 3.305.0 - 2024-04-22
+
+* `Aws\BedrockAgent` - Releasing the support for simplified configuration and return of control
+* `Aws\SageMaker` - This release adds support for Real-Time Collaboration and Shared Space for JupyterLab App on SageMaker Studio.
+* `Aws\Route53Profiles` - Route 53 Profiles allows you to apply a central DNS configuration across many VPCs regardless of account.
+* `Aws\ServiceDiscovery` - This release adds examples to several Cloud Map actions.
+* `Aws\RedshiftServerless` - Updates description of schedule field for scheduled actions.
+* `Aws\PaymentCryptography` - Adding support to TR-31/TR-34 exports for optional headers, allowing customers to add additional metadata (such as key version and KSN) when exporting keys from the service.
+* `Aws\Transfer` - Adding new API to support remote directory listing using SFTP connector
+* `Aws\BedrockAgentRuntime` - Releasing the support for simplified configuration and return of control
+
 ## 3.304.8 - 2024-04-19
 
 * `Aws\Personalize` - This releases auto training capability while creating a solution and automatically syncing latest solution versions when creating/updating a campaign
