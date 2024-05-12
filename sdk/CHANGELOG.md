@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## 3.306.4 - 2024-05-10
+
+* `Aws\SageMaker` - Introduced support for G6 instance types on Sagemaker Notebook Instances and on SageMaker Studio for JupyterLab and CodeEditor applications.
+* `Aws\GreengrassV2` - Mark ComponentVersion in ComponentDeploymentSpecification as required.
+* `Aws\SSOOIDC` - Updated request parameters for PKCE support.
+* `Aws\ApplicationDiscoveryService` - add v2 smoke tests and smithy smokeTests trait for SDK testing
+
+## 3.306.3 - 2024-05-09
+
+* `Aws\VerifiedPermissions` - Adds policy effect and actions fields to Policy API's.
+* `Aws\SsmSap` - Added support for application-aware start/stop of SAP applications running on EC2 instances, with SSM for SAP
+* `Aws\BedrockAgentRuntime` - This release adds support to provide guardrail configuration and modify inference parameters that are then used in RetrieveAndGenerate API in Agents for Amazon Bedrock.
+* `Aws\Pinpoint` - This release adds support for specifying email message headers for Email Templates, Campaigns, Journeys and Send Messages.
+* `Aws\Route53Resolver` - Update the DNS Firewall settings to correct a spelling issue.
+
+## 3.306.2 - 2024-05-08
+
+* `Aws\ECR` - This release adds pull through cache rules support for GitLab container registry in Amazon ECR.
+* `Aws\CognitoIdentityProvider` - Add EXTERNAL_PROVIDER enum value to UserStatusType.
+* `Aws\FMS` - The policy scope resource tag is always a string value, either a non-empty string or an empty string.
+* `Aws\EC2` - Adding Precision Hardware Clock (PHC) to public API DescribeInstanceTypes
+* `Aws\Polly` - Add new engine - generative - that builds the most expressive conversational voices.
+* `Aws\SQS` - This release adds MessageSystemAttributeNames to ReceiveMessageRequest to replace AttributeNames.
+
+## 3.306.1 - 2024-05-07
+
+* `Aws\Budgets` - This release adds tag support for budgets and budget actions.
+* `Aws\Route53Profiles` - Doc only update for Route 53 profiles that fixes some link issues
+* `Aws\B2bi` - Documentation update to clarify the MappingTemplate definition.
+* `Aws\ResilienceHub` - AWS Resilience Hub has expanded its drift detection capabilities by introducing a new type of drift detection - application resource drift. This new enhancement detects changes, such as the addition or deletion of resources within the application's input sources.
+
+## 3.306.0 - 2024-05-06
+
+* `Aws\Parser` - Adds support for event streaming on JSON-RPC protocol parser
+* `Aws\MediaLive` - AWS Elemental MediaLive now supports configuring how SCTE 35 passthrough triggers segment breaks in HLS and MediaPackage output groups. Previously, messages triggered breaks in all these output groups. The new option is to trigger segment breaks only in groups that have SCTE 35 passthrough enabled.
+
 ## 3.305.9 - 2024-05-03
 
 * `Aws\` - Fixes issue with manually configured signature versions.
