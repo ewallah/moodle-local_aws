@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 3.307.1 - 2024-05-17
+
+* `Aws\ElasticLoadBalancingv2` - This release adds dualstack-without-public-ipv4 IP address type for ALB.
+* `Aws\ApplicationAutoScaling` - add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CodeBuild` - Aws CodeBuild now supports 36 hours build timeout
+* `Aws\LakeFormation` - Introduces a new API, GetDataLakePrincipal, that returns the identity of the invoking principal
+* `Aws\Transfer` - Enable use of CloudFormation traits in Smithy model to improve generated CloudFormation schema from the Smithy API model.
+
+## 3.307.0 - 2024-05-16
+
+* `Aws\User-Agent` - Update user agent implementation for supporting AppId and user agent version
+* `Aws\SecretsManager` - Documentation updates for AWS Secrets Manager
+* `Aws\Connect` - Adding Contact Flow metrics to the GetMetricDataV2 API
+* `Aws\ACMPCA` - This release adds support for waiters to fail on AccessDeniedException when having insufficient permissions
+* `Aws\Kafka` - AWS MSK support for Broker Removal.
+* `Aws\QuickSight` - This release adds DescribeKeyRegistration and UpdateKeyRegistration APIs to manage QuickSight Customer Managed Keys (CMK).
+* `Aws\MWAA` - Amazon MWAA now supports Airflow web server auto scaling to automatically handle increased demand from REST APIs, Command Line Interface (CLI), or more Airflow User Interface (UI) users. Customers can specify maximum and minimum web server instances during environment creation and update workflow.
+* `Aws\SageMaker` - Introduced WorkerAccessConfiguration to SageMaker Workteam. This allows customers to configure resource access for workers in a workteam.
+
+## 3.306.7 - 2024-05-15
+
+* `Aws\` - Remove Honeycode and AlexaForBusiness clients from the SDK since they have been discontinued.
+* `Aws\BedrockAgentRuntime` - Updating Bedrock Knowledge Base Metadata & Filters feature with two new filters listContains and stringContains
+* `Aws\DataSync` - Task executions now display a CANCELLING status when an execution is in the process of being cancelled.
+* `Aws\ManagedGrafana` - This release adds new ServiceAccount and ServiceAccountToken APIs.
+* `Aws\SecurityHub` - Documentation-only update for AWS Security Hub
+* `Aws\MedicalImaging` - Added support for importing medical imaging data from Amazon S3 buckets across accounts and regions.
+* `Aws\CodeBuild` - CodeBuild Reserved Capacity VPC Support
+
+## 3.306.6 - 2024-05-14
+
+* `Aws\Connect` - Amazon Connect provides enhanced search capabilities for flows & flow modules on the Connect admin website and programmatically using APIs. You can search for flows and flow modules by name, description, type, status, and tags, to filter and identify a specific flow in your Connect instances.
+* `Aws\S3` - Updated a few x-id in the http uri traits
+
+## 3.306.5 - 2024-05-13
+
+* `Aws\VPCLattice` - This release adds TLS Passthrough support. It also increases max number of target group per rule to 10.
+* `Aws\EventBridge` - Amazon EventBridge introduces KMS customer-managed key (CMK) encryption support for custom and partner events published on EventBridge Event Bus (including default bus) and UpdateEventBus API.
+
 ## 3.306.4 - 2024-05-10
 
 * `Aws\SageMaker` - Introduced support for G6 instance types on Sagemaker Notebook Instances and on SageMaker Studio for JupyterLab and CodeEditor applications.
