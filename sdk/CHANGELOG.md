@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## 3.308.3 - 2024-05-24
+
+* `Aws\DynamoDB` - Documentation only updates for DynamoDB.
+* `Aws\IoTFleetWise` - AWS IoT FleetWise now supports listing vehicles with attributes filter, ListVehicles API is updated to support additional attributes filter.
+* `Aws\ManagedBlockchain` - This is a minor documentation update to address the impact of the shut down of the Goerli and Polygon networks.
+
+## 3.308.2 - 2024-05-23
+
+* `Aws\OpsWorks` - Documentation-only update for OpsWorks Stacks.
+* `Aws\EMRServerless` - This release adds the capability to run interactive workloads using Apache Livy Endpoint.
+
+## 3.308.1 - 2024-05-22
+
+* `Aws\KMS` - This release includes feature to import customer's asymmetric (RSA, ECC and SM2) and HMAC keys into KMS in China.
+* `Aws\CloudFormation` - Added DeletionMode FORCE_DELETE_STACK for deleting a stack that is stuck in DELETE_FAILED state due to resource deletion failure.
+* `Aws\WAFV2` - You can now use Security Lake to collect web ACL traffic data.
+* `Aws\Chatbot` - This change adds support for tagging Chatbot configurations.
+* `Aws\OpenSearchService` - This release adds support for enabling or disabling a data source configured as part of Zero-ETL integration with Amazon S3, by setting its status.
+
+## 3.308.0 - 2024-05-21
+
+* `Aws\StorageGateway` - Added new SMBSecurityStrategy enum named MandatoryEncryptionNoAes128, new mode enforces encryption and disables AES 128-bit algorithums.
+* `Aws\Lightsail` - This release adds support for Amazon Lightsail instances to switch between dual-stack or IPv4 only and IPv6-only public IP address types.
+* `Aws\PI` - Performance Insights added a new input parameter called AuthorizedActions to support the fine-grained access feature. Performance Insights also restricted the acceptable input characters.
+* `Aws\Glue` - Add Maintenance window to CreateJob and UpdateJob APIs and JobRun response. Add a new Job Run State for EXPIRED.
+* `Aws\RDS` - Updates Amazon RDS documentation for Db2 license through AWS Marketplace.
+* `Aws\CloudFront` - Model update; no change to SDK functionality.
+* `Aws\MailManager` - This release includes a new Amazon SES feature called Mail Manager, which is a set of email gateway capabilities designed to help customers strengthen their organization's email infrastructure, simplify email workflow management, and streamline email compliance control.
+
+## 3.307.2 - 2024-05-20
+
+* `Aws\RDS` - This release adds support for EngineLifecycleSupport on DBInstances, DBClusters, and GlobalClusters.
+* `Aws\SecretsManager` - add v2 smoke tests and smithy smokeTests trait for SDK testing
+* `Aws\ControlTower` - Added ListControlOperations API and filtering support for ListEnabledControls API. Updates also includes added metadata for enabled controls and control operations.
+* `Aws\BedrockAgent` - This release adds support for using Guardrails with Bedrock Agents.
+* `Aws\BedrockAgentRuntime` - This release adds support for using Guardrails with Bedrock Agents.
+* `Aws\OSIS` - Add support for creating an OpenSearch Ingestion pipeline that is attached to a provided VPC. Add information about the destinations of an OpenSearch Ingestion pipeline to the GetPipeline and ListPipelines APIs.
+
 ## 3.307.1 - 2024-05-17
 
 * `Aws\ElasticLoadBalancingv2` - This release adds dualstack-without-public-ipv4 IP address type for ALB.
