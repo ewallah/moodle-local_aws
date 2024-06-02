@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## 3.308.7 - 2024-05-31
+
+* `Aws\LaunchWizard` - This release adds support for describing workload deployment specifications, deploying additional workload types, and managing tags for Launch Wizard resources with API operations.
+* `Aws\CodeBuild` - AWS CodeBuild now supports Self-hosted GitHub Actions runners for Github Enterprise
+* `Aws\ElastiCache` - Update to attributes of TestFailover and minor revisions.
+* `Aws\CodeGuruSecurity` - This release includes minor model updates and documentation updates.
+
+## 3.308.6 - 2024-05-30
+
+* `Aws\BedrockRuntime` - This release adds Converse and ConverseStream APIs to Bedrock Runtime
+* `Aws\ACM` - add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\EMRServerless` - The release adds support for spark structured streaming.
+* `Aws\Connect` - Adding associatedQueueIds as a SearchCriteria and response field to the SearchRoutingProfiles API
+* `Aws\BedrockAgent` - With this release, Knowledge bases for Bedrock adds support for Titan Text Embedding v2.
+* `Aws\SageMaker` - Adds Model Card information as a new component to Model Package. Autopilot launches algorithm selection for TimeSeries modality to generate AutoML candidates per algorithm.
+* `Aws\CloudTrail` - CloudTrail Lake returns PartitionKeys in the GetEventDataStore API response. Events are grouped into partitions based on these keys for better query performance. For example, the calendarday key groups events by day, while combining the calendarday key with the hour key groups them by day and hour.
+* `Aws\RDS` - Updates Amazon RDS documentation for Aurora Postgres DBname.
+
+## 3.308.5 - 2024-05-29
+
+* `Aws\Credentials` - Clears cached path for authorization token when necessary on ECS credentials provider.
+* `Aws\CodeBuild` - AWS CodeBuild now supports manually creating GitHub webhooks
+* `Aws\Connect` - This release includes changes to DescribeContact API's response by including ConnectedToSystemTimestamp, RoutingCriteria, Customer, Campaign, AnsweringMachineDetectionStatus, CustomerVoiceActivity, QualityMetrics, DisconnectDetails, and SegmentAttributes information from a contact in Amazon Connect.
+* `Aws\Athena` - Throwing validation errors on CreateNotebook with Name containing `/`,`:`,`\`
+* `Aws\SecurityHub` - Add ROOT type for TargetType model
+* `Aws\Glue` - Add optional field JobMode to CreateJob and UpdateJob APIs.
+
+## 3.308.4 - 2024-05-28
+
+* `Aws\Kafka` - Adds ControllerNodeInfo in ListNodes response to support Raft mode for MSK
+* `Aws\SWF` - This release adds new APIs for deleting activity type and workflow type resources.
+* `Aws\EC2` - Providing support to accept BgpAsnExtended attribute
+* `Aws\DynamoDB` - Doc-only update for DynamoDB. Specified the IAM actions needed to authorize a user to create a table with a resource-based policy.
+
 ## 3.308.3 - 2024-05-24
 
 * `Aws\DynamoDB` - Documentation only updates for DynamoDB.
