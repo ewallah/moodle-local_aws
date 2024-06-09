@@ -44,6 +44,7 @@ final class admin_settings_aws_region_test extends advanced_testcase {
      * @return void
      */
     public function tearDown(): void {
+        parent::tearDown();
         $admin = admin_get_root();
         $admin->purge_children(true);
     }
