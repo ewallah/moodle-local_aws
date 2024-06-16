@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## 3.314.2 - 2024-06-14
+
+* `Aws\DataZone` - This release introduces a new default service blueprint for custom environment creation.
+* `Aws\MediaConvert` - This release adds the ability to search for historical job records within the management console using a search box and/or via the SDK/CLI with partial string matching search on input file name.
+* `Aws\Macie2` - This release adds support for managing the status of automated sensitive data discovery for individual accounts in an organization, and determining whether individual S3 buckets are included in the scope of the analyses.
+* `Aws\EC2` - Documentation updates for Amazon EC2.
+* `Aws\Route53Domains` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## 3.314.1 - 2024-06-13
+
+* `Aws\Glue` - This release adds support for configuration of evaluation method for composite rules in Glue Data Quality rulesets.
+* `Aws\IoTWireless` - Add RoamingDeviceSNR and RoamingDeviceRSSI to Customer Metrics.
+* `Aws\CloudHSMV2` - Added support for hsm type hsm2m.medium. Added supported for creating a cluster in FIPS or NON_FIPS mode.
+* `Aws\KMS` - This feature allows customers to use their keys stored in KMS to derive a shared secret which can then be used to establish a secured channel for communication, provide proof of possession, or establish trust with other parties.
+* `Aws\MediaPackageV2` - This release adds support for CMAF ingest (DASH-IF live media ingest protocol interface 1)
+
+## 3.314.0 - 2024-06-12
+
+* `Aws\` - Removes Backup Storage client, which has been deprecated.
+* `Aws\OSIS` - SDK changes for self-managed vpc endpoint to OpenSearch ingestion pipelines.
+* `Aws\SecretsManager` - Introducing RotationToken parameter for PutSecretValue API
+* `Aws\Redshift` - Updates to remove DC1 and DS2 node types.
+* `Aws\SecurityLake` - This release updates request validation regex to account for non-commercial aws partitions.
+* `Aws\SESv2` - This release adds support for Amazon EventBridge as an email sending events destination.
+* `Aws\AppTest` - AWS Mainframe Modernization Application Testing is an AWS Mainframe Modernization service feature that automates functional equivalence testing for mainframe application modernization and migration to AWS, and regression testing.
+* `Aws\EC2` - Tagging support for Traffic Mirroring FilterRule resource
+
+## 3.313.0 - 2024-06-11
+
+* `Aws\Serializer` - Fixes empty list serialization on empty lists
+* `Aws\AccessAnalyzer` - IAM Access Analyzer now provides policy recommendations to help resolve unused permissions for IAM roles and users. Additionally, IAM Access Analyzer now extends its custom policy checks to detect when IAM policies grant public access or access to critical resources ahead of deployments.
+* `Aws\NetworkManager` - This is model changes & documentation update for Service Insertion feature for AWS Cloud WAN. This feature allows insertion of AWS/3rd party security services on Cloud WAN. This allows to steer inter/intra segment traffic via security appliances and provide visibility to the route updates.
+* `Aws\PcaConnectorScep` - Connector for SCEP allows you to use a managed, cloud CA to enroll mobile devices and networking gear. SCEP is a widely-adopted protocol used by mobile device management (MDM) solutions for enrolling mobile devices. With the connector, you can use AWS Private CA with popular MDM solutions.
+* `Aws\SageMaker` - Introduced Scope and AuthenticationRequestExtraParams to SageMaker Workforce OIDC configuration; this allows customers to modify these options for their private Workforce IdP integration. Model Registry Cross-account model package groups are discoverable.
+* `Aws\GuardDuty` - Added API support for GuardDuty Malware Protection for S3.
+
+## 3.312.0 - 2024-06-10
+
+* `Aws\ApplicationSignals` - This is the initial SDK release for Amazon CloudWatch Application Signals. Amazon CloudWatch Application Signals provides curated application performance monitoring for developers to monitor and troubleshoot application health using pre-built dashboards and Service Level Objectives.
+* `Aws\ECS` - This release introduces a new cluster configuration to support the customer-managed keys for ECS managed storage encryption.
+* `Aws\imagebuilder` - This release updates the regex pattern for Image Builder ARNs.
+
 ## 3.311.2 - 2024-06-07
 
 * `Aws\CodePipeline` - CodePipeline now supports overriding S3 Source Object Key during StartPipelineExecution, as part of Source Overrides.
