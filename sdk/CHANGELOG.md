@@ -1,5 +1,54 @@
 # CHANGELOG
 
+## 3.314.6 - 2024-06-20
+
+* `Aws\DynamoDB` - Doc-only update for DynamoDB. Fixed Important note in 6 Global table APIs - CreateGlobalTable, DescribeGlobalTable, DescribeGlobalTableSettings, ListGlobalTables, UpdateGlobalTable, and UpdateGlobalTableSettings.
+* `Aws\BedrockRuntime` - This release adds document support to Converse and ConverseStream APIs
+* `Aws\Glue` - Fix Glue paginators for Jobs, JobRuns, Triggers, Blueprints and Workflows.
+* `Aws\SecurityHub` - Documentation updates for Security Hub
+* `Aws\SageMaker` - Adds support for model references in Hub service, and adds support for cross-account access of Hubs
+* `Aws\CostOptimizationHub` - This release enables AWS Cost Optimization Hub to show cost optimization recommendations for Amazon RDS MySQL and RDS PostgreSQL.
+* `Aws\IVSRealTime` - IVS Real-Time now offers customers the ability to record individual stage participants to S3.
+* `Aws\ComputeOptimizer` - This release enables AWS Compute Optimizer to analyze and generate optimization recommendations for Amazon RDS MySQL and RDS PostgreSQL.
+* `Aws\CodeArtifact` - Add support for the Cargo package format.
+
+## 3.314.5 - 2024-06-19
+
+* `Aws\DirectConnect` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CostandUsageReportService` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Artifact` - This release adds an acceptanceType field to the ReportSummary structure (used in the ListReports API response).
+* `Aws\ElasticTranscoder` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Athena` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\OpenSearchService` - This release enables customers to use JSON Web Tokens (JWT) for authentication on their Amazon OpenSearch Service domains.
+
+## 3.314.4 - 2024-06-18
+
+* `Aws\Auth` - Corrects an issue with modeling for `noAuth` auth types.
+* `Aws\Lightsail` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Rekognition` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\BedrockRuntime` - This release adds support for using Guardrails with the Converse and ConverseStream APIs.
+* `Aws\SageMaker` - Launched a new feature in SageMaker to provide managed MLflow Tracking Servers for customers to track ML experiments. This release also adds a new capability of attaching additional storage to SageMaker HyperPod cluster instances.
+* `Aws\ConfigService` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\EKS` - This release adds support to surface async fargate customer errors from async path to customer through describe-fargate-profile API response.
+* `Aws\CloudTrail` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Shield` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Snowball` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Polly` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## 3.314.3 - 2024-06-17
+
+* `Aws\MediaConvert` - This release includes support for creating I-frame only video segments for DASH trick play.
+* `Aws\SecretsManager` - Doc only update for Secrets Manager
+* `Aws\Glue` - This release introduces a new feature, Usage profiles. Usage profiles allow the AWS Glue admin to create different profiles for various classes of users within the account, enforcing limits and defaults for jobs and sessions.
+* `Aws\WAF` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Batch` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\KMS` - Updating SDK example for KMS DeriveSharedSecret API.
+* `Aws\CodeBuild` - AWS CodeBuild now supports global and organization GitHub webhooks
+* `Aws\DirectoryService` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\EFS` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CognitoIdentityProvider` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\ACMPCA` - Doc-only update that adds name constraints as an allowed extension for ImportCertificateAuthorityCertificate.
+
 ## 3.314.2 - 2024-06-14
 
 * `Aws\DataZone` - This release introduces a new default service blueprint for custom environment creation.
