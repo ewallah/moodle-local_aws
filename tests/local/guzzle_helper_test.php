@@ -36,6 +36,7 @@ final class guzzle_helper_test extends \advanced_testcase {
      * This method runs before every test.
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest();
     }
 
