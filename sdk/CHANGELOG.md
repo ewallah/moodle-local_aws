@@ -1,5 +1,56 @@
 # CHANGELOG
 
+## 3.315.2 - 2024-06-28
+
+* `Aws\Glue` - Added AttributesToGet parameter to Glue GetDatabases, allowing caller to limit output to include only the database name.
+* `Aws\CloudHSMV2` - Added 3 new APIs to support backup sharing: GetResourcePolicy, PutResourcePolicy, and DeleteResourcePolicy. Added BackupArn to the output of the DescribeBackups API. Added support for BackupArn in the CreateCluster API.
+* `Aws\PI` - Noting that the filter db.sql.db_id isn't available for RDS for SQL Server DB instances.
+* `Aws\WorkSpaces` - Added support for Red Hat Enterprise Linux 8 on Amazon WorkSpaces Personal.
+* `Aws\OpenSearchService` - This release removes support for enabling or disabling Natural Language Query Processing feature for Amazon OpenSearch Service domains.
+* `Aws\ACMPCA` - Added CCPC_LEVEL_1_OR_HIGHER KeyStorageSecurityStandard and SM2 KeyAlgorithm and SM3WITHSM2 SigningAlgorithm for China regions.
+* `Aws\EMR` - This release provides the support for new allocation strategies i.e. CAPACITY_OPTIMIZED_PRIORITIZED for Spot and PRIORITIZED for On-Demand by taking input of priority value for each instance type for instance fleet clusters.
+* `Aws\KinesisAnalyticsV2` - Support for Flink 1.19 in Managed Service for Apache Flink
+* `Aws\Connect` - This release supports showing PreferredAgentRouting step via DescribeContact API.
+
+## 3.315.1 - 2024-06-27
+
+* `Aws\ElastiCache` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\ChimeSDKMediaPipelines` - Added Amazon Transcribe multi language identification to Chime SDK call analytics. Enabling customers sending single stream audio to generate call recordings using Chime SDK call analytics
+* `Aws\SageMaker` - Add capability for Admins to customize Studio experience for the user by showing or hiding Apps and MLTools.
+* `Aws\CloudFront` - Doc only update for CloudFront that fixes customer-reported issue
+* `Aws\MQ` - This release makes the EngineVersion field optional for both broker and configuration and uses the latest available version by default. The AutoMinorVersionUpgrade field is also now optional for broker creation and defaults to 'true'.
+* `Aws\WorkSpaces` - Added support for WorkSpaces Pools.
+* `Aws\QuickSight` - Adding support for Repeating Sections, Nested Filters
+* `Aws\ApplicationAutoScaling` - Amazon WorkSpaces customers can now use Application Auto Scaling to automatically scale the number of virtual desktops in a WorkSpaces pool.
+* `Aws\QConnect` - Adds CreateContentAssociation, ListContentAssociations, GetContentAssociation, and DeleteContentAssociation APIs.
+* `Aws\DataZone` - This release supports the data lineage feature of business data catalog in Amazon DataZone.
+* `Aws\RDS` - Updates Amazon RDS documentation for TAZ export to S3.
+
+## 3.315.0 - 2024-06-26
+
+* `Aws\` - Decodes URL returned by CompleteMultipartUpload operation so special characters are removed.
+* `Aws\ControlTower` - Added ListLandingZoneOperations API.
+* `Aws\EKS` - Added support for disabling unmanaged addons during cluster creation.
+* `Aws\IVSRealTime` - IVS Real-Time now offers customers the ability to upload public keys for customer vended participant tokens.
+* `Aws\KinesisAnalyticsV2` - This release adds support for new ListApplicationOperations and DescribeApplicationOperation APIs. It adds a new configuration to enable system rollbacks, adds field ApplicationVersionCreateTimestamp for clarity and improves support for pagination for APIs.
+* `Aws\OpenSearchService` - This release adds support for enabling or disabling Natural Language Query Processing feature for Amazon OpenSearch Service domains, and provides visibility into the current state of the setup or tear-down.
+
+## 3.314.8 - 2024-06-25
+
+* `Aws\EC2` - This release is for the launch of the new u7ib-12tb.224xlarge, R8g, c7gn.metal and mac2-m1ultra.metal instance types
+* `Aws\AutoScaling` - Doc only update for Auto Scaling's TargetTrackingMetricDataQuery
+* `Aws\NetworkManager` - This is model changes & documentation update for the Asynchronous Error Reporting feature for AWS Cloud WAN. This feature allows customers to view errors that occur while their resources are being provisioned, enabling customers to fix their resources without needing external support.
+* `Aws\WorkSpacesThinClient` - This release adds the deviceCreationTags field to CreateEnvironment API input, UpdateEnvironment API input and GetEnvironment API output.
+
+## 3.314.7 - 2024-06-24
+
+* `Aws\SSM` - Add sensitive trait to SSM IPAddress property for CloudTrail redaction
+* `Aws\EC2` - Fix EC2 multi-protocol info in models.
+* `Aws\BedrockRuntime` - Increases Converse API's document name length
+* `Aws\QBusiness` - Allow enable/disable Q Apps when creating/updating a Q application; Return the Q Apps enablement information when getting a Q application.
+* `Aws\CustomerProfiles` - This release includes changes to ProfileObjectType APIs, adds functionality top set and get capacity for profile object types.
+* `Aws\WorkSpacesWeb` - Added ability to enable DeepLinking functionality on a Portal via UserSettings as well as added support for IdentityProvider resource tagging.
+
 ## 3.314.6 - 2024-06-20
 
 * `Aws\DynamoDB` - Doc-only update for DynamoDB. Fixed Important note in 6 Global table APIs - CreateGlobalTable, DescribeGlobalTable, DescribeGlobalTableSettings, ListGlobalTables, UpdateGlobalTable, and UpdateGlobalTableSettings.
