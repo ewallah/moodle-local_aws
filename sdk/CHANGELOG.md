@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.316.3 - 2024-07-12
+
+* `Aws\SNS` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\GlobalAccelerator` - This feature adds exceptions to the Customer API to avoid throwing Internal Service errors
+* `Aws\AutoScaling` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\ACMPCA` - Minor refactoring of C2J model for AWS Private CA
+* `Aws\QuickSight` - Vega ally control options and Support for Reviewed Answers in Topics
+* `Aws\ARCZonalShift` - Adds the option to subscribe to get notifications when a zonal autoshift occurs in a region.
+* `Aws\Pinpoint` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\RDS` - Update path for CreateDBCluster resource identifier, and Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CodeBuild` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\DynamoDB` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## 3.316.2 - 2024-07-10
+
+* `Aws\EC2` - Add parameters to enable provisioning IPAM BYOIPv4 space at a Local Zone Network Border Group level
+* `Aws\Batch` - This feature allows AWS Batch Jobs with EKS container orchestration type to be run as Multi-Node Parallel Jobs.
+* `Aws\BedrockRuntime` - Add support for contextual grounding check and ApplyGuardrail API for Guardrails for Amazon Bedrock.
+* `Aws\Bedrock` - Add support for contextual grounding check for Guardrails for Amazon Bedrock.
+* `Aws\LicenseManagerLinuxSubscriptions` - Add support for third party subscription providers, starting with RHEL subscriptions through Red Hat Subscription Manager (RHSM). Additionally, add support for tagging subscription provider resources, and detect when an instance has more than one Linux subscription and notify the customer.
+* `Aws\GroundStation` - Documentation update specifying OEM ephemeris units of measurement
+* `Aws\Glue` - Add recipe step support for recipe node
+* `Aws\MediaConnect` - AWS Elemental MediaConnect introduces the ability to disable outputs. Disabling an output allows you to keep the output attached to the flow, but stop streaming to the output destination. A disabled output does not incur data transfer costs.
+* `Aws\BedrockAgentRuntime` - Introduces query decomposition, enhanced Agents integration with Knowledge bases, session summary generation, and code interpretation (preview) for Claude V3 Sonnet and Haiku models. Also introduces Prompt Flows (preview) to link prompts, foundational models, and resources for end-to-end solutions.
+* `Aws\BedrockAgent` - Introduces new data sources and chunking strategies for Knowledge bases, advanced parsing logic using FMs, session summary generation, and code interpretation (preview) for Claude V3 Sonnet and Haiku models. Also introduces Prompt Flows (preview) to link prompts, foundational models, and resources.
+
+## 3.316.1 - 2024-07-09
+
+* `Aws\OpenSearchService` - This release adds support for enabling or disabling Natural Language Query Processing feature for Amazon OpenSearch Service domains, and provides visibility into the current state of the setup or tear-down.
+* `Aws\DataZone` - This release deprecates dataProductItem field from SearchInventoryResultItem, along with some unused DataProduct shapes
+* `Aws\FSx` - Adds support for FSx for NetApp ONTAP 2nd Generation file systems, and FSx for OpenZFS Single AZ HA file systems.
+* `Aws\SageMaker` - This release 1/ enables optimization jobs that allows customers to perform Ahead-of-time compilation and quantization. 2/ allows customers to control access to Amazon Q integration in SageMaker Studio. 3/ enables AdditionalModelDataSources for CreateModel action.
+
+## 3.316.0 - 2024-07-08
+
+* `Aws\ElasticBeanstalk` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CodeDeploy` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\DatabaseMigrationService` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Firehose` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\DeviceFarm` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\SES` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\GameLift` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Route53Resolver` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\QApps` - This is a general availability (GA) release of Amazon Q Apps, a capability of Amazon Q Business. Q Apps leverages data sources your company has provided to enable users to build, share, and customize apps within your organization.
+* `Aws\ElasticsearchService` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
 ## 3.315.6 - 2024-07-05
 
 * `Aws\ECR` - This release for Amazon ECR makes change to bring the SDK into sync with the API.
