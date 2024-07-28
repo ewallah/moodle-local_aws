@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## 3.316.8 - 2024-07-25
+
+* `Aws\ElasticLoadBalancingv2` - This release adds support for sharing trust stores across accounts and organizations through integration with AWS Resource Access Manager.
+* `Aws\ApplicationSignals` - CloudWatch Application Signals now supports application logs correlation with traces and operational health metrics of applications running on EC2 instances. Users can view the most relevant telemetry to troubleshoot application health anomalies such as spikes in latency, errors, and availability.
+* `Aws\ECR` - API and documentation updates for Amazon ECR, adding support for creating, updating, describing and deleting ECR Repository Creation Template.
+* `Aws\DataZone` - Introduces GetEnvironmentCredentials operation to SDK
+* `Aws\BedrockRuntime` - Provides ServiceUnavailableException error message
+* `Aws\SFN` - This release adds support to customer managed KMS key encryption in AWS Step Functions.
+* `Aws\EC2` - EC2 Fleet now supports using custom identifiers to reference Amazon Machine Images (AMI) in launch requests that are configured to choose from a diversified list of instance types.
+* `Aws\CodeCommit` - CreateRepository API now throws OperationNotAllowedException when the account has been restricted from creating a repository.
+* `Aws\EKS` - This release adds support for EKS cluster to manage extended support.
+* `Aws\ApplicationAutoScaling` - Application Auto Scaling is now more responsive to the changes in demand of your SageMaker Inference endpoints. To get started, create or update a Target Tracking policy based on High Resolution CloudWatch metrics.
+* `Aws\Outposts` - Adding default vCPU information to GetOutpostSupportedInstanceTypes and GetOutpostInstanceTypes responses
+* `Aws\NetworkFirewall` - You can now log events that are related to TLS inspection, in addition to the existing alert and flow logging.
+
+## 3.316.7 - 2024-07-24
+
+* `Aws\PinpointSMSVoiceV2` - Update for rebrand to AWS End User Messaging SMS and Voice.
+* `Aws\MedicalImaging` - CopyImageSet API adds copying selected instances between image sets, and overriding inconsistent metadata with a force parameter. UpdateImageSetMetadata API enables reverting to prior versions; updates to Study, Series, and SOP Instance UIDs; and updates to private elements, with a force parameter.
+* `Aws\CleanRooms` - Three enhancements to the AWS Clean Rooms: Disallowed Output Columns, Flexible Result Receivers, SQL as a Seed
+* `Aws\IoTSiteWise` - Adds support for creating SiteWise Edge gateways that run on a Siemens Industrial Edge Device.
+* `Aws\DynamoDB` - DynamoDB doc only update for July
+* `Aws\MediaPackageV2` - This release adds support for Irdeto DRM encryption in DASH manifests.
+
+## 3.316.6 - 2024-07-23
+
+* `Aws\DataZone` - This release removes the deprecated dataProductItem field from Search API output.
+* `Aws\AppSync` - Adding support for paginators in AppSync list APIs
+* `Aws\Connect` - Added PostContactSummary segment type on ListRealTimeContactAnalysisSegmentsV2 API
+* `Aws\CleanRoomsML` - Adds SQL query as the source of seed audience for audience generation job.
+* `Aws\CleanRooms` - This release adds AWS Entity Resolution integration to associate ID namespaces & ID mapping workflow resources as part of ID namespace association and ID mapping table in AWS Clean Rooms. It also introduces a new ID_MAPPING_TABLE analysis rule to manage the protection on ID mapping table.
+* `Aws\EntityResolution` - Support First Party ID Mapping
+* `Aws\ConnectContactLens` - Added PostContactSummary segment type on ListRealTimeContactAnalysisSegments API
+
+## 3.316.5 - 2024-07-22
+
+* `Aws\` - Updates CRT signing config region handling
+* `Aws\RedshiftServerless` - Adds dualstack support for Redshift Serverless workgroup.
+* `Aws\DataZone` - This release adds 1/ support of register S3 locations of assets in AWS Lake Formation hybrid access mode for DefaultDataLake blueprint. 2/ support of CRUD operations for Asset Filters.
+* `Aws\NeptuneGraph` - Amazon Neptune Analytics provides new options for customers to start with smaller graphs at a lower cost. CreateGraph, CreaateGraphImportTask, UpdateGraph and StartImportTask APIs will now allow 32 and 64 for `provisioned-memory`
+* `Aws\IVS` - Documentation update for IVS Low Latency API Reference.
+
 ## 3.316.4 - 2024-07-18
 
 * `Aws\Connect` - Amazon Connect expands search API coverage for additional resources. Search for hierarchy groups by name, ID, tag, or other criteria (new endpoint). Search for agent statuses by name, ID, tag, or other criteria (new endpoint). Search for users by their assigned proficiencies (enhanced endpoint)
