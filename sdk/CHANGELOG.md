@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.317.1 - 2024-08-02
+
+* `Aws\Api` - Fixes issue with parsing iso8601 timestamps with nanosecond precision in versions 8.0.9 and below.
+* `Aws\IVS` - updates cloudtrail event source for SDKs
+* `Aws\ResilienceHub` - Customers are presented with the grouping recommendations and can determine if the recommendations are accurate and apply to their case. This feature simplifies onboarding by organizing resources into appropriate AppComponents.
+* `Aws\WAFRegional` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Kinesis` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\SSM` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\IVSRealTime` - updates cloudtrail event source for SDKs
+* `Aws\Route53` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\Glue` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CloudWatch` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\ECS` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\ivschat` - updates cloudtrail event source for SDKs
+
+## 3.317.0 - 2024-08-01
+
+* `Aws\ControlTower` - Updated Control Tower service documentation for controlcatalog control ARN support with existing Control Tower public APIs
+* `Aws\ControlCatalog` - AWS Control Tower provides two new public APIs controlcatalog:ListControls and controlcatalog:GetControl under controlcatalog service namespace, which enable customers to programmatically retrieve control metadata of available controls.
+* `Aws\Support` - Doc only updates to CaseDetails
+* `Aws\SSMQuickSetup` - This release adds API support for the QuickSetup feature of AWS Systems Manager
+* `Aws\MemoryDB` - Doc only update for changes to deletion API.
+* `Aws\RDS` - This release adds support for specifying optional MinACU parameter in CreateDBShardGroup and ModifyDBShardGroup API. DBShardGroup response will contain MinACU if specified.
+* `Aws\SageMaker` - This release adds support for Amazon EMR Serverless applications in SageMaker Studio for running data processing jobs.
+* `Aws\Bedrock` - API and Documentation for Bedrock Model Copy feature. This feature lets you share and copy a custom model from one region to another or one account to another.
+* `Aws\IAM` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## 3.316.10 - 2024-07-30
+
+* `Aws\AppStream` - Added support for Red Hat Enterprise Linux 8 on Amazon AppStream 2.0
+* `Aws\AutoScaling` - Increase the length limit for VPCZoneIdentifier from 2047 to 5000
+* `Aws\Tnb` - This release adds Network Service Update, through which customers will be able to update their instantiated networks to a new network package. See the documentation for limitations. The release also enhances the Get network operation API to return parameter overrides used during the operation.
+* `Aws\ElasticLoadBalancing` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\CodePipeline` - AWS CodePipeline V2 type pipelines now support stage level conditions to enable development teams to safely release changes that meet quality and compliance requirements.
+* `Aws\CloudWatchLogs` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\RolesAnywhere` - IAM RolesAnywhere now supports custom role session name on the CreateSession. This release adds the acceptRoleSessionName option to a profile to control whether a role session name will be accepted in a session request with a given profile.
+* `Aws\EventBridge` - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+* `Aws\WorkSpaces` - Removing multi-session as it isn't supported for pools
+* `Aws\ElastiCache` - Doc only update for changes to deletion API.
+* `Aws\LexModelsV2` - This release adds new capabilities to the AMAZON.QnAIntent: Custom prompting, Guardrails integration and ExactResponse support for Bedrock Knowledge Base.
+
+## 3.316.9 - 2024-07-29
+
+* `Aws\ElastiCache` - Renaming full service name as it appears in developer documentation.
+* `Aws\MemoryDB` - Renaming full service name as it appears in developer documentation.
+
 ## 3.316.8 - 2024-07-25
 
 * `Aws\ElasticLoadBalancingv2` - This release adds support for sharing trust stores across accounts and organizations through integration with AWS Resource Access Manager.
