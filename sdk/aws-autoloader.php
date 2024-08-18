@@ -1,5 +1,10 @@
 <?php
 
+global $CFG;
+if ($CFG->version > 2023042400) {
+    return;
+}
+
 $mapping = array(
     'Aws\data\amplifyuibuilder\2021-08-11\smoke.json' => __DIR__ . '/Aws/data/amplifyuibuilder/2021-08-11/smoke.json.php',
     'Aws\data\amplifyuibuilder\2021-08-11\api-2.json' => __DIR__ . '/Aws/data/amplifyuibuilder/2021-08-11/api-2.json.php',
@@ -3079,6 +3084,7 @@ $mapping = array(
     'Psr\Http\Client\RequestExceptionInterface' => __DIR__ . '/Psr/Http/Client/RequestExceptionInterface.php',
     'Psr\Http\Client\NetworkExceptionInterface' => __DIR__ . '/Psr/Http/Client/NetworkExceptionInterface.php',
 );
+
 
 spl_autoload_register(function ($class) use ($mapping) {
     if (isset($mapping[$class])) {
