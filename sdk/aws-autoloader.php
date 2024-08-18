@@ -1,7 +1,7 @@
 <?php
 
 global $CFG;
-if ($CFG->version > 2023042400) {
+if ($CFG->version > 2023100900) {
     return;
 }
 
