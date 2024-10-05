@@ -1,7 +1,8 @@
 <?php
 
 global $CFG;
-if ($CFG->version > 2023100900) {
+
+if ($CFG->version > 2023100900 || during_initial_install() || isset($CFG->upgraderunning)) {
     return;
 }
 
