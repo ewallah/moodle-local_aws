@@ -166,8 +166,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionCodeGuruSecurity(array $args = [])
  * @method \Aws\CodePipeline\CodePipelineClient createCodePipeline(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionCodePipeline(array $args = [])
- * @method \Aws\CodeStar\CodeStarClient createCodeStar(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionCodeStar(array $args = [])
  * @method \Aws\CodeStarNotifications\CodeStarNotificationsClient createCodeStarNotifications(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionCodeStarNotifications(array $args = [])
  * @method \Aws\CodeStarconnections\CodeStarconnectionsClient createCodeStarconnections(array $args = [])
@@ -236,6 +234,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionDirectConnect(array $args = [])
  * @method \Aws\DirectoryService\DirectoryServiceClient createDirectoryService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionDirectoryService(array $args = [])
+ * @method \Aws\DirectoryServiceData\DirectoryServiceDataClient createDirectoryServiceData(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionDirectoryServiceData(array $args = [])
  * @method \Aws\DocDB\DocDBClient createDocDB(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionDocDB(array $args = [])
  * @method \Aws\DocDBElastic\DocDBElasticClient createDocDBElastic(array $args = [])
@@ -464,6 +464,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceEntitlementService(array $args = [])
  * @method \Aws\MarketplaceMetering\MarketplaceMeteringClient createMarketplaceMetering(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceMetering(array $args = [])
+ * @method \Aws\MarketplaceReporting\MarketplaceReportingClient createMarketplaceReporting(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMarketplaceReporting(array $args = [])
  * @method \Aws\MediaConnect\MediaConnectClient createMediaConnect(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMediaConnect(array $args = [])
  * @method \Aws\MediaConvert\MediaConvertClient createMediaConvert(array $args = [])
@@ -528,6 +530,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionOrganizations(array $args = [])
  * @method \Aws\Outposts\OutpostsClient createOutposts(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionOutposts(array $args = [])
+ * @method \Aws\PCS\PCSClient createPCS(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPCS(array $args = [])
  * @method \Aws\PI\PIClient createPI(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPI(array $args = [])
  * @method \Aws\Panorama\PanoramaClient createPanorama(array $args = [])
@@ -746,8 +750,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionWellArchitected(array $args = [])
  * @method \Aws\WorkDocs\WorkDocsClient createWorkDocs(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionWorkDocs(array $args = [])
- * @method \Aws\WorkLink\WorkLinkClient createWorkLink(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionWorkLink(array $args = [])
  * @method \Aws\WorkMail\WorkMailClient createWorkMail(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionWorkMail(array $args = [])
  * @method \Aws\WorkMailMessageFlow\WorkMailMessageFlowClient createWorkMailMessageFlow(array $args = [])
@@ -777,7 +779,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.320.2';
+    const VERSION = '3.323.1';
 
     /** @var array Arguments for creating clients */
     private $args;
