@@ -13,6 +13,11 @@ sed -i -e 's/require/require_once/g' $SDKDIR/aws-autoloader.php
 sed -i -e 's#GuzzleHttp/functions.php#GuzzleHttp/functions_include.php#g' $SDKDIR/aws-autoloader.php
 sed -i -e 's#GuzzleHttp/Psr7/functions.php#GuzzleHttp/Psr7/functions_include.php#g' $SDKDIR/aws-autoloader.php
 sed -i -e 's#GuzzleHttp/Promise/functions.php#GuzzleHttp/Promise/functions_include.php#g' $SDKDIR/aws-autoloader.php
+sed '2 i }'  $SDKDIR/aws-autoloader.php
+sed '2 i     return;'   $SDKDIR/aws-autoloader.php
+sed '2 i if ($CFG->version > 2023100900 ||  during_initial_install() || isset($CFG->upgraderunning)) {'   $SDKDIR/aws-autoloader.php
+sed '2 i global $CFG;'   $SDKDIR/aws-autoloader.php
+
 # sed -i -e 's#public function count()#public function count(): int#g' $SDKDIR/GuzzleHttp/Handler/MockHandler.php
 rm $SDKDIR/sdk.zip
 echo
@@ -25,4 +30,4 @@ sed -i -e '30s/.*/$plugin->release = "'$VERS'";/' version.php
 sed -i -e '6s/.*/        <version>'$VERS'<\/version>/' thirdpartylibs.xml
 git add sdk
 git commit -am $VERS
-git push ewa
+// git push ewa
