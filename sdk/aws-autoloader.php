@@ -1,4 +1,8 @@
 <?php
+global $CFG;
+if ($CFG->version > 2023100900 ||  during_initial_install() || isset($CFG->upgraderunning)) {
+return;
+}
 
 $mapping = array(
     'Aws\data\elastic-inference\2017-07-25\endpoint-rule-set-1.json' => __DIR__ . '/Aws/data/elastic-inference/2017-07-25/endpoint-rule-set-1.json.php',
