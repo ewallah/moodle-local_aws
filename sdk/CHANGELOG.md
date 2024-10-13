@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## 3.324.1 - 2024-10-11
+
+* `Aws\RoboMaker` - Documentation update: added support notices to each API action.
+* `Aws\ElasticLoadBalancingv2` - Add zonal_shift.config.enabled attribute. Add new AdministrativeOverride construct in the describe-target-health API response to include information about the override status applied to a target.
+* `Aws\EMR` - This release provides new parameter "Context" in instance fleet clusters.
+* `Aws\GuardDuty` - Added a new field for network connection details.
+* `Aws\Appflow` - Doc only updates for clarification around OAuth2GrantType for Salesforce.
+
+## 3.324.0 - 2024-10-10
+
+* `Aws\TimestreamInfluxDB` - This release updates our regex based validation rules in regards to valid DbInstance and DbParameterGroup name.
+* `Aws\ACMPCA` - Documentation updates for AWS Private CA.
+* `Aws\DatabaseMigrationService` - Introduces DescribeDataMigrations, CreateDataMigration, ModifyDataMigration, DeleteDataMigration, StartDataMigration, StopDataMigration operations to SDK. Provides FailedDependencyFault error message.
+* `Aws\EC2` - This release adds support for assigning the billing of shared Amazon EC2 On-Demand Capacity Reservations.
+* `Aws\IoTFleetWise` - Refine campaign related API validations
+* `Aws\ECS` - This is a documentation only release that updates to documentation to let customers know that Amazon Elastic Inference is no longer available.
+* `Aws\Route53Resolver` - Route 53 Resolver Forwarding Rules can now include a server name indication (SNI) in the target address for rules that use the DNS-over-HTTPS (DoH) protocol. When a DoH-enabled Outbound Resolver Endpoint forwards a request to a DoH server, it will provide the SNI in the TLS handshake.
+* `Aws\ElasticInference` - Elastic Inference - Documentation update to add service shutdown notice.
+* `Aws\NeptuneGraph` - Support for 16 m-NCU graphs available through account allowlisting
+* `Aws\Outposts` - Adding new "DELIVERED" enum value for Outposts Order status
+* `Aws\SocialMessaging` - This release for AWS End User Messaging includes a public SDK, providing a suite of APIs that enable sending WhatsApp messages to end users.
+
 ## 3.323.4 - 2024-10-09
 
 * `Aws\CodePipeline` - AWS CodePipeline introduces a Compute category
