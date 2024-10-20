@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## 3.324.5 - 2024-10-17
+
+* `Aws\ECS` - This is an Amazon ECS documentation only update to address tickets.
+* `Aws\RDS` - Updates Amazon RDS documentation for TAZ IAM support
+* `Aws\QuickSight` - Add StartDashboardSnapshotJobSchedule API. RestoreAnalysis now supports restoring analysis to folders.
+* `Aws\Pipes` - This release adds validation to require specifying a SecurityGroup and Subnets in the Vpc object under PipesSourceSelfManagedKafkaParameters. It also adds support for iso-e, iso-f, and other non-commercial partitions in ARN parameters.
+* `Aws\DataExchange` - This release adds Data Grant support, through which customers can programmatically create data grants to share with other AWS accounts and accept data grants from other AWS accounts.
+* `Aws\PinpointSMSVoiceV2` - Added the registrations status of REQUIRES_AUTHENTICATION
+* `Aws\WorkSpaces` - Updated the DomainName pattern for Active Directory
+* `Aws\BedrockAgent` - Removing support for topK property in PromptModelInferenceConfiguration object, Making PromptTemplateConfiguration property as required, Limiting the maximum PromptVariant to 1
+
+## 3.324.4 - 2024-10-16
+
+* `Aws\S3` - Add support for the new optional bucket-region and prefix query parameters in the ListBuckets API. For ListBuckets requests that express pagination, Amazon S3 will now return both the bucket names and associated AWS regions in the response.
+
+## 3.324.3 - 2024-10-15
+
+* `Aws\Redshift` - This release launches the CreateIntegration, DeleteIntegration, DescribeIntegrations and ModifyIntegration APIs to create and manage Amazon Redshift Zero-ETL Integrations.
+* `Aws\QBusiness` - Amazon Q Business now supports embedding the Amazon Q Business web experience on third-party websites.
+* `Aws\IVS` - On a channel that you own, you can now replace an ongoing stream with a new stream by streaming up with the priority parameter appended to the stream key.
+* `Aws\SESv2` - This release adds support for email maximum delivery seconds that allows senders to control the time within which their emails are attempted for delivery.
+* `Aws\CodeBuild` - Enable proxy for reserved capacity fleet.
+* `Aws\Amplify` - Added sourceUrlType field to StartDeployment request
+* `Aws\CloudFormation` - Documentation update for AWS CloudFormation API Reference.
+* `Aws\ResilienceHub` - AWS Resilience Hub now integrates with the myApplications platform, enabling customers to easily assess the resilience of applications defined in myApplications. The new Resiliency widget provides visibility into application resilience and actionable recommendations for improvement.
+
+## 3.324.2 - 2024-10-14
+
+* `Aws\Transfer` - This release enables customers using SFTP connectors to query the transfer status of their files to meet their monitoring needs as well as orchestrate post transfer actions.
+* `Aws\CodePipeline` - AWS CodePipeline V2 type pipelines now support automatically retrying failed stages and skipping stage for failed entry conditions.
+* `Aws\MailManager` - Mail Manager support for viewing and exporting metadata of archived messages.
+* `Aws\SupplyChain` - This release adds AWS Supply Chain instance management functionality. Specifically adding CreateInstance, DeleteInstance, GetInstance, ListInstances, and UpdateInstance APIs.
+* `Aws\SecurityLake` - This release updates request validation regex for resource ARNs.
+
 ## 3.324.1 - 2024-10-11
 
 * `Aws\RoboMaker` - Documentation update: added support notices to each API action.
