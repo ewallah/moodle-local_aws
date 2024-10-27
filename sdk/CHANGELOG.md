@@ -1,5 +1,60 @@
 # CHANGELOG
 
+## 3.324.11 - 2024-10-25
+
+* `Aws\` - Removes deprecated Nimble Studio service.
+* `Aws\BedrockAgent` - Add support of new model types for Bedrock Agents, Adding inference profile support for Flows and Prompt Management, Adding new field to configure additional inference configurations for Flows and Prompt Management
+* `Aws\CodeBuild` - AWS CodeBuild now supports automatically retrying failed builds
+* `Aws\Lambda` - Add TagsError field in Lambda GetFunctionResponse. The TagsError field contains details related to errors retrieving tags.
+* `Aws\SupplyChain` - API doc updates, and also support showing error message on a failed instance
+* `Aws\CloudWatchLogs` - Adding inferred token name for dynamic tokens in Anomalies.
+
+## 3.324.10 - 2024-10-24
+
+* `Aws\AppConfig` - This release improves deployment safety by granting customers the ability to REVERT completed deployments, to the last known good state.In the StopDeployment API revert case the status of a COMPLETE deployment will be REVERTED. AppConfig only allows a revert within 72 hours of deployment completion.
+* `Aws\ECS` - This release adds support for EBS volumes attached to Amazon ECS Windows tasks running on EC2 instances.
+* `Aws\EC2` - This release includes a new API to describe some details of the Amazon Machine Images (AMIs) that were used to launch EC2 instances, even if those AMIs are no longer available for use.
+* `Aws\PCS` - Documentation update: added the default value of the Slurm configuration parameter scaleDownIdleTimeInSeconds to its description.
+* `Aws\QBusiness` - Add a new field in chat response. This field can be used to support nested schemas in array fields
+
+## 3.324.9 - 2024-10-23
+
+* `Aws\PaymentCryptographyData` - Add ECDH support on PIN operations.
+* `Aws\PaymentCryptography` - Add support for ECC P-256 and P-384 Keys.
+* `Aws\Bedrock` - Doc updates for supporting converse
+* `Aws\EC2` - Amazon EC2 X8g, C8g and M8g instances are powered by AWS Graviton4 processors. X8g provide the lowest cost per GiB of memory among Graviton4 instances. C8g provide the best price performance for compute-intensive workloads. M8g provide the best price performance in for general purpose workloads.
+* `Aws\Connect` - Amazon Connect Service Feature: Add support to start screen sharing for a web calling contact.
+* `Aws\MWAA` - Introducing InvokeRestApi which allows users to invoke the Apache Airflow REST API on the webserver with the specified inputs.
+
+## 3.324.8 - 2024-10-22
+
+* `Aws\imagebuilder` - Add macOS platform and instance placement options
+* `Aws\BedrockRuntime` - Updating invoke regex to support imported models for converse API
+* `Aws\Repostspace` - Adds the BatchAddRole and BatchRemoveRole APIs.
+* `Aws\TimestreamQuery` - This release adds support for Query Insights, a feature that provides details of query execution, enabling users to identify areas for improvement to optimize their queries, resulting in improved query performance and lower query costs.
+* `Aws\MainframeModernization` - Add AuthSecretsManagerArn optional parameter to batch job APIs, expand batch parameter limits, and introduce clientToken constraints.
+* `Aws\RDS` - Global clusters now expose the Endpoint attribute as one of its fields. It is a Read/Write endpoint for the global cluster which resolves to the Global Cluster writer instance.
+
+## 3.324.7 - 2024-10-21
+
+* `Aws\ApplicationInsights` - This feature enables customers to specify SNS Topic ARN. CloudWatch Application Insights (CWAI) will utilize this ARN to send problem notifications.
+* `Aws\AutoScaling` - Adds support for removing the PlacementGroup setting on an Auto Scaling Group through the UpdateAutoScalingGroup API.
+* `Aws\FMS` - Update AWS WAF policy - add the option to retrofit existing web ACLs instead of creating all new web ACLs.
+* `Aws\DatabaseMigrationService` - Added support for tagging in StartReplicationTaskAssessmentRun API and introduced IsLatestTaskAssessmentRun and ResultStatistic fields for enhanced tracking and assessment result statistics.
+* `Aws\BedrockAgentRuntime` - Knowledge Bases for Amazon Bedrock now supports custom prompts and model parameters in the orchestrationConfiguration of the RetrieveAndGenerate API. The modelArn field accepts Custom Models and Imported Models ARNs.
+* `Aws\EC2` - Amazon EC2 now allows you to create network interfaces with just the EFA driver and no ENA driver by specifying the network interface type as efa-only.
+* `Aws\EKS` - This release adds support for Amazon Application Recovery Controller (ARC) zonal shift and zonal autoshift with EKS that enhances the resiliency of multi-AZ cluster environments
+* `Aws\PaymentCryptographyData` - Adding new API to generate authenticated scripts for EMV pin change use cases.
+* `Aws\WAFV2` - Add a property to WebACL to indicate whether it's been retrofitted by Firewall Manager.
+
+## 3.324.6 - 2024-10-18
+
+* `Aws\BedrockRuntime` - Added converse support for custom imported models
+* `Aws\EC2` - RequestSpotInstances and RequestSpotFleet feature release.
+* `Aws\Bedrock` - Adding converse support to CMI API's
+* `Aws\Athena` - Removing FEDERATED from Create/List/Delete/GetDataCatalog API
+* `Aws\DataZone` - Adding the following project member designations: PROJECT_CATALOG_VIEWER, PROJECT_CATALOG_CONSUMER and PROJECT_CATALOG_STEWARD in the CreateProjectMembership API and PROJECT_CATALOG_STEWARD designation in the AddPolicyGrant API.
+
 ## 3.324.5 - 2024-10-17
 
 * `Aws\ECS` - This is an Amazon ECS documentation only update to address tickets.
