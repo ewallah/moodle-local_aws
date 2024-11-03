@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## 3.325.2 - 2024-11-01
+
+* `Aws\DocDBElastic` - Amazon DocumentDB Elastic Clusters adds support for pending maintenance actions feature with APIs GetPendingMaintenanceAction, ListPendingMaintenanceActions and ApplyPendingMaintenanceAction
+* `Aws\BedrockAgent` - Amazon Bedrock Knowledge Bases now supports using application inference profiles to increase throughput and improve resilience.
+* `Aws\CloudWatchLogs` - This release introduces an improvement in PutLogEvents
+* `Aws\TaxSettings` - Add support for supplemental tax registrations via these new APIs: PutSupplementalTaxRegistration, ListSupplementalTaxRegistrations, and DeleteSupplementalTaxRegistration.
+
+## 3.325.1 - 2024-10-31
+
+* `Aws\PrometheusService` - Added support for UpdateScraper API, to enable updating collector configuration in-place
+* `Aws\SageMaker` - SageMaker HyperPod adds scale-down at instance level via BatchDeleteClusterNodes API and group level via UpdateCluster API. SageMaker Training exposes secondary job status in TrainingJobSummary from ListTrainingJobs API. SageMaker now supports G6, G6e, P5e instances for HyperPod and Training.
+* `Aws\SESv2` - This release enables customers to provide the email template content in the SESv2 SendEmail and SendBulkEmail APIs instead of the name or the ARN of a stored email template.
+* `Aws\AutoScaling` - Adds bake time for Auto Scaling group Instance Refresh
+* `Aws\ElasticLoadBalancingv2` - Add UDP support for AWS PrivateLink and dual-stack Network Load Balancers
+* `Aws\Batch` - Add `podNamespace` to `EksAttemptDetail` and `containerID` to `EksAttemptContainerDetail`.
+* `Aws\Glue` - Add schedule support for AWS Glue column statistics
+
+## 3.325.0 - 2024-10-30
+
+* `Aws\Keyspaces` - Adds support for interacting with user-defined types (UDTs) through the following new operations: Create-Type, Delete-Type, List-Types, Get-Type.
+* `Aws\GeoPlaces` - Release of Amazon Location Places API. Places enables you to quickly search, display, and filter places, businesses, and locations based on proximity, category, and name
+* `Aws\Route53` - This release adds support for TLSA, SSHFP, SVCB, and HTTPS record types.
+* `Aws\EC2` - This release adds two new capabilities to VPC Security Groups: Security Group VPC Associations and Shared Security Groups.
+* `Aws\ECS` - This release supports service deployments and service revisions which provide a comprehensive view of your Amazon ECS service history.
+* `Aws\DataSync` - AWS DataSync now supports Enhanced mode tasks. This task mode supports transfer of virtually unlimited numbers of objects with enhanced metrics, more detailed logs, and higher performance than Basic mode. This mode currently supports transfers between Amazon S3 locations.
+* `Aws\Redshift` - This release launches S3 event integrations to create and manage integrations from an Amazon S3 source into an Amazon Redshift database.
+* `Aws\GeoMaps` - Release of Amazon Location Maps API. Maps enables you to build digital maps that showcase your locations, visualize your data, and unlock insights to drive your business
+* `Aws\AppSync` - This release adds support for AppSync Event APIs.
+* `Aws\OpenSearchService` - This release introduces the new OpenSearch user interface (Dashboards), a new web-based application that can be associated with multiple data sources across OpenSearch managed clusters, serverless collections, and Amazon S3, so that users can gain a comprehensive insights in an unified interface.
+* `Aws\WorkMail` - This release adds support for Multi-Factor Authentication (MFA) and Personal Access Tokens through integration with AWS IAM Identity Center.
+* `Aws\Connect` - Updated the public documentation for the UserIdentityInfo object to accurately reflect the character limits for the FirstName and LastName fields, which were previously listed as 1-100 characters.
+* `Aws\OpenSearchServerless` - Neo Integration via IAM Identity Center (IdC)
+* `Aws\GeoRoutes` - Release of Amazon Location Routes API. Routes enables you to plan efficient routes and streamline deliveries by leveraging real-time traffic, vehicle restrictions, and turn-by-turn directions.
+* `Aws\SageMaker` - Added support for Model Registry Staging construct. Users can define series of stages that models can progress through for model workflows and lifecycle. This simplifies tracking and managing models as they transition through development, testing, and production stages.
+* `Aws\RedshiftServerless` - Adds and updates API members for the Redshift Serverless AI-driven scaling and optimization feature using the price-performance target setting.
+* `Aws\NetworkFirewall` - AWS Network Firewall now supports configuring TCP idle timeout
+
+## 3.324.13 - 2024-10-29
+
+* `Aws\BedrockRuntime` - Update Application Inference Profile
+* `Aws\CleanRooms` - This release adds the option for customers to configure analytics engine when creating a collaboration, and introduces the new SPARK analytics engine type in addition to maintaining the legacy CLEAN_ROOMS_SQL engine type.
+* `Aws\RedshiftDataAPIService` - Adding a new API GetStatementResultV2 that supports CSV formatted results from ExecuteStatement and BatchExecuteStatement calls.
+* `Aws\SageMaker` - Adding `notebook-al2-v3` as allowed value to SageMaker NotebookInstance PlatformIdentifier attribute
+* `Aws\IoTFleetWise` - Updated BatchCreateVehicle and BatchUpdateVehicle APIs: LimitExceededException has been added and the maximum number of vehicles in a batch has been set to 10 explicitly
+* `Aws\Bedrock` - Update Application Inference Profile
+* `Aws\CloudWatchLogs` - Added support for new optional baseline parameter in the UpdateAnomaly API. For UpdateAnomaly requests with baseline set to True, The anomaly behavior is then treated as baseline behavior. However, more severe occurrences of this behavior will still be reported as anomalies.
+
+## 3.324.12 - 2024-10-28
+
+* `Aws\RDS` - This release adds support for Enhanced Monitoring and Performance Insights when restoring Aurora Limitless Database DB clusters. It also adds support for the os-upgrade pending maintenance action.
+* `Aws\StorageGateway` - Documentation update: Amazon FSx File Gateway will no longer be available to new customers.
+* `Aws\MediaPackageV2` - MediaPackage V2 Live to VOD Harvester is a MediaPackage V2 feature, which is used to export content from an origin endpoint to a S3 bucket.
+* `Aws\OpenSearchService` - Adds support for provisioning dedicated coordinator nodes. Coordinator nodes can be specified using the new NodeOptions parameter in ClusterConfig.
+
 ## 3.324.11 - 2024-10-25
 
 * `Aws\` - Removes deprecated Nimble Studio service.
