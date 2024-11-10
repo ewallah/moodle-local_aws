@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## 3.325.5 - 2024-11-08
+
+* `Aws\PinpointSMSVoiceV2` - Added the RequiresAuthenticationTimestamp field to the RegistrationVersionStatusHistory data type.
+* `Aws\EKS` - Adds new error code `Ec2InstanceTypeDoesNotExist` for Amazon EKS managed node groups
+* `Aws\Lambda` - This release adds support for using AWS KMS customer managed keys to encrypt AWS Lambda .zip deployment packages.
+* `Aws\QBusiness` - Adds S3 path option to pass group member list for PutGroup API.
+* `Aws\ControlCatalog` - AWS Control Catalog GetControl public API returns additional data in output, including Implementation and Parameters
+* `Aws\Batch` - This feature allows override LaunchTemplates to be specified in an AWS Batch Compute Environment.
+* `Aws\ChimeSDKMediaPipelines` - Added support for Media Capture Pipeline and Media Concatenation Pipeline for customer managed server side encryption. Now Media Capture Pipeline can use IAM sink role to get access to KMS key and encrypt/decrypt recorded artifacts. KMS key ID can also be supplied with encryption context.
+* `Aws\Firehose` - Amazon Data Firehose / Features : Adds support for a new DeliveryStreamType, DatabaseAsSource. DatabaseAsSource hoses allow customers to stream CDC events from their RDS and Amazon EC2 hosted databases, running MySQL and PostgreSQL database engines, to Iceberg Table destinations.
+* `Aws\BedrockAgentRuntime` - This release adds trace functionality to Bedrock Prompt Flows
+
+## 3.325.4 - 2024-11-07
+
+* `Aws\ResourceExplorer2` - Add GetManagedView, ListManagedViews APIs.
+* `Aws\BedrockAgent` - Add prompt support for chat template configuration and agent generative AI resource. Add support for configuring an optional guardrail in Prompt and Knowledge Base nodes in Prompt Flows. Add API to validate flow definition
+* `Aws\CleanRooms` - This release introduces support for Custom Models in AWS Clean Rooms ML.
+* `Aws\Synthetics` - Add support to toggle if a canary will automatically delete provisioned canary resources such as Lambda functions and layers when a canary is deleted. This behavior can be controlled via the new ProvisionedResourceCleanup property exposed in the CreateCanary and UpdateCanary APIs.
+* `Aws\CleanRoomsML` - This release introduces support for Custom Models in AWS Clean Rooms ML.
+* `Aws\QuickSight` - Add Client Credentials based OAuth support for Snowflake and Starburst
+* `Aws\BedrockRuntime` - Add Prompt management support to Bedrock runtime APIs: Converse, ConverseStream, InvokeModel, InvokeModelWithStreamingResponse
+* `Aws\AutoScaling` - Auto Scaling groups now support the ability to strictly balance instances across Availability Zones by configuring the AvailabilityZoneDistribution parameter. If balanced-only is configured for a group, launches will always be attempted in the under scaled Availability Zone even if it is unhealthy.
+
+## 3.325.3 - 2024-11-06
+
+* `Aws\GuardDuty` - GuardDuty RDS Protection expands support for Amazon Aurora PostgreSQL Limitless Databases.
+* `Aws\S3Control` - Fix ListStorageLensConfigurations and ListStorageLensGroups deserialization for Smithy SDKs.
+* `Aws\LakeFormation` - API changes for new named tag expressions feature.
+* `Aws\CodeBuild` - AWS CodeBuild now adds additional compute types for reserved capacity fleet.
+* `Aws\VerifiedPermissions` - Adding BatchGetPolicy API which supports the retrieval of multiple policies across multiple policy stores within a single request.
+* `Aws\QApps` - Introduces category apis in AmazonQApps. Web experience users use Categories to tag and filter library items.
+
 ## 3.325.2 - 2024-11-01
 
 * `Aws\DocDBElastic` - Amazon DocumentDB Elastic Clusters adds support for pending maintenance actions feature with APIs GetPendingMaintenanceAction, ListPendingMaintenanceActions and ApplyPendingMaintenanceAction
