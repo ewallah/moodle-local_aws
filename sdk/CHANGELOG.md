@@ -1,5 +1,106 @@
 # CHANGELOG
 
+## 3.330.0 - 2024-11-22
+
+* `Aws\NeptuneGraph` - Add 4 new APIs to support new Export features, allowing Parquet and CSV formats. Add new arguments in Import APIs to support Parquet import. Add a new query "neptune.read" to run algorithms without loading data into database
+* `Aws\Inspector2` - Extend inspector2 service model to include ServiceQuotaExceededException.
+* `Aws\Lambda` - Add ProvisionedPollerConfig to Lambda event-source-mapping API.
+* `Aws\ElasticLoadBalancingv2` - This release adds support for advertising trusted CA certificate names in associated trust stores.
+* `Aws\Omics` - This release adds support for resource policy based cross account S3 access to sequence store read sets.
+* `Aws\MailManager` - Added new "DeliverToQBusiness" rule action to MailManager RulesSet for ingesting email data into Amazon Q Business customer applications
+* `Aws\BCMPricingCalculator` - Initial release of the AWS Billing and Cost Management Pricing Calculator API.
+* `Aws\SNS` - ArchivePolicy attribute added to Archive and Replay feature
+* `Aws\Connect` - Amazon Connect Service Feature: Add APIs for Amazon Connect Email Channel
+* `Aws\AutoScaling` - Now, Amazon EC2 Auto Scaling customers can enable target tracking policies to take quicker scaling decisions, enhancing their application performance and EC2 utilization. To get started, specify target tracking to monitor a metric that is available on Amazon CloudWatch at seconds-level interval.
+* `Aws\EMR` - Advanced Scaling in Amazon EMR Managed Scaling
+* `Aws\CodePipeline` - AWS CodePipeline V2 type pipelines now support ECRBuildAndPublish and InspectorScan actions.
+* `Aws\SES` - This release adds support for starting email contacts in your Amazon Connect instance as an email receiving action.
+* `Aws\WorkSpaces` - While integrating WSP-DCV rebrand, a few mentions were erroneously renamed from WSP to DCV. This release reverts those mentions back to WSP.
+* `Aws\CognitoIdentityProvider` - Add support for users to sign up and sign in without passwords, using email and SMS OTPs and Passkeys. Add support for Passkeys based on WebAuthn. Add support for enhanced branding customization for hosted authentication pages with Amazon Cognito Managed Login. Add feature tiers with new pricing.
+* `Aws\BedrockAgentRuntime` - InvokeInlineAgent API release to help invoke runtime agents without any dependency on preconfigured agents.
+* `Aws\Chatbot` - Adds support for programmatic management of custom actions and aliases which can be associated with channel configurations.
+* `Aws\QuickSight` - This release includes: Update APIs to support Image, Layer Map, font customization, and Plugin Visual. Add Identity center related information in ListNamsespace API. Update API for restrictedFolder support in topics and add API for SearchTopics, Describe/Update DashboardsQA Configration.
+* `Aws\CostExplorer` - This release adds the Impact field(contains Contribution field) to the GetAnomalies API response under RootCause
+* `Aws\SageMaker` - This release adds APIs for new features for SageMaker endpoint to scale down to zero instances, native support for multi-adapter inference, and endpoint scaling improvements.
+* `Aws\SFN` - Add support for variables and JSONata in TestState, GetExecutionHistory, DescribeStateMachine, and DescribeStateMachineForExecution
+
+## 3.329.0 - 2024-11-21
+
+* `Aws\Api` - Fixes issue with path resolution in rest protocol services
+* `Aws\APIGateway` - Added support for custom domain names for private APIs.
+* `Aws\CostExplorer` - This release introduces three new APIs that enable you to estimate the cost, coverage, and utilization impact of Savings Plans you plan to purchase. The three APIs are StartCommitmentPurchaseAnalysis, GetCommitmentPurchaseAnalysis, and ListCommitmentPurchaseAnalyses.
+* `Aws\ApplicationAutoScaling` - Application Auto Scaling now supports Predictive Scaling to proactively increase the desired capacity ahead of predicted demand, ensuring improved availability and responsiveness for customers' applications. This feature is currently only made available for Amazon ECS Service scalable targets.
+* `Aws\AppSync` - Add support for the Amazon Bedrock Runtime.
+* `Aws\Health` - Adds metadata property to an AffectedEntity.
+* `Aws\CloudFront` - Adds support for Origin Selection between EMPv2 origins based on media quality score.
+* `Aws\XRay` - AWS X-Ray introduces Transaction Search APIs, enabling span ingestion into CloudWatch Logs for high-scale trace data indexing. These APIs support span-level queries, trace graph generation, and metric correlation for deeper application insights.
+* `Aws\S3` - Add support for conditional deletes for the S3 DeleteObject and DeleteObjects APIs. Add support for write offset bytes option used to append to objects with the S3 PutObject API.
+* `Aws\Notifications` - This release adds support for AWS User Notifications. You can now configure and view notifications from AWS services in a central location using the AWS SDK.
+* `Aws\ResilienceHub` - AWS Resilience Hub's new summary view visually represents applications' resilience through charts, enabling efficient resilience management. It provides a consolidated view of the app portfolio's resilience state and allows data export for custom stakeholder reporting.
+* `Aws\EC2` - Adds support for requesting future-dated Capacity Reservations with a minimum commitment duration, enabling IPAM for organizational units within AWS Organizations, reserving EC2 Capacity Blocks that start in 30 minutes, and extending the end date of existing Capacity Blocks.
+* `Aws\Lambda` - Adds support for metrics for event source mappings for AWS Lambda
+* `Aws\SSMQuickSetup` - Add methods that retrieve details about deployed configurations: ListConfigurations, GetConfiguration
+* `Aws\SSM` - Added support for providing high-level overviews of managed nodes and previewing the potential impact of a runbook execution.
+* `Aws\IoTJobsDataPlane` - General Availability (GA) release of AWS IoT Device Management - Commands, to trigger light-weight remote actions on targeted devices
+* `Aws\IoTFleetWise` - AWS IoT FleetWise now includes campaign parameters to store and forward data, configure MQTT topic as a data destination, and collect diagnostic trouble code data. It includes APIs for network agnostic data collection using custom decoding interfaces, and monitoring the last known state of vehicles.
+* `Aws\IoT` - General Availability (GA) release of AWS IoT Device Management - Commands, to trigger light-weight remote actions on targeted devices
+* `Aws\CloudWatchLogs` - Adds "Create field indexes to improve query performance and reduce scan volume" and "Transform logs during ingestion". Updates documentation for "PutLogEvents with Entity".
+* `Aws\NotificationsContacts` - This release adds support for AWS User Notifications Contacts. You can now configure and view email contacts for AWS User Notifications using the AWS SDK.
+* `Aws\CloudTrail` - This release introduces new APIs for creating and managing CloudTrail Lake dashboards. It also adds support for resource-based policies on CloudTrail EventDataStore and Dashboard resource.
+* `Aws\ElastiCache` - Added support to modify the engine type for existing ElastiCache Users and User Groups. Customers can now modify the engine type from redis to valkey.
+* `Aws\ElasticLoadBalancingv2` - This feature adds support for enabling zonal shift on cross-zone enabled Application Load Balancer, as well as modifying HTTP request and response headers.
+
+## 3.328.3 - 2024-11-20
+
+* `Aws\` - Adds support for psr/simple-cache v2 and v3
+* `Aws\WorkSpacesWeb` - Added data protection settings with support for inline data redaction.
+* `Aws\DataZone` - This release supports Metadata Enforcement Rule feature for Create Subscription Request action.
+* `Aws\Omics` - Enabling call caching feature that allows customers to reuse previously computed results from a set of completed tasks in a new workflow run.
+* `Aws\TimestreamQuery` - This release adds support for Provisioning Timestream Compute Units (TCUs), a new feature that allows provisioning dedicated compute resources for your queries, providing predictable and cost-effective query performance.
+* `Aws\Lambda` - Add Node 22.x (node22.x) support to AWS Lambda
+* `Aws\WorkSpaces` - Added support for Rocky Linux 8 on Amazon WorkSpaces Personal.
+* `Aws\RDS` - This release adds support for scale storage on the DB instance using a Blue/Green Deployment.
+* `Aws\ElasticLoadBalancingv2` - This release adds support for configuring Load balancer Capacity Unit reservations
+* `Aws\RecycleBin` - This release adds support for exclusion tags for Recycle Bin, which allows you to identify resources that are to be excluded, or ignored, by a Region-level retention rule.
+* `Aws\CostOptimizationHub` - This release adds action type "Delete" to the GetRecommendation, ListRecommendations and ListRecommendationSummaries APIs to support new EBS and ECS recommendations with action type "Delete".
+* `Aws\ApplicationDiscoveryService` - Add support to import data from commercially available discovery tools without file manipulation.
+* `Aws\ComputeOptimizer` - This release enables AWS Compute Optimizer to analyze and generate optimization recommendations for Amazon Aurora database instances. It also enables Compute Optimizer to identify idle Amazon EC2 instances, Amazon EBS volumes, Amazon ECS services running on Fargate, and Amazon RDS databases.
+* `Aws\BedrockAgentRuntime` - Releasing new Prompt Optimization to enhance your prompts for improved performance
+* `Aws\ECS` - This release adds support for the Availability Zone rebalancing feature on Amazon ECS.
+* `Aws\EC2` - With this release, customers can express their desire to launch instances only in an ODCR or ODCR group rather than OnDemand capacity. Customers can express their baseline instances' CPU-performance in attribute-based Instance Requirements configuration by referencing an instance family.
+* `Aws\AutoScaling` - With this release, customers can prioritize launching instances into ODCRs using targets from ASGs or Launch Templates. Customers can express their baseline instances' CPU-performance in attribute-based Instance Requirements configuration by referencing an instance family that meets their needs.
+* `Aws\ControlTower` - Adds support for child enabled baselines which allow you to see the enabled baseline status for individual accounts.
+* `Aws\MediaConvert` - This release adds the ability to reconfigure concurrent job settings for existing queues and create queues with custom concurrent job settings.
+* `Aws\CloudFront` - Add support for gRPC, VPC origins, and Anycast IP Lists. Allow LoggingConfig IncludeCookies to be set regardless of whether the LoggingConfig is enabled.
+* `Aws\MediaPackageV2` - MediaPackage v2 now supports the Media Quality Confidence Score (MQCS) published from MediaLive. Customers can control input switching based on the MQCS and publishing HTTP Headers for the MQCS via the API.
+
+## 3.328.2 - 2024-11-19
+
+* `Aws\` - Adds opt-in header for query-compatible services
+* `Aws\Keyspaces` - Amazon Keyspaces Multi-Region Replication: Adds support to add new regions to multi and single-region keyspaces.
+* `Aws\B2bi` - Add new X12 transactions sets and versions
+* `Aws\WorkSpaces` - Releasing new ErrorCodes for Image Validation failure during CreateWorkspaceImage process
+* `Aws\MWAA` - Amazon MWAA now supports a new environment class, mw1.micro, ideal for workloads requiring fewer resources than mw1.small. This class supports a single instance of each Airflow component: Scheduler, Worker, and Webserver.
+* `Aws\Glue` - AWS Glue Data Catalog now enhances managed table optimizations of Apache Iceberg tables that can be accessed only from a specific Amazon Virtual Private Cloud (VPC) environment.
+* `Aws\TaxSettings` - Release Tax Inheritance APIs, Tax Exemption APIs, and functionality update for some existing Tax Registration APIs
+* `Aws\EFS` - Add support for the new parameters in EFS replication APIs
+* `Aws\EC2` - This release adds VPC Block Public Access (VPC BPA), a new declarative control which blocks resources in VPCs and subnets that you own in a Region from reaching or being reached from the internet through internet gateways and egress-only internet gateways.
+* `Aws\ECS` - This release introduces support for configuring the version consistency feature for individual containers defined within a task definition. The configuration allows to specify whether ECS should resolve the container image tag specified in the container definition to an image digest.
+
+## 3.328.1 - 2024-11-18
+
+* `Aws\RDSDataService` - Add support for the automatic pause/resume feature of Aurora Serverless v2.
+* `Aws\CloudFormation` - This release adds a new API, ListHookResults, that allows retrieving CloudFormation Hooks invocation results for hooks invoked during a create change set operation or Cloud Control API operation
+* `Aws\CustomerProfiles` - This release introduces Segmentation APIs and new Calculated Attribute Event Filters as part of Amazon Connect Customer Profiles service.
+* `Aws\AppConfig` - AWS AppConfig has added a new extension action point, AT_DEPLOYMENT_TICK, to support third-party monitors to trigger an automatic rollback during a deployment.
+* `Aws\Connect` - Adds CreateContactFlowVersion and ListContactFlowVersions APIs to create and view the versions of a contact flow.
+* `Aws\EC2` - Adding request and response elements for managed resources.
+* `Aws\RDS` - Add support for the automatic pause/resume feature of Aurora Serverless v2.
+* `Aws\QConnect` - This release introduces MessageTemplate as a resource in Amazon Q in Connect, along with APIs to create, read, search, update, and delete MessageTemplate resources.
+* `Aws\ECS` - This release adds support for adding VPC Lattice configurations in ECS CreateService/UpdateService APIs. The configuration allows for associating VPC Lattice target groups with ECS Services.
+* `Aws\IoTSiteWise` - The release introduces a generative AI Assistant in AWS IoT SiteWise. It includes: 1) InvokeAssistant API - Invoke the Assistant to get alarm summaries and ask questions. 2) Dataset APIs - Manage knowledge base configuration for the Assistant. 3) Portal APIs enhancement - Manage AI-aware dashboards.
+* `Aws\AutoScaling` - Amazon EC2 Auto Scaling now supports Amazon Application Recovery Controller (ARC) zonal shift and zonal autoshift to help you quickly recover an impaired application from failures in an Availability Zone (AZ).
+
 ## 3.328.0 - 2024-11-15
 
 * `Aws\EC2` - Remove non-functional enum variants for FleetCapacityReservationUsageStrategy
