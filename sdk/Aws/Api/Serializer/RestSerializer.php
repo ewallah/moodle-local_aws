@@ -197,6 +197,7 @@ abstract class RestSerializer
     private function buildEndpoint(Operation $operation, array $args, array $opts)
     {
         $isModifiedModel = $this->api->isModifiedModel();
+        $serviceName = $this->api->getServiceName();
         // Create an associative array of variable definitions used in expansions
         $varDefinitions = $this->getVarDefinitions($operation, $args);
 
@@ -225,7 +226,7 @@ abstract class RestSerializer
 
         $path = $this->endpoint->getPath();
 
-        if ($isModifiedModel && $this->api->getServiceName() === 's3') {
+        if ($isModifiedModel && $serviceName === 's3') {
             if (substr($path, -1) === '/' && $relative[0] === '/') {
                 $path = rtrim($path, '/');
             }
@@ -242,8 +243,11 @@ abstract class RestSerializer
             }
         }
 
-        if (!$isModifiedModel) {
-            $relative = $this->prependPath($relative, $path);
+        if ((!empty($relative) && $relative !== '/')
+            && !$isModifiedModel
+            && $serviceName !== 's3'
+        ) {
+            $this->normalizePath($path);
         }
 
         // If endpoint has path, remove leading '/' to preserve URI resolution.
@@ -307,31 +311,17 @@ abstract class RestSerializer
     }
 
     /**
-     * If non-empty path with at least one segment present, compare
-     * with relative and prepend if starting segments are not duplicated
+     * Appends trailing slash to non-empty paths with at least one segment
+     * to ensure proper URI resolution
      *
-     * @param string $relative
      * @param string $path
      *
-     * @return string
+     * @return void
      */
-    private function prependPath(string $relative, string $path): string
+    private function normalizePath(string $path): void
     {
-        if (empty($relative) || $relative === '/'
-            || empty($path) || $path === '/'
-        ) {
-            return $relative;
+        if (!empty($path) && $path !== '/' && substr($path, -1) !== '/') {
+            $this->endpoint = $this->endpoint->withPath($path . '/');
         }
-
-        $normalizedPath = rtrim($path, '/');
-        $normalizedRelative = ltrim($relative, '/');
-
-        // Check if $relative starts with $path
-        if (strpos($normalizedRelative, ltrim($normalizedPath, '/')) === 0) {
-            // $relative already starts with $path, return $relative
-            return $relative;
-        }
-
-        return $normalizedPath . '/' . $normalizedRelative;
     }
 }

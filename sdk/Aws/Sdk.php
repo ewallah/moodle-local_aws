@@ -88,6 +88,10 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionBedrockAgent(array $args = [])
  * @method \Aws\BedrockAgentRuntime\BedrockAgentRuntimeClient createBedrockAgentRuntime(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionBedrockAgentRuntime(array $args = [])
+ * @method \Aws\BedrockDataAutomation\BedrockDataAutomationClient createBedrockDataAutomation(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionBedrockDataAutomation(array $args = [])
+ * @method \Aws\BedrockDataAutomationRuntime\BedrockDataAutomationRuntimeClient createBedrockDataAutomationRuntime(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionBedrockDataAutomationRuntime(array $args = [])
  * @method \Aws\BedrockRuntime\BedrockRuntimeClient createBedrockRuntime(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionBedrockRuntime(array $args = [])
  * @method \Aws\Billing\BillingClient createBilling(array $args = [])
@@ -218,6 +222,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionDAX(array $args = [])
  * @method \Aws\DLM\DLMClient createDLM(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionDLM(array $args = [])
+ * @method \Aws\DSQL\DSQLClient createDSQL(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionDSQL(array $args = [])
  * @method \Aws\DataExchange\DataExchangeClient createDataExchange(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionDataExchange(array $args = [])
  * @method \Aws\DataPipeline\DataPipelineClient createDataPipeline(array $args = [])
@@ -356,6 +362,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionInspectorScan(array $args = [])
  * @method \Aws\InternetMonitor\InternetMonitorClient createInternetMonitor(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionInternetMonitor(array $args = [])
+ * @method \Aws\Invoicing\InvoicingClient createInvoicing(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionInvoicing(array $args = [])
  * @method \Aws\IoT1ClickDevicesService\IoT1ClickDevicesServiceClient createIoT1ClickDevicesService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoT1ClickDevicesService(array $args = [])
  * @method \Aws\IoT1ClickProjects\IoT1ClickProjectsClient createIoT1ClickProjects(array $args = [])
@@ -518,6 +526,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionNeptunedata(array $args = [])
  * @method \Aws\NetworkFirewall\NetworkFirewallClient createNetworkFirewall(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionNetworkFirewall(array $args = [])
+ * @method \Aws\NetworkFlowMonitor\NetworkFlowMonitorClient createNetworkFlowMonitor(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionNetworkFlowMonitor(array $args = [])
  * @method \Aws\NetworkManager\NetworkManagerClient createNetworkManager(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionNetworkManager(array $args = [])
  * @method \Aws\NetworkMonitor\NetworkMonitorClient createNetworkMonitor(array $args = [])
@@ -530,6 +540,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionOAM(array $args = [])
  * @method \Aws\OSIS\OSISClient createOSIS(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionOSIS(array $args = [])
+ * @method \Aws\ObservabilityAdmin\ObservabilityAdminClient createObservabilityAdmin(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionObservabilityAdmin(array $args = [])
  * @method \Aws\Omics\OmicsClient createOmics(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionOmics(array $args = [])
  * @method \Aws\OpenSearchServerless\OpenSearchServerlessClient createOpenSearchServerless(array $args = [])
@@ -648,6 +660,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionS3Control(array $args = [])
  * @method \Aws\S3Outposts\S3OutpostsClient createS3Outposts(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionS3Outposts(array $args = [])
+ * @method \Aws\S3Tables\S3TablesClient createS3Tables(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionS3Tables(array $args = [])
  * @method \Aws\SSMContacts\SSMContactsClient createSSMContacts(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSSMContacts(array $args = [])
  * @method \Aws\SSMIncidents\SSMIncidentsClient createSSMIncidents(array $args = [])
@@ -682,6 +696,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionSecretsManager(array $args = [])
  * @method \Aws\SecurityHub\SecurityHubClient createSecurityHub(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSecurityHub(array $args = [])
+ * @method \Aws\SecurityIR\SecurityIRClient createSecurityIR(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionSecurityIR(array $args = [])
  * @method \Aws\SecurityLake\SecurityLakeClient createSecurityLake(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSecurityLake(array $args = [])
  * @method \Aws\ServerlessApplicationRepository\ServerlessApplicationRepositoryClient createServerlessApplicationRepository(array $args = [])
@@ -797,7 +813,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.330.0';
+    const VERSION = '3.334.1';
 
     /** @var array Arguments for creating clients */
     private $args;
