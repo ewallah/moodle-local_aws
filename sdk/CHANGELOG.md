@@ -1,5 +1,54 @@
 # CHANGELOG
 
+## 3.334.6 - 2024-12-13
+
+* `Aws\CloudHSMV2` - Add support for Dual-Stack hsm2m.medium clusters. The customers will now be able to create hsm2m.medium clusters having both IPv4 and IPv6 connection capabilities by specifying a new param called NetworkType=DUALSTACK during cluster creation.
+* `Aws\EC2` - This release adds GroupId to the response for DeleteSecurityGroup.
+* `Aws\EKS` - Add NodeRepairConfig in CreateNodegroupRequest and UpdateNodegroupConfigRequest
+* `Aws\MediaConnect` - AWS Elemental MediaConnect Gateway now supports Source Specific Multicast (SSM) for ingress bridges. This enables you to specify a source IP address in addition to a multicast IP when creating or updating an ingress bridge source.
+* `Aws\ServiceDiscovery` - AWS Cloud Map now supports service-level attributes, allowing you to associate custom metadata directly with services. These attributes can be retrieved, updated, and deleted using the new GetServiceAttributes, UpdateServiceAttributes, and DeleteServiceAttributes API calls.
+* `Aws\CloudWatchLogs` - Limit PutIntegration IntegrationName and ListIntegrations IntegrationNamePrefix parameters to 50 characters
+* `Aws\NetworkManager` - There was a sentence fragment in UpdateDirectConnectGatewayAttachment that was causing customer confusion as to whether it's an incomplete sentence or if it was a typo. Removed the fragment.
+
+## 3.334.5 - 2024-12-12
+
+* `Aws\Route53Domains` - This release includes the following API updates: added the enumeration type RESTORE_DOMAIN to the OperationType; constrained the Price attribute to non-negative values; updated the LangCode to allow 2 or 3 alphabetical characters.
+* `Aws\GuardDuty` - Improved descriptions for certain APIs.
+* `Aws\DatabaseMigrationService` - Add parameters to support for kerberos authentication. Add parameter for disabling the Unicode source filter with PostgreSQL settings. Add parameter to use large integer value with Kinesis/Kafka settings.
+* `Aws\Glue` - To support customer-managed encryption in Data Quality to allow customers encrypt data with their own KMS key, we will add a DataQualityEncryption field to the SecurityConfiguration API where customers can provide their KMS keys.
+* `Aws\Connect` - Configure holidays and other overrides to hours of operation in advance. During contact handling, Amazon Connect automatically checks for overrides and provides customers with an appropriate flow path. After an override period passes call center automatically reverts to standard hours of operation.
+
+## 3.334.4 - 2024-12-11
+
+* `Aws\MigrationHub` - API and documentation updates for AWS MigrationHub related to adding support for listing migration task updates and associating, disassociating and listing source resources
+* `Aws\CloudTrail` - Doc-only updates for CloudTrail.
+* `Aws\CognitoIdentityProvider` - Updated descriptions for some API operations and parameters, corrected some errors in Cognito user pools
+* `Aws\ControlCatalog` - Minor documentation updates to the content of ImplementationDetails object part of the Control Catalog GetControl API
+* `Aws\EMRServerless` - This release adds support for accessing system profile logs in Lake Formation-enabled jobs.
+* `Aws\Artifact` - Add support for listing active customer agreements for the calling AWS Account.
+* `Aws\TimestreamInfluxDB` - Adds networkType parameter to CreateDbInstance API which allows IPv6 support to the InfluxDB endpoint
+* `Aws\SESv2` - Introduces support for multi-region endpoint.
+
+## 3.334.3 - 2024-12-10
+
+* `Aws\BCMPricingCalculator` - Updated condition key inference from Workload Estimate, Bill Scenario, and Bill Estimate resources. Updated documentation links.
+* `Aws\finspace` - Update KxCommandLineArgument value parameter regex to allow for spaces and semicolons
+* `Aws\ApplicationAutoScaling` - Doc only update for AAS Predictive Scaling policy configuration API.
+* `Aws\Connect` - Add support for Push Notifications for Amazon Connect chat. With Push Notifications enabled an alert could be sent to customers about new messages even when they aren't actively using the mobile application.
+* `Aws\IVSRealTime` - IVS Real-Time now offers customers the ability to customize thumbnails recording mode and interval for both Individual Participant Recording (IPR) and Server-Side Compositions (SSC).
+* `Aws\SESv2` - Introduces support for creating DEED (Deterministic Easy-DKIM) identities.
+* `Aws\DSQL` - Doc only update to examples for DeleteMultiRegionClusters & CreateMultiRegionClusters
+
+## 3.334.2 - 2024-12-09
+
+* `Aws\MediaLive` - H265 outputs now support disabling the deblocking filter.
+* `Aws\Keyspaces` - Amazon Keyspaces: adding the list of IAM actions required by the UpdateKeyspace API.
+* `Aws\EC2` - This release includes a new API for modifying instance network-performance-options after launch.
+* `Aws\AppSync` - Provides description of new Amazon Bedrock runtime datasource.
+* `Aws\WorkSpaces` - Added text to clarify case-sensitivity
+* `Aws\ECS` - This is a documentation only update to address various tickets for Amazon ECS.
+* `Aws\CognitoIdentityProvider` - Change `CustomDomainConfig` from a required to an optional parameter for the `UpdateUserPoolDomain` operation.
+
 ## 3.334.1 - 2024-12-05
 
 * `Aws\QBusiness` - This release removes the deprecated UserId and UserGroups fields from SearchRelevantContent api's request parameters.
@@ -405,7 +454,7 @@
 * `Aws\BedrockRuntime` - Added converse support for custom imported models
 * `Aws\EC2` - RequestSpotInstances and RequestSpotFleet feature release.
 * `Aws\Bedrock` - Adding converse support to CMI API's
-* `Aws\Athena` - Removing FEDERATED from Create/List/Delete/GetDataCatalog API
+* `Aws\Athena` - **Breaking Change**: Remove DataCatalog from Create/DeleteDataCatalog. Remove Status, ConnectionType, and Error from DataCatalog and DataCatalogSummary. These were released inadvertently with no functionality. They were not populated or populated with a default value. Code related to these changes can be safely removed.
 * `Aws\DataZone` - Adding the following project member designations: PROJECT_CATALOG_VIEWER, PROJECT_CATALOG_CONSUMER and PROJECT_CATALOG_STEWARD in the CreateProjectMembership API and PROJECT_CATALOG_STEWARD designation in the AddPolicyGrant API.
 
 ## 3.324.5 - 2024-10-17
