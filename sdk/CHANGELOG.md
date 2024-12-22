@@ -1,5 +1,65 @@
 # CHANGELOG
 
+## 3.336.2 - 2024-12-20
+
+* `Aws\BedrockDataAutomationRuntime` - Documentation update for Amazon Bedrock Data Automation Runtime
+* `Aws\Outposts` - Add CS8365C as a supported power connector for Outpost sites.
+* `Aws\DocDB` - Support AWS Secret Manager managed password for AWS DocumentDB instance-based cluster.
+* `Aws\Macie2` - This release adds support for identifying S3 general purpose buckets that exceed the Amazon Macie quota for preventative control monitoring.
+* `Aws\EKS` - This release expands the catalog of upgrade insight checks
+* `Aws\Connect` - This release supports adding NotAttributeCondition and Range to the RoutingCriteria object.
+* `Aws\SageMaker` - This release adds support for c6i, m6i and r6i instance on SageMaker Hyperpod and trn1 instances in batch
+* `Aws\BedrockAgent` - Support for custom user agent and max web pages crawled for web connector. Support app only credentials for SharePoint connector. Increase agents memory duration limit to 365 days. Support to specify max number of session summaries to include in agent invocation context.
+* `Aws\BedrockDataAutomation` - Documentation update for Amazon Bedrock Data Automation
+* `Aws\Billing` - Added new API's for defining and fetching Billing Views.
+* `Aws\CostExplorer` - Support for retrieving cost, usage, and forecast for billing view.
+* `Aws\BedrockAgentRuntime` - bedrock agents now supports long term memory and performance configs. Invokeflow supports performance configs. RetrieveAndGenerate performance configs
+
+## 3.336.1 - 2024-12-19
+
+* `Aws\QConnect` - Amazon Q in Connect enables agents to ask Q for assistance in multiple languages and Q will provide answers and recommended step-by-step guides in those languages. Qs default language is English (United States) and you can switch this by setting the locale configuration on the AI Agent.
+* `Aws\WorkSpaces` - Added AWS Global Accelerator (AGA) support for WorkSpaces Personal.
+* `Aws\AppStream` - Added support for Rocky Linux 8 on Amazon AppStream 2.0
+* `Aws\MediaLive` - MediaLive is releasing ListVersions api
+* `Aws\MediaConvert` - This release adds support for inserting timecode tracks into MP4 container outputs.
+* `Aws\SsmSap` - AWS Systems Manager for SAP added support for registration and discovery of distributed ABAP applications
+
+## 3.336.0 - 2024-12-18
+
+* `Aws\ResilienceHub` - AWS Resilience Hub now automatically detects already configured CloudWatch alarms and FIS experiments as part of the assessment process and returns the discovered resources in the corresponding list API responses. It also allows you to include or exclude test recommendations for an AppComponent.
+* `Aws\DataSync` - AWS DataSync introduces the ability to update attributes for in-cloud locations.
+* `Aws\Budgets` - Releasing minor partition endpoint updates
+* `Aws\MWAA` - Added support for Apache Airflow version 2.10.3 to MWAA.
+* `Aws\ConnectParticipant` - This release adds support for the GetAuthenticationUrl and CancelParticipantAuthentication APIs used for customer authentication within Amazon Connect chats. There are also minor updates to the GetAttachment API.
+* `Aws\Transfer` - Added AS2 agreement configurations to control filename preservation and message signing enforcement. Added AS2 connector configuration to preserve content type from S3 objects.
+* `Aws\QuickSight` - Add support for PerformanceConfiguration attribute to Dataset entity. Allow PerformanceConfiguration specification in CreateDataset and UpdateDataset APIs.
+* `Aws\Connect` - This release adds support for the UpdateParticipantAuthentication API used for customer authentication within Amazon Connect chats.
+* `Aws\Amplify` - Added WAF Configuration to Amplify Apps
+* `Aws\IoT` - Release connectivity status query API which is a dedicated high throughput(TPS) API to query a specific device's most recent connectivity state and metadata.
+* `Aws\` - User agent 2.1 which allows metrics gathering around SDK usage.
+
+## 3.335.0 - 2024-12-17
+
+* `Aws\Synthetics` - Add support to toggle outbound IPv6 traffic on canaries connected to dualstack subnets. This behavior can be controlled via the new Ipv6AllowedForDualStack parameter of the VpcConfig input object in CreateCanary and UpdateCanary APIs.
+* `Aws\MainframeModernization` - This release adds support for AWS Mainframe Modernization(M2) Service to allow specifying network type(ipv4, dual) for the environment instances. For dual network type, m2 environment applications will serve both IPv4 and IPv6 requests, whereas for ipv4 it will serve only IPv4 requests.
+* `Aws\BackupSearch` - Add support for searching backups
+* `Aws\ECS` - Added support for enableFaultInjection task definition parameter which can be used to enable Fault Injection feature on ECS tasks.
+* `Aws\Batch` - This feature allows AWS Batch on Amazon EKS to support configuration of Pod Annotations, overriding Namespace on which the Batch job's Pod runs on, and allows Subpath and Persistent Volume claim to be set for AWS Batch on Amazon EKS jobs.
+* `Aws\CodePipeline` - AWS CodePipeline V2 type pipelines now support Managed Compute Rule.
+* `Aws\CloudFront` - Adds support for OriginReadTimeout and OriginKeepaliveTimeout to create CloudFront Distributions with VPC Origins.
+* `Aws\Backup` - Add Support for Backup Indexing
+* `Aws\Account` - Update endpoint configuration.
+* `Aws\CleanRoomsML` - Add support for SQL compute configuration for StartAudienceGenerationJob API.
+
+## 3.334.7 - 2024-12-16
+
+* `Aws\Cloud9` - Added information about Ubuntu 18.04 will be removed from the available imageIds for Cloud9 because Ubuntu 18.04 has ended standard support on May 31, 2023.
+* `Aws\GreengrassV2` - Add support for runtime in GetCoreDevice and ListCoreDevices APIs.
+* `Aws\EC2` - This release adds support for EBS local snapshots in AWS Dedicated Local Zones, which allows you to store snapshots of EBS volumes locally in Dedicated Local Zones.
+* `Aws\MediaLive` - AWS Elemental MediaLive adds three new features: MediaPackage v2 endpoint support for live stream delivery, KLV metadata passthrough in CMAF Ingest output groups, and Metadata Name Modifier in CMAF Ingest output groups for customizing metadata track names in output streams.
+* `Aws\DLM` - This release adds support for Local Zones in Amazon Data Lifecycle Manager EBS snapshot lifecycle policies.
+* `Aws\RDS` - This release adds support for the "MYSQL_CACHING_SHA2_PASSWORD" enum value for RDS Proxy ClientPasswordAuthType.
+
 ## 3.334.6 - 2024-12-13
 
 * `Aws\CloudHSMV2` - Add support for Dual-Stack hsm2m.medium clusters. The customers will now be able to create hsm2m.medium clusters having both IPv4 and IPv6 connection capabilities by specifying a new param called NetworkType=DUALSTACK during cluster creation.
