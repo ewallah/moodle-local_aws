@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 3.336.6 - 2024-12-28
+
+* `Aws\ECR` - Restoring custom endpoint functionality for ECR
+* `Aws\ECRPublic` - Restoring custom endpoint functionality for ECR Public
+
+## 3.336.5 - 2024-12-27
+
+* `Aws\RDS` - Updates Amazon RDS documentation to correct various descriptions.
+
+## 3.336.4 - 2024-12-26
+
+* `Aws\NetworkFirewall` - Dual-stack endpoints are now supported.
+* `Aws\BCMPricingCalculator` - Added ConflictException to DeleteBillEstimate.
+* `Aws\SecurityHub` - Documentation updates for AWS Security Hub
+* `Aws\ECR` - Add support for Dualstack Endpoints
+
+## 3.336.3 - 2024-12-23
+
+* `Aws\Glue` - Add IncludeRoot parameters to GetCatalogs API to return root catalog.
+* `Aws\ECR` - Documentation update for ECR GetAccountSetting and PutAccountSetting APIs.
+* `Aws\ECRPublic` - Add support for Dualstack endpoints
+* `Aws\EKS` - This release adds support for DescribeClusterVersions API that provides important information about Kubernetes versions along with end of support dates
+
 ## 3.336.2 - 2024-12-20
 
 * `Aws\BedrockDataAutomationRuntime` - Documentation update for Amazon Bedrock Data Automation Runtime
