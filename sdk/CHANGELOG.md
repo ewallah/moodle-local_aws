@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 3.336.8 - 2025-01-03
+
+* `Aws\ECS` - Adding SDK reference examples for Amazon ECS operations.
+* `Aws\S3` - This change is only for updating the model regexp of CopySource which is not for validation but only for documentation and user guide change.
+* `Aws\Route53Domains` - Doc only update for Route 53 Domains that fixes several customer-reported issues
+
+## 3.336.7 - 2025-01-02
+
+* `Aws\GameLift` - Amazon GameLift releases a new game session shutdown feature. Use the Amazon GameLift console or AWS CLI to terminate an in-progress game session that's entered a bad state or is no longer needed.
+* `Aws\SageMaker` - Adding ETag information with Model Artifacts for Model Registry
+* `Aws\MediaConnect` - AWS Elemental MediaConnect now supports Content Quality Analysis for enhanced source stream monitoring. This enables you to track specific audio and video metrics in transport stream source flows, ensuring your content meets quality standards.
+* `Aws\SQS` - In-flight message typo fix from 20k to 120k.
+* `Aws\MediaConvert` - This release adds support for the AVC3 codec and fixes an alignment issue with Japanese vertical captions.
+* `Aws\AppSync` - Modify UpdateGraphQLAPI operation and flag authenticationType as required.
+* `Aws\Organizations` - Added ALL_FEATURES_MIGRATION_ORGANIZATION_SIZE_LIMIT_EXCEEDED to ConstraintViolationException for the EnableAllFeatures operation.
+
 ## 3.336.6 - 2024-12-28
 
 * `Aws\ECR` - Restoring custom endpoint functionality for ECR
