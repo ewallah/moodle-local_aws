@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## 3.336.13 - 2025-01-10
+
+* `Aws\` - Removes the Iot 1click services, which have been deprecated.
+* `Aws\Redshift` - Additions to the PubliclyAccessible and Encrypted parameters clarifying what the defaults are.
+* `Aws\STS` - Fixed typos in the descriptions.
+* `Aws\SecurityLake` - Doc only update for ServiceName that fixes several customer-reported issues
+
+## 3.336.12 - 2025-01-09
+
+* `Aws\ComputeOptimizer` - This release expands AWS Compute Optimizer rightsizing recommendation support for Amazon EC2 Auto Scaling groups to include those with scaling policies and multiple instance types.
+* `Aws\CodeBuild` - AWS CodeBuild Now Supports BuildBatch in Reserved Capacity and Lambda
+* `Aws\FMS` - AWS Firewall Manager now lets you combine multiple resource tags using the logical AND operator or the logical OR operator.
+
+## 3.336.11 - 2025-01-08
+
+* `Aws\Route53` - Amazon Route 53 now supports the Asia Pacific (Thailand) Region (ap-southeast-7) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region
+* `Aws\RDS` - Updates Amazon RDS documentation to clarify the RestoreDBClusterToPointInTime description.
+* `Aws\SageMaker` - Adds support for IPv6 for SageMaker HyperPod cluster nodes.
+
+## 3.336.10 - 2025-01-07
+
+* `Aws\DynamoDB` - This release makes Amazon DynamoDB point-in-time-recovery (PITR) to be configurable. You can set PITR recovery period for each table individually to between 1 and 35 days.
+* `Aws\CloudHSMV2` - Adds support to ModifyCluster for modifying a Cluster's Hsm Type.
+* `Aws\imagebuilder` - This release adds support for importing images from ISO disk files. Added new ImportDiskImage API operation.
+
+## 3.336.9 - 2025-01-06
+
+* `Aws\SupplyChain` - Allow vanity DNS domain when creating a new ASC instance
+* `Aws\IoTSecureTunneling` - Adds dualstack endpoint support for IoT Secure Tunneling
+
 ## 3.336.8 - 2025-01-03
 
 * `Aws\ECS` - Adding SDK reference examples for Amazon ECS operations.
