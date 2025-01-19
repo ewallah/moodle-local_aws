@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 3.337.2 - 2025-01-17
+
+* `Aws\EC2` - Release u7i-6tb.112xlarge, u7i-8tb.112xlarge, u7inh-32tb.480xlarge, p5e.48xlarge, p5en.48xlarge, f2.12xlarge, f2.48xlarge, trn2.48xlarge instance types.
+* `Aws\BedrockRuntime` - Allow hyphens in tool name for Converse and ConverseStream APIs
+* `Aws\Detective` - Doc only update for Detective documentation.
+* `Aws\Notifications` - Added support for Managed Notifications, integration with AWS Organization and added aggregation summaries for Aggregate Notifications
+* `Aws\SageMaker` - Correction of docs for "Added support for ml.trn1.32xlarge instance type in Reserved Capacity Offering"
+
+## 3.337.1 - 2025-01-16
+
+* `Aws\ECS` - The release addresses Amazon ECS documentation tickets.
+* `Aws\SageMaker` - Added support for ml.trn1.32xlarge instance type in Reserved Capacity Offering
+
+## 3.337.0 - 2025-01-15
+
+* `Aws\S3` - Adds a default checksum of CRC32 to operations that support checksums. Adds additional configuration for request checksum calculation and response checksum validation.
+* `Aws\CognitoIdentity` - corrects the dual-stack endpoint configuration
+* `Aws\SESv2` - This release introduces a new recommendation in Virtual Deliverability Manager Advisor, which detects elevated complaint rates for customer sending identities.
+* `Aws\WorkSpaces` - Added GeneralPurpose.4xlarge & GeneralPurpose.8xlarge ComputeTypes.
+* `Aws\WorkSpacesThinClient` - Mark type in MaintenanceWindow as required.
+* `Aws\APIGateway` - Documentation updates for Amazon API Gateway
+* `Aws\PartnerCentralSelling` - Add Tagging support for ResourceSnapshotJob resources
+* `Aws\SecurityIR` - Increase minimum length of Threat Actor IP 'userAgent' to 1.
+* `Aws\S3` - This change enhances integrity protections for new SDK requests to S3. S3 SDKs now support the CRC64NVME checksum algorithm, full object checksums for multipart S3 objects, and new default integrity protections for S3 requests.
+* `Aws\BedrockAgentRuntime` - Now supports streaming for inline agents.
+
+## 3.336.15 - 2025-01-14
+
+* `Aws\Route53` - Amazon Route 53 now supports the Mexico (Central) Region (mx-central-1) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region
+* `Aws\GameLift` - Amazon GameLift releases a new game session placement feature: PriorityConfigurationOverride. You can now override how a game session queue prioritizes placement locations for a single StartGameSessionPlacement request.
+
+## 3.336.14 - 2025-01-13
+
+* `Aws\Bedrock` - With this release, Bedrock Evaluation will now support latency-optimized inference for foundation models.
+* `Aws\TranscribeService` - This update provides tagging support for Transcribe's Call Analytics Jobs and Call Analytics Categories.
+* `Aws\EC2` - Add support for DisconnectOnSessionTimeout flag in CreateClientVpnEndpoint and ModifyClientVpnEndpoint requests and DescribeClientVpnEndpoints responses
+* `Aws\Artifact` - Support resolving regional API calls to partition's leader region endpoint.
+* `Aws\KafkaConnect` - Support updating connector configuration via UpdateConnector API. Release Operations API to monitor the status of the connector operation.
+
 ## 3.336.13 - 2025-01-10
 
 * `Aws\` - Removes the Iot 1click services, which have been deprecated.
