@@ -21,7 +21,7 @@
  * @author    Peter Burnett <peterburnett@catalyst-au.net>
  * @copyright 2020 Catalyst IT
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @covers    \local_aws\local\aws_helper
+ * #[CoversClass(local_aws\local\aws_helper)]
  */
 
 namespace local_aws\local;
@@ -44,7 +44,7 @@ use advanced_testcase;
 final class aws_helper_test extends advanced_testcase {
     /**
      * Test the proxy string.
-     * @covers \local_aws\local\aws_helper
+     * #[CoversClass(local_aws\local\aws_helper)]
      */
     public function test_get_proxy_string(): void {
         global $CFG;
@@ -68,8 +68,8 @@ final class aws_helper_test extends advanced_testcase {
 
     /**
      * Test the configure client proxy
-     * @covers \local_aws\local\aws_helper
-     * @covers \local_aws\local\client_factory
+     * #[CoversClass(local_aws\local\aws_helper)]
+     * #[CoversClass(local_aws\local\client_factory)]
      */
     public function test_configure_client_proxy(): void {
         $this->resetAfterTest();
