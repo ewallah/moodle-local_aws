@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.339.4 - 2025-01-31
+
+* `Aws\PrometheusService` - Add support for sending metrics to cross account and CMCK AMP workspaces through RoleConfiguration on Create/Update Scraper.
+* `Aws\CodeBuild` - Added support for CodeBuild self-hosted Buildkite runner builds
+* `Aws\SageMaker` - This release introduces a new valid value in InstanceType parameter: p5en.48xlarge, in ProductionVariant.
+* `Aws\RDS` - Updates to Aurora MySQL and Aurora PostgreSQL API pages with instance log type in the create and modify DB Cluster.
+* `Aws\GeoRoutes` - The OptimizeWaypoints API now supports 50 waypoints per request (20 with constraints like AccessHours or AppointmentTime). It adds waypoint clustering via Clustering and ClusteringIndex for better optimization. Also, total distance validation is removed for greater flexibility.
+* `Aws\BedrockAgentRuntime` - This change is to deprecate the existing citation field under RetrieveAndGenerateStream API response in lieu of GeneratedResponsePart and RetrievedReferences
+
+## 3.339.3 - 2025-01-30
+
+* `Aws\QBusiness` - Added APIs to manage QBusiness user subscriptions
+* `Aws\AppStream` - Add support for managing admin consent requirement on selected domains for OneDrive Storage Connectors in AppStream2.0.
+* `Aws\ECR` - Temporarily updating dualstack endpoint support
+* `Aws\VerifiedPermissions` - Adds Cedar JSON format support for entities and context data in authorization requests
+* `Aws\MediaTailor` - Adds options for configuring how MediaTailor conditions ads before inserting them into the content stream. Based on the new settings, MediaTailor will either transcode ads to match the content stream as it has in the past, or it will insert ads without first transcoding them.
+* `Aws\S3Tables` - You can now use the CreateTable API operation to create tables with schemas by adding an optional metadata argument.
+* `Aws\BedrockAgentRuntime` - Add a 'reason' field to InternalServerException
+* `Aws\ECRPublic` - Temporarily updating dualstack endpoint support
+
+## 3.339.2 - 2025-01-29
+
+* `Aws\ECR` - Add support for Dualstack and Dualstack-with-FIPS Endpoints
+* `Aws\S3` - Change the type of MpuObjectSize in CompleteMultipartUploadRequest from int to long.
+* `Aws\ECRPublic` - Add support for Dualstack Endpoints
+* `Aws\BCMPricingCalculator` - Added ConflictException error type in DeleteBillScenario, BatchDeleteBillScenarioCommitmentModification, BatchDeleteBillScenarioUsageModification, BatchUpdateBillScenarioUsageModification, and BatchUpdateBillScenarioCommitmentModification API operations.
+* `Aws\MailManager` - This release includes a new feature for Amazon SES Mail Manager which allows customers to specify known addresses and domains and make use of those in traffic policies and rules actions to distinguish between known and unknown entries.
+
+## 3.339.1 - 2025-01-28
+
+* `Aws\DSQL` - Updates default `AuthTokenGenerator` token expiration time from 700 to 900 seconds.
+* `Aws\Firehose` - For AppendOnly streams, Firehose will automatically scale to match your throughput.
+* `Aws\AppSync` - Add stash and outErrors to EvaluateCode/EvaluateMappingTemplate response
+* `Aws\Deadline` - feature: Deadline: Add support for limiting the concurrent usage of external resources, like floating licenses, using limits and the ability to constrain the maximum number of workers that work on a job
+* `Aws\DataSync` - AWS DataSync now supports the Kerberos authentication protocol for SMB locations.
+* `Aws\TimestreamInfluxDB` - Adds 'allocatedStorage' parameter to UpdateDbInstance API that allows increasing the database instance storage size and 'dbStorageType' parameter to UpdateDbInstance API that allows changing the storage type of the database instance
+* `Aws\EC2` - This release changes the CreateFleet CLI and SDK's such that if you do not specify a client token, a randomly generated token is used for the request to ensure idempotency.
+
+## 3.339.0 - 2025-01-27
+
+* `Aws\DSQL` - Adds new `AuthTokenGenerator` class which generates tokens for connecting to DSQL database clusters
+* `Aws\BedrockAgent` - Add support for the prompt caching feature for Bedrock Prompt Management
+* `Aws\MediaConvert` - This release adds support for dynamic audio configuration and the ability to disable the deblocking filter for h265 encodes.
+* `Aws\S3Control` - Minor fix to ARN validation for Lambda functions passed to S3 Batch Operations
+* `Aws\IoT` - Raised the documentParameters size limit to 30 KB for AWS IoT Device Management - Jobs.
+
 ## 3.338.2 - 2025-01-24
 
 * `Aws\CloudTrail` - This release introduces the SearchSampleQueries API that allows users to search for CloudTrail Lake sample queries.
