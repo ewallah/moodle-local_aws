@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 3.339.9 - 2025-02-07
+
+* `Aws\` - Remove paragonie/random_compat dev dependency.
+* `Aws\MediaConvert` - This release adds support for Animated GIF output, forced chroma sample positioning metadata, and Extensible Wave Container format
+* `Aws\EKS` - Introduce versionStatus field to take place of status field in EKS DescribeClusterVersions API
+* `Aws\PI` - Adds documentation for dimension groups and dimensions to analyze locks for Database Insights.
+* `Aws\TranscribeService` - This release adds support for the Clinical Note Template Customization feature for the AWS HealthScribe APIs within Amazon Transcribe.
+* `Aws\ECR` - Adds support to handle the new basic scanning daily quota.
+
+## 3.339.8 - 2025-02-06
+
+* `Aws\Signature` - Adds `transfer-encoding` to list of headers to be removed prior to sigv4a signing
+* `Aws\ConnectCases` - This release adds the ability to conditionally require fields on a template. Check public documentation for more information.
+* `Aws\CostOptimizationHub` - This release enables AWS Cost Optimization Hub to show cost optimization recommendations for Amazon Auto Scaling Groups, including those with single and mixed instance types.
+* `Aws\S3` - Updated list of the valid AWS Region values for the LocationConstraint parameter for general purpose buckets.
+* `Aws\CloudFormation` - We added 5 new stack refactoring APIs: CreateStackRefactor, ExecuteStackRefactor, ListStackRefactors, DescribeStackRefactor, ListStackRefactorActions.
+
+## 3.339.7 - 2025-02-05
+
+* `Aws\RDS` - Documentation updates to clarify the description for the parameter AllocatedStorage for the DB cluster data type, the description for the parameter DeleteAutomatedBackups for the DeleteDBCluster API operation, and removing an outdated note for the CreateDBParameterGroup API operation.
+
+## 3.339.6 - 2025-02-04
+
+* `Aws\Credentials` - Updates to sso provider expiration time handling
+* `Aws\DataSync` - Doc-only update to provide more information on using Kerberos authentication with SMB locations.
+* `Aws\QBusiness` - Adds functionality to enable/disable a new Q Business Chat orchestration feature. If enabled, Q Business can orchestrate over datasources and plugins without the need for customers to select specific chat modes.
+* `Aws\SageMaker` - IPv6 support for Hyperpod clusters
+* `Aws\IAM` - This release adds support for accepting encrypted SAML assertions. Customers can now configure their identity provider to encrypt the SAML assertions it sends to IAM.
+* `Aws\DatabaseMigrationService` - Introduces TargetDataSettings with the TablePreparationMode option available for data migrations.
+* `Aws\NeptuneGraph` - Added argument to `list-export` to filter by graph ID
+
+## 3.339.5 - 2025-02-03
+
+* `Aws\MediaTailor` - Add support for CloudWatch Vended Logs which allows for delivery of customer logs to CloudWatch Logs, S3, or Firehose.
+
 ## 3.339.4 - 2025-01-31
 
 * `Aws\PrometheusService` - Add support for sending metrics to cross account and CMCK AMP workspaces through RoleConfiguration on Create/Update Scraper.
