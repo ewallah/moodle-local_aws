@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.339.14 - 2025-02-14
+
+* `Aws\WorkSpacesThinClient` - Update Environment and Device name field definitions
+* `Aws\RDSDataService` - Add support for Stop DB feature.
+* `Aws\Connect` - Release Notes: 1) Analytics API enhancements: Added new ListAnalyticsDataLakeDataSets API. 2) Onboarding API Idempotency: Adds ClientToken to instance creation and management APIs to support idempotency.
+* `Aws\S3` - Added support for Content-Range header in HeadObject response.
+* `Aws\WAFV2` - The WAFv2 API now supports configuring data protection in webACLs.
+* `Aws\CodeBuild` - Added test suite names to test case metadata
+* `Aws\DatabaseMigrationService` - Introduces premigration assessment feature to DMS Serverless API for start-replication and describe-replications
+
+## 3.339.13 - 2025-02-13
+
+* `Aws\S3Control` - Disables legacy `EndpointArnMiddleware` when the dynamic endpoint provider is in use
+* `Aws\AccessAnalyzer` - This release introduces the getFindingsStatistics API, enabling users to retrieve aggregated finding statistics for IAM Access Analyzer's external access and unused access analysis features. Updated service API and documentation.
+* `Aws\ECS` - This is a documentation only release to support migrating Amazon ECS service ARNs to the long ARN format.
+* `Aws\ACMPCA` - Private Certificate Authority (PCA) documentation updates
+* `Aws\StorageGateway` - This release adds support for generating cache reports on S3 File Gateways for files that fail to upload.
+* `Aws\SageMaker` - Adds additional values to the InferenceAmiVersion parameter in the ProductionVariant data type.
+* `Aws\FIS` - Adds auto-pagination for the following operations: ListActions, ListExperimentTemplates, ListTargetAccountConfigurations, ListExperiments, ListExperimentResolvedTargets, ListTargetResourceTypes. Reduces length constraints of prefixes for logConfiguration and experimentReportConfiguration.
+
+## 3.339.12 - 2025-02-12
+
+* `Aws\Auth` - Adds exception handling for invalid identities, allowing fallback behavior
+* `Aws\BedrockAgent` - This releases adds the additionalModelRequestFields field to the CreateAgent and UpdateAgent operations. Use additionalModelRequestFields to specify additional inference parameters for a model beyond the base inference parameters.
+* `Aws\MediaLive` - Adds a RequestId parameter to all MediaLive Workflow Monitor create operations. The RequestId parameter allows idempotent operations.
+* `Aws\FSx` - Support for in-place Lustre version upgrades
+* `Aws\Polly` - Added support for the new voice - Jasmine (en-SG). Jasmine is available as a Neural voice only.
+* `Aws\BedrockAgentRuntime` - This releases adds the additionalModelRequestFields field to the InvokeInlineAgent operation. Use additionalModelRequestFields to specify additional inference parameters for a model beyond the base inference parameters.
+* `Aws\OpenSearchServerless` - Custom OpenSearchServerless Entity ID for SAML Config.
+* `Aws\CodeBuild` - Add note for the RUNNER_BUILDKITE_BUILD buildType.
+* `Aws\B2bi` - Allow spaces in the following fields in the Partnership resource: ISA 06 - Sender ID, ISA 08 - Receiver ID, GS 02 - Application Sender Code, GS 03 - Application Receiver Code
+
+## 3.339.11 - 2025-02-11
+
+* `Aws\ACMPCA` - Private Certificate Authority service now supports Partitioned CRL as a revocation configuration option.
+* `Aws\PI` - Documentation only update for RDS Performance Insights dimensions for execution plans and locking analysis.
+* `Aws\AppSync` - Add support for operation level caching
+* `Aws\EC2` - Adding support for the new fullSnapshotSizeInBytes field in the response of the EC2 EBS DescribeSnapshots API. This field represents the size of all the blocks that were written to the source volume at the time the snapshot was created.
+
+## 3.339.10 - 2025-02-10
+
+* `Aws\Connect` - Updated the CreateContact API documentation to indicate that it only applies to EMAIL contacts.
+* `Aws\DatabaseMigrationService` - New vendors for DMS Data Providers: DB2 LUW and DB2 for z/OS
+* `Aws\CloudFront` - Doc-only update that adds defaults for CloudFront VpcOriginEndpointConfig values.
+* `Aws\ApiGatewayV2` - Documentation updates for Amazon API Gateway
+
 ## 3.339.9 - 2025-02-07
 
 * `Aws\` - Remove paragonie/random_compat dev dependency.
