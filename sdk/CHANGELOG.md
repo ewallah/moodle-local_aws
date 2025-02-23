@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## 3.339.19 - 2025-02-21
+
+* `Aws\AppStream` - Added support for Certificate-Based Authentication on AppStream 2.0 multi-session fleets.
+* `Aws\BedrockAgent` - Introduce a new parameter which represents the user-agent header value used by the Bedrock Knowledge Base Web Connector.
+
+## 3.339.18 - 2025-02-20
+
+* `Aws\LicenseManagerUserSubscriptions` - Updates entity to include Microsoft RDS SAL as a valid type of user subscription.
+* `Aws\GuardDuty` - Reduce the minimum number of required attack sequence signals from 2 to 1
+* `Aws\RDS` - CloudWatch Database Insights now supports Amazon RDS.
+* `Aws\CodeBuild` - Add webhook status and status message to AWS CodeBuild webhooks
+* `Aws\WorkSpacesWeb` - Add support for toolbar configuration under user settings.
+* `Aws\SageMaker` - Added new capability in the UpdateCluster operation to remove instance groups from your SageMaker HyperPod cluster.
+
+## 3.339.17 - 2025-02-19
+
+* `Aws\` - When doing a putObject request and the body is provided with the `SourceFile` parameter then, internally a lazy open stream is created in order to populate the body of the request. This change makes sure that created stream is closed after request completion.
+* `Aws\CodePipeline` - Add environment variables to codepipeline action declaration.
+* `Aws\SESv2` - This release adds the ability for outbound email sent with SES to preserve emails to a Mail Manager archive.
+* `Aws\Lightsail` - Documentation updates for Amazon Lightsail.
+* `Aws\LocationService` - Adds support for larger property maps for tracking and geofence positions changes. It increases the maximum number of items from 3 to 4, and the maximum value length from 40 to 150.
+* `Aws\ECS` - This is a documentation only release for Amazon ECS that supports the CPU task limit increase.
+* `Aws\SageMaker` - Adds r8g instance type support to SageMaker Realtime Endpoints
+* `Aws\MailManager` - This release adds additional metadata fields in Mail Manager archive searches to show email source and details about emails that were archived when being sent with SES.
+* `Aws\NetworkFirewall` - This release introduces Network Firewall's Automated Domain List feature. New APIs include UpdateFirewallAnalysisSettings, StartAnalysisReport, GetAnalysisReportResults, and ListAnalysisReports. These allow customers to enable analysis on firewalls to identify and report frequently accessed domain.
+
+## 3.339.16 - 2025-02-18
+
+* `Aws\EMRContainers` - EMR on EKS StartJobRun Api will be supporting the configuration of log storage in AWS by using "managedLogs" under "MonitoringConfiguration".
+* `Aws\Batch` - This documentation-only update corrects some typos.
+* `Aws\MediaLive` - Adds support for creating CloudWatchAlarmTemplates for AWS Elemental MediaTailor Playback Configuration resources.
+
+## 3.339.15 - 2025-02-17
+
+* `Aws\TimestreamInfluxDB` - This release introduces APIs to manage DbClusters and adds support for read replicas
+* `Aws\DatabaseMigrationService` - Support replicationConfigArn in DMS DescribeApplicableIndividualAssessments API.
+* `Aws\Amplify` - Add ComputeRoleArn to CreateApp, UpdateApp, CreateBranch, and UpdateBranch, allowing caller to specify a role to be assumed by Amplify Hosting for server-side rendered applications.
+
 ## 3.339.14 - 2025-02-14
 
 * `Aws\WorkSpacesThinClient` - Update Environment and Device name field definitions
