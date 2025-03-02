@@ -1,5 +1,54 @@
 # CHANGELOG
 
+## 3.340.4 - 2025-02-28
+
+* `Aws\S3` - Adds missing, unimplemented streamwrapper methods
+* `Aws\MediaConvert` - The AWS MediaConvert Probe API allows you to analyze media files and retrieve detailed metadata about their content, format, and structure.
+* `Aws\EKS` - Adding licenses to EKS Anywhere Subscription operations response.
+* `Aws\BedrockDataAutomationRuntime` - Added a mandatory parameter DataAutomationProfileArn to support for cross region inference for InvokeDataAutomationAsync API. Renamed DataAutomationArn to DataAutomationProjectArn. Added APIs to support tagging.
+* `Aws\BedrockAgent` - This release lets Amazon Bedrock Flows support newer models by increasing the maximum length of output in a prompt configuration. This release also increases the maximum number of prompt variables to 20 and the maximum number of node inputs to 20.
+* `Aws\BedrockDataAutomation` - Renamed and added new StandardConfiguration enums. Added support to update EncryptionConfiguration in UpdateBlueprint and UpdateDataAutomation APIs. Changed HttpStatus code for DeleteBlueprint and DeleteDataAutomationProject APIs to 200 from 204. Added APIs to support tagging.
+* `Aws\SSM` - Systems Manager doc-only updates for Feb. 2025.
+* `Aws\Pricing` - Update GetProducts and DescribeServices API request input validations.
+* `Aws\DatabaseMigrationService` - Add skipped status to the Result Statistics of an Assessment Run
+
+## 3.340.3 - 2025-02-27
+
+* `Aws\BedrockAgentRuntime` - Introduces Sessions (preview) to enable stateful conversations in GenAI applications.
+* `Aws\RedshiftServerless` - Add track support for Redshift Serverless workgroup.
+* `Aws\StorageGateway` - This release adds support to invoke a process that cleans the specified file share's cache of file entries that are failing upload to Amazon S3.
+* `Aws\QBusiness` - This release supports deleting attachments from conversations.
+* `Aws\SageMaker` - SageMaker HubService is introducing support for creating Training Jobs in Curated Hub (Private Hub). Additionally, it is introducing two new APIs: UpdateHubContent and UpdateHubContentReference.
+* `Aws\EMR` - Definition update for EbsConfiguration.
+
+## 3.340.2 - 2025-02-26
+
+* `Aws\OAM` - This release adds support for sharing AWS::ApplicationSignals::Service and AWS::ApplicationSignals::ServiceLevelObjective resources.
+* `Aws\Batch` - AWS Batch: Resource Aware Scheduling feature support
+* `Aws\Chime` - Removes the Amazon Chime SDK APIs from the "chime" namespace. Amazon Chime SDK APIs continue to be available in the AWS SDK via the dedicated Amazon Chime SDK namespaces: chime-sdk-identity, chime-sdk-mediapipelines, chime-sdk-meetings, chime-sdk-messaging, and chime-sdk-voice.
+* `Aws\EC2` - Amazon EC2 Fleet customers can now override the Block Device Mapping specified in the Launch Template when creating a new Fleet request, saving the effort of creating and associating new Launch Templates to customize the Block Device Mapping.
+* `Aws\IoTFleetWise` - This release adds an optional listResponseScope request parameter in certain list API requests to limit the response to metadata only.
+* `Aws\SageMaker` - AWS SageMaker InferenceComponents now support rolling update deployments for Inference Components.
+* `Aws\ApplicationSignals` - This release adds API support for reading Service Level Objectives and Services from monitoring accounts, from SLO and Service-scoped operations, including ListServices and ListServiceLevelObjectives.
+* `Aws\CloudFront` - Documentation update for VPC origin config.
+
+## 3.340.1 - 2025-02-25
+
+* `Aws\DeviceFarm` - Add an optional configuration to the ScheduleRun and CreateRemoteAccessSession API to set a device level http/s proxy.
+* `Aws\EC2` - Adds support for time-based EBS-backed AMI copy operations. Time-based copy ensures that EBS-backed AMIs are copied within and across Regions in a specified timeframe.
+* `Aws\TaxSettings` - PutTaxRegistration API changes for Egypt, Greece, Vietnam countries
+* `Aws\CodeBuild` - Adding "reportArns" field in output of BatchGetBuildBatches API. "reportArns" is an array that contains the ARNs of reports created by merging reports from builds associated with the batch build.
+* `Aws\IoT` - AWS IoT - AWS IoT Device Defender adds support for a new Device Defender Audit Check that monitors device certificate age and custom threshold configurations for both the new device certificate age check and existing device certificate expiry check.
+
+## 3.340.0 - 2025-02-24
+
+* `Aws\Api` - Adds protocol selection behavior for services that specify the `protocols` field
+* `Aws\ElastiCache` - Documentation update, adding clarity and rephrasing.
+* `Aws\BedrockAgent` - This release improves support for newer models in Amazon Bedrock Flows.
+* `Aws\BedrockRuntime` - This release adds Reasoning Content support to Converse and ConverseStream APIs
+* `Aws\BedrockAgentRuntime` - Adding support for ReasoningContent fields in Pre-Processing, Post-Processing and Orchestration Trace outputs.
+* `Aws\ElasticInference` - Removes the Elastic Inference Service, which has been deprecated.
+
 ## 3.339.19 - 2025-02-21
 
 * `Aws\AppStream` - Added support for Certificate-Based Authentication on AppStream 2.0 multi-session fleets.
