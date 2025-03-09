@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 3.342.2 - 2025-03-07
+
+* `Aws\BedrockAgent` - Introduces support for Neptune Analytics as a vector data store and adds Context Enrichment Configurations, enabling use cases such as GraphRAG.
+* `Aws\ElasticLoadBalancingv2` - This release adds support for assigning IP addresses to Application Load Balancers from VPC IP Address Manager pools.
+* `Aws\CloudFront` - Documentation updates for Amazon CloudFront.
+* `Aws\NeptuneGraph` - Several small updates to resolve customer requests.
+* `Aws\BedrockAgentRuntime` - Support Multi Agent Collaboration within Inline Agents
+* `Aws\EC2` - Add serviceManaged field to DescribeAddresses API response.
+
+## 3.342.1 - 2025-03-06
+
+* `Aws\NetworkFlowMonitor` - This release contains 2 changes. 1: DeleteScope/GetScope/UpdateScope operations now return 404 instead of 500 when the resource does not exist. 2: Expected string format for clientToken fields of CreateMonitorInput/CreateScopeInput/UpdateMonitorInput have been updated to be an UUID based string.
+* `Aws\RedshiftDataAPIService` - This release adds support for ListStatements API to filter statements by ClusterIdentifier, WorkgroupName, and Database.
+* `Aws\CloudTrail` - Doc-only update for CloudTrail.
+* `Aws\WAFV2` - You can now perform an exact match or rate limit aggregation against the web request's JA4 fingerprint.
+* `Aws\IVSRealTime` - IVS Real-Time now offers customers the ability to merge fragmented recordings in the event of a participant disconnect.
+* `Aws\WorkSpaces` - Added a new ModifyEndpointEncryptionMode API for managing endpoint encryption settings.
+* `Aws\Bedrock` - This releases adds support for Custom Prompt Router
+
+## 3.342.0 - 2025-03-05
+
+* `Aws\Handler` - Remove code for unsupported version v5 of Guzzle.
+* `Aws\BedrockRuntime` - This releases adds support for Custom Prompt Router ARN
+* `Aws\GameLiftStreams` - New Service: Amazon GameLift Streams delivers low-latency game streaming from AWS global infrastructure to virtually any device with a browser at up to 1080p resolution and 60 fps.
+* `Aws\WorkSpaces` - Added DeviceTypeWorkSpacesThinClient type to allow users to access their WorkSpaces through a WorkSpaces Thin Client.
+* `Aws\DataSync` - AWS DataSync now supports modifying ServerHostname while updating locations SMB, NFS, and ObjectStorage.
+* `Aws\IoTFleetWise` - This release adds floating point support for CAN/OBD signals and adds support for signed OBD signals.
+
+## 3.341.0 - 2025-03-04
+
+* `Aws\ClientSideMonitoring` - Updates handling of `csm_port` value if provided in ini file
+* `Aws\IoTManagedIntegrations` - Adding managed integrations APIs for IoT Device Management to setup and control devices across different manufacturers and connectivity protocols. APIs include managedthing operations, credential and provisioning profile management, notification configuration, and OTA update.
+* `Aws\RDS` - Note support for Database Insights for Amazon RDS.
+* `Aws\IoTSiteWise` - AWS IoT SiteWise now supports MQTT-enabled, V3 gateways. Configure data destinations for real-time ingestion into AWS IoT SiteWise or buffered ingestion using Amazon S3 storage. You can also use path filters for precise data collection from specific MQTT topics.
+* `Aws\ElastiCache` - Doc only update, listing 'valkey7' and 'valkey8' as engine options for parameter groups.
+
+## 3.340.5 - 2025-03-03
+
+* `Aws\` - Changes to align with current waiter specifications.
+* `Aws\EC2` - Update the DescribeVpcs response
+* `Aws\CognitoIdentityProvider` - Added the capacity to return available challenges in admin authentication and to set version 3 of the pre token generation event for M2M ATC.
+* `Aws\CloudWatchRUM` - Add support for PutResourcePolicy, GetResourcePolicy and DeleteResourcePolicy to support resource based policies for AWS CloudWatch RUM
+* `Aws\SageMaker` - Add DomainId to CreateDomainResponse
+* `Aws\TranscribeService` - Updating documentation for post call analytics job queueing.
+* `Aws\QBusiness` - Adds support for the ingestion of audio and video files by Q Business, which can be configured with the mediaExtractionConfiguration parameter.
+
 ## 3.340.4 - 2025-02-28
 
 * `Aws\S3` - Adds missing, unimplemented streamwrapper methods
