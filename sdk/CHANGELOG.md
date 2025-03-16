@@ -1,5 +1,46 @@
 # CHANGELOG
 
+## 3.342.6 - 2025-03-14
+
+* `Aws\Handler` - Remove code for unsupported version v6 of Guzzle and moved Aws\Handler\GuzzleV6\GuzzleHandler to an unversioned Aws\Handler\Guzzle\GuzzleHandler.
+* `Aws\Glue` - This release added AllowFullTableExternalDataAccess to glue catalog resource.
+* `Aws\LakeFormation` - This release added "condition" to LakeFormation OptIn APIs, also added WithPrivilegedAccess flag to RegisterResource and DescribeResource.
+* `Aws\CognitoIdentityProvider` - Minor description updates to API parameters
+* `Aws\CognitoIdentity` - Updated API model build artifacts for identity pools
+
+## 3.342.5 - 2025-03-13
+
+* `Aws\` - Avoid evaluating 200 errors for responses where its body is not seekable.
+* `Aws\ACMPCA` - Private Certificate Authority service now supports P521 and RSA3072 key algorithms.
+* `Aws\IVSRealTime` - IVS Real-Time now offers customers the ability to adjust the participant & composition recording segment duration
+* `Aws\CloudWatchLogs` - Updated CreateLogAnomalyDetector to accept only kms key arn
+* `Aws\EC2` - This release changes the CreateLaunchTemplate, CreateLaunchTemplateVersion, ModifyLaunchTemplate CLI and SDKs such that if you do not specify a client token, a randomly generated token is used for the request to ensure idempotency.
+* `Aws\DynamoDB` - Generate account endpoints for DynamoDB requests using ARN-sourced account ID when available
+* `Aws\S3Control` - Updating GetDataAccess response for S3 Access Grants to include the matched Grantee for the requested prefix
+* `Aws\Amplify` - Introduced support for Skew Protection. Added enableSkewProtection field to createBranch and updateBranch API.
+* `Aws\CodeBuild` - AWS CodeBuild now supports webhook filtering by organization name
+* `Aws\DataZone` - This release adds support to update projects and environments
+* `Aws\MediaPackageV2` - This release adds the ResetChannelState and ResetOriginEndpointState operation to reset MediaPackage V2 channel and origin endpoint. This release also adds a new field, UrlEncodeChildManifest, for HLS/LL-HLS to allow URL-encoding child manifest query string based on the requirements of AWS SigV4.
+
+## 3.342.4 - 2025-03-11
+
+* `Aws\EC2` - This release adds the GroupLongName field to the response of the DescribeAvailabilityZones API.
+* `Aws\ECR` - This release adds Amazon ECR to Amazon ECR pull through cache rules support.
+* `Aws\ECS` - This is a documentation only update for Amazon ECS to address various tickets.
+* `Aws\Inspector2` - Adding componentArn to network reachability details
+* `Aws\MediaLive` - Add an enum option DISABLED for Output Locking Mode under Global Configuration.
+
+## 3.342.3 - 2025-03-10
+
+* `Aws\BedrockAgent` - Add support for computer use tools
+* `Aws\MediaLive` - Adds defaultFontSize and defaultLineHeight as options in the EbuTtDDestinationSettings within the caption descriptions for an output stream.
+* `Aws\Connect` - Add support for contact transfers in external voice systems.
+* `Aws\BedrockAgentRuntime` - Add support for computer use tools
+* `Aws\PcaConnectorAd` - PrivateCA Connector for Active Directory now supports dual stack endpoints. This release adds the IpAddressType option to the VpcInformation on a Connector which determines whether the endpoint supports IPv4 only or IPv4 and IPv6 traffic.
+* `Aws\TimestreamInfluxDB` - This release updates the default value of pprof-disabled from false to true.
+* `Aws\SecurityHub` - This release adds new StandardsControlsUpdatable field to the StandardsSubscription resource
+* `Aws\CostExplorer` - Releasing minor partition endpoint updates.
+
 ## 3.342.2 - 2025-03-07
 
 * `Aws\BedrockAgent` - Introduces support for Neptune Analytics as a vector data store and adds Context Enrichment Configurations, enabling use cases such as GraphRAG.
