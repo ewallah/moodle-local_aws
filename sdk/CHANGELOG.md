@@ -1,5 +1,46 @@
 # CHANGELOG
 
+## 3.342.11 - 2025-03-21
+
+* `Aws\Route53RecoveryControlConfig` - Adds dual-stack (IPv4 and IPv6) endpoint support for route53-recovery-control-config operations, opt-in dual-stack addresses for cluster endpoints, and UpdateCluster API to update the network-type of clusters between IPv4 and dual-stack.
+* `Aws\Bedrock` - A CustomModelUnit(CMU) is an abstract view of the hardware utilization that Bedrock needs to host a a single copy of your custom imported model. Bedrock determines the number of CMUs that a model copy needs when you import the custom model. You can use CMUs to estimate the cost of Inference's.
+* `Aws\SageMaker` - This release does the following: 1.) Adds DurationHours as a required field to the SearchTrainingPlanOfferings action in the SageMaker AI API; 2.) Adds support for G6e instance types for SageMaker AI inference optimization jobs.
+* `Aws\DataZone` - Add support for overriding selection of default AWS IAM Identity Center instance as part of Amazon DataZone domain APIs.
+
+## 3.342.10 - 2025-03-20
+
+* `Aws\ControlCatalog` - Add ExemptAssumeRoot parameter to adapt for new AWS AssumeRoot capability.
+* `Aws\MailManager` - Amazon SES Mail Manager. Extended rule string and boolean expressions to support analysis in condition evaluation. Extended ingress point string expression to support analysis in condition evaluation
+* `Aws\Amplify` - Added appId field to Webhook responses
+* `Aws\NetworkFirewall` - You can now use flow operations to either flush or capture traffic monitored in your firewall's flow table.
+* `Aws\Bedrock` - With this release, Bedrock Evaluation will now support bring your own inference responses.
+
+## 3.342.9 - 2025-03-19
+
+* `Aws\` - Remove legacy code from the PHP 7 era and earlier.
+* `Aws\Bedrock` - Support custom prompt routers for evaluation jobs
+* `Aws\MediaConnect` - This release adds support for NDI flow outputs in AWS Elemental MediaConnect. You can now send content from your MediaConnect transport streams directly to your NDI environment using the new NDI output type.
+* `Aws\Lambda` - Add Ruby 3.4 (ruby3.4) support to AWS Lambda.
+* `Aws\NeptuneGraph` - Update IAM Role ARN Validation to Support Role Paths
+* `Aws\SageMaker` - Added support for g6, g6e, m6i, c6i instance types in SageMaker Processing Jobs.
+* `Aws\EC2` - Doc-only updates for EC2 for March 2025.
+
+## 3.342.8 - 2025-03-18
+
+* `Aws\S3` - Added possibility to execute a callback function after a transfer is fulfilled when using the Transfer class. Implemented similarly to the way the 'before' callback works.
+* `Aws\Route53` - Amazon Route 53 now supports the iso-f regions for private DNS Amazon VPCs and cloudwatch healthchecks.
+* `Aws\AppSync` - Providing Tagging support for DomainName in AppSync
+* `Aws\CleanRooms` - This release adds support for PySpark jobs. Customers can now analyze data by running jobs using approved PySpark analysis templates.
+* `Aws\MediaConvert` - This release adds support for AVC passthrough, the ability to specify PTS offset without padding, and an A/V segment matching feature.
+
+## 3.342.7 - 2025-03-17
+
+* `Aws\TaxSettings` - Adjust Vietnam PaymentVoucherNumber regex and minor API change.
+* `Aws\ApplicationSignals` - This release adds support for adding, removing, and listing SLO time exclusion windows with the BatchUpdateExclusionWindows and ListServiceLevelObjectiveExclusionWindows APIs.
+* `Aws\GeoMaps` - Provide support for vector map styles in the GetStaticMap operation.
+* `Aws\CloudWatchRUM` - CloudWatch RUM now supports unminification of JS error stack traces.
+* `Aws\WAFV2` - AWS WAF now lets you inspect fragments of request URIs. You can specify the scope of the URI to inspect and narrow the set of URI fragments.
+
 ## 3.342.6 - 2025-03-14
 
 * `Aws\Handler` - Remove code for unsupported version v6 of Guzzle and moved Aws\Handler\GuzzleV6\GuzzleHandler to an unversioned Aws\Handler\Guzzle\GuzzleHandler.
