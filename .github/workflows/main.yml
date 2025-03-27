@@ -36,6 +36,9 @@ jobs:
           - php: '8.3'
             moodle-branch: 'main'
             database: 'pgsql'
+          - php: '8.4'
+            moodle-branch: 'main'
+            database: 'pgsql'
 
     name: ${{ matrix.moodle-branch }}  php ${{ matrix.php }} db ${{ matrix.database }}
 
