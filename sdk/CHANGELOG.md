@@ -1,5 +1,60 @@
 # CHANGELOG
 
+## 3.342.16 - 2025-03-28
+
+* `Aws\CodeBuild` - This release adds support for cacheNamespace in ProjectCache
+* `Aws\BedrockRuntime` - Launching Multi-modality Content Filter for Amazon Bedrock Guardrails.
+* `Aws\ECS` - This is an Amazon ECS documentation only release that addresses tickets.
+* `Aws\SageMaker` - TransformAmiVersion for Batch Transform and SageMaker Search Service Aggregate Search API Extension
+* `Aws\PaymentCryptography` - The service adds support for transferring AES-256 and other keys between the service and other service providers and HSMs. This feature uses ECDH to derive a one-time key transport key to enable these secure key exchanges.
+* `Aws\MarketplaceMetering` - Add support for Marketplace Metering Service dual-stack endpoints.
+* `Aws\NetworkManager` - Add support for NetworkManager Dualstack endpoints.
+* `Aws\QuickSight` - RLS permission dataset with userAs: RLS_RULES flag, Q in QuickSight/Threshold Alerts/Schedules/Snapshots in QS embedding, toggle dataset refresh email alerts via API, transposed table with options: column width, type and index, toggle Q&A on dashboards, Oracle Service Name when creating data source.
+* `Aws\APIGateway` - Adds support for setting the IP address type to allow dual-stack or IPv4 address types to invoke your APIs or domain names.
+* `Aws\ApiGatewayV2` - Adds support for setting the IP address type to allow dual-stack or IPv4 address types to invoke your APIs or domain names.
+
+## 3.342.15 - 2025-03-27
+
+* `Aws\CloudFormation` - Adding support for the new parameter "ScanFilters" in the CloudFormation StartResourceScan API. When this parameter is included, the StartResourceScan API will initiate a scan limited to the resource types specified by the parameter.
+* `Aws\Batch` - This release will enable two features: Firelens log driver, and Execute Command on Batch jobs on ECS. Both features will be passed through to ECS.
+* `Aws\DataZone` - This release adds new action type of Create Listing Changeset for the Metadata Enforcement Rule feature.
+* `Aws\BedrockAgentRuntime` - bedrock flow now support node action trace.
+* `Aws\IAM` - Update IAM dual-stack endpoints for BJS, IAD and PDT partitions
+* `Aws\SSOOIDC` - This release adds AwsAdditionalDetails in the CreateTokenWithIAM API response.
+* `Aws\SageMaker` - add: recovery mode for SageMaker Studio apps
+* `Aws\GameLift` - Amazon GameLift Servers add support for additional instance types.
+* `Aws\EKS` - Added support for BOTTLEROCKET FIPS AMIs to AMI types in US regions.
+* `Aws\BCMPricingCalculator` - Added standaloneAccountRateTypeSelections for GetPreferences and UpdatePreferences APIs. Added STALE enum value to status attribute in GetBillScenario and UpdateBillScenario APIs.
+
+## 3.342.14 - 2025-03-26
+
+* `Aws\DirectConnect` - With this release, AWS Direct Connect allows you to tag your Direct Connect gateways. Tags are metadata that you can create and use to manage your Direct Connect gateways. For more information about tagging, see AWS Tagging Strategies.
+* `Aws\RDS` - Add note about the Availability Zone where RDS restores the DB cluster for the RestoreDBClusterToPointInTime operation.
+* `Aws\WAFV2` - This release adds the ability to associate an AWS WAF v2 web ACL with an AWS Amplify App.
+* `Aws\ARCZonalShift` - Add new shiftType field for ARC zonal shifts.
+* `Aws\MediaConvert` - This release adds a configurable Quality Level setting for the top rendition of Auto ABR jobs
+* `Aws\MediaTailor` - Add support for log filtering which allow customers to filter out selected event types from logs.
+* `Aws\Polly` - Added support for the new voice - Jihye (ko-KR). Jihye is available as a Neural voice only.
+
+## 3.342.13 - 2025-03-25
+
+* `Aws\Api` - Fixes bug which caused path duplication in custom configured endpoints
+* `Aws\SageMaker` - This release adds support for customer-managed KMS keys in Amazon SageMaker Partner AI Apps
+* `Aws\Keyspaces` - Removing replication region limitation for Amazon Keyspaces Multi-Region Replication APIs.
+* `Aws\BedrockAgent` - Adding support for Amazon OpenSearch Managed clusters as a vector database in Knowledge Bases for Amazon Bedrock
+* `Aws\EKS` - Added support to override upgrade-blocking readiness checks via force flag when updating a cluster.
+* `Aws\WorkSpacesThinClient` - Deprecate tags field in Get API responses
+* `Aws\GameLiftStreams` - Minor updates to improve developer experience.
+* `Aws\MarketplaceMetering` - This release enhances the BatchMeterUsage API to support new field CustomerAWSAccountId in request and response and making CustomerIdentifier optional. CustomerAWSAccountId or CustomerIdentifier must be provided in request but not both.
+* `Aws\MarketplaceEntitlementService` - This release enhances the GetEntitlements API to support new filter CUSTOMER_AWS_ACCOUNT_ID in request and CustomerAWSAccountId field in response.
+
+## 3.342.12 - 2025-03-24
+
+* `Aws\QConnect` - Provides the correct value for supported model ID.
+* `Aws\PCS` - ClusterName/ClusterIdentifier, ComputeNodeGroupName/ComputeNodeGroupIdentifier, and QueueName/QueueIdentifier can now have 10 characters, and a minimum of 3 characters. The TagResource API action can now return ServiceQuotaExceededException.
+* `Aws\SSM` - This release adds the AvailableSecurityUpdatesComplianceStatus field to patch baseline operations, as well as the AvailableSecurityUpdateCount and InstancesWithAvailableSecurityUpdates to patch state operations. Applies to Windows Server managed nodes only.
+* `Aws\IoTWireless` - Mark EutranCid under LteNmr optional.
+
 ## 3.342.11 - 2025-03-21
 
 * `Aws\Route53RecoveryControlConfig` - Adds dual-stack (IPv4 and IPv6) endpoint support for route53-recovery-control-config operations, opt-in dual-stack addresses for cluster endpoints, and UpdateCluster API to update the network-type of clusters between IPv4 and dual-stack.
