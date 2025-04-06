@@ -1,5 +1,50 @@
 # CHANGELOG
 
+## 3.342.21 - 2025-04-04
+
+* `Aws\EC2` - Doc-only updates for Amazon EC2
+* `Aws\S3Control` - Updated max size of Prefixes parameter of Scope data type.
+* `Aws\DirectoryServiceData` - Doc only update - fixed broken links.
+* `Aws\EventBridge` - Amazon EventBridge adds support for customer-managed keys on Archives and validations for two fields: eventSourceArn and kmsKeyIdentifier.
+
+## 3.342.20 - 2025-04-03
+
+* `Aws\BedrockAgent` - Added optional "customMetadataField" for Amazon Aurora knowledge bases, allowing single-column metadata. Also added optional "textIndexName" for MongoDB Atlas knowledge bases, enabling hybrid search support.
+* `Aws\SESv2` - This release enables customers to provide attachments in the SESv2 SendEmail and SendBulkEmail APIs.
+* `Aws\ChimeSDKVoice` - Added FOC date as an attribute of PhoneNumberOrder, added AccessDeniedException as a possible return type of ValidateE911Address
+* `Aws\SageMaker` - Adds support for i3en, m7i, r7i instance types for SageMaker Hyperpod
+* `Aws\MailManager` - Add support for Dual_Stack and PrivateLink types of IngressPoint. For configuration requests, SES Mail Manager will now accept both IPv4/IPv6 dual-stack endpoints and AWS PrivateLink VPC endpoints for email receiving.
+* `Aws\Route53` - Added us-gov-east-1 and us-gov-west-1 as valid Latency Based Routing regions for change-resource-record-sets.
+* `Aws\OpenSearchService` - Improve descriptions for various API commands and data types.
+* `Aws\TranscribeService` - This Feature Adds Support for the "zh-HK" Locale for Batch Operations
+
+## 3.342.19 - 2025-04-02
+
+* `Aws\ECS` - This is an Amazon ECS documentation only update to address various tickets.
+* `Aws\LexModelsV2` - Release feature of errorlogging for lex bot, customer can config this feature in bot version to generate log for error exception which helps debug
+* `Aws\CodeBuild` - This release adds support for environment type WINDOWS_SERVER_2022_CONTAINER in ProjectEnvironment
+* `Aws\MediaLive` - Added support for SMPTE 2110 inputs when running a channel in a MediaLive Anywhere cluster. This feature enables ingestion of SMPTE 2110-compliant video, audio, and ancillary streams by reading SDP files that AWS Elemental MediaLive can retrieve from a network source.
+* `Aws\ECR` - Fix for customer issues related to AWS account ID and size limitation for token.
+* `Aws\ApplicationSignals` - Application Signals now supports creating Service Level Objectives on service dependencies. Users can now create or update SLOs on discovered service dependencies to monitor their standard application metrics.
+
+## 3.342.18 - 2025-04-01
+
+* `Aws\CleanRooms` - This release adds support for updating the analytics engine of a collaboration.
+* `Aws\SageMaker` - Added tagging support for SageMaker notebook instance lifecycle configurations
+
+## 3.342.17 - 2025-03-31
+
+* `Aws\Transfer` - Add WebAppEndpointPolicy support for WebApps
+* `Aws\EKS` - Add support for updating RemoteNetworkConfig for hybrid nodes on EKS UpdateClusterConfig API
+* `Aws\MarketplaceEntitlementService` - Add support for Marketplace Entitlement Service dual-stack endpoints.
+* `Aws\S3` - Amazon S3 adds support for S3 Access Points for directory buckets in AWS Dedicated Local Zones
+* `Aws\EC2` - Release VPC Route Server, a new feature allowing dynamic routing in VPCs.
+* `Aws\S3Control` - Amazon S3 adds support for S3 Access Points for directory buckets in AWS Dedicated Local Zones
+* `Aws\Outposts` - Enabling Asset Level Capacity Management feature, which allows customers to create a Capacity Task for a single Asset on their active Outpost.
+* `Aws\SESv2` - Add dual-stack support to global endpoints.
+* `Aws\Deadline` - With this release you can use a new field to specify the search term match type. Search term match types currently support fuzzy and contains matching.
+* `Aws\BedrockRuntime` - Add Prompt Caching support to Converse and ConverseStream APIs
+
 ## 3.342.16 - 2025-03-28
 
 * `Aws\CodeBuild` - This release adds support for cacheNamespace in ProjectCache
