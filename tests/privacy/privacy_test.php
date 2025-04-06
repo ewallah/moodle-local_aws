@@ -36,7 +36,7 @@ namespace local_aws\privacy;
 final class privacy_test extends \advanced_testcase {
     /**
      * Test privacy.
-     * #[CoversClass(local_aws\privacy\provider)]
+     * @covers \local_aws\privacy\provider
      */
     public function test_privacy(): void {
         $collection = new \core_privacy\local\metadata\collection('local_aws');

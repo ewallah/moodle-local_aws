@@ -35,7 +35,7 @@ use local_aws\admin_settings_aws_region;
  * @author     Mikhail Golenkov <mikhailgolenkov@catalyst-au.net>
  * @copyright  2020 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * #[CoversClass(local_aws\admin_settings_aws_region)]
+ * @covers \local_aws\admin_settings_aws_region
  */
 final class admin_settings_aws_region_test extends advanced_testcase {
     /**
@@ -50,7 +50,7 @@ final class admin_settings_aws_region_test extends advanced_testcase {
     }
     /**
      * Test that output_html() method works and returns HTML string with expected content.
-     * #[CoversClass(local_aws\admin_settings_aws_region)]
+     * @covers \local_aws\admin_settings_aws_region
      */
     public function test_output_html(): void {
         $this->resetAfterTest();
