@@ -1,5 +1,54 @@
 # CHANGELOG
 
+## 3.342.26 - 2025-04-11
+
+* `Aws\ConnectContactLens` - Making sentiment optional for ListRealtimeContactAnalysisSegments Response depending on conversational analytics configuration
+* `Aws\MarketplaceMetering` - Add support for Marketplace Metering Service dual-stack endpoints for CN regions
+* `Aws\DataZone` - Raise hard limit of authorized principals per SubscriptionTarget from 10 to 20.
+* `Aws\Detective` - Add support for Detective DualStack endpoints
+* `Aws\MarketplaceEntitlementService` - Add support for Marketplace Entitlement Service dual-stack endpoints for CN and GOV regions
+* `Aws\VerifiedPermissions` - Adds deletion protection support to policy stores. Deletion protection is disabled by default, can be enabled via the CreatePolicyStore or UpdatePolicyStore APIs, and is visible in GetPolicyStore.
+* `Aws\DynamoDB` - Doc only update for API descriptions.
+* `Aws\PCS` - Changed the minimum length of clusterIdentifier, computeNodeGroupIdentifier, and queueIdentifier to 3.
+
+## 3.342.25 - 2025-04-10
+
+* `Aws\MediaLive` - AWS Elemental MediaLive / Features : Add support for CMAF Ingest CaptionLanguageMappings, TimedMetadataId3 settings, and Link InputResolution.
+* `Aws\QuickSight` - Add support to analysis and sheet level highlighting in QuickSight.
+* `Aws\MainframeModernization` - Introduce three new APIs: CreateDataSetExportTask, GetDataSetExportTask and ListDataSetExportHistory. Add support for batch restart for Blu Age applications.
+* `Aws\ElastiCache` - AWS ElastiCache SDK now supports using MemcachedUpgradeConfig parameter with ModifyCacheCluster API to enable updating Memcached cache node types. Please refer to updated AWS ElastiCache public documentation for detailed information on API usage and implementation.
+* `Aws\QBusiness` - Adds functionality to enable/disable a new Q Business Hallucination Reduction feature. If enabled, Q Business will detect and attempt to remove Hallucinations from certain Chat requests.
+* `Aws\ApplicationAutoScaling` - Application Auto Scaling now supports horizontal scaling for Elasticache Memcached self-designed clusters using target tracking scaling policies and scheduled scaling.
+
+## 3.342.24 - 2025-04-09
+
+* `Aws\Auth` - Updates auth selection behavior to treat credential retrieval errors as non-terminal.
+* `Aws\DynamoDB` - Documentation update for secondary indexes and Create_Table.
+* `Aws\GroundStation` - Support tagging Agents and adjust input field validations
+* `Aws\Transfer` - This launch includes 2 enhancements to SFTP connectors user-experience: 1) Customers can self-serve concurrent connections setting for their connectors, and 2) Customers can discover the public host key of remote servers using their SFTP connectors.
+* `Aws\ControlCatalog` - The GetControl API now surfaces a control's Severity, CreateTime, and Identifier for a control's Implementation. The ListControls API now surfaces a control's Behavior, Severity, CreateTime, and Identifier for a control's Implementation.
+* `Aws\Glue` - The TableOptimizer APIs in AWS Glue now return the DpuHours field in each TableOptimizerRun, providing clients visibility to the DPU-hours used for billing in managed Apache Iceberg table compaction optimization.
+
+## 3.342.23 - 2025-04-08
+
+* `Aws\CostExplorer` - This release supports Pagination traits on Cost Anomaly Detection APIs.
+* `Aws\CostOptimizationHub` - This release adds resource type "MemoryDbReservedInstances" and resource type "DynamoDbReservedCapacity" to the GetRecommendation, ListRecommendations, and ListRecommendationSummaries APIs to support new MemoryDB and DynamoDB RI recommendations.
+* `Aws\StorageGateway` - Added new ActiveDirectoryStatus value, ListCacheReports paginator, and support for longer pagination tokens.
+* `Aws\IoTFleetWise` - This release adds the option to update the strategy of state templates already associated to a vehicle, without the need to remove and re-add them.
+* `Aws\BedrockRuntime` - This release introduces our latest bedrock runtime API, InvokeModelWithBidirectionalStream. The API supports both input and output streams and is supported by only HTTP2.0.
+* `Aws\TaxSettings` - Uzbekistan Launch on TaxSettings Page
+* `Aws\SecurityHub` - Documentation updates for AWS Security Hub.
+
+## 3.342.22 - 2025-04-07
+
+* `Aws\Personalize` - Add support for eventsConfig for CreateSolution, UpdateSolution, DescribeSolution, DescribeSolutionVersion. Add support for GetSolutionMetrics to return weighted NDCG metrics when eventsConfig is enabled for the solution.
+* `Aws\Glue` - Add input validations for multiple Glue APIs
+* `Aws\Transfer` - This launch enables customers to manage contents of their remote directories, by deleting old files or moving files to archive folders in remote servers once they have been retrieved. Customers will be able to automate the process using event-driven architecture.
+* `Aws\Bedrock` - New options for how to handle harmful content detected by Amazon Bedrock Guardrails.
+* `Aws\CodeBuild` - AWS CodeBuild now offers an enhanced debugging experience.
+* `Aws\BedrockRuntime` - New options for how to handle harmful content detected by Amazon Bedrock Guardrails.
+* `Aws\MediaLive` - AWS Elemental MediaLive now supports SDI inputs to MediaLive Anywhere Channels in workflows that use AWS SDKs.
+
 ## 3.342.21 - 2025-04-04
 
 * `Aws\EC2` - Doc-only updates for Amazon EC2
