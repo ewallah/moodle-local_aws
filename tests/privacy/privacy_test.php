@@ -33,10 +33,10 @@ namespace local_aws\privacy;
  * @author      Renaat Debleu <info@eWallah.net>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+#[CoversClass(provider::class)]
 final class privacy_test extends \advanced_testcase {
     /**
      * Test privacy.
-     * @covers \local_aws\privacy\provider
      */
     public function test_privacy(): void {
         $collection = new \core_privacy\local\metadata\collection('local_aws');

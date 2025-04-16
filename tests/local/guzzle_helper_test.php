@@ -31,6 +31,7 @@ use local_aws\local\guzzle_helper;
  * @copyright  2023 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+#[CoversClass(guzzle_helper::class)]
 final class guzzle_helper_test extends \advanced_testcase {
     /**
      * This method runs before every test.
@@ -42,7 +43,6 @@ final class guzzle_helper_test extends \advanced_testcase {
 
     /**
      * Test that the Middleware is added to the HandlerStack for the Guzzle client.
-     * @covers \local_aws\local\guzzle_helper
      */
     public function test_configure_client_proxy_adds_middleware(): void {
         // Create client with mock response.
@@ -63,7 +63,6 @@ final class guzzle_helper_test extends \advanced_testcase {
 
     /**
      * Test proxy is used for a request.
-     * @covers \local_aws\local\guzzle_helper
      */
     public function test_configure_client_proxy_with_proxied_request(): void {
         global $CFG;
@@ -89,7 +88,6 @@ final class guzzle_helper_test extends \advanced_testcase {
 
     /**
      * Test no proxy used if request is in proxy bypass list.
-     * @covers \local_aws\local\guzzle_helper
      */
     public function test_configure_client_proxy_with_bypassed_proxied_request(): void {
         global $CFG;
@@ -114,7 +112,6 @@ final class guzzle_helper_test extends \advanced_testcase {
 
     /**
      * Test no proxy used if none is configured.
-     * @covers \local_aws\local\guzzle_helper
      */
     public function test_configure_client_proxy_with_no_proxy_configured(): void {
         global $CFG;
