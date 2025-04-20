@@ -1,5 +1,38 @@
 # CHANGELOG
 
+## 3.342.30 - 2025-04-18
+
+* `Aws\QConnect` - This release adds support for the following capabilities: Chunking generative answer replies from Amazon Q in Connect. Integration support for the use of additional LLM models with Amazon Q in Connect.
+* `Aws\ServiceQuotas` - Add new optional SupportCaseAllowed query parameter to the RequestServiceQuotaIncrease API
+* `Aws\SageMaker` - This release adds a new Neuron driver option in InferenceAmiVersion parameter for ProductionVariant. Additionally, it adds support for fetching model lifecycle status in the ListModelPackages API. Users can now use this API to view the lifecycle stage of models that have been shared with them.
+
+## 3.342.29 - 2025-04-17
+
+* `Aws\IoTFleetWise` - We've added stricter parameter validations to AWS IoT FleetWise signal catalog, model manifest, and decoder manifest APIs.
+* `Aws\Bedrock` - With this release, Bedrock Evaluation will now support custom metrics for evaluation.
+* `Aws\Connect` - This release adds following capabilities to Contact Lens Rules APIs 1/ 'ASSIGN_SLA' action and '$.Case.TemplateId' comparison value for 'OnCaseCreate' and 'OnCaseUpdate' event sources 2/ 'OnSlaBreach' Cases event source which supports '$.RelatedItem.SlaConfiguration.Name' comparison value
+* `Aws\ECS` - Adds a new AccountSetting - defaultLogDriverMode for ECS.
+* `Aws\MemoryDB` - Added support for IPv6 and dual stack for Valkey and Redis clusters. Customers can now launch new Valkey and Redis clusters with IPv6 and dual stack networking support.
+* `Aws\AccessAnalyzer` - Added new resource types to evaluate for public access in resource policies and added support for S3 directory bucket access points.
+* `Aws\AutoScaling` - Doc only update for EC2 Auto Scaling.
+* `Aws\Omics` - Add versioning for HealthOmics workflows
+* `Aws\PrometheusService` - Add Workspace Configuration APIs for Amazon Prometheus
+
+## 3.342.28 - 2025-04-16
+
+* `Aws\ServiceCatalog` - Updated default value for the access-level-filter in SearchProvisionedProducts API to Account. For access to userLevel or roleLevel, the user must provide access-level-filter parameter.
+* `Aws\S3Tables` - S3 Tables now supports setting encryption configurations on table buckets and tables. Encryption configurations can use server side encryption using AES256 or KMS customer-managed keys.
+* `Aws\EKS` - Added support for new AL2023 ARM64 NVIDIA AMIs to the supported AMITypes.
+* `Aws\DSQL` - Added GetClusterEndpointService API. The new API allows retrieving endpoint service name specific to a cluster.
+* `Aws\ResourceGroups` - Resource Groups: TagSyncTasks can be created with ResourceQuery
+* `Aws\ConnectCases` - This feature provides capabilities to help track and meet service level agreements (SLAs) on cases programmatically. It allows configuring a new related item of type `Sla` on a case using CreateRelatedItem API and provides the ability to search for this new related item using SearchRelatedItems API.
+* `Aws\EventBridge` - Adding support for KmsKeyIdentifer in CreateConnection, UpdateConnection and DescribeConnection APIs
+
+## 3.342.27 - 2025-04-14
+
+* `Aws\TaxSettings` - Indonesia SOR Tax Registration Launch
+* `Aws\EntityResolution` - This is to add new metrics to our GetIdMappingJob API and also update uniqueId naming for batchDeleteUniqueIds API to be more accurate
+
 ## 3.342.26 - 2025-04-11
 
 * `Aws\ConnectContactLens` - Making sentiment optional for ListRealtimeContactAnalysisSegments Response depending on conversational analytics configuration
