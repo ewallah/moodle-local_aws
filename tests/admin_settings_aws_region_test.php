@@ -27,6 +27,7 @@ namespace local_aws;
 
 use advanced_testcase;
 use local_aws\admin_settings_aws_region;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 /**
  * Testcase for the list of AWS regions admin setting.
