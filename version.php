@@ -30,5 +30,4 @@ $plugin->component = 'local_aws';
 $plugin->release = "3.342.30";
 $plugin->maturity = MATURITY_STABLE;
 $plugin->supported = [405, 500];
-$plugin->release = 'v5.0.1';
 $plugin->version = 2025042200;
