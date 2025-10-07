@@ -29,5 +29,6 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'local_aws';
 $plugin->release = "3.342.30";
 $plugin->maturity = MATURITY_STABLE;
-$plugin->supported = [405, 500];
+$plugin->supported = [500, 501];
+$plugin->requires = 2025041400;
 $plugin->version = 2025042200;
