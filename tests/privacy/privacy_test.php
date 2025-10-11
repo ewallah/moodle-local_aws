@@ -24,6 +24,7 @@
  */
 
 namespace local_aws\privacy;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 /**
  * File containing privacy tests.

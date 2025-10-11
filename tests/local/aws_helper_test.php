@@ -24,6 +24,7 @@
  */
 
 namespace local_aws\local;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 defined('MOODLE_INTERNAL') || die;
 

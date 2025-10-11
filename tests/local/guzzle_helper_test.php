@@ -22,6 +22,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use local_aws\local\aws_helper;
 use local_aws\local\guzzle_helper;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 /**
  * Test the guzzle_helper class that includes middleware for proxy settings.
