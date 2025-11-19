@@ -46,8 +46,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionAppRunner(array $args = [])
  * @method \Aws\AppSync\AppSyncClient createAppSync(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionAppSync(array $args = [])
- * @method \Aws\AppTest\AppTestClient createAppTest(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionAppTest(array $args = [])
  * @method \Aws\Appflow\AppflowClient createAppflow(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionAppflow(array $args = [])
  * @method \Aws\ApplicationAutoScaling\ApplicationAutoScalingClient createApplicationAutoScaling(array $args = [])
@@ -388,8 +386,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionIoTEvents(array $args = [])
  * @method \Aws\IoTEventsData\IoTEventsDataClient createIoTEventsData(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTEventsData(array $args = [])
- * @method \Aws\IoTFleetHub\IoTFleetHubClient createIoTFleetHub(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionIoTFleetHub(array $args = [])
  * @method \Aws\IoTFleetWise\IoTFleetWiseClient createIoTFleetWise(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTFleetWise(array $args = [])
  * @method \Aws\IoTJobsDataPlane\IoTJobsDataPlaneClient createIoTJobsDataPlane(array $args = [])
@@ -464,10 +460,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionLocationService(array $args = [])
  * @method \Aws\LookoutEquipment\LookoutEquipmentClient createLookoutEquipment(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionLookoutEquipment(array $args = [])
- * @method \Aws\LookoutMetrics\LookoutMetricsClient createLookoutMetrics(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionLookoutMetrics(array $args = [])
- * @method \Aws\LookoutforVision\LookoutforVisionClient createLookoutforVision(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionLookoutforVision(array $args = [])
  * @method \Aws\MPA\MPAClient createMPA(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMPA(array $args = [])
  * @method \Aws\MQ\MQClient createMQ(array $args = [])
@@ -476,6 +468,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMTurk(array $args = [])
  * @method \Aws\MWAA\MWAAClient createMWAA(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMWAA(array $args = [])
+ * @method \Aws\MWAAServerless\MWAAServerlessClient createMWAAServerless(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMWAAServerless(array $args = [])
  * @method \Aws\MachineLearning\MachineLearningClient createMachineLearning(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMachineLearning(array $args = [])
  * @method \Aws\Macie2\Macie2Client createMacie2(array $args = [])
@@ -618,16 +612,14 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionQBusiness(array $args = [])
  * @method \Aws\QConnect\QConnectClient createQConnect(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionQConnect(array $args = [])
- * @method \Aws\QLDB\QLDBClient createQLDB(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionQLDB(array $args = [])
- * @method \Aws\QLDBSession\QLDBSessionClient createQLDBSession(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionQLDBSession(array $args = [])
  * @method \Aws\QuickSight\QuickSightClient createQuickSight(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionQuickSight(array $args = [])
  * @method \Aws\RAM\RAMClient createRAM(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionRAM(array $args = [])
  * @method \Aws\RDSDataService\RDSDataServiceClient createRDSDataService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionRDSDataService(array $args = [])
+ * @method \Aws\RTBFabric\RTBFabricClient createRTBFabric(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionRTBFabric(array $args = [])
  * @method \Aws\Rds\RdsClient createRds(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionRds(array $args = [])
  * @method \Aws\RecycleBin\RecycleBinClient createRecycleBin(array $args = [])
@@ -650,8 +642,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionResourceGroups(array $args = [])
  * @method \Aws\ResourceGroupsTaggingAPI\ResourceGroupsTaggingAPIClient createResourceGroupsTaggingAPI(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionResourceGroupsTaggingAPI(array $args = [])
- * @method \Aws\RoboMaker\RoboMakerClient createRoboMaker(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionRoboMaker(array $args = [])
  * @method \Aws\RolesAnywhere\RolesAnywhereClient createRolesAnywhere(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionRolesAnywhere(array $args = [])
  * @method \Aws\Route53\Route53Client createRoute53(array $args = [])
@@ -831,7 +821,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.356.37';
+    const VERSION = '3.360.1';
 
     /** @var array Arguments for creating clients */
     private $args;
