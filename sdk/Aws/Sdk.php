@@ -202,6 +202,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionComprehendMedical(array $args = [])
  * @method \Aws\ComputeOptimizer\ComputeOptimizerClient createComputeOptimizer(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionComputeOptimizer(array $args = [])
+ * @method \Aws\ComputeOptimizerAutomation\ComputeOptimizerAutomationClient createComputeOptimizerAutomation(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionComputeOptimizerAutomation(array $args = [])
  * @method \Aws\ConfigService\ConfigServiceClient createConfigService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionConfigService(array $args = [])
  * @method \Aws\Connect\ConnectClient createConnect(array $args = [])
@@ -572,6 +574,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionPI(array $args = [])
  * @method \Aws\Panorama\PanoramaClient createPanorama(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPanorama(array $args = [])
+ * @method \Aws\PartnerCentralChannel\PartnerCentralChannelClient createPartnerCentralChannel(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralChannel(array $args = [])
  * @method \Aws\PartnerCentralSelling\PartnerCentralSellingClient createPartnerCentralSelling(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralSelling(array $args = [])
  * @method \Aws\PaymentCryptography\PaymentCryptographyClient createPaymentCryptography(array $args = [])
@@ -724,6 +728,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionSfn(array $args = [])
  * @method \Aws\Shield\ShieldClient createShield(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionShield(array $args = [])
+ * @method \Aws\Signin\SigninClient createSignin(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionSignin(array $args = [])
  * @method \Aws\SimSpaceWeaver\SimSpaceWeaverClient createSimSpaceWeaver(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSimSpaceWeaver(array $args = [])
  * @method \Aws\SnowBall\SnowBallClient createSnowBall(array $args = [])
@@ -821,7 +827,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.360.1';
+    const VERSION = '3.363.0';
 
     /** @var array Arguments for creating clients */
     private $args;
