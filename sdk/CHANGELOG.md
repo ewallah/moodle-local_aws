@@ -1,5 +1,63 @@
 # CHANGELOG
 
+## 3.369.0 - 2025-12-19
+
+* `Aws\EMRServerless` - Added JobLevelCostAllocationConfiguration field to enable cost allocation reporting at the job level, providing more granular visibility into EMR Serverless charges
+* `Aws\Connect` - Adding support for Custom Metrics and Pre-Defined Attributes to GetCurrentMetricData API.
+* `Aws\QBusiness` - It is a internal bug fix for region expansion
+* `Aws\IoT` - This release adds event-based logging feature that enables granular event logging controls for AWS IoT logs.
+* `Aws\WorkSpacesWeb` - Add support for WebAuthn under user settings.
+* `Aws\ARCRegionSwitch` - Automatic Plan Execution Reports allow customers to maintain a concise record of their Region switch Plan executions. This enables customer SREs and leadership to have a clear view of their recovery posture based on the generated reports for their Plan executions.
+* `Aws\Wickr` - AWS Wickr now provides a suite of admin APIs to allow you to programmatically manage secure communication for Wickr networks at scale. These APIs enable you to automate administrative workflows including user lifecycle management, network configuration, and security group administration.
+
+## 3.368.2 - 2025-12-18
+
+* `Aws\SsmSap` - Added "Stopping" for the HANA Database Status.
+* `Aws\OpenSearchService` - Amazon OpenSearch Service adds support for warm nodes, enabling new multi-tier architecture.
+* `Aws\ECR` - Adds support for ECR Create On Push
+* `Aws\BedrockDataAutomation` - Blueprint Optimization (BPO) is a new Amazon Bedrock Data Automation (BDA) capability that improves blueprint inference accuracy using example content assets and ground truth data. BPO works by generating better instructions for fields in the Blueprint using provided data.
+* `Aws\SESv2` - Amazon SES introduces Email Validation feature which checks email addresses for syntax errors, domain validity, and risky addresses to help maintain deliverability and protect sender reputation. SES also adds resource tagging and ABAC support for EmailTemplates and CustomVerificationEmailTemplates.
+* `Aws\IoT` - This release adds message batching for the IoT Rules Engine HTTP action.
+* `Aws\Artifact` - Add support for ListReportVersions API for the calling AWS account.
+* `Aws\CleanRooms` - Adding support for collaboration change requests requiring an approval workflow. Adding support for change requests that grant or revoke results receiver ability and modifying auto approved change types in an existing collaboration.
+* `Aws\AppStream` - Added support for new operating systems (1) Ubuntu 24.04 Pro LTS on Elastic fleets, and (2) Microsoft Server 2025 on Always-On and On-Demand fleets
+* `Aws\BedrockAgentCoreControl` - Feature to support header exchanges between Bedrock AgentCore Gateway Targets and client, along with propagating query parameter to the configured targets.
+* `Aws\ARCRegionSwitch` - New API to list Route 53 health checks created by ARC region switch for a plan in a specific AWS Region using the Region switch Regional data plane.
+* `Aws\ECS` - Adding support for Event Windows via a new ECS account setting "fargateEventWindows". When enabled, ECS Fargate will use the configured event window for patching tasks. Introducing "CapacityOptionType" for CreateCapacityProvider API, allowing support for Spot capacity for ECS Managed Instances.
+* `Aws\EC2` - This release adds AvailabilityZoneId support for CreateFleet, ModifyFleet, DescribeFleets, RequestSpotFleet, ModifySpotFleetRequests and DescribeSpotFleetRequests APIs.
+
+## 3.368.1 - 2025-12-17
+
+* `Aws\MediaConvert` - Adds support for tile encoding in HEVC and audio for video overlays.
+* `Aws\GameLiftStreams` - Added new stream group operation parameters for scale-on-demand capacity with automatic prewarming. Added new Gen6 stream classes based on the EC2 G6 instance family. Added new StartStreamSession parameter for exposure of real-time performance stats to clients.
+* `Aws\PaymentCryptography` - Support for AS2805 standard. Modifications to import-key and export-key to support AS2805 variants.
+* `Aws\PaymentCryptographyData` - Support for AS2805 standard. New API GenerateAs2805KekValidation and changes to translate pin, GenerateMac and VerifyMac to support AS2805 key variants.
+* `Aws\SageMaker` - Adding the newly launched p6-b300.48xlarge ec2 instance support in Sagemaker(Hyperpod,Training and Sceptor)
+* `Aws\KafkaConnect` - Support dual-stack network connectivity for connectors via NetworkType field.
+* `Aws\GuardDuty` - Add support for dbiResourceId in finding.
+* `Aws\InspectorScan` - Adds an additional OutputFormat
+* `Aws\MediaPackageV2` - This release adds support for SPEKE V2 content key encryption in MediaPackage v2 Origin Endpoints.
+
+## 3.368.0 - 2025-12-16
+
+* `Aws\S3` - A new `S3EncryptionClient` implementation and a new `KmsMaterialProvider` implementation. `S3EncryptionClientV3` now supports writing and reading objects with Key Commitment. `KmsMaterialProviderV3` now supports verifying supplied encryption context on `decryptCek` calls.
+* `Aws\TimestreamInfluxDB` - This release adds support for rebooting InfluxDB DbInstances and DbClusters
+* `Aws\IoT` - Add support for dynamic payloads in IoT Device Management Commands
+
+## 3.367.3 - 2025-12-15
+
+* `Aws\MediaTailor` - Added support for Ad Decision Server Configuration enabling HTTP POST requests with custom bodies, headers, GZIP compression, and dynamic variables. No changes required for existing GET request configurations.
+* `Aws\Connect` - Amazon Connect now supports outbound WhatsApp contacts via the Send message block or StartOutboundChatContact API. Send proactive messages for surveys, reminders, and updates. Offer customers the option to switch to WhatsApp while in queue, eliminating hold time.
+* `Aws\BedrockAgentCoreControl` - This release updates broken links for AgentCore Policy APIs in the AWS CLI and SDK resources.
+* `Aws\Glacier` - Documentation updates for Amazon Glacier's maintenance mode
+* `Aws\Route53Resolver` - Adds support for enabling detailed metrics on Route 53 Resolver endpoints using RniEnhancedMetricsEnabled and TargetNameServerMetricsEnabled in the CreateResolverEndpoint and UpdateResolverEndpoint APIs, providing enhanced visibility into Resolver endpoint and target name server performance.
+* `Aws\CloudWatchLogs` - This release allows you to import your historical CloudTrail Lake data into CloudWatch with a few steps, enabling you to easily consolidate operational, security, and compliance data in one place.
+* `Aws\EC2` - EC2 Capacity Manager now supports SpotTotalCount, SpotTotalInterruptions and SpotInterruptionRate metrics for both vCPU and instance units.
+* `Aws\S3` - This release adds support for the new optional field 'LifecycleExpirationDate' in S3 Inventory configurations.
+* `Aws\Health` - Updating Health API endpoint generation for dualstack only regions
+* `Aws\EntityResolution` - Support Customer Profiles Integration for AWS Entity Resolution
+* `Aws\ServiceQuotas` - Add support for SQ Dashboard Api
+
 ## 3.367.2 - 2025-12-12
 
 * `Aws\WorkSpacesWeb` - Adds support for portal branding customization, enabling administrators to personalize end-user portals with custom assets.
