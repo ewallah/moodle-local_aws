@@ -40,8 +40,7 @@ final class privacy_test extends \advanced_testcase {
      * Test privacy.
      */
     public function test_privacy(): void {
-        $collection = new \core_privacy\local\metadata\collection('local_aws');
-        $reason = provider::get_reason($collection);
+        $reason = provider::get_reason();
         $this->assertEquals($reason, 'privacy:metadata');
     }
 }
