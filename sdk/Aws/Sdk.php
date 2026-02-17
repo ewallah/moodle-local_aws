@@ -160,8 +160,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionCloudWatch(array $args = [])
  * @method \Aws\CloudWatchEvents\CloudWatchEventsClient createCloudWatchEvents(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionCloudWatchEvents(array $args = [])
- * @method \Aws\CloudWatchEvidently\CloudWatchEvidentlyClient createCloudWatchEvidently(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionCloudWatchEvidently(array $args = [])
  * @method \Aws\CloudWatchLogs\CloudWatchLogsClient createCloudWatchLogs(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionCloudWatchLogs(array $args = [])
  * @method \Aws\CloudWatchRUM\CloudWatchRUMClient createCloudWatchRUM(array $args = [])
@@ -300,8 +298,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionElasticLoadBalancing(array $args = [])
  * @method \Aws\ElasticLoadBalancingV2\ElasticLoadBalancingV2Client createElasticLoadBalancingV2(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionElasticLoadBalancingV2(array $args = [])
- * @method \Aws\ElasticTranscoder\ElasticTranscoderClient createElasticTranscoder(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionElasticTranscoder(array $args = [])
  * @method \Aws\ElasticsearchService\ElasticsearchServiceClient createElasticsearchService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionElasticsearchService(array $args = [])
  * @method \Aws\Emr\EmrClient createEmr(array $args = [])
@@ -837,7 +833,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.369.0';
+    const VERSION = '3.369.35';
 
     /** @var array Arguments for creating clients */
     private $args;
