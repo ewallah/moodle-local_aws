@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## 3.371.3 - 2026-02-27
+
+* `Aws\Health` - Updates the regex for validating availabilityZone strings used in the describe events filters.
+* `Aws\RAM` - Resource owners can now specify ResourceShareConfiguration request parameter for CreateResourceShare API including RetainSharingOnAccountLeaveOrganization boolean parameter
+* `Aws\Connect` - Deprecate EvaluationReviewMetadata's CreatedBy and CreatedTime, add EvaluationReviewMetadata's RequestedBy and RequestedTime
+* `Aws\CustomerProfiles` - This release introduces an optional SourcePriority parameter to the ProfileObjectType APIs, allowing you to control the precedence of object types when ingesting data from multiple sources. Additionally, WebAnalytics and Device have been added as new StandardIdentifier values.
+* `Aws\Odb` - ODB Networking Route Management is a feature improvement which allows for implicit creation and deletion of EC2 Routes in the Peer Network Route Table designated by the customer via new optional input. This feature release is combined with Multiple App-VPC functionality for ODB Network Peering(s).
+* `Aws\Bedrock` - Added four new model lifecycle date fields, startOfLifeTime, endOfLifeTime, legacyTime, and publicExtendedAccessTime. Adds support for using the Converse API with Bedrock Batch inference jobs.
+* `Aws\CognitoIdentityProvider` - Cognito is introducing a two-secret rotation model for app clients, enabling seamless credential rotation without downtime. Dedicated APIs support passing in a custom secret. Custom secrets need to be at least 24 characters. This eliminates reconfiguration needs and reduces security risks.
+* `Aws\Batch` - This feature allows customers to specify the minimum time (in minutes) that AWS Batch keeps instances running in a compute environment after all jobs on the instance complete
+* `Aws\KeyspacesStreams` - Added support for Change Data Capture (CDC) streams with Duration DataType.
+* `Aws\ARCRegionSwitch` - Post-Recovery Workflows enable customers to maintain comprehensive disaster recovery automation. This allows customer SREs and leadership to have complete recovery orchestration from failover through post-recovery preparation, ensuring Regions remain ready for subsequent recovery events.
+
+## 3.371.2 - 2026-02-26
+
+* `Aws\BackupGateway` - This release updates GetGateway API to include deprecationDate and softwareVersion in the response, enabling customers to track gateway software versions and upcoming deprecation dates.
+* `Aws\MarketplaceMetering` - Added LicenseArn to ResolveCustomer response and BatchMeterUsage usage records. BatchMeterUsage now accepts LicenseArn in each UsageRecord to report usage at the license level. Added InvalidLicenseException error response for invalid license parameters.
+* `Aws\MarketplaceEntitlementService` - Added License Arn as a new optional filter for GetEntitlements and LicenseArn field in each entitlement in the response.
+* `Aws\ECS` - Adding support for Capacity Reservations for ECS Managed Instances by introducing a new "capacityOptionType" value of "RESERVED" and new field "capacityReservations" for CreateCapacityProvider and UpdateCapacityProvider APIs.
+* `Aws\EC2` - Add c8id, m8id and hpc8a instance types.
+* `Aws\SecurityHub` - Security Hub added EXTENDED PLAN integration type to DescribeProductsV2 and added metadata.product.vendor name GroupBy support to GetFindingStatisticsV2
+
+## 3.371.1 - 2026-02-25
+
+* `Aws\Batch` - AWS Batch documentation update for service job capacity units.
+* `Aws\Neptune` - Neptune global clusters now supports tags
+* `Aws\WAFV2` - AWS WAF now supports GetTopPathStatisticsByTraffic that provides aggregated statistics on the top URI paths accessed by bot traffic. Use this operation to see which paths receive the most bot traffic, identify the specific bots accessing them, and filter by category, organization, or bot name.
+* `Aws\ECR` - Update repository name regex to comply with OCI Distribution Specification
+* `Aws\EC2` - Add support for EC2 Capacity Blocks in Local Zones.
+
+## 3.371.0 - 2026-02-24
+
+* `Aws\ElementalInference` - Initial GA launch for AWS Elemental Inference including capabilities of Smart Crop and Live Event Clipping
+* `Aws\OpenSearchService` - Fixed HTTP binding for DescribeDomainAutoTunes API to correctly pass request parameters as query parameters in the HTTP request.
+* `Aws\PartnerCentralSelling` - Added support for filtering opportunities by target close date in the ListOpportunities API. You can now filter results to return opportunities with a target close date before or after a specified date, enabling more precise opportunity searches based on expected closure timelines.
+* `Aws\MediaLive` - AWS Elemental MediaLive - Added support for Elemental Inference for Smart Cropping and Clipping features for MediaLive.
+* `Aws\EC2` - Adds httpTokensEnforced property to ModifyInstanceMetadataDefaults API. Set per account or manage organization-wide using declarative policies to prevent IMDSv1-enabled instance launch and block attempts to enable IMDSv1 on existing IMDSv2-only instances.
+* `Aws\ElasticsearchService` - Fixed HTTP binding for DescribeDomainAutoTunes API to correctly pass request parameters as query parameters in the HTTP request.
+* `Aws\CloudWatch` - This release adds the APIs (PutAlarmMuteRule, ListAlarmMuteRules, GetAlarmMuteRule and DeleteAlarmMuteRule) to manage a new Cloudwatch resource, AlarmMuteRules. AlarmMuteRules allow customers to temporarily mute alarm notifications during expected downtime periods.
+* `Aws\ObservabilityAdmin` - Adding a new field in the CreateCentralizationRuleForOrganization, UpdateCentralizationRuleForOrganization API and updating the GetCentralizationRuleForOrganization API response to include the new field
+
+## 3.370.1 - 2026-02-23
+
+* `Aws\DataZone` - Add workflow properties support to connections APIs
+* `Aws\ControlCatalog` - Updated ExemptedPrincipalArns parameter documentation for improved accuracy
+* `Aws\MediaTailor` - Updated endpoint rule set for dualstack endpoints. Added a new opt-in option to log raw ad decision server requests for Playback Configurations.
+* `Aws\ConnectCases` - SearchCases API can now accept 25 fields in the request and response as opposed to the previous limit of 10. DeleteField's hard limit of 100 fields per domain has been lifted.
+* `Aws\QuickSight` - Adds support for SEMISTRUCT to InputColumn Type
+* `Aws\DynamoDB` - This change supports the creation of multi-account global tables. It adds one new arguments to UpdateTable, GlobalTableSettingsReplicationMode.
+* `Aws\Bedrock` - Automated Reasoning checks in Amazon Bedrock Guardrails now support fidelity report generation. The new workflow type assesses policy coverage and accuracy against customer documents. The GetAutomatedReasoningPolicyBuildWorkflowResultAssets API adds support for the three new asset types.
+* `Aws\Wickr` - AWS Wickr now provides APIs to manage your Wickr OpenTDF integration. These APIs enable you to test and save your OpenTDF configuration allowing you to manage rooms based on Trusted Data Format attributes.
+
 ## 3.370.0 - 2026-02-20
 
 * `Aws\SignerData` - This release introduces AWS Signer Data Plane SDK client supporting GetRevocationStatus API. The new client enables AWS PrivateLink connectivity with both private DNS and VPC endpoint URLs.
