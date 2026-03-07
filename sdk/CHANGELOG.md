@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 3.372.1 - 2026-03-06
+
+* `Aws\SESv2` - Adds support for longer email message header values, increasing the maximum length from 870 to 995 characters for RFC 5322 compliance.
+* `Aws\BedrockAgentCoreControl` - Adds support for streaming memory records in AgentCore Memory
+* `Aws\AppIntegrationsService` - This release adds support for webhooks, allowing customers to create an Event Integration with a webhook source.
+* `Aws\Deadline` - AWS Deadline Cloud now supports cost scale factors for farms, enabling studios to adjust reported costs to reflect their actual rendering economics. Adjusted costs are reflected in Deadline Cloud's Usage Explorer and Budgets.
+* `Aws\BCMDataExports` - Fixed wrong endpoint resolutions in few regions. Added AWS CFN resource schema for BCM Data Exports. Added max value validation for pagination parameter. Fixed ARN format validation for BCM Data Exports resources. Updated size constraints for table properties. Added AccessDeniedException error.
+* `Aws\Connect` - Amazon Connect now supports the ability to programmatically configure and run automated tests for contact center experiences for Chat. Integrate testing into CICD pipelines, run multiple tests at scale, and retrieve results via API to automate validation of chat interactions and workflows.
+* `Aws\Bedrock` - Amazon Bedrock Guardrails account-level enforcement APIs now support lists for model inclusion and exclusion from guardrail enforcement.
+* `Aws\GameLiftStreams` - Added new Gen6 stream classes based on the EC2 G6f instance family. These stream classes provide cost-optimized options for streaming well-optimized or lower-fidelity games on Windows environments.
+
+## 3.372.0 - 2026-03-05
+
+* `Aws\Api` - Adds support for the Smithy RPC V2 CBOR protocol.
+* `Aws\EC2` - Added metadata field to CapacityAllocation.
+* `Aws\MPA` - Updates to multi-party approval (MPA) service to add support for approval team baseline operations.
+* `Aws\ConnectHealth` - Connect-Health SDK is AWS's unified SDK for the Amazon Connect Health offering. It allows healthcare developers to integrate purpose-built agents - such as patient insights, ambient documentation, and medical coding - into their existing applications, including EHRs, telehealth, and revenue cycle.
+* `Aws\SageMaker` - Adds support for S3 Bucket Ownership validation for SageMaker Managed MLflow.
+* `Aws\SavingsPlans` - Added support for OpenSearch and Neptune Analytics to Database Savings Plans.
+* `Aws\GuardDuty` - Added MALICIOUS FILE to IndicatorType enum in MDC Sequence
+
+## 3.371.5 - 2026-03-04
+
+* `Aws\` - Fixes how response with empty bodies for non-seekable streams are handled and adds streaming flag automatically based on the operation.
+* `Aws\QuickSight` - Added several new values for Capabilities, increased visual limit per sheet from previous limit to 75, renamed Quick Suite to Quick in several places.
+* `Aws\OpenSearchService` - Adding support for DeploymentStrategyOptions
+* `Aws\ElasticsearchService` - Adds support for DeploymentStrategyOptions.
+* `Aws\GameLift` - Amazon GameLift Servers now offers DDoS protection for Linux-based EC2 and Container Fleets on SDKv5. The player gateway proxy relay network provides traffic validation, per-player rate limiting, and game server IP address obfuscation all with negligible added latency and no additional cost.
+* `Aws\Connect` - Added support for configuring additional email addresses on queues in Amazon Connect. Agents can now select an outbound email address and associate additional email addresses for replying to or initiating emails.
+* `Aws\ElasticBeanstalk` - As part of this release, Beanstalk introduce a new info type - analyze for request environment info and retrieve environment info operations. When customers request an Al analysis, Elastic Beanstalk runs a script on an instance in their environment and returns an analysis of events, health and logs.
+
+## 3.371.4 - 2026-03-03
+
+* `Aws\` - Add a validation for custom policies to make sure the property `Resource` has not a non allowed character.
+* `Aws\PartnerCentralChannel` - Adds the Resold Unified Operations support plan and removes the Resold Business support plan in the CreateRelationship and UpdateRelationship APIs
+* `Aws\SageMaker` - This release adds b300 and g7e instance types for SageMaker inference endpoints.
+* `Aws\DataZone` - Adding QueryGraph operation to DataZone SDK
+* `Aws\CloudWatchLogs` - CloudWatch Logs updates- Added support for the PutBearerTokenAuthentication API to enable or disable bearer token authentication on a log group. For more information, see CloudWatch Logs API documentation.
+* `Aws\BedrockAgentCoreControl` - Support for AgentCore Policy GA
+
 ## 3.371.3 - 2026-02-27
 
 * `Aws\Health` - Updates the regex for validating availabilityZone strings used in the describe events filters.
