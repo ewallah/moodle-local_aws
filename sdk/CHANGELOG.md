@@ -1,5 +1,55 @@
 # CHANGELOG
 
+## 3.373.2 - 2026-03-13
+
+* `Aws\ConfigService` - Fix pagination support for DescribeConformancePackCompliance, and update OrganizationConfigRule InputParameters max length to match ConfigRule.
+* `Aws\mgn` - Network Migration APIs are now publicly available for direct programmatic access. Customers can now call Network Migration APIs directly without going through AWS Transform (ATX), enabling automation, integration with existing tools, and self-service migration workflows.
+* `Aws\QuickSight` - The change adds a new capability named ManageSharedFolders in Custom Permissions
+* `Aws\MediaConvert` - This update adds support for Dolby AC-4 audio output, frame rate conversion between non-Dolby Vision inputs to Dolby Vision outputs, and clear lead CMAF HLS output.
+* `Aws\Glue` - Add QuerySessionContext to BatchGetPartitionRequest
+* `Aws\IVSRealTime` - Updates maximum reconnect window seconds from 60 to 300 for participant replication
+* `Aws\MediaLive` - Documents the VideoDescription.ScalingBehavior.SMART(underscore)CROP enum value.
+* `Aws\Connect` - Deprecating PredefinedNotificationID field
+* `Aws\GameLiftStreams` - Feature launch that enables customers to connect streaming sessions to their own VPCs running in AWS.
+* `Aws\APIGateway` - API Gateway now supports an additional security policy "SecurityPolicy-TLS13-1-2-FIPS-PFS-PQ-2025-09" for REST APIs and custom domain names. The new policy is compliant with TLS 1.3, Federal Information Processing Standards (FIPS), Perfect Forward Secrecy (PFS), and post-quantum (PQ) cryptography
+
+## 3.373.1 - 2026-03-12
+
+* `Aws\` - Add support for PHPUnit v10. 
+- Make data provider static functions. 
+- Use class attributes instead of annotations for @dataProvider, @covers, and @doesNotPerformAssertions. 
+- Remove/Replace the usage of expectDeprecation, expectDeprecationMessage, expectDeprecationMessageMatches, expectError, expectErrorMessage, expectNotice, expectNoticeMessage, expectWarning, and expectWarningMessage. 
+- Migrate phpunit xml config file.
+* `Aws\S3` - Adds support for account regional namespaces for general purpose buckets. The account regional namespace is a reserved subdivision of the global bucket namespace where only your account can create general purpose buckets.
+* `Aws\ECR` - Add Chainguard to PTC upstreamRegistry enum
+* `Aws\DataSync` - DataSync's 3 location types, Hadoop Distributed File System (HDFS), FSx for Windows File Server (FSx Windows), and FSx for NetApp ONTAP (FSx ONTAP) now have credentials managed via Secrets Manager, which may be encrypted with service keys or be configured to use customer-managed keys or secret.
+
+## 3.373.0 - 2026-03-11
+
+* `Aws\WorkSpaces` - Added WINDOWS SERVER 2025 OperatingSystemName.
+* `Aws\SimpleDBv2` - Introduced Amazon SimpleDB export functionality enabling domain data export to S3 in JSON format. Added three new APIs StartDomainExport, GetExport, and ListExports via SimpleDBv2 service. Supports cross-region exports and KMS encryption.
+* `Aws\Polly` - Added support for the new voices - Ambre (fr-FR), Beatrice (it-IT), Florian (fr-FR), Lennart (de-DE), Lorenzo (it-IT) and Tiffany (en-US). They are available as a Generative voices only.
+* `Aws\CustomerProfiles` - Today, Amazon Connect is announcing the ability to filter (include or exclude) recommendations based on properties of items and interactions.
+* `Aws\SageMaker` - SageMaker training plans allow you to extend your existing training plans to avoid workload interruptions without workload reconfiguration. When a training plan is approaching expiration, you can extend it directly through the SageMaker AI console or programmatically using the API or AWS CLI.
+* `Aws\EKS` - Adds support for a new tier in controlPlaneScalingConfig on EKS Clusters.
+
+## 3.372.3 - 2026-03-10
+
+* `Aws\` - Sorts presigned headers alphabetically.
+* `Aws\Kafka` - Add dual stack endpoint to SDK
+* `Aws\ConnectCases` - Added functionality for the Required and Hidden case rule types to be conditionally evaluated on up to 5 conditions.
+* `Aws\DatabaseMigrationService` - Not need to include to any release notes. The only change is to correct LoadTimeout unit from milliseconds to seconds in RedshiftSettings
+* `Aws\BedrockAgentCoreControl` - Adding first class support for AG-UI protocol in AgentCore Runtime.
+* `Aws\LexModelsV2` - This release introduces a new generative AI feature called Lex Bot Analyzer. This feature leverage AI to analyze the bot configuration against AWS Lex best practices to identify configuration issues and provides recommendations.
+
+## 3.372.2 - 2026-03-09
+
+* `Aws\Multipart` - Fixes bug in `AbstractUploadManager` where valid falsy values are excluded.
+* `Aws\OpenSearchService` - This change enables cross-account and cross-region access for DataSources. Customers can now define access policies on their datasources to allow other AWS accounts to access and query their data.
+* `Aws\IAM` - Added support for CloudWatch Logs long-term API keys, currently available in Preview
+* `Aws\Route53GlobalResolver` - Adds support for dual stack Global Resolvers and Dictionary-based Domain Generation Firewall Advanced Protection.
+* `Aws\mgn` - Adds support for new storeSnapshotOnLocalZone field in ReplicationConfiguration and updateReplicationConfiguration
+
 ## 3.372.1 - 2026-03-06
 
 * `Aws\SESv2` - Adds support for longer email message header values, increasing the maximum length from 870 to 995 characters for RFC 5322 compliance.

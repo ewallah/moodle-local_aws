@@ -740,6 +740,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionSignin(array $args = [])
  * @method \Aws\SimSpaceWeaver\SimSpaceWeaverClient createSimSpaceWeaver(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSimSpaceWeaver(array $args = [])
+ * @method \Aws\SimpleDBv2\SimpleDBv2Client createSimpleDBv2(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionSimpleDBv2(array $args = [])
  * @method \Aws\SnowBall\SnowBallClient createSnowBall(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSnowBall(array $args = [])
  * @method \Aws\SnowDeviceManagement\SnowDeviceManagementClient createSnowDeviceManagement(array $args = [])
@@ -837,7 +839,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.372.1';
+    const VERSION = '3.373.2';
 
     /** @var array Arguments for creating clients */
     private $args;
