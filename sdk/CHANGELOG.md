@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## 3.373.7 - 2026-03-20
+
+* `Aws\DynamoDB` - Adding ReplicaArn to ReplicaDescription of a global table replica
+* `Aws\OpenSearchService` - Added support for Amazon Managed Service for Prometheus (AMP) as a connected data source in OpenSearch UI. Now users can analyze Prometheus metrics in OpenSearch UI without data copy.
+* `Aws\VerifiedPermissions` - Adds support for Policy Store Aliases, Policy Names, and Policy Template Names. These are customizable identifiers that can be used in place of Policy Store ids, Policy ids, and Policy Template ids respectively in Amazon Verified Permissions APIs.
+* `Aws\Backup` - Fix Typo for S3Backup Options ( S3BackupACLs to BackupACLs)
+
+## 3.373.6 - 2026-03-19
+
+* `Aws\ObservabilityAdmin` - Adding a new field in the CreateCentralizationRuleForOrganization, UpdateCentralizationRuleForOrganization API and updating the GetCentralizationRuleForOrganization API response to include the new field
+* `Aws\EC2` - Amazon EC2 Fleet instant mode now supports launching instances into Interruptible Capacity Reservations, enabling customers to use spare capacity shared by Capacity Reservation owners within their AWS Organization.
+* `Aws\Polly` - Added bi-directional streaming functionality through a new API, StartSpeechSynthesisStream. This API allows streaming input text through inbound events and receiving audio as part of an output stream simultaneously.
+* `Aws\BedrockAgentCore` - This release includes SDK support for the following new features on AgentCore Built In Tools. 1. Enterprise Policies for AgentCore Browser Tool. 2. Root CA Configuration Support for AgentCore Browser Tool and Code Interpreter. 3. API changes to AgentCore Browser Profile APIs
+* `Aws\BedrockAgentCoreControl` - Adds support for the following new features. 1. Enterprise Policies support for AgentCore Browser Tool. 2. Root CA Configuration support for AgentCore Browser Tool and Code Interpreter.
+* `Aws\Batch` - AWS Batch now supports quota management, enabling administrators to allocate shared compute resources across teams and projects through quota shares with capacity limits, resource-sharing strategies, and priority-based preemption - currently available for SageMaker Training job queues.
+
+## 3.373.5 - 2026-03-18
+
+* `Aws\EC2` - The DescribeInstanceTypes API now returns default connection tracking timeout values for TCP, UDP, and UDP stream via the new connectionTrackingConfiguration field on NetworkInfo.
+* `Aws\MediaConvert` - This update adds additional bitrate options for Dolby AC-4 audio outputs.
+
+## 3.373.4 - 2026-03-17
+
+* `Aws\Signature` - Fixes bug in canonicalized query generation when dealing with numeric values
+* `Aws\BedrockAgentCoreControl` - Deprecating namespaces field and adding namespaceTemplates.
+* `Aws\Glue` - Provide approval to overwrite existing Lake Formation permissions on all child resources with the default permissions specified in 'CreateTableDefaultPermissions' and 'CreateDatabaseDefaultPermissions' when updating catalog. Allowed values are ["Accept","Deny"] .
+* `Aws\EMR` - Add S3LoggingConfiguration to Control LogUploads
+
+## 3.373.3 - 2026-03-16
+
+* `Aws\` - Handles errors that comes in the `error_description` field, specifically how SSO-OIDC service has it modeled.
+* `Aws\BedrockAgentCore` - Provide support to perform deterministic operations on agent runtime through shell command executions via the new InvokeAgentRuntimeCommand API
+* `Aws\Bedrock` - You can now generate policy scenarios on demand using the new GENERATE POLICY SCENARIOS build workflow type. Scenarios will no longer be automatically generated during INGEST CONTENT, REFINE POLICY, and IMPORT POLICY workflows, resulting in faster completion times for these operations.
+* `Aws\BedrockAgentCoreControl` - Supporting hosting of public ECR Container Images in AgentCore Runtime
+* `Aws\ECS` - Amazon ECS now supports configuring whether tags are propagated to the EC2 Instance Metadata Service (IMDS) for instances launched by the Managed Instances capacity provider. This gives customers control over tag visibility in IMDS when using ECS Managed Instances.
+
 ## 3.373.2 - 2026-03-13
 
 * `Aws\ConfigService` - Fix pagination support for DescribeConformancePackCompliance, and update OrganizationConfigRule InputParameters max length to match ConfigRule.
