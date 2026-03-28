@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 3.374.2 - 2026-03-27
+
+* `Aws\Neptunedata` - Minor formatting changes to remove unnecessary symbols.
+* `Aws\Omics` - AWS HealthOmics now supports VPC networking, allowing users to connect runs to external resources with NAT gateway, AWS VPC resources, and more. New Configuration APIs support configuring VPC settings. StartRun API now accepts networkingMode and configurationName parameters to enable VPC networking.
+* `Aws\BedrockAgentCoreControl` - Adds support for custom code-based evaluators using customer-managed Lambda functions.
+* `Aws\BedrockAgentCore` - Adding AgentCore Code Interpreter Node.js Runtime Support with an optional runtime field
+
+## 3.374.1 - 2026-03-26
+
+* `Aws\SageMaker` - Release support for ml.r5d.16xlarge instance types for SageMaker HyperPod
+* `Aws\BCMDataExports` - With this release we are providing an option to accounts to have their export delivered to an S3 bucket that is not owned by the account.
+* `Aws\CloudWatchLogs` - This release adds parameter support to saved queries in CloudWatch Logs Insights. Define reusable query templates with named placeholders, invoke them using start query. Available in Console, CLI and SDK
+* `Aws\TimestreamInfluxDB` - Timestream for InfluxDB adds support for customer defined maintenance windows. This allows customers to define maintenance schedule during resource creation and updates
+* `Aws\EMR` - Add StepExecutionRoleArn to RunJobFlow API
+
+## 3.374.0 - 2026-03-25
+
+* `Aws\ApiGatewayV2` - Added DISABLE IN PROGRESS and DISABLE FAILED Portal statuses.
+* `Aws\Uxc` - GA release of AccountCustomizations, used to manage account color, visible services, and visible regions settings in the AWS Management Console.
+* `Aws\ApplicationSignals` - This release adds support for creating SLOs on RUM appMonitors, Synthetics canaries and services.
+* `Aws\Polly` - Add support for Mu-law and A-law codecs for output format
+* `Aws\MarketplaceAgreement` - The Variable Payments APIs enable AWS Marketplace Sellers to perform manage their payment requests (send, get, list, cancel).
+* `Aws\Batch` - Documentation-only update for AWS Batch.
+
+## 3.373.9 - 2026-03-24
+
+* `Aws\RDS` - Adds support in Aurora PostgreSQL serverless databases for express configuration based creation through WithExpressConfiguration in CreateDbCluster API, and for restoring clusters using RestoreDBClusterToPointInTime and RestoreDBClusterFromSnapshot APIs.
+* `Aws\MediaPackageV2` - Reduces the minimum allowed value for startOverWindowSeconds from 60 to 0, allowing customers to effectively disable the start-over window.
+* `Aws\OpenSearchServerless` - Adds support for updating the vector options field for existing collections.
+* `Aws\BedrockAgentCoreControl` - Adds SDK support for 1) Persist session state in AgentCore Runtime via filesystemConfigurations in CreateAgentRuntime, UpdateAgentRuntime, and GetAgentRuntime APIs, 2) Optional name-based filtering on AgentCore ListBrowserProfiles API.
+* `Aws\PCS` - This release adds support for custom slurmdbd and cgroup configuration in AWS PCS. Customers can now specify slurmdbd and cgroup settings to configure database accounting and reporting for their HPC workloads, and control resource allocation and limits for compute jobs.
+* `Aws\GameLift` - Amazon GameLift Servers launches UDP ping beacons in the Beijing and Ningxia (China) Regions to help measure real-time network latency for multiplayer games. The ListLocations API is now available in these regions to provide endpoint domain and port information as part of the locations list.
+
+## 3.373.8 - 2026-03-23
+
+* `Aws\Omics` - Adds support for batch workflow runs in Amazon Omics, enabling users to submit, manage, and monitor multiple runs as a single batch. Includes APIs to create, cancel, and delete batches, track submission statuses and counts, list runs within a batch, and configure default settings.
+* `Aws\ConnectCases` - You can now use the UpdateRelatedItem API to update the content of comments and custom related items associated with a case.
+* `Aws\Batch` - AWS Batch AMI Visibility feature support. Adds read-only batchImageStatus to Ec2Configuration to provide visibility on the status of Batch-vended AMIs used by Compute Environments.
+* `Aws\Lightsail` - Add support for tagging of ContactMethod resource type
+
 ## 3.373.7 - 2026-03-20
 
 * `Aws\DynamoDB` - Adding ReplicaArn to ReplicaDescription of a global table replica
