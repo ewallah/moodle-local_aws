@@ -494,6 +494,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceCommerceAnalytics(array $args = [])
  * @method \Aws\MarketplaceDeployment\MarketplaceDeploymentClient createMarketplaceDeployment(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceDeployment(array $args = [])
+ * @method \Aws\MarketplaceDiscovery\MarketplaceDiscoveryClient createMarketplaceDiscovery(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMarketplaceDiscovery(array $args = [])
  * @method \Aws\MarketplaceEntitlementService\MarketplaceEntitlementServiceClient createMarketplaceEntitlementService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceEntitlementService(array $args = [])
  * @method \Aws\MarketplaceMetering\MarketplaceMeteringClient createMarketplaceMetering(array $args = [])
@@ -674,6 +676,8 @@ namespace Aws;
  * @method \Aws\S3\S3MultiRegionClient createMultiRegionS3(array $args = [])
  * @method \Aws\S3Control\S3ControlClient createS3Control(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionS3Control(array $args = [])
+ * @method \Aws\S3Files\S3FilesClient createS3Files(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionS3Files(array $args = [])
  * @method \Aws\S3Outposts\S3OutpostsClient createS3Outposts(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionS3Outposts(array $args = [])
  * @method \Aws\S3Tables\S3TablesClient createS3Tables(array $args = [])
@@ -847,7 +851,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.376.3';
+    const VERSION = '3.378.2';
 
     /** @var array Arguments for creating clients */
     private $args;

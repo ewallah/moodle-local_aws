@@ -1,5 +1,64 @@
 # CHANGELOG
 
+## 3.378.2 - 2026-04-10
+
+* `Aws\Connect` - Conversational Analytics for Email
+* `Aws\SageMaker` - Support new SageMaker StartClusterHealthCheck API for on-demand DHC on Hyperpod EKS cluster. Support updated CreateCluster, UpdateCluster, DescribeCluster, BatchAddClusterNodes APIs for flexible instance group on HyperPod cluster
+* `Aws\imagebuilder` - Image pipelines can now automatically apply tags to images they create. Set the imageTags property when creating or updating your pipelines to get started.
+* `Aws\MediaConvert` - Adds support for MV-HEVC video output and clear lead for AV1 DRM output.
+* `Aws\DevOpsAgent` - Devops Agent now supports associate Splunk, Datadog and custom MCP server to an Agent Space.
+* `Aws\ECS` - Minor updates to exceptions for completeness
+* `Aws\RTBFabric` - Adds optional health check configuration for Responder Gateways with ASG Managed Endpoints. When provided, RTB Fabric continuously probes customers' instance IPs and routes traffic only to healthy ones, reducing errors during deployments, scaling events, and instance failures.
+* `Aws\ObservabilityAdmin` - CloudWatch Observability Admin adds support for multi-region telemetry evaluation and telemetry enablement rules.
+
+## 3.378.1 - 2026-04-09
+
+* `Aws\RedshiftDataAPIService` - The BatchExecuteStatement API now supports named SQL parameters, enabling secure batch queries with parameterized values. This enhancement helps prevent SQL injection vulnerabilities and improves query reusability.
+* `Aws\BedrockAgentCoreControl` - Initial release for CRUDL in AgentCore Registry Service
+* `Aws\SageMaker` - Release support for g7e instance types for SageMaker HyperPod
+* `Aws\BedrockAgentCore` - Introducing support for SearchRegistryRecords API on AgentCoreRegistry
+* `Aws\MediaConnect` - Adds support for MediaLive Channel-type Router Inputs.
+* `Aws\BCMDashboards` - Scheduled email reports of Billing and Cost Management Dashboards
+
+## 3.378.0 - 2026-04-08
+
+* `Aws\drs` - This changes adds support for modifying the replication configuration to support data replication using IPv6.
+* `Aws\MediaLive` - MediaLive is adding support for MediaConnect Router by supporting a new output type called MEDIACONNECT ROUTER. This new output type will provide seamless encrypted transport between your MediaLive channel and MediaConnect Router.
+* `Aws\IVSRealTime` - Adds support for Amazon IVS real-time streaming redundant ingest.
+* `Aws\MarketplaceDiscovery` - AWS Marketplace Discovery API provides an interface that enables programmatic access to the AWS Marketplace catalog, including searching and browsing listings, retrieving product details and fulfillment options, and accessing public and private offer pricing and terms.
+* `Aws\Backup` - Adding EKS specific backup vault notification types for AWS Backup.
+* `Aws\ECR` - Add UnableToListUpstreamImageReferrersException in ListImageReferrers
+* `Aws\Outposts` - Add AWS Outposts APIs to view renewal pricing options and submit renewal requests for Outpost contracts
+
+## 3.377.0 - 2026-04-07
+
+* `Aws\S3Files` - Support for S3 Files, a new shared file system that connects any AWS compute directly with your data in Amazon S3. It provides fast, direct access to all of your S3 data as files with full file system semantics and low-latency performance, without your data ever leaving S3.
+* `Aws\Braket` - Added support for t3, g6, and g6e instance types for Hybrid Jobs.
+* `Aws\DataZone` - Update Configurations and registerS3AccessGrantLocation as public attributes for cfn
+* `Aws\Connect` - The voice enhancement mode used by the agent can now be viewed on the contact record via the DescribeContact api.
+* `Aws\EKS` - EKS MNG WarmPool feature to support ASG WarmPool feature.
+* `Aws\EC2` - EC2 Capacity Manager adds new dimensions for grouping and filtering capacity metrics, including tag-based dimensions and Account Name.
+* `Aws\Lambda` - Launching Lambda integration with S3 Files as a new file system configuration.
+* `Aws\DataSync` - Allow IAM role ARNs with IAM Paths for "SecretAccessRoleArn" field in "CustomSecretConfig"
+* `Aws\ECS` - This release provides the functionality of mounting Amazon S3 Files to Amazon ECS tasks by adding support for the new S3FilesVolumeConfiguration parameter in ECS RegisterTaskDefinition API.
+* `Aws\S3` - Updated list of the valid AWS Region values for the LocationConstraint parameter for general purpose buckets.
+* `Aws\Outposts` - This change allows listAssets to surface pending and non-compute asset information. Adds the INSTALLING asset state enum and the STORAGE, POWERSHELF, SWITCH, and NETWORKING AssetTypes.
+* `Aws\AccessAnalyzer` - Revert previous additions of API changes.
+* `Aws\BedrockAgentCore` - This release includes support for 1) InvokeBrowser API, enabling OS-level control of AgentCore Browser Tool sessions through mouse actions, keyboard input, and screenshots. 2) Added documentation noting that empty sessions are automatically deleted after one day in the ListSessions API.
+* `Aws\RTBFabric` - AWS RTB Fabric External Responder gateways now support HTTP in addition to HTTPS for inbound external links. Gateways can accept bid requests on port 80 or serve both protocols simultaneously via listener configuration, giving customers flexible transport options for their bidding infrastructure
+
+## 3.376.4 - 2026-04-06
+
+* `Aws\Deadline` - Added 8 batch APIs (BatchGetJob, BatchGetStep, BatchGetTask, BatchGetSession, BatchGetSessionAction, BatchGetWorker, BatchUpdateJob, BatchUpdateTask) for bulk operations. Monitors can now use an Identity Center instance in a different region via the identityCenterRegion parameter.
+* `Aws\AccessAnalyzer` - Brookie helps customers preview the impact of SCPs before deployment using historical access activity. It evaluates attached policies and proposed policy updates using collected access activity through CloudTrail authorization events and reports where currently allowed access will be denied.
+* `Aws\Lightsail` - This release adds support for the Asia Pacific (Malaysia) (ap-southeast-5) Region.
+* `Aws\Transfer` - AWS Transfer Family Connectors now support IPv6 connectivity, enabling outbound connections to remote SFTP or AS2 servers using IPv4-only or dual-stack (IPv4 and IPv6) configurations based on network requirements.
+* `Aws\GeoMaps` - This release updates API reference documentation for Amazon Location Service Maps APIs to reflect regional restrictions for Grab Maps users
+* `Aws\GuardDuty` - Migrated to Smithy. No functional changes
+* `Aws\DLM` - This release adds support for Fast Snapshot Restore AvailabilityZone Ids in Amazon Data Lifecycle Manager EBS snapshot lifecycle policies.
+* `Aws\QConnect` - Added optional originRequestId parameter to SendMessageRequest and ListSpans response in Amazon Q in Connect to support request tracing across service boundaries.
+* `Aws\MediaTailor` - This change adds support for Tagging the resource types Programs and Prefetch Schedules
+
 ## 3.376.3 - 2026-04-03
 
 * `Aws\Lightsail` - Add support for tagging of Alarm resource type
