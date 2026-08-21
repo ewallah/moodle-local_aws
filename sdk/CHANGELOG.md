@@ -1,5 +1,1020 @@
 # CHANGELOG
 
+## 3.393.3 - 2026-08-20
+
+* `Aws\CloudFront` - Added SigV4a as a supported signing protocol for Origin Access Control (OAC), enabling CloudFront to sign requests to Amazon S3 Multi-Region Access Point (S3-MRAP) origins.
+* `Aws\Lambda` - Adds support for full JSON resource-based policies, enabling customers to create, retrieve, update, and delete function resource policies as complete JSON documents.
+* `Aws\SageMaker` - Added IAM Identity Center (IdC) support to CreatePartnerApp and UpdatePartnerApp APIs. Added Customer Managed Key (CMK) support to CreateMlflowApp and DescribeMlflowApp.
+* `Aws\Batch` - AWS Batch now supports a new compute environment type that provides fully managed EC2 capacity with broader compute flexibility than Fargate, including GPU instances, bare metal, and specific instance type selection, without infrastructure management overhead.
+* `Aws\Amplify` - Increased the maximum allowed length from 255 to 4,096 characters to support longer access tokens.
+* `Aws\DirectConnect` - This release adds custom route prefix pool allocations for Direct Connect. You can set IPv4 and IPv6 route prefix counts on private and transit virtual interfaces, and view pool size and unallocated counts on connections and LAGs, plus direct connect gateway attachment prefix allocation totals.
+* `Aws\EC2` - EC2 marks UEFI instance metadata field as sensitive.
+* `Aws\ARCRegionSwitch` - Adds support for Rds switchover read replica for Oracle databases in Region switch plans
+* `Aws\SESv2` - Amazon SES now supports per-message tracking overrides. You can use the new ConfigurationOverrides parameter in SendEmail and SendBulkEmail to enable or disable open and click tracking for individual messages without changing your account-level or configuration set settings.
+* `Aws\PricingPlanManager` - Documentation update for the CreateSubscription API to correct the default value of the approval mode parameter. The default value for paid subscriptions is MANUAL, not IMMEDIATE as previously documented. The default value remains IMMEDIATE for FREE tier subscriptions.
+
+## 3.393.2 - 2026-08-19
+
+* `Aws\RedshiftServerless` - Amazon Redshift Enhanced System Table Retention that allows customers to store their system table data directly in S3 Tables in customer's account instead of Redshift Managed Storage
+* `Aws\VPCLattice` - Amazon VPC Lattice now supports modification of private DNS options on Service Network VPC Associations
+* `Aws\AccountAccess` - Adds throttling exceptions to operation outputs that were previously inconsistent with other operations.
+* `Aws\MediaLive` - AWS Elemental MediaLive now supports video cropping and output positioning. Use cropRectangle and outputPositionRectangle to position the encoded video within the output frame, with the surrounding area filled with black.
+* `Aws\BedrockAgentCore` - AgentCore Memory now supports Flexible Namespaces and Non-Conversational Payloads in CreateEvent API
+* `Aws\Redshift` - Amazon Redshift enhanced System Table retention that allows customers to store their system table data directly in S3 Tables in customer's account instead of Redshift Managed Storage
+* `Aws\Batch` - AWS Batch now supports managing CloudWatch Container Insights on compute environments via CreateComputeEnvironment and UpdateComputeEnvironment.
+* `Aws\BedrockAgentCoreControl` - AgentCore Memory now supports Flexible Namespaces
+* `Aws\EKS` - Adds support for EKS cluster certificate authorities (CA)
+
+## 3.393.1 - 2026-08-18
+
+* `Aws\MediaLive` - AWS Elemental MediaLive now supports SCTE-35 marker passthrough without IDR frame insertion for CMAF Ingest, MediaPackage V2, and transport stream outputs.
+* `Aws\MarketplaceCatalog` - Introducing two new APIs, DescribeAssessment and ListAssessments. These APIs expose validation issues on Marketplace resources. The validation issues are exposed via a newly created resource called Assessment.
+* `Aws\Batch` - Update AWS Batch documentation with newer Fargate Supported configurations, notes, and fix broken Docker link re-directs.
+* `Aws\WorkSpaces` - Amazon WorkSpaces now supports nested virtualization, allowing you to run hypervisors and virtualization-based workloads within your WorkSpaces. You can enable or disable nested virtualization when creating a WorkSpace or by modifying an existing WorkSpace's properties.
+* `Aws\Outposts` - AWS Outposts now supports VPC Endpoint configuration in CreatePrivateConnectivityConfig, enabling scoped private connectivity with provisioning role creation for secure outpost installations
+* `Aws\EC2` - Doc release for CreateImage support for instances with local snapshots in Outpost
+* `Aws\EntityResolution` - Added ResourceNotFoundException to DeleteSchemaMapping, DeleteMatchingWorkflow, DeleteIdMappingWorkflow, and DeleteIdNamespace. These operations now return a 404 ResourceNotFoundException (previously a 200 Success) when the target resource does not exist.
+
+## 3.393.0 - 2026-08-17
+
+* `Aws\Handler` - Adds support for Guzzle transport sharing (persistent connections) via the new transport_sharing client option.
+* `Aws\GeoMaps` - Amazon Location Service now supports POI density and category filtering on dynamic maps. The GetStyleDescriptor API adds two optional parameters. PoiDensity (Off to VeryDense) controls POI volume, and PoiCategories filters by up to nine categories. Available on HERE and Grab map styles.
+* `Aws\Connect` - This release adds new APIs to create, describe, update, delete, and list extraction definitions, enabling customers to manage lifecycle of extraction definition resources. Additionally, this release adds new event sources for Rules related to ACW and new action to Extract Information.
+* `Aws\BedrockAgentCoreControl` - Adds implementations of third-party evaluators, both managed-as-a-service and as templates within custom evaluators.
+* `Aws\drs` - AWS Elastic Disaster Recovery (AWS DRS) now offers Recovery Plans to recover multi-server applications in the right order in one action. Define the launch sequence once, with ordered steps and wait times, and DRS runs it automatically. Validate with non-disruptive drills and monitor in real time.
+* `Aws\ECR` - Documentation update for the ECR PutReplicationConfiguration API to increase the replication rule limit from 10 to 25
+* `Aws\BedrockAgentRuntime` - AgenticRetrieveStream API now supports Amazon Bedrock AgentCore Memory. Use the new memoryConfiguration parameter to continue a session from short-term memory and retrieve from long-term memory.
+* `Aws\Organizations` - Add new Transfer Responsibility error codes and document related CloudTrail events for accepting and terminating a Transfer Responsibility.
+
+## 3.392.3 - 2026-08-14
+
+* `Aws\RedshiftServerless` - Amazon Redshift now unlocks a locked admin user account and resets the failed-login counter when you update the admin password using the UpdateNamespace API. This option is available only when account lockout security is enabled.
+* `Aws\Glue` - Added support for associating glossary terms with iterable form items, such as table columns.
+* `Aws\BedrockAgentCore` - Add support for the Machine Payments Protocol (MPP) and x402 upto scheme payments protocol in Amazon Bedrock AgentCore Payments. Customers can now pay for MPP-gated resources and also pay services which requires upto scheme in x402
+* `Aws\ObservabilityAdmin` - CloudWatch Logs centralization rules now support tag propagation. You can configure a TagPropagationConfiguration on your centralization rule to automatically sync resource tags from source to destination log groups, with configurable conflict resolution strategies.
+* `Aws\Redshift` - Amazon Redshift now unlocks a locked admin user account and resets the failed-login counter when you update the admin password using the ModifyCluster API. This option is available only when account lockout security is enabled.
+* `Aws\BedrockAgentRuntime` - Adds CheckIngestedDocumentAcl and GetIngestedDocumentAcl APIs to Amazon Bedrock Knowledge Bases. Customers can verify user access to documents based on ingested ACLs and retrieve full ACL details including allow and deny entries, enabling validation of ACL ingestion without test retrievals.
+* `Aws\MWAAServerless` - Adds support for Consuming code for MWAA Serverless
+* `Aws\SageMaker` - Release support for g7.2xlarge, g7.4xlarge, g7.8xlarge, g7.12xlarge, g7.24xlarge, and g7.48xlarge instance types for SageMaker HyperPod
+* `Aws\BedrockAgentCoreControl` - Adds AgentCore Payments support for CMK, Marketplace Subscriptions and QuickCreate
+
+## 3.392.2 - 2026-08-13
+
+* `Aws\ACM` - This change allows customers to update their existing email-validated certificates to use the DNS validation method.
+* `Aws\Connect` - Adds the StartAssistantContact API to start chat contacts handled by an AI agent. Adds SegmentAttributes to StartWebRTCContact, and corrects its error response to now receive AccessDeniedException (previously returned as an internal server error due to a missing error declaration).
+* `Aws\SecurityAgent` - Add support for setting a maximum task-hour budget cap on penetration tests and code reviews, and for revalidating previously reported findings via a new REVALIDATION job type.
+* `Aws\CodeCommit` - Added the GetBlobDifferences API operation, which returns line-level diffs between two blob versions without requiring a local clone. Returns structured hunks with context, additions, and deletions. Supports pagination for large diffs.
+* `Aws\CleanRooms` - This release adds support for minimum aggregation thresholds and comparison controls to the Custom analysis rule type.
+* `Aws\AutoScaling` - Amazon EC2 Auto Scaling now supports terminating multiple instances in a single TerminateInstanceInAutoScalingGroup call via the new InstanceIds parameter, returning an Activities list. LaunchInstances now returns IdempotentCallInProgressFault for duplicate client tokens.
+
+## 3.392.1 - 2026-08-12
+
+* `Aws\WellArchitected` - This change releases the Well-Architected Agent, a generative AI service that analyzes a customer's AWS environment and delivers personalized, prioritized recommendations across cost, security, performance, and resilience.
+* `Aws\Glue` - Documentation updates for materialized views APIs.
+* `Aws\IAM` - Introduced role manager, an IAM capability that automatically sets up the IAM roles your AWS services need. When you set up a supported service in the console, role manager creates a role for you or reuses an existing one from an AWS-managed template.
+* `Aws\DSQL` - Improved validation of Kinesis stream ARN format to ensure only valid ARN characters are accepted
+* `Aws\MediaConnect` - AWS MediaConnect now supports tuning the internal recovery latency between Router Inputs and Outputs to prioritize stream quality versus end-to-end latency.
+* `Aws\Odb` - Adds support for Oracle Exadata on Exascale Infrastructure (ExaDB-XS) resources including storage vaults and VM clusters.
+* `Aws\QuickSight` - Added APIs for DLP with Microsoft Purview (manage configs with label enforcement across Spaces, Chat, Knowledge Bases), Approval Workflows (CRUD for policies on asset sharing for Agents, Knowledge Bases, Spaces), and Limits Management (limit profiles for index storage and agent hours per user).
+
+## 3.392.0 - 2026-08-11
+
+* `Aws\DataZone` - GetSubscriptionGrant now returns materialized asset scope name for mapping Lake Formation data cell filters or Redshift views to subscription grants.
+* `Aws\CloudDirectory` - Added an end-of-support notice to Amazon Cloud Directory public CLI reference documentation.
+* `Aws\Organizations` - Documentation update for AWS Organizations that clarifies valid input values for the HandshakePartyType parameter in the InviteAccountToOrganization. API ORGANIZATION is valid in responses only. valid input values are ACCOUNT and EMAIL
+* `Aws\Textract` - Amazon A2I entered maintenance mode in July 2026 and now rejects StartHumanLoop requests from accounts that it does not recognize as existing customers. This update adds a corresponding note to the HumanLoopConfig parameter documentation so that the API Reference and SDK docs explain this behavior.
+* `Aws\EKS` - This feature would give customers the ability to selectively tune certain configurations of Kubernetes control plane components in an Amazon EKS cluster.
+* `Aws\BedrockAgentCore` - Adding online eval arn as input for recommendation API
+* `Aws\Connect` - Seven new APIs for managing custom metrics, including create, describe, update, and delete. Using Custom Metrics, customers of Amazon Connect Customer can tailor analytics dashboards to their needs by applying custom thresholds, filters, and calculations to one or more out of the box measurements.
+* `Aws\AccountAccess` - Adds SDK support for AWS IAM account access manager, a feature that enables mapping of IAM roles to the users and groups in AWS IAM Identity Center.
+* `Aws\CleanRooms` - Adds support for exporting redacted query execution logs in AWS Clean Rooms
+
+## 3.391.2 - 2026-08-10
+
+* `Aws\SageMakerRuntime` - Added the PrefixAwareId header to InvokeEndpoint and InvokeEndpointWithResponseStream. This optional parameter serves as a routing hint for endpoints configured with prefix-aware routing, differentiating routing decisions for requests that share the same prompt prefix.
+* `Aws\ElementalInference` - Added support for the SearchFixtures API and DataSourceConfiguration, enabling customers to map fixture event data onto clipping outputs for improved feature accuracy.
+* `Aws\MediaLive` - Added VirtualSourceAddress to multicast output destinations for MediaLive Anywhere channels. Specifies the source IP address for outbound multicast packets when downstream networks enforce source-IP filtering.
+* `Aws\SageMaker` - Added PREFIX AWARE routing strategy and PrefixAwareRoutingConfig to CreateEndpointConfig. Configure PrefixLength and ConcurrencyThreshold to route requests that share the same prompt prefix to the same instance.
+* `Aws\Connect` - Added Malay language option to use AI to automatically fill evaluation forms in Malay
+
+## 3.391.1 - 2026-08-07
+
+* `Aws\Retries` - Updated the opt-in retry path (AWS_NEW_RETRIES_2026) to emit SEP-compliant retry headers, honor AWS_MAX_ATTEMPTS and shared-config max_attempts, and align long-polling retry behavior with the new retry spec.
+* `Aws\Connect` - Supports updating the task template associated with in-progress task contacts using the new UpdateContactTaskTemplate API. This enables supervisors and developers to dynamically reassign task templates without creating a new task.
+* `Aws\MediaTailor` - Added support for inserting ads via the VAST Ad Buffet standard. You can now configure MediaTailor to insert ads in sequence order using the AdSequencingMode setting in your playback configuration. Standalone ads are used as fallbacks when a sequenced ad is unavailable.
+* `Aws\EC2` - This release adds support for BGP route protection in Amazon VPC IP Address Manager (IPAM), including route discovery, RPKI route protection findings, and delegated RPKI (Internet Registry Associations, routing policy registrations, and ROA management) for BYOIP prefixes.
+* `Aws\SageMaker` - Amazon SageMaker adds maintenance lifecycle statuses for Notebook Instances
+* `Aws\MediaPackageV2` - StreamNameOutputMode - a new optional field on MediaPackageV2 OriginEndpoints that lets customers choose whether egress manifests use numeric stream indices (default) or encoder-assigned stream names from the input
+* `Aws\SecurityAgent` - Added enableEmailMfa input field on Actor to enable email-based MFA during penetration tests. When enabled, a server-generated mfaForwardingAddress is returned. Set up a forwarding rule in your email provider to forward MFA emails to this address so the agent can complete email-based MFA login flows
+* `Aws\HealthLake` - Adds provenanceEnabled to StartFHIRImportJob
+* `Aws\Amplify` - Increased the maximum allowed length of the oauthToken parameter in the CreateApp and UpdateApp APIs to support longer OAuth tokens issued by third-party Git providers.
+
+## 3.391.0 - 2026-08-06
+
+* `Aws\S3` - AWS Backup now lets you create read-only access points for Amazon S3 recovery points, enabling you to access backup data using S3 APIs without initiating a restore.
+* `Aws\MarketplaceDiscovery` - GetOfferTerms now returns netPaymentTerm in offerTerms, specifying payment due period after invoice date. The paymentDuePeriod field uses ISO 8601 duration format (e.g., "P30D" for net 30 days). This is a backward-compatible addition. See API documentation for full structure and examples.
+* `Aws\EC2` - Adds a new optional IncludeLocalZones parameter to the Spot Placement Score API that defaults to false. When set to true, the Spot Placement Score API will consider the relevant Local Zones with Spot capacity when computing the Spot Placement Score.
+* `Aws\AutoScaling` - EC2 Auto Scaling now supports being managed by other AWS services via the operator field.
+* `Aws\BedrockAgentCore` - Add support for capacity provider sessions in Amazon Bedrock AgentCore. Customers can now delete an active session running on a runtime instance launched through their capacity provider.
+* `Aws\Kafka` - MSK Clusters can now deliver authorizer logs alongside broker logs to the destinations defined by you
+* `Aws\AgentRegistry` - Agent Registry's Public Preview release
+* `Aws\MarketplaceAgreement` - GetAgreementTerms now returns a new term variant in AcceptedTerm, netPaymentTerm, with a paymentDuePeriod field (example "P30D").
+* `Aws\MediaTailor` - AWS Elemental MediaTailor now supports concurrent function execution. The new Concurrent Executor function type runs multiple independent child functions in parallel within a single lifecycle hook, reducing pipeline latency to the duration of the slowest call instead of the sum of all calls.
+* `Aws\Backup` - AWS Backup now lets you create read-only access points for Amazon S3 recovery points, enabling you to access backup data using S3 APIs without initiating a restore.
+* `Aws\AgentRegistryControl` - Agent Registry's Public Preview release
+* `Aws\SageMaker` - Releases new Model Customization SequenceLength parameter for Training and g7 instance types for Training and Processing.
+* `Aws\DeviceFarm` - Adds support for service generated insights across runs, jobs, and tests.
+* `Aws\BedrockAgentCoreControl` - Add support for Gateway rate limits and Runtime instances in Amazon Bedrock AgentCore. Customers can now configure rate limits scoped to control request rates, token consumption rates, and active connection rates. Customers can now create capacity providers to launch runtimes on their EC2 instances.
+* `Aws\SecurityHub` - Security Hub is adding a new public API, ListFreeTrialStatusesV2 to describe the free trial statuses of the Security Hub service and its opt-in features.
+* `Aws\GameLift` - Adds support for C8a, C8i, C9g, M8a, M8i, and M9g EC2 instance type families for managed EC2 and container fleets. Also adds explicit anchors on most string regexes.
+* `Aws\SocialMessaging` - Add support for WhatsApp Conversions APIs.
+* `Aws\CloudWatchLogs` - This release adds index category support to the CloudWatch Logs DescribeFieldIndexes API. Customers can filter and identify DEFAULT, CUSTOM, AUTO, and INACTIVE field indexes.
+
+## 3.390.5 - 2026-08-05
+
+* `Aws\ECS` - New enum values added for Agent Connectivity issues
+* `Aws\ACMPCA` - Private Certificate Authority service now supports RSASSA-PSS signing algorithm.
+* `Aws\Glue` - Added the PutDataCatalogExportConfiguration to export Glue Data Catalog metadata to systems tables stored in S3 Tables.
+* `Aws\BedrockAgentCoreControl` - Adding support for fine-grained access control for AgentCore Memory through managed AgentCore Gateway HTTP Connectors.
+* `Aws\Deadline` - AWS Deadline Cloud now reports persistent volume costs alongside compute and license costs. Customers can view per-fleet storage costs in Usage Explorer by selecting the Usage Type grouping, helping them better understand the costs of their infrastructure.
+
+## 3.390.4 - 2026-08-04
+
+* `Aws\DynamoDB` - Vector indexes are a type of index in Amazon DynamoDB that enable similarity search on vector embedding stored in your table items. Vector indexes use approximate nearest neighbor search to find items whose vectors are most similar to a query vector that you provide.
+* `Aws\Organizations` - Improved accuracy of CloudTrail event documentation for AWS Organizations membership operations.
+* `Aws\SSOAdmin` - AWS IAM Identity Center now lets you create organization-level instances without enabling multi-account permissions. You can enable multi-account permissions during instance creation or later via console or API, which then provisions the necessary service-linked roles.
+* `Aws\Inspector2` - Adding Azure SBOM export capability.
+* `Aws\EC2` - Amazon EC2 now supports Application Status Checks, a new status check that monitors your application's health through configurable HTTP(S) paths and ports, so you can detect and automatically respond to application-level impairments.
+* `Aws\Connect` - Amazon Connect Customer now supports up to 50 attachments per email, increased from the previous limit of 10. The individual maximum attachment size limit of 20 MB and the total email size limit of 25 MB still hold true.
+* `Aws\WorkSpaces` - Added ClientExperiencePolicy to ClientProperties object for ModifyClientProperties and DescribeClientProperties APIs.
+* `Aws\PartnerCentralSelling` - Partners can now create leads with only 5 required fields and free-text values for all other fields, reducing import friction. Engagement invitations now include enrichment data (propensity scores, lead readiness) directly in the response.
+* `Aws\DSQL` - UpdateCluster now checks the RemovePeerCluster permission on the specific cluster being removed, not a wildcard and docs now clarify how to set kmsEncryptionKey so the cluster uses the AWS-owned key.
+* `Aws\IAM` - Updating endpoint generation logic
+
+## 3.390.3 - 2026-08-03
+
+* `Aws\WAFV2` - Updated descriptions for number of PreParseTextTransformations allowed per rule statement
+* `Aws\TimestreamInfluxDB` - This release adds support for customer-managed backup restore, and encryption of new DbInstances and DbClusters using customer-managed KMS keys.
+* `Aws\ObservabilityAdmin` - Launch CMK support for Telemetry Enablement Organization and Account Rules.
+* `Aws\EKSAuth` - Added eksNodeName, instanceId, and zone optional parameters to the AssumeRoleForPodIdentity API.
+* `Aws\NetworkFirewall` - This launch allows customers to use Network Firewall as an explicit Proxy and protect their workloads against threat of data exfiltration.
+* `Aws\MediaConvert` - Updates Kantar server URL validation to accept Fifty5Blue domain. Adds support for output to S3 Glacier Instant Retrieval.
+* `Aws\DirectConnect` - Added route visibility support for AWS Direct Connect, allowing customers to call ListVirtualInterfaceRoutes to view the BGP routes including AS path and BGP communities advertised over their virtual interfaces.
+
+## 3.390.2 - 2026-07-31
+
+* `Aws\Outposts` - Adds the "EKS" value to the AWSServiceName enum and marks the Address field as sensitive.
+* `Aws\MarketplaceCatalog` - This release enhances the ListEntities API to support TargetAgreementId, TargetAgreementIntent, and CreatedBySource filters for the Offer entity type.
+* `Aws\CloudFormation` - Adding enum for sensitive property to DriftIgnoredReason
+* `Aws\BedrockRuntime` - Added support for mid-conversation tool changes in the Amazon Bedrock Converse and ConverseStream APIs
+* `Aws\DataZone` - Adding support for enhanced Git experience in Sagemaker Unified Studio.
+* `Aws\RDS` - Adds StorageOperationStatus and StorageOperationPercentProgress to DescribeDBInstances, letting you monitor RDS storage initialization and optimization progress.
+* `Aws\ElementalInference` - AWS Elemental Inference now supports graphic composition on cropped video outputs, enabling branded graphics and other visual elements to be overlaid as part of the inference workflow.
+* `Aws\PrometheusService` - Amazon Managed Service for Prometheus adds support for an Amazon OpenSearch Service exporter for managed collectors.
+* `Aws\ConnectCampaignsV2` - Launching feature for abandonment rate pacing control for outbound campaigns.
+* `Aws\QuickSight` - Adding TopicV2 management APIs, adding possibility to use Topics in Analysis
+* `Aws\Billing` - Adds GetEnterpriseSupportChargeSummary, GetEnterpriseSupportContractDetails, and ListEnterpriseSupportLinkedAccountCharges. These APIs provide first-time programmatic access to billing data for Enterprise Support usage previously only available upon request through AWS Concierge or Support.
+* `Aws\NetworkFirewall` - Doc Updates for Container Attributes
+* `Aws\CloudWatchLogs` - Amazon CloudWatch Logs now lets you create and update lookup tables directly from CloudWatch Logs query results by passing a queryId, and configure a lookup table as a scheduled query destination so it refreshes automatically with the latest query results on each run.
+* `Aws\Resiliencehubv2` - Adding support for new testing capability in AWS Resilience Hub.
+
+## 3.390.1 - 2026-07-31
+
+* `Aws\BCMRecommendedActions` - Removing Smithy RPC v2 CBOR support that was added in previous SDK release.
+* `Aws\BCMPricingCalculator` - Removing Smithy RPC v2 CBOR support that was added in previous SDK release.
+
+## 3.390.0 - 2026-07-30
+
+* `Aws\Crypto` - Fixes issue with client material description decode.
+* `Aws\BedrockAgentCoreControl` - Adds support for configuring models through the OpenResponses API for custom evaluators. CreateEvaluator and UpdateEvaluator now accept an OpenResponses model configuration for LLM-as-a-Judge evaluations.
+* `Aws\SageMaker` - Adds support for g7 family instance types for SageMaker Studio JupyterLab and CodeEditor apps for IAD (us-east-1), PDX (us-west-2), CMH (us-east-2).
+* `Aws\Lambda` - Add Python3.15 (python3.15) and NodeJs 26 (nodejs26.x) support to AWS Lambda
+* `Aws\Kafka` - Amazon MSK Express brokers now support streaming tables for Apache Iceberg, continuously materializing Apache Kafka topics as Iceberg tables in Amazon S3 Tables. Express brokers also now support data delivery to Amazon S3 general purpose buckets.
+* `Aws\NetworkFirewall` - Adds UPDATING field to Container Association Status
+* `Aws\IAM` - Improved IAM Policy Simulator accuracy. Simulator now evaluates SCP conditions and resource scoping, returns explicitDeny for explicit SCP denials, and reports accurate cross-account decisions.
+* `Aws\SecurityAgent` - Adds support for providing a branch override when configured integrated repositories
+* `Aws\PricingPlanManager` - Adds support for Public PricingPlanManager SDK
+
+## 3.389.3 - 2026-07-29
+
+* `Aws\EC2` - This release adds support for policy-based routing on AWS Transit Gateway, enabling you to route traffic based on 5-tuple matching (source IP, destination IP, source port, destination port, and protocol) using new policy table entry APIs that direct matching traffic to a target route table.
+* `Aws\GameLiftStreams` - Adds ListApplicationShaderCaches API to retrieve shader cache metadata for applications and adds stream URLs, which give end users temporary, unauthenticated access to a stream session in their browser. Includes CreateStreamUrl, GetStreamUrl, ListStreamUrls, and RevokeStreamUrl operations.
+* `Aws\WAFV2` - AWS WAF now supports pre-parse text transformations, letting you normalize raw query strings before parsing, available on rule statements that use SingleQueryArgument or AllQueryArguments as the FieldToMatch. AWS WAF also added 10 new text transformations, including ModSecurity v3 parity options.
+* `Aws\Glue` - Adding filtering, partitioning, and VPC support to AWS Glue REST API connector
+* `Aws\IoTSiteWise` - We have released a new set of APIs in support of a major new feature within AWS IoT SiteWise called Scenario Discover. Please see user guide about the feature and the API guide in public documentation for new APIs.
+* `Aws\DatabaseMigrationService` - Updated documentation for various DMS Schema Conversion operations
+
+## 3.389.2 - 2026-07-28
+
+* `Aws\DataSync` - Adds Enhanced mode support for EFS and FSx Lustre locations without an agent, and for HDFS (TDE), Azure Blob, and object storage locations with an agent. HDFS Enhanced mode supports multiple NameNodes for High Availability. Enhanced mode agents can now be deployed on Microsoft Hyper-V.
+* `Aws\BedrockAgentCoreControl` - AgentCore Identity now supports Private Key JWT client authentication for OAuth 2.0 credential providers. Agents can authenticate to identity provider token endpoints with a JWT client assertion signed by a customer-managed AWS KMS asymmetric key, eliminating the need for client secrets.
+* `Aws\Connect` - Documentation updates for SearchRules, AssociateRoutingProfileQueues, CreateRoutingProfile, AssociateContactWithUser CreateTaskTemplate, and UpdateTaskTemplate
+* `Aws\RolesAnywhere` - Increases certificate string length for trust anchor source data to support new adjustable trust anchor limits.
+* `Aws\TrustedAdvisor` - Adds ListRecommendationsForResource API and four CheckSummary fields (resourceArnQueryable, awsResourceTypes, checkGranularity, recommendationId) to retrieve recommendations for a given resource ARN.
+
+## 3.389.1 - 2026-07-27
+
+* `Aws\CleanRoomsML` - This release adds support for the CR.8X worker type for SQL (32 vCPU)
+* `Aws\PartnerCentralAccount` - Adds optional headquarters location to StartProfileUpdateTask, letting partners record their headquarters as an ISO 3166 country and subdivision code on their profile. When headquarters is provided, both the country and subdivision codes are required.
+* `Aws\SecurityAgent` - AWS Security Agent adds a new task hours field that reflects the active work done for a task.
+* `Aws\EMRContainers` - With this launch, you can now set concurrent job limits on a virtual cluster, giving you fine-grained control over how many job runs execute at once and how many can wait in queue.
+* `Aws\CleanRooms` - This release adds support for the CR.8X worker type for SQL (32 vCPU)
+* `Aws\QuickSight` - Added new Governance fields to Custom Permissions API to support Deny By Default functionality.
+* `Aws\Account` - This release adds support for the GetPrimaryEmailUpdateStatus API operation, which allows customers to retrieve the current status of a primary email address update request for an AWS account. The operation returns status information including whether the update is pending, completed, or failed.
+* `Aws\SageMaker` - This release adds LoRA adapters, training plans, and new instance types to SageMaker inference optimization. CreateAIRecommendationJob accepts optional AdapterSource and CreateOptimizationJob accepts optional TrainingPlanArns and the ml.g7e and ml.p6-b200 families.
+* `Aws\Glue` - Adds BatchGetDataQualityRulesetEvaluationRun API to retrieve multiple runs in one call, ObservationScope and ObservationMode parameters for anomaly detection, writing evaluation results to Data Catalog tables, and custom log group paths for recommendation runs.
+* `Aws\BCMDataExports` - With this release, customers can configure their data exports to deliver CSV reports in ZIP compressed format.
+
+## 3.389.0 - 2026-07-24
+
+* `Aws\Handler` - Adds Guzzle 8 support.
+* `Aws\ApplicationInsights` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.1. The SDK will prioritize its most performant protocol.
+* `Aws\Artifact` - Added the PutComplianceInquiryFeedback API, enabling customers to submit feedback on compliance inquiry responses. Customers can rate responses as helpful or not helpful and provide optional reason codes and comments.
+* `Aws\RTBFabric` - The deprecated inboundLinksCount field has been removed from the GetResponderGateway API response. Customers who previously relied on this field should use linksRequestedCount instead.
+* `Aws\DynamoDB` - Endpoint test standardizations
+* `Aws\CognitoIdentityProvider` - Amazon Cognito user pools now support the AdminGetUserAuthFactors operation, which lets administrators retrieve the configured authentication factors (such as password, SMS, email, and TOTP) available for a specific user in a user pool.
+* `Aws\NeptuneGraph` - Update validations for Tag Keys and KMS Key ARNs.
+* `Aws\Odb` - Documentation-only update to clarify the operation-specific valid values for the externalIdType field.
+
+## 3.388.13 - 2026-07-23
+
+* `Aws\Credentials` - Normalizes numeric-string metadata timeouts to floats in the ECS and instance profile credential providers while preserving their existing configuration and environment precedence.
+* `Aws\BedrockAgentCore` - Adds support for the Bring Your Own Storage(BYOS) feature in AgentCore Browser and Code Interpreter. Enables mounting S3Files and EFS File Systems via Access points.
+* `Aws\BackupGateway` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `Aws\QuickSight` - Added new capabilities to custom permissions profiles to control access to Amazon Quick through the browser extension and Microsoft Word, Outlook, Excel, and PowerPoint add-ins.
+* `Aws\BedrockAgentCoreControl` - Adds support for the Bring Your Own Storage(BYOS) feature in AgentCore Browser and Code Interpreter. Enables mounting S3Files and EFS File Systems via Access points.
+* `Aws\DataZone` - Adds support for notebook sync with S3 ipynb files
+* `Aws\RedshiftDataAPIService` - This release include long polling provids a new parameter wait-time-seconds to 5 API operations, new API ListSessions, and a new parameter execution-mode to BatchExecuteStatement
+* `Aws\AppStream` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.1. The SDK will prioritize its most performant protocol.
+* `Aws\BCMRecommendedActions` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `Aws\MediaPackageV2` - This release adds support for non-epoch-locked CMAF ingest in MediaPackageV2 channels.
+* `Aws\BCMPricingCalculator` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `Aws\WorkspacesInstances` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `Aws\GameLiftStreams` - GameLift Streams now supports configuring a custom aspect ratio per stream session to accommodate different player devices. Supported aspect ratios include landscape, portrait, and square - delivering a full-screen experience without letterboxing or cropping.
+* `Aws\SageMaker` - Release support for c6a, m6a, m6g, m7g, m8g instance types for SageMaker HyperPod
+* `Aws\KendraRanking` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+
+## 3.388.12 - 2026-07-22
+
+* `Aws\S3` - Aws\S3\Transfer::resolvesOutsideTargetDirectory() now treats both '/' and '\' as directory separators when tokenizing the sink path. Aligns the legacy Transfer guard with the newer S3Transfer\DirectoryDownloader on Windows, where PHP's filesystem layer resolves backslashes as separators.
+* `Aws\GuardDuty` - Amazon GuardDuty now returns filter lifecycle metadata in GetFilter responses. The response includes createdAt and updatedAt timestamps and a version number that increments on each update, giving you visibility into when a filter was created and last modified.
+* `Aws\ElasticLoadBalancingv2` - This adds CLI examples for the IpAddressType field on SourceIpConfig, enabling Network Load Balancer listener rules to match traffic based on whether the source IP is IPv4 or IPv6.
+* `Aws\CloudWatch` - Adds documented value constraints for CloudWatch Log Alarm scheduled query configuration fields, and makes LogGroupIdentifiers optional for log alarms.
+* `Aws\PrometheusService` - Add CloudWatch dataset destinations for Amazon Managed Service for Prometheus collectors.
+* `Aws\ObservabilityAdmin` - Enablement for ALB and Bedrock Knowledge Base logs via Observability Admin Telemetry Rule for account and organization level
+* `Aws\SESv2` - Launching DEED and MREP in US GOV
+* `Aws\PartnerCentralAccount` - Adds Qualifications Association APIs that enable partners to associate a subsidiary account's qualifications with a primary account. Once associated, qualifications are shared across all connected accounts and scorecards are consolidated. Partners can start and track association and disassociation.
+* `Aws\PCS` - AWS PCS Node Lifecycle Actions provides a structured way to run custom scripts at defined points in a compute node's lifecycle directly through the AWS PCS compute node group API.
+* `Aws\ARCRegionSwitch` - Adds support for a client token in StartPlanExecution to make plan execution requests idempotent for safe retries.
+
+## 3.388.11 - 2026-07-21
+
+* `Aws\TimestreamInfluxDB` - This release adds support for custom plugins in Amazon Timestream for InfluxDB. InfluxDB 3 Core and Enterprise DB parameter groups now accept a plugin repository URL and optional AWS Secrets Manager secret ARN, so the Processing Engine loads your Python plugins from a public or private repository.
+* `Aws\SSM` - Added a WarningMessage field to Automation along with corresponding public documentation.
+* `Aws\SecurityHub` - Security Hub standard and control multicloud API documentation updates
+* `Aws\EntityResolution` - Add support for real time matching with AWS Entity Resolution matching workflows with advanced rule sets.
+* `Aws\Invoicing` - Added the SendProcurementPortalValidation and VerifyProcurementPortalValidation APIs. You can use the AWS SDKs to self-service activate your Procurement Portal Preferences created on the Billing Preferences page with a one-time-passcode (OTP) delivered to your portal.
+* `Aws\RedshiftDataAPIService` - update the workgroupArn to include EUSC partition, tests in THF Gamma and Prod no issue
+* `Aws\EMRContainers` - Added support for the DeleteSecurityConfiguration API, which allows customers to delete security configurations in Amazon EMR on EKS. Also added authenticationConfiguration in securityConfigurationdata structure.
+* `Aws\Inspector2` - GA date - July 21st 2026, remove Tags field from ListCodeSecurityIntegration and ListCodeSecurityScanConfiguration.
+* `Aws\Redshift` - Amazon Redshift - Added support for managing Query Editor V2 IAM Identity Center applications via new CreateQev2IdcApplication, DescribeQev2IdcApplications, ModifyQev2IdcApplication, and DeleteQev2IdcApplication API operations.
+
+## 3.388.10 - 2026-07-20
+
+* `Aws\Inspector2` - Adds Windows path support for deep inspection. Fixes tag propagation for connector CloudFormation stack operations.
+* `Aws\MediaTailor` - This change adds api support for configuring ad decision server timeouts and concurrency fields on MediaTailor playback configurations
+* `Aws\SESv2` - Amazon SES introduces three new Pricing Plans (Essentials, Pro, Enterprise), which bundle SES features under one pricing umbrella. The new PutAccountPricingAttributes API lets the user set the account's plan, while current plan retrievalif done through the new PricingAttributes field on GetAccount.
+* `Aws\MarketplaceMetering` - For new SaaS product integrations, CustomerIdentifier is not populated in ResolveCustomer responses and is not supported in BatchMeterUsage. Use CustomerAWSAccountId and LicenseArn instead.
+* `Aws\BedrockAgentCoreControl` - This release adds support for specifying a connector version on Gateway targets to pin the connector's tool schema. It also introduces web-search connector version 1.2.0, which adds agent-side domain filtering, published date range filtering, and admin-side domain allowlisting.
+* `Aws\BedrockAgentCore` - Add W3C trace context headers (traceparent, tracestate, baggage) and X-Amzn-Trace-Id to InvokeHarness request for end-to-end observability propagation. Add toolResultMetadata to the streaming content block delta for MCP tool result meta delivery without oversized SSE frames.
+* `Aws\QuickSight` - Adds support for custom permissions for Triggers, allowing administrators to control user access to Schedule, Inbound Email and Quick Event triggers.
+* `Aws\Organizations` - Updated InvalidInputException error documentation to clarify that the service validates free-text field values against common cross-site scripting (XSS) patterns.
+
+## 3.388.9 - 2026-07-17
+
+* `Aws\CognitoIdentityProvider` - Amazon Cognito user pools now support sending SMS via AWS End User Messaging. A new EumsSms object in SmsConfigurationType lets you deliver MFA and verification texts through AWS End User Messaging, alongside the existing Amazon SNS option.
+* `Aws\Odb` - Adds support for sourcing Autonomous Database admin and wallet passwords from customer-managed AWS Secrets Manager secrets, including password source configuration and summaries, and enabling or disabling the OCI IAM service role for Secrets Manager integration via InitializeService.
+* `Aws\RDS` - Adds the AssociatedRoles parameter to CreateDBCluster, RestoreDBClusterFromSnapshot, RestoreDBClusterToPointInTime, and RestoreDBClusterFromS3, letting customers associate IAM roles with an Aurora DB cluster at create or restore time instead of calling AddRoleToDBCluster afterward.
+* `Aws\GameLiftStreams` - Amazon GameLift Streams now supports assigning an IAM role to a stream session, enabling your application to securely access resources in your AWS account, such as Amazon S3 buckets and DynamoDB tables.
+* `Aws\KinesisAnalyticsV2` - Support for Flink 2.3 in Managed Service for Apache Flink
+
+## 3.388.8 - 2026-07-16
+
+* `Aws\EndpointV2` - Adds BDD artifacts, which result in an average performance increase of 35% (faster) endpoint resolution.
+* `Aws\Redshift` - Amazon Redshift - Added support for rg.large and rg.12xlarge node types in CreateCluster, ModifyCluster, and ResizeCluster API operations.
+* `Aws\Sustainability` - Adds support for retrieving estimated water allocation data.
+* `Aws\SageMaker` - Release support for g7 instance type for SageMaker inference endpoints.
+* `Aws\S3` - Documentation update for removing the 30 day minimum restriction for transition to Standard-IA or OneZone-IA storage classes
+* `Aws\Omics` - Adds support for returning the task UUID (universally unique identifier) in GetRunTask and ListRunTasks responses
+* `Aws\EMR` - Amazon EMR updates the Session object returned by GetSession API
+* `Aws\ChimeSDKVoice` - Marked CreateProxySession, DeleteProxySession, GetProxySession, ListProxySessions, UpdateProxySession, PutVoiceConnectorProxy, DeleteVoiceConnectorProxy, and GetVoiceConnectorProxy as deprecated.
+
+## 3.388.7 - 2026-07-15
+
+* `Aws\CloudFront` - Adds SHA-256 support to `Signer`.
+* `Aws\BedrockAgentCoreControl` - Fix HarnessEndpointArn pattern to match the actual service-emitted ARN format ('harness-endpoint' instead of 'endpoint'). Add additionalParams to Gemini model configuration for passing provider-specific parameters through to the model unchanged.
+* `Aws\PaymentCryptographyData` - Adds support for UnionPay session key derivation to the GenerateAuthRequestCryptogram, VerifyAuthRequestCryptogram, GenerateMac, and VerifyMac APIs.
+* `Aws\ElasticLoadBalancingv2` - This release adds support for the IpAddressType field on SourceIpConfig, enabling Network Load Balancer listener rules to match traffic based on whether the source IP is IPv4 or IPv6.
+* `Aws\HealthLake` - AWS HealthLake now offers data transformation in Preview to convert CSV and C-CDA data to FHIR R4. Customers can maintain reusable mapping profiles, run sync or async jobs with provenance tracking and drift detection, and use an AI agent to build and edit mapping logic from natural language.
+* `Aws\RDS` - Adds support for modifying EngineLifecycleSupport on DB instances and DB clusters through ModifyDBInstance and ModifyDBCluster.
+
+## 3.388.6 - 2026-07-14
+
+* `Aws\Crypto` - Fixes AAD concatenation and tag validation
+* `Aws\drs` - Fast recovery of EC2 based drs workloads by skipping the conversion step
+* `Aws\SecurityHub` - AWS Security Hub now provides an AI inventory, giving central security teams a continuously updated, organization-wide view of AI assets and their security posture
+* `Aws\EMRContainers` - Introduced 5 new fields across 3 APIs as part of Spark Connect server launch for EMR on EKS. The fields added are sessionIdleTimeoutInMinutes, sessionEnabled, endpointToken, authProxyUrl and encryptionKeyArn.
+* `Aws\Lambda` - AWS Lambda now returns a new DependencyError value in StateReasonCode and LastUpdateStatusReasonCode to provide more actionable information when a function reaches a failed state due to an error from an upstream dependency or service.
+* `Aws\ServiceDiscovery` - Fixed Cloud Map endpoint resolution to correctly route to the dualstack endpoint when dualstack is enabled.
+* `Aws\SSM` - Update AWS Systems Manager Automation Targets to be correct max value.
+* `Aws\Connect` - This release adds SearchRules API which can be used to search for rules within an Amazon Connect instance.
+* `Aws\MQ` - This release adds storage size parameter for Amazon MQ for RabbitMQ cluster deployment broker on engine version RabbitMQ 4.2. You can now set a configurable storage size within a range of sizes dependent on broker instance size.
+
+## 3.388.5 - 2026-07-13
+
+* `Aws\Lambda` - Add Java 8, 11 and 17 on AL2023 (java8.al2023, java11.al2023, java17.al2023) support to AWS Lambda.
+* `Aws\ElasticsearchService` - Adds support for the EngineMode and UseCase parameters on Amazon Elasticsearch Service domains, enabling GENERAL or OPTIMIZED engine modes and SEARCH, VECTOR, OBSERVABILITY, or MIXED usecases when creating and updating domain configurations.
+* `Aws\RedshiftServerless` - Add support for preserving datasharing, zero-ETL and S3 event integrations on snapshot restore to serverless namespace.
+* `Aws\GameLift` - Amazon GameLift Servers now includes fleet expiration for managed fleets. A managed fleet expires one year after creation, transitioning to EXPIRED status, emitting a FLEET EXPIRED event, and scaling to zero instances. Expired fleets cannot host new game sessions or increase capacity.
+* `Aws\GuardDuty` - GuardDuty AI Protection is now publicly available. Findings include Bedrock guardrail details, model details, observation numbers, and continuous scan details. GuardrailArn and GuardrailVersion are deprecated in favor of the guardrails list.
+
+## 3.388.4 - 2026-07-10
+
+* `Aws\S3\MultipartCopy` - Stop pinning HeadObject-derived VersionId on UploadPartCopy requests. Only user-provided versionId is now attached to copy-part requests.
+* `Aws\CloudWatch` - CloudWatch now assigns a unique identifier to each anomaly detector. PutAnomalyDetector and DescribeAnomalyDetectors return this AnomalyDetectorId, which you can use to describe or delete a specific anomaly detector directly.
+* `Aws\LicenseManager` - Added the ResetUsage field to the CreateLicenseVersion API. When set to true, the entitlement usage counts for the license are reset to 0. If it is false or not specified, entitlement usage is left unchanged.
+* `Aws\EC2` - New Amazon EC2 instances. M9g, M9gd, C9g, and C9gd on AWS Graviton5. C8in, M8in, and R8in add 600 Gbps network. C8ib, M8ib, and R8ib add 300 Gbps EBS. C8ine, M8ine, M8idn, R8idn, M8idb, and R8idb round out Intel Xeon 6. Mac-m3ultra with Apple M3 Ultra. G7 with NVIDIA RTX PRO 4500 Blackwell GPUs.
+* `Aws\SageMaker` - Release support for g4d, c6g, c7g, c8g instance types for SageMaker HyperPod
+* `Aws\Lambda` - Added TelemetryConfig support for Managed Instances Capacity Provider, enabling customers to configure system log level and custom log group for managed instance logging.
+* `Aws\Inspector2` - Support for 3 day and 7 day ECR re-scan durations
+* `Aws\QuickSight` - Provides CreateKnowledgeBase and UpdateKnowledgeBase APIs
+
+## 3.388.3 - 2026-07-09
+
+* `Aws\IVS` - adds support for AWS IVS ad configuration APIs to allow for a postRollConfiguration object on the ad configuration resource
+* `Aws\EC2` - Added support for additional override parameters in CreateFleet, including LaunchTemplateSpecificationUserData, KeyName, IamInstanceProfile, and MetadataOptions. The CreateFleet response now also includes SubnetId, AvailabilityZone, and AvailabilityZoneId for launched instances.
+* `Aws\Synthetics` - CloudWatch Synthetics adds support for customer managed KMS keys for canary environment variables. Customers can now encrypt their canary's Lambda function environment variables at rest using their own AWS KMS key, providing additional control over data protection.
+* `Aws\GuardDuty` - Adding "AI Analyst" enum value for detector
+* `Aws\Connect` - Amazon Connect - Added DeleteContactData API to support PII deletion of customer endpoint, additional email recipients and email subject.
+
+## 3.388.2 - 2026-07-08
+
+* `Aws\Signin` - Adds support for OAuth 2.0 token operations in AWS Sign-In, CreateOAuth2TokenWithIAM (client credentials flow), IntrospectOAuth2TokenWithIAM (token inspection), and RevokeOAuth2TokenWithIAM (token revocation).
+
+## 3.388.1 - 2026-07-08
+
+* `Aws\GeoPlaces` - Added AddressNamesMode, AddressNameTranslations, MobilityMode, PostalCodeMode, SecondaryAddresses, and DriveThrough features across Places V2 APIs to support address name formatting, multilingual translations, travel-aware search, multi-city postal codes, and unit-level address resolution.
+* `Aws\IoTWireless` - Default session downlink transmission parameters have been added to the existing Multicast Group APIs. Explicit transmission parameters are no longer required when starting a multicast session during the FUOTA procedure.
+* `Aws\BedrockAgentCoreControl` - AgentCore Gateway now supports mapping allowed scopes to separate advertised scopes on the inbound authorizer.
+* `Aws\EC2` - Replace Root Volume now supports a VolumeId parameter. This allows the customer to pass in a pre-prepared volume as the target root volume for an RRV workflow.
+* `Aws\Resiliencehubv2` - Next Generation Resilience Hub now supports filtering and sorting failure mode assessments, resource type filtering in ListResources, cross-region and cross-account topology edges, data recovery achievability status, and more granular dependency discovery progress tracking.
+* `Aws\AppConfig` - Update ExperimentRun APIs to support ConflictExceptions.
+* `Aws\ECS` - Amazon ECS now automatically detects the correct CPU architecture for Express Mode services.
+
+## 3.388.0 - 2026-07-07
+
+* `Aws\Lambda` - AWS Lambda Durable Functions now supports customer managed KMS keys. This allows customers to configure a KMS key in Durable Config to have all their durable execution data encrypted.
+* `Aws\Connect` - Adds support for CreateAuthCode and DeleteSession APIs.
+* `Aws\Inspector2` - This release extends vulnerability management to Azure VM, container registries and function apps. Adds support for per-member-account scan configuration settings.
+* `Aws\SecurityHub` - release SecurityHub MultiCloud integration with Azure
+* `Aws\ConfigService` - Added support for connecting AWS Config to third-party cloud service providers. New APIs include PutConnector, GetConnector, DeleteConnector, and ListConnectors for managing connectors, and PutThirdPartyServiceLinkedConfigurationRecorder for creating third-party service-linked recorders.
+* `Aws\MarketplaceCatalog` - This release enhances the ListEntities API to support ResellerRole filter for ResaleAuthorization entity.
+* `Aws\MarketplaceMetering` - The usage reporting window for the BatchMeterUsage API has been extended from 6 hours to 24 hours. Sellers can now submit usage records for up to 24 hours after a metered event occurs. The existing 6-hour grace period at the end of a billing cycle still applies.
+* `Aws\PartnerCentralRevenueMeasurement` - Add support for AWS Partner Central Revenue Measurement API for creating, managing, and tracking revenue attributions and marketplace revenue share allocations.
+* `Aws\Route53GlobalResolver` - Adds ListSharedDNSViews operation to list all DNS Views shared with caller using AWS Resource Access Manager. Also updates ListHostedZoneAssociations operation so that resource ARN param is optional, allowing caller to list all HostedZoneAssociations in account.
+* `Aws\EC2` - This launch surfaces the public SSM parameter associated with public AMIs in the AMI metadata.
+* `Aws\SSM` - Adding SSM Cloud Connector to support Azure Virtual Machines onboarding to AWS Systems Manager
+
+## 3.387.3 - 2026-07-06
+
+* `Aws\CloudWatchLogs` - Added PutStorageTierPolicy and GetStorageTierPolicy APIs to Amazon CloudWatch Logs. Customers can now configure account-level Intelligent Tiering to automatically optimize log storage costs by moving infrequently accessed data to lower-cost storage tiers.
+* `Aws\OpenSearchService` - This release introduces Saved Object Migration APIs, enabling users to migrate dashboards, visualizations, index patterns, and other saved objects from a data source into an Amazon OpenSearch Service application workspace with configurable export filters and conflict resolution strategies.
+* `Aws\Billing` - Adds support for managing AWS account credits and billing preferences, including retrieving credit details, viewing per-month credit allocation history, redeeming promotional codes, and configuring credit sharing and billing preferences.
+* `Aws\MailManager` - This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+
+## 3.387.2 - 2026-07-02
+
+* `Aws\CustomerProfiles` - Amazon Connect Customer Profiles adds support for diversityConfig to recommenderConfig which can be used for diversifying the recommendations. This release also includes model versioning support which helps customer to rollback trained models.
+* `Aws\MediaTailor` - Added dual-stack (IPv4 and IPv6) endpoint fields to SSAI and Channel Assembly API responses.
+* `Aws\ElementalInference` - Adding new BDD representation of endpoint ruleset
+* `Aws\Outposts` - Tighten Outpost site ContactPhoneNumber regex to perform phone number validation.
+* `Aws\CognitoIdentityProvider` - Add support for provisioned limit management, enabling customers to view and update their provisioned API rate limits for Amazon Cognito User Pools programmatically through the new GetProvisionedLimit and UpdateProvisionedLimit APIs.
+* `Aws\Odb` - Updated model definitions for ODB service.
+* `Aws\ConfigService` - AWS Config now supports tag-on-create for organization-managed Config rules and conformance packs through the PutOrganizationConfigRule and PutOrganizationConformancePack APIs.
+
+## 3.387.1 - 2026-07-01
+
+* `Aws\QuickSight` - Adding support for FileSource PhysicalTables. This adds support for datasets with file sources.
+* `Aws\GameLiftStreams` - Added CreateStreamSessionAdminShell API operation to enable customers to establish secure terminal connections to the live runtime environment of streaming sessions for troubleshooting purposes.
+* `Aws\MediaConvert` - Adds support for integer-second duration normalization and the option to disable explicit weighted prediction.
+* `Aws\Artifact` - Add support for Assurance Assistant APIs for managing compliance inquiries along with tagging features.
+* `Aws\Connect` - Adds a new Amazon Connect Service API, SendOutboundWebNotification, that delivers web notifications to end-customer chat widget sessions. Callable only by the Amazon Connect Outbound Campaigns service principal.
+* `Aws\EC2` - Use declarative policies to enable VPC Encryption Controls across your organization or select accounts. Added AMD SEV-SNP support for EC2 Dedicated Hosts. Managed resource visibility settings control whether AWS-provisioned resources in your account appear in console views and API list operations.
+* `Aws\OpenSearchService` - To create a Mustang domain via the AWS CLI, you must pass EngineMode OPTIMIZED (along with UseCase OBSERVABILITY or MIXED) without it, the domain defaults to a regular (GENERAL) domain. Also this release includes Insights Feedback API which user can use to provide feedback for Insight API.
+* `Aws\MarketplaceMetering` - The usage reporting window for the BatchMeterUsage API has been extended from 6 hours to 24 hours. Sellers can now submit usage records for up to 24 hours after a metered event occurs.
+* `Aws\Cloud9` - Since Amazon Linux 2 (AL2) will reach its end-of-life (EOL) and stop receiving security updates on June 30, 2026, Cloud9 will remove AL2 from AMI options in public API create-environment-ec2.
+
+## 3.387.0 - 2026-06-30
+
+* `Aws\` - Removes `SimSpaceWeaver`, `Panorama`, and `IotEvents` services, which have been deprecated.
+* `Aws\NetworkFirewall` - AWS Network Firewall now supports container associations for monitoring ECS and EKS workloads. You can create container associations to dynamically track the IP addresses of running containers in your Amazon ECS and Amazon EKS clusters.
+* `Aws\AutoScaling` - This release adds support for a new reservations-then-balanced capacity distribution strategy, which first attempts to launch instances into your Capacity Reservations and then balances remaining capacity across healthy Availability Zones.
+* `Aws\SupportAuthZ` - New SDK release for SupportAuthZ.
+* `Aws\CloudWatch` - Customers can configure alarms with wall-clock-aligned evaluation windows instead of sliding windows, with optional timezone support for daily or weekly periods
+* `Aws\SSOAdmin` - AWS IAM Identity Center now returns PrimaryRegion and Regions in the ListInstances response, providing information about replicated instances.
+* `Aws\EC2` - Adds ModifyVpcEndpointPayerResponsibility API, which enables VPC endpoint service owners to modify the billing account for VPC endpoint usage charges at the individual endpoint level
+* `Aws\PartnerCentralSelling` - This release adds AwsMarketplaceSolutions and AwsMarketplaceProducts entity types to the Associate and Disassociate APIs, returns them in GetOpportunity, and adds AwsMarketplaceSolutionArn to ListSolutions ,letting partners link Marketplace listings directly to opportunities.
+* `Aws\ECS` - Updated threshold configuration documentation.
+* `Aws\EKS` - Adds Kubernetes version rollback support, including the CancelUpdate operation to cancel an in-progress VersionRollback update, the RollbackConfig structure with a timeoutMinutes field, and the Cancellation structure surfaced via the new cancellation field on the Update object.
+* `Aws\CloudFormation` - AWS CloudFormation adds a DeploymentConfig parameter to enable Express mode, which completes stack operations as soon as resource configuration is applied. Also adds a DisableValidation parameter to skip pre-deployment validation, which now runs automatically on CreateStack and UpdateStak.
+* `Aws\Connect` - Amazon Connect - Added CreateAttachedFile and StartContactConversationalAnalyticsJob APIs to import call recordings and run conversational analytics.
+* `Aws\ACM` - AWS Certificate Manager now supports the Automatic Certificate Management Environment (ACME) protocol to issue public certificates. ACME is an industry-standard protocol for automating certificate lifecycle on customer-managed infrastructure such as on-premises servers and Kubernetes clusters.
+* `Aws\CleanRooms` - Adds support for intermediate tables in AWS Clean Rooms collaborations.
+* `Aws\CodeBuild` - Adds support for host kernel selection for on-demand builds.
+* `Aws\DataZone` - Amazon DataZone now supports SNOWFLAKE as a connection type in the CreateConnection API, enabling metadata and lineage retrieval from Snowflake databases. Specify snowflakeProperties with connection details, a Secrets Manager secret, an Athena spill bucket, and an identity mapping for Snowflake.
+* `Aws\ObservabilityAdmin` - Organization and account level telemetry rule via Observability Admin and CloudWatch pipelines for metrics
+
+## 3.386.2 - 2026-06-29
+
+* `Aws\` - Fixes issue where after #3290, user-provided resource handles were closed on Guzzle `StreamInterface` destruct.
+* `Aws\PinpointSMSVoiceV2` - This launch is an expansion of our Q1 RCS for business launch where we will release an API that supports rich media and interactive messaging elements.
+* `Aws\EC2` - Adds support for the precision time strategy and a parentGroupId parameter on CreatePlacementGroup and DescribePlacementGroups. Precision time placement groups and cluster placement groups with a parent precision time placement group ensure instances launch on precision time capable hardware.
+* `Aws\RDSDataService` - Updated documentation to remove Aurora Serverless V1 references.
+* `Aws\ECS` - Amazon ECS now supports customizable deployment circuit breaker configurations. Customers can now define the failure threshold or control the failure counting mechanism.
+* `Aws\WAFV2` - AWS WAF added support for associating AWS WAF web ACLs with Amazon Bedrock AgentCore Gateway resources. You can now use AssociateWebACL, DisassociateWebACL, GetWebACLForResource, and ListResourcesForWebACL to protect your AgentCore Gateways with AWS WAF.
+* `Aws\ConnectCampaignsV2` - Adding new attributes to PutProfileOutboundRequest API that will create an outbound request call for the customer's Web Notification outbound campaign.
+* `Aws\Lambda` - Lambda now supports self-managed S3 buckets for Lambda code storage giving you the option for Lambda to reference a copy of your source code from your own S3 buckets. This allows you to maintain a single copy of your source code and manage your own code storage limits.
+* `Aws\PCS` - Add support for in-place Slurm version upgrades on existing clusters by accepting scheduler.version in UpdateCluster.
+* `Aws\Evs` - Amazon EVS introduces a VMware Cloud Foundation (VCF) self-deployed mode, along with new connectors to VCF components such as the Operations and SDDC managers to monitor coverage and usage.
+* `Aws\imagebuilder` - Adds support for AMI watermarks in Image Builder.
+* `Aws\CloudWatch` - This release adds the API (PutLogAlarm) to manage a new CloudWatch resource, Log Based Alarms. Log Based Alarms allows customers to alarm directly on CloudWatch Logs query results.
+* `Aws\ConnectHealth` - Expand input validation to support Unicode characters and markdown table syntax.
+* `Aws\SageMakerFeatureStoreRuntime` - Add support for ListRecords and BatchWriteRecord APIs to Feature Store.
+* `Aws\VPCLattice` - Amazon VPC Lattice now supports mutable idle timeout configuration on VPC Lattice Services
+* `Aws\ResourceExplorer2` - Added CFN resource type fields for Search and ListSupportedResourceTypes responses. Added SLRec field for ServiceView
+* `Aws\AppConfig` - AWS AppConfig introduces Experimentation tools - enhanced capabilities within AWS AppConfig that enable you to run AB tests, multivariate tests, and gradual feature rollouts across your application stack.
+* `Aws\Glue` - Added the UpdateAsset operation to set the business name and description for an existing AWS Glue Data Catalog asset.
+* `Aws\ElastiCache` - Updated documentation for the ApplyImmediately parameter in ModifyCacheCluster and ModifyReplicationGroup to clarify modification behavior.
+
+## 3.386.1 - 2026-06-23
+
+* `Aws\Kafka` - Amazon MSK Replicator now supports mTLS authentication when connecting to external Apache Kafka clusters, enabling customers to replicate data from clusters that require mutual TLS for client authentication. This capability is supported when replicating to Amazon MSK Express brokers.
+
+## 3.386.0 - 2026-06-22
+
+* `Aws\DirectConnect` - Added VIF rate limiting support for AWS Direct Connect, allowing customers to set bandwidth allocations on virtual interfaces to manage traffic on dedicated connections.
+* `Aws\EC2` - This release adds support for AMI Watermark and Allowed AMIs integration
+* `Aws\QuickSight` - Updated the Amazon Quick Spaces API to remove unsupported SPACE and ARTIFACT values from the SpaceQuickSightResourceType enum.
+* `Aws\Kafka` - Amazon MSK Replicator now supports mTLS authentication when connecting to external Apache Kafka clusters, enabling customers to replicate data from clusters that require mutual TLS for client authentication. This capability is supported when replicating to Amazon MSK Express brokers.
+* `Aws\LambdaMicrovms` - Lambda MicroVMs GA launch. Lambda MicroVMs enable isolated and highly responsive execution of user-supplied or LLM-generated code.
+* `Aws\GuardDuty` - Added AI-powered investigations that automatically analyze security findings, correlate related activity, and produce structured summaries with risk assessment, confidence scoring, MITRE technique classification, and actionable next steps.
+* `Aws\Lambda` - Add support for tagging Network Connector resources in AWS Lambda.
+* `Aws\LambdaCore` - Initial release of the AWS Lambda Core SDK with APIs to create, manage, and tag network connectors that enable Lambda compute resources to access private resources in your Amazon VPC.
+* `Aws\MediaConnect` - AWS MediaConnect now supports Content Quality Analysis for Router Inputs, enabling detection of black frames, frozen frames, and silent audio with configurable thresholds.
+* `Aws\ApplicationSignals` - Application Signals now supports dynamic instrumentation and Service Events telemetry. Add instrumentation at runtime without restarts, and use fine-grained profiling data to quickly pinpoint latency and error root causes.
+* `Aws\Omics` - Adds support for scratch ephemeral storage mounted at tmp
+* `Aws\BedrockAgentCore` - Adds an optional extractionMode field to CreateEvent. SKIP retains the event in short-term memory but excludes it from long-term memory extraction.
+* `Aws\CloudWatchLogs` - CloudWatch Logs Updates - New APIs introduced to support syslog ingestion to a log group. For more information, see CloudWatch Logs API documentation.
+
+## 3.385.3 - 2026-06-19
+
+* `Aws\Signature` - Updates signed headers to include `x-amz-user-agent` and `content-type`
+* `Aws\OpenSearchService` - This release introduces data source attachment APIs, enabling users to attach and detach Amazon OpenSearch Service domains and Amazon OpenSearch Serverless collections to an OpenSearch application.
+* `Aws\AppStream` - Amazon WorkSpaces Agent Access now supports domain-joined fleets for enterprise identity integration, real-time agent observation with instant stop controls, and MCP tool forwarding for lower-latency, cost-effective desktop tool access.
+* `Aws\BedrockAgent` - Add support for metadata-only retrieval on GetFlow, GetFlowVersion, and GetPrompt APIs.
+* `Aws\Connect` - This is the release for point based scoring system and the evaluation form validation project
+* `Aws\Glue` - Adds the SearchAssets operation for discovering assets in the AWS Glue Data Catalog using full-text search and filters. Minor naming refinements across the Glossary Terms and Attachment APIs for consistency.
+
+## 3.385.2 - 2026-06-18
+
+* `Aws\Batch` - Adds Support for ordered allocation strategies- BEST-FIT-PROGRESSIVE-ORDERED or SPOT-CAPACITY-OPTIMIZED-PRIORITIZED
+* `Aws\CloudWatchLogs` - Added optional startFromHead parameter to FilterLogEvents enabling descending timestamp order (newest first) when set to false. Default true preserves existing ascending order. Reverse sorting requires a startTime on or after Jan 1, 2024.
+* `Aws\Synthetics` - CloudWatch Synthetics adds support for multi-location canaries. Customers can now monitor their endpoints from multiple locations with centralized management from a primary location. The SDK includes new parameters for configuring multiple locations and tracking their state.
+* `Aws\Lambda` - Converging and fixing existing documentation gaps in Lambda SDK
+* `Aws\EC2` - Documentation updates clarifying CancelCapacityReservation cancellable states
+* `Aws\EKS` - Adds support for configurable control plane egress routing in Amazon EKS, allowing you to route control plane egress traffic through your VPC and control how the control plane reaches resources in your network such as webhook servers and OIDC providers.
+* `Aws\GameLift` - Amazon GameLift Servers has launched support for customizing Linux capabilities in container fleets. You can now specify additional Linux capabilities for containers in a container group definition, giving you finer control over the default Docker capabilities available to your containers.
+* `Aws\HealthLake` - Adding New Configurations to the FHIR Create Datastore. The new configurations include NLP Configuration, AnalyticsConfiguration, ProfileConfiguration
+* `Aws\ECS` - Amazon ECS services now support high resolution (20 second) CloudWatch metrics for CPUUtilization and MemoryUtilization. Use these metrics for faster service auto scaling.
+* `Aws\SageMaker` - Adds support for automatic AMI patching on HyperPod clusters. Customers can configure patching strategies to automatically apply security patch with zero job termination. Customers can also specify an AMI version at instance group level and update cluster software to a certain AMI version.
+* `Aws\CognitoIdentityProvider` - In order to support the new TLS Self-Service feature, this change adds SecurityPolicyType to CustomDomainConfigType. During CreateUserPoolDomain and UpdateUserPoolDomain this is used to select a custom domain's TLS enforcement, and for DescribeUserPoolDomain it informs users about the current TLS.
+* `Aws\ApplicationAutoScaling` - Adds support for ECS high-resolution predefined scaling metrics (ECSServiceAverageCPUUtilizationHighResolution, ECSServiceAverageMemoryUtilizationHighResolution) enabling 20-second metric periods for faster scaling
+* `Aws\ComputeOptimizer` - This release surfaces two new metrics Volume IOPS Exceeded and Volume Throughput Exceeded into EBS volume rightsizing recommendations.
+
+## 3.385.1 - 2026-06-17
+
+* `Aws\Configuration` - Fixes issue where profiles other than default are not discovered in the ini file due to a missing profile prefix in the lookup.
+* `Aws\BedrockAgentRuntime` - Adds new AgenticRetrieveStream API for managed knowledge bases to use conversation history and autonomously plan for multi-hop multi-KB reasoning with built-in evaluation and access-control. Updates Retrieve API for access-control-based filtering for managed knowledge bases.
+* `Aws\MQ` - This release adds private networking support for Amazon MQ for RabbitMQ. You can now associate AWS RAM resource shares with your broker and retrieve shared resource details using the new DescribeSharedResources API.
+* `Aws\ECS` - Releasing the ability to bring-your-own task-definition for CreateExpressGatewayService and UpdateGatewayExpressService
+* `Aws\BedrockAgentCore` - AgentCore Harness service will be Generally Available at NYS 2026 with this Treb release. Harness will support invoking specific endpoints via the qualifier parameter, AWS Skills for pre-built agent capabilities, and improved validation for skill git source URLs.
+* `Aws\DevOpsAgent` - Adds support for Remote A2A (Agent-to-Agent) agent registration and management. Adds new Release Readiness Review and Release Testing capabilities. Adds support for Git managed skills in AWS DevOps Agent.
+* `Aws\BedrockAgentCoreControl` - AgentCore Gateway now supports inference targets to LLM providers (direct config or built-in connectors), HTTP passthrough targets with session stickiness, runtime target API schemas, AWS WAF web ACL association with configurable fail-open or fail-close modes, and interceptor payload filtering.
+* `Aws\Glue` - This release adds support for Search and Discovery in AWS Glue, letting you and your applications search Data Catalog assets such as table and enrich them with business context and glossary terms.
+* `Aws\OpenSearchService` - Adds support for configuring IAM Identity Center options on existing OpenSearch applications via the UpdateApplication API.
+* `Aws\SecurityAgent` - Updated AWS Security Agent SDK model with new APIs for threat modeling, code review, security requirements, and additional integration providers.
+* `Aws\BedrockAgent` - Launching Bedrock Managed Knowledge Bases. Added support for resource-based policies on Knowledge Base resources, enabling cross-account access for Managed Knowledge Bases.
+* `Aws\ComputeOptimizerAutomation` - This launch adds IfExists comparison operators to Compute Optimizer Automation rule criteria, so a rule can include recommended actions whose specified attribute isn't present.
+* `Aws\PartnerCentralSelling` - Cosell Resonate AND Prospecing API Launch with ARN correction
+
+## 3.385.0 - 2026-06-16
+
+* `Aws\S3` - Added support for copying tags and annotations to the destination object in `MultipartCopy`. Set `tags_directive` and `annotations_directive` to override individually. Tag and annotation work runs only when explicitly opted in to preserve backwards compatibility.
+
+## 3.384.11 - 2026-06-16
+
+* `Aws\S3` - Added support for annotations. You can now attach up to 1000 annotations (up to 1 MB each) directly to objects and create, retrieve, list, and delete them using new annotation APIs. Also added support for configuring an annotation table in S3 Metadata.
+* `Aws\DirectConnect` - Added VIF rate limiting support for AWS Direct Connect, allowing customers to set bandwidth allocations on virtual interfaces to manage traffic on dedicated connections.
+* `Aws\Route53Resolver` - Adds supports for PartnerManagedRules
+* `Aws\PartnerCentralSelling` - Added Prospecting APIs to convert engagements into AI-enriched leads with scoring insights. Extended Engagement APIs with ProspectingResult and Lead contexts. Added CoSell Scoring to GetAwsOpportunitySummary- quality score, trend, agent-driven recommendations, and engagement classification.
+* `Aws\S3Vectors` - Amazon S3 Vectors now supports paginated QueryVectors requests, returning up to 10,000 results per query.
+* `Aws\Outposts` - Adds support for creating an order from quotes.
+* `Aws\SageMaker` - Add EnableDetailedObservability to Endpoint MetricsConfig. Publishes GPU, host, and framework-native inference metrics to CloudWatch with per-inference-component, availability-zone, and instance dimensions. Adds Inference Component provisioning lifecycle and multi-AZ placement metrics.
+
+## 3.384.10 - 2026-06-15
+
+* `Aws\mgn` - AWS Transform for VMware now supports Amazon FSx for NetApp ONTAP as a target storage. Customers can migrate source server disks directly to FSx for NetApp ONTAP iSCSI LUNs. Target storage is configurable per source server, and compute, network, and storage migrate together in coordinated waves.
+* `Aws\DataZone` - Adds support for deleting lineage events in Amazon DataZone.
+* `Aws\RDS` - Adding support for RDS SQL Server BYOM and DB2 Community Edition
+* `Aws\WAFV2` - AWS WAF now supports AI traffic monetization for CloudFront. Configure payment networks and pricing on your web ACL, use the new Monetize rule action to charge AI agents via x402, and monitor revenue with new GetRevenueStatisticsSummary, GetRevenueStatistics, and ListSettlementRecords APIs.
+* `Aws\WorkSpaces` - Added a validation for null check for ImageIds in DescribeWorkspaceImages API request parameters.
+* `Aws\CloudWatchLogs` - Added endTimeOffset parameter to Scheduled Queries APIs (Create, Update, Get) enabling bounded time window configuration. Introduced scheduleType filter (CUSTOMER MANAGED, AWS MANAGED) for ListScheduledQueries and exposed it in Get and Update responses.
+* `Aws\BedrockRuntime` - InvokeGuardrailChecks API evaluates prompts and responses against safety checks (content filters, prompt attacks, sensitive info) without creating guardrail resources. It's a detect-only API, returning numeric scores so you can build adaptive logic as per your application.
+
+## 3.384.9 - 2026-06-12
+
+* `Aws\BedrockAgentCoreControl` - Added tagging and CMK support for optimizations and an insights feature to identify failure patterns, extract user intents, and summarize execution behavior
+* `Aws\DevOpsAgent` - Adds support for Trigger CRUD APIs (CreateTrigger, GetTrigger, UpdateTrigger, DeleteTrigger, ListTriggers) for managing schedule-based automation triggers in DevOps Agent agent spaces.
+* `Aws\BedrockAgentCore` - Added tagging and CMK support across optimization, an explanation field in recommendation output, and an insights feature to identify failure patterns, extract user intents, and summarize execution behavior
+* `Aws\IAM` - Updating documentation for select service-specific credential APIs
+* `Aws\Firehose` - Update KeyARN in DeliveryStreamEncryptionConfigurationInput to accept KMS key ARNs only (not alias ARNs), matching service behavior.
+* `Aws\Glue` - Adds support for retrieving Apache Iceberg table metadata via GetTable. Use the new AttributesToGet parameter with LATEST ICEBERG METADATA to receive schema, partition specs, sort orders, and table properties in the response.
+* `Aws\SageMakerRuntime` - Added support for inline request payloads to the InvokeEndpointAsync operation to allow users to provide the inference payload directly in the request Body (up to 128,000 bytes) as an alternative to uploading the payload to Amazon S3 and passing InputLocation.
+* `Aws\EKS` - Patches missing enum values for EKS updates
+* `Aws\ACM` - Certificate transparency logging opt-out is no longer available. Per compliance requirements, all public ACM certificates are automatically recorded in certificate transparency logs. The CertificateTransparencyLoggingPreference option is deprecated.
+
+## 3.384.8 - 2026-06-11
+
+* `Aws\Support` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockAgentCoreControl` - Supports deterministic metadata for AgentCore Memory
+* `Aws\HealthLake` - Adds the UpdateFHIRDatastore API and adds analytics, NLP, and profile configuration support to CreateFHIRDatastore and DescribeFHIRDatastore.
+* `Aws\BedrockAgentCore` - Adds support to perform cross account data plane actions on an AgentCore Memory resource
+* `Aws\Neptune` - Amazon Neptune now supports IPv6 dual-stack networking. You can create and manage Neptune DB clusters accessible over both IPv4 and IPv6 by specifying NetworkType as DUAL in CreateDBCluster, ModifyDBCluster, RestoreDBClusterFromSnapshot, and RestoreDBClusterToPointInTime API operations
+* `Aws\Omics` - Adds support for workflowName in the ListRuns API response.
+* `Aws\EKS` - Introduce new CreateCluster parameters for Amazon EKS local clusters on AWS Outposts. Added etcdInstanceType for configuring the EC2 instance type for dedicated etcd instances, and spreadLevel for configuring the placement group spread level for Kubernetes control plane and etcd instances.
+
+## 3.384.7 - 2026-06-10
+
+* `Aws\ConnectHealth` - Add support for MedicalScribeBinaryAudioEvent in the Medical Scribe streaming input. This new event type lets you send audio as a raw binary payload instead of a base64-encoded value
+* `Aws\SageMaker` - Add support for G6e instances (ml.g6e.xlarge through ml.g6e.48xlarge) on Amazon SageMaker Notebook Instances.
+* `Aws\Lightsail` - This release adds support for Asia Pacific (Hong Kong) (ap-east-1), Europe (Spain) (eu-south-2) and South America (Sao Paulo) (sa-east-1) Regions.
+* `Aws\ECS` - Amazon ECS Managed Daemon task definitions now support pidMode and ipcMode parameters. Set shared to allow daemons to share PID or IPC namespaces with co-located tasks on Managed Instances, enabling process tracing and shared memory communication.
+* `Aws\Signin` - AWS Sign-In now allows customers to control access to the AWS Management Console using resource-based policies. With this release customers can restrict console access based on network perimeters such as VPC IDs, VPC endpoints, and IP addresses.
+* `Aws\EC2` - This release adds support for AMI Watermark which a structured identifier that helps in tracking AMI provenance
+* `Aws\MediaLive` - Adding premixer settings to pid and track audio inputs in MediaLIve to allow greater control over mixing audio from multiple source streams including support for AudioPidSelectors made up of multiple audio PIDs.
+* `Aws\PrometheusService` - Adds supports for out-of-order sample ingestion (default 1-minute window) and a configurable rule query offset to reduce data loss and improve alerting accuracy.
+
+## 3.384.6 - 2026-06-09
+
+* `Aws\IoTSiteWise` - Adding new BDD representation of endpoint ruleset
+* `Aws\Outposts` - Added AWS Outposts APIs for self-service Outposts quoting and ordering. New operations include CreateQuote, GetQuote, UpdateQuote, DeleteQuote, ListQuotes, and ListOrderableInstanceTypes.
+* `Aws\BedrockAgentCore` - Add RetryableConflictException (HTTP 409) to InvokeAgentRuntimeCommand and GetAgentCard to prevent orphaned VMs during concurrent session access. The SDK automatically retries this exception with backoff. Enforcement is not yet active and will be enabled in a future service update.
+* `Aws\EC2` - Added TagFieldSpecifications to CreateFlowLogs and DescribeFlowLogs APIs. Customers can now specify tag keys in their Flow Logs subscriptions to capture associated EC2 resource tag values in their logs, enabling tag-based visibility.
+* `Aws\DynamoDBStreams` - Adding new BDD representation of endpoint ruleset
+* `Aws\TimestreamQuery` - Adding new BDD representation of endpoint ruleset
+* `Aws\Odb` - Releases Autonomous Database Serverless APIs, autonomousDatabaseOciIntegrationIamRoles, linkedOciTenancyId, linkedOciCompartmentId, and subscriptionErrors fields in GetOciOnboardingStatus API response.
+* `Aws\Bedrock` - Adds support for the Amazon Bedrock account-level data retention APIs PutAccountDataRetention and GetAccountDataRetention.
+* `Aws\MarketplaceCommerceAnalytics` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudWatch` - This release adds the APIs (AssociateDatasetKmsKey, DisassociateDatasetKmsKey, GetDataset) to manage encryption at rest for OpenTelemetry metrics in CloudWatch using AWS KMS customer managed keys.
+* `Aws\TimestreamWrite` - Adding new BDD representation of endpoint ruleset
+
+## 3.384.5 - 2026-06-08
+
+* `Aws\TaxSettings` - Adds support for additional tax information fields for Philippines, Belgium, Chile, France, Poland, and Italy in the Tax Settings API.
+* `Aws\Omics` - StartRunBatch API - Add EngineSettings
+* `Aws\ComputeOptimizer` - Adds new Idle Recommendation Resource types in the AWS Compute Optimizer API
+* `Aws\ObservabilityAdmin` - CloudWatch Observability Admin extends CentralizationRuleForOrganization APIs to support metrics, enabling centralization of metrics across accounts and Regions alongside logs.
+* `Aws\MediaPackageV2` - Adds support for DASH Audio Timeline Patternization. This enables your DASH manifests to templatize the repeating patterns that emerge in audio segment timelines. This compacts the total timeline length, utilizing the repeat notation, such that manifests don't grow indefinitely long.
+* `Aws\mgn` - AWS Transform discovery tool now supported as network migration input source. You can now use the AWS Transform Discovery tool as a source for network migration alongside modelizeIT, enabling hybrid network migrations for environments running both VMware and non-VMware workloads.
+* `Aws\DevOpsAgent` - Add Asset APIs for managing versioned assets and asset files in AWS DevOps Agent agent spaces.
+* `Aws\Deadline` - Added optional identityCenterRegion parameter to AssociateMember APIs to allow managing memberships for users and groups in other regions.
+* `Aws\CostOptimizationHub` - Adds new Idle Recommendation types in the Cost Optimization Hub API
+
+## 3.384.4 - 2026-06-05
+
+* `Aws\QuickSight` - Adds support for Knowledge Base APIs and Index Capacity API
+* `Aws\PaymentCryptography` - Adds CloudFormation support for resource-based policies on AWS Payment Cryptography keys.
+* `Aws\MediaConvert` - Adds support for configurable number of Clear Lead segments at the beginning of encrypted output. Adds support for multiple trickplay variants.
+* `Aws\DynamoDB` - Adding new BDD representation of endpoint ruleset
+* `Aws\EMRServerless` - Adds support for updating max capacity and custom fields while application is started
+* `Aws\SageMaker` - This release adds support for MLflow experiment tracking in SageMaker inference optimization. CreateAIRecommendationJob and CreateAIBenchmarkJob now accept an optional OutputConfig.MlflowConfig (MLflow App ARN, experiment, run name) to stream benchmark metrics and artifacts to your own MLflow App.
+
+## 3.384.3 - 2026-06-04
+
+* `Aws\MediaPackageVod` - Adding new BDD representation of endpoint ruleset
+* `Aws\SNS` - Adding new BDD representation of endpoint ruleset
+* `Aws\CostExplorer` - Adding new BDD representation of endpoint ruleset
+* `Aws\SageMakerRuntimeHTTP2` - Adding new BDD representation of endpoint ruleset
+* `Aws\GuardDuty` - Remove unsupported RDS field for filter
+* `Aws\Wickr` - AWS Wickr now allows network administrators to configure a maximum session duration for non-SSO users in security groups, and display customizable consent popups to users at login for terms of use or compliance acknowledgements.
+* `Aws\CloudFormation` - Adding new BDD representation of endpoint ruleset
+* `Aws\TaxSettings` - Adding new BDD representation of endpoint ruleset
+* `Aws\AmplifyBackend` - Adding new BDD representation of endpoint ruleset
+* `Aws\AuditManager` - Adding new BDD representation of endpoint ruleset
+* `Aws\AppIntegrationsService` - Adding new BDD representation of endpoint ruleset
+* `Aws\Glue` - AWS Glue Interactive Sessions now supports Apache Spark Connect, enabling remote Spark execution over gRPC with minimal client-side dependencies. Adds GetSessionEndpoint and GetDashboardUrl APIs. Modifies CreateSession now accepts SPARK CONNECT session type.
+* `Aws\Route53RecoveryReadiness` - Adding new BDD representation of endpoint ruleset
+* `Aws\Uxc` - Adding new BDD representation of endpoint ruleset
+* `Aws\OpenSearchServerless` - Adding new BDD representation of endpoint ruleset
+* `Aws\MediaPackage` - Adding new BDD representation of endpoint ruleset
+* `Aws\MWAAServerless` - Adding new BDD representation of endpoint ruleset
+* `Aws\WorkDocs` - Adding new BDD representation of endpoint ruleset
+* `Aws\kendra` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConfigService` - AWS Config now supports internal service-linked rules, allowing AWS service partners to deploy Config rules for customers and use the evaluation results to build enhanced features.
+* `Aws\Sustainability` - Adding new BDD representation of endpoint ruleset
+* `Aws\Appflow` - Adding new BDD representation of endpoint ruleset
+* `Aws\GeoMaps` - Adding new BDD representation of endpoint ruleset
+* `Aws\IVS` - adds UpdateAdConfiguration operation to AWS IVS low-latency APIs
+* `Aws\SageMaker` - Adds the IncludedData parameter to DescribeModelCard and DescribeModelPackage. Set it to MetadataOnly to retrieve a model card without decrypt permission on the customer managed AWS KMS key (default AllData returns full content). Adds support for the MTRL Job resource in SageMaker Search.
+* `Aws\MediaConnect` - BDD bulk update change rollout
+* `Aws\SignerData` - Adding new BDD representation of endpoint ruleset
+* `Aws\EFS` - Adding new BDD representation of endpoint ruleset
+* `Aws\ChimeSDKVoice` - Adding new BDD representation of endpoint ruleset
+* `Aws\S3Files` - Adding new BDD representation of endpoint ruleset
+* `Aws\EMR` - Added support for Spark Connect interactive sessions on Amazon EMR on EC2 with new APIs - StartSession, GetSession, GetSessionEndpoint, ListSessions, and TerminateSession. Added sessionEnabled field in RunJobFlow and DescribeCluster to enable Spark Connect endpoints on EMR clusters.
+* `Aws\ConnectParticipant` - Adding new BDD representation of endpoint ruleset
+* `Aws\WorkSpaces` - Adding new BDD representation of endpoint ruleset
+* `Aws\MQ` - BDD bulk update change rollout
+* `Aws\EC2InstanceConnect` - Adding new BDD representation of endpoint ruleset
+* `Aws\Interconnect` - Adding new BDD representation of endpoint ruleset
+
+## 3.384.2 - 2026-06-03
+
+* `Aws\CloudTrailData` - Adding new BDD representation of endpoint ruleset
+* `Aws\ApplicationAutoScaling` - Adding new BDD representation of endpoint ruleset
+* `Aws\SES` - Adding new BDD representation of endpoint ruleset
+* `Aws\Kinesis` - Adding new BDD representation of endpoint ruleset
+* `Aws\Firehose` - Adding new BDD representation of endpoint ruleset
+* `Aws\ResourceGroups` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudWatchLogs` - Adding new BDD representation of endpoint ruleset
+* `Aws\DAX` - Adding new BDD representation of endpoint ruleset
+* `Aws\ApiGatewayManagementApi` - Adding new BDD representation of endpoint ruleset
+* `Aws\Route53Profiles` - Adding new BDD representation of endpoint ruleset
+* `Aws\SocialMessaging` - Adding support for WhatsApp flow APIs and adding AccessDeniedByMetaException for Template APIs
+* `Aws\IoTSecureTunneling` - Adding new BDD representation of endpoint ruleset
+* `Aws\ARCRegionSwitch` - ARC Region Switch now supports three new execution blocks for multi-Region database workloads-Amazon Aurora Serverless scaling, Amazon Aurora Provisioned scaling, and Amazon Neptune Global Database failover.
+* `Aws\DirectConnect` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoTEvents` - Adding new BDD representation of endpoint ruleset
+* `Aws\WAFRegional` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudFront` - Adding new BDD representation of endpoint ruleset
+* `Aws\PinpointSMSVoice` - Adding new BDD representation of endpoint ruleset
+* `Aws\ComputeOptimizer` - This release lets customers extend the lookback period for Amazon EBS volume and Amazon ECS rightsizing recommendations to 32 days.
+* `Aws\LakeFormation` - Adding new BDD representation of endpoint ruleset
+* `Aws\S3Outposts` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConnectWisdomService` - Adding new BDD representation of endpoint ruleset
+* `Aws\VPCLattice` - Adding new BDD representation of endpoint ruleset
+* `Aws\Macie2` - Adding new BDD representation of endpoint ruleset
+* `Aws\Inspector2` - Inspector support for enhanced scanning
+* `Aws\Connect` - SearchContacts Connect API now supports filtering contacts by the AI Agents involved in handling them
+* `Aws\AppFabric` - Adding new BDD representation of endpoint ruleset
+* `Aws\CostExplorer` - Added support for target-coverage-based Savings Plans purchase analysis. The StartCommitmentPurchaseAnalysis API now accepts a new TARGET AVERAGE COVERAGE value for AnalysisType, as well as an optional SavingsPlansTargetCoverage field in SavingsPlansPurchaseAnalysisConfiguration
+* `Aws\ConnectCampaignService` - Adding new BDD representation of endpoint ruleset
+* `Aws\SnowDeviceManagement` - Adding new BDD representation of endpoint ruleset
+* `Aws\AppConfigData` - Adding new BDD representation of endpoint ruleset
+* `Aws\SecurityLake` - Adding new BDD representation of endpoint ruleset
+* `Aws\RDS` - Adding new BDD representation of endpoint ruleset
+
+## 3.384.1 - 2026-06-03
+
+* `Aws\GeoRoutes` - Add "standardRegionalEndpoints" back to fix 'Could not connect to the endpoint URL'
+
+## 3.384.0 - 2026-06-02
+
+* `Aws\S3` - Prevents resources provided to `ObjectUploader` from being closed by Guzzle.
+* `Aws\MediaConvert` - Adding new BDD representation of endpoint ruleset
+* `Aws\EC2` - Amazon EC2 now supports self-service cancellation of future-dated Capacity Reservations. A cancellation charge applies based on remaining commitment. Customers can generate a cancellation quote to review charges before confirming.
+* `Aws\Shield` - Adding new BDD representation of endpoint ruleset
+* `Aws\SecretsManager` - Adding new BDD representation of endpoint ruleset
+* `Aws\Neptune` - Adding new BDD representation of endpoint ruleset
+* `Aws\Pinpoint` - Adding new BDD representation of endpoint ruleset
+* `Aws\SageMaker` - Amazon SageMaker Job is a new service to help you manage various workloads related to model fine tuning, evaluation etc. Two job categories are supported today, AgentRFT for multi-turn agentic reinforcement fine tuning, and AgentRFTEvaluation for evaluating base model or trained model from AgentRFT.
+* `Aws\Polly` - Adding new BDD representation of endpoint ruleset
+* `Aws\SagemakerJobRuntime` - Amazon SageMaker Job Runtime is a new service for managing trajectory data during multi-turn customization jobs. It provides APIs to send inference requests to models during job execution, mark rollouts as complete, and submit reward values for training trajectories.
+* `Aws\SFN` - Adding new BDD representation of endpoint ruleset
+* `Aws\ElastiCache` - Amazon ElastiCache for Valkey now supports durability. This new capability is enabled through a Multi-AZ transactional log, enabling fast recovery and restart during failures.
+* `Aws\TranscribeService` - Release new Language locales including am-ET, es-MX, fa-AF, ht-HT, jv-ID, km-KH, my-MM, sq-AL, ne-NP. The commit shows past locales that have already been release which include cy-gb, ga-ie, gd-gb.
+* `Aws\GeoRoutes` - Added Transit and Intermodal travel modes to CalculateRoutes. Plan routes using public transit (bus, subway, train, ferry) or combine transit with driving, taxi, and rental car segments in a single multi-modal route.
+* `Aws\MigrationHub` - Adding new BDD representation of endpoint ruleset
+* `Aws\MarketplaceMetering` - Adding new BDD representation of endpoint ruleset
+* `Aws\STS` - Adding new BDD representation of endpoint ruleset
+* `Aws\Transfer` - Adding new BDD representation of endpoint ruleset
+* `Aws\ManagedBlockchain` - Adding new BDD representation of endpoint ruleset
+* `Aws\MediaStore` - Adding new BDD representation of endpoint ruleset
+* `Aws\PI` - Adding new BDD representation of endpoint ruleset
+* `Aws\Route53Domains` - Adding new BDD representation of endpoint ruleset
+* `Aws\KeyspacesStreams` - Added iterator description to the GetRecords API response for Amazon Keyspaces Change Data Capture (CDC) streams, enabling consumers to track their current position within the stream.
+* `Aws\Route53` - Adding new BDD representation of endpoint ruleset
+* `Aws\SSO` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoT` - Fleet indexing documentation update
+* `Aws\RAM` - Adding new BDD representation of endpoint ruleset
+* `Aws\MTurk` - Adding new BDD representation of endpoint ruleset
+* `Aws\Lambda` - Adds configuration for tag propagation to Lambda-managed resources.
+* `Aws\CloudWatch` - Adding new BDD representation of endpoint ruleset
+* `Aws\PinpointEmail` - Adding new BDD representation of endpoint ruleset
+* `Aws\Redshift` - Adding new BDD representation of endpoint ruleset
+* `Aws\GuardDuty` - Amazon GuardDuty Runtime Monitoring now supports 3 new SensitiveFileModified finding types (Persistence, PrivilegeEscalation, DefenseEvasion) that detect when security-sensitive system files are modified on EC2 instances or containers, indicating potential compromise through file tampering.
+* `Aws\SSM` - Adding new BDD representation of endpoint ruleset
+* `Aws\XRay` - Adding new BDD representation of endpoint ruleset
+* `Aws\S3` - Adding new BDD representation of endpoint ruleset
+* `Aws\SWF` - Adding new BDD representation of endpoint ruleset
+* `Aws\StorageGateway` - Adding new BDD representation of endpoint ruleset
+* `Aws\MediaLive` - Adding new BDD representation of endpoint ruleset
+* `Aws\LexRuntimeService` - Adding new BDD representation of endpoint ruleset
+* `Aws\Snowball` - Adding new BDD representation of endpoint ruleset
+* `Aws\ResourceGroupsTaggingAPI` - Adding new BDD representation of endpoint ruleset
+* `Aws\Rekognition` - Adding new BDD representation of endpoint ruleset
+* `Aws\ServiceCatalog` - Adding new BDD representation of endpoint ruleset
+* `Aws\SQS` - Adding new BDD representation of endpoint ruleset
+* `Aws\PersonalizeRuntime` - Adding new BDD representation of endpoint ruleset
+* `Aws\WAF` - Adding new BDD representation of endpoint ruleset
+
+## 3.383.2 - 2026-06-01
+
+* `Aws\IoTEventsData` - Adding new BDD representation of endpoint ruleset
+* `Aws\KinesisAnalytics` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoT` - Adding new BDD representation of endpoint ruleset
+* `Aws\Lambda` - Adding new BDD representation of endpoint ruleset
+* `Aws\Greengrass` - Adding new BDD representation of endpoint ruleset
+* `Aws\Amplify` - Adding new BDD representation of endpoint ruleset
+* `Aws\GameLift` - Adding new BDD representation of endpoint ruleset
+* `Aws\KinesisVideo` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConfigService` - Adding new BDD representation of endpoint ruleset
+* `Aws\DatabaseMigrationService` - Adding new BDD representation of endpoint ruleset
+* `Aws\MarketplaceCatalog` - Adding new BDD representation of endpoint ruleset
+* `Aws\IAM` - Adding new BDD representation of endpoint ruleset
+* `Aws\ElasticsearchService` - Adding new BDD representation of endpoint ruleset
+* `Aws\MediaStoreData` - Adding new BDD representation of endpoint ruleset
+* `Aws\AppSync` - Adding new BDD representation of endpoint ruleset
+* `Aws\EMR` - Adding new BDD representation of endpoint ruleset
+* `Aws\Lightsail` - Adding new BDD representation of endpoint ruleset
+* `Aws\CognitoSync` - Adding new BDD representation of endpoint ruleset
+* `Aws\KinesisVideoMedia` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudWatchEvents` - Adding new BDD representation of endpoint ruleset
+* `Aws\DataPipeline` - Adding new BDD representation of endpoint ruleset
+* `Aws\LicenseManager` - Adding new BDD representation of endpoint ruleset
+* `Aws\CognitoIdentityProvider` - Add support for multi-region replication, enabling synchronization of user data and configurations to a secondary user pool in a standby Region. Add support for customer managed keys (CMK) in AWS KMS for encrypting user pool data at rest.
+* `Aws\Inspector` - Adding new BDD representation of endpoint ruleset
+* `Aws\MachineLearning` - Adding new BDD representation of endpoint ruleset
+* `Aws\DeviceFarm` - Adding new BDD representation of endpoint ruleset
+* `Aws\ElasticLoadBalancingv2` - Adding new BDD representation of endpoint ruleset
+* `Aws\ElastiCache` - Adding new BDD representation of endpoint ruleset
+* `Aws\Glacier` - Adding new BDD representation of endpoint ruleset
+* `Aws\KMS` - Adding new BDD representation of endpoint ruleset
+* `Aws\AppMesh` - Adding new BDD representation of endpoint ruleset
+* `Aws\QuickSight` - This release adds public APIs for Amazon QuickSight Spaces, Agents, and Flows. Spaces APIs enable management of curated resource collections. Agents APIs provide lifecycle control over AI-powered agents that leverage Spaces. Flows APIs add CRUDL APIs for automated workflows.
+* `Aws\CostandUsageReportService` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodePipeline` - Adding new BDD representation of endpoint ruleset
+* `Aws\CognitoIdentity` - Adding new BDD representation of endpoint ruleset
+* `Aws\ElasticLoadBalancing` - Adding new BDD representation of endpoint ruleset
+* `Aws\MarketplaceAgreement` - Adding Entitlements in SearchAgreements Response
+* `Aws\LexModelBuildingService` - Adding new BDD representation of endpoint ruleset
+* `Aws\ECS` - Adding new BDD representation of endpoint ruleset
+* `Aws\ElasticBeanstalk` - Adding new BDD representation of endpoint ruleset
+* `Aws\DirectoryService` - Adding new BDD representation of endpoint ruleset
+* `Aws\ECR` - Adding new BDD representation of endpoint ruleset
+* `Aws\Personalize` - Adding new BDD representation of endpoint ruleset
+* `Aws\Health` - Adding new BDD representation of endpoint ruleset
+* `Aws\ApplicationDiscoveryService` - Adding new BDD representation of endpoint ruleset
+* `Aws\DocDB` - Adding new BDD representation of endpoint ruleset
+
+## 3.383.1 - 2026-05-29
+
+* `Aws\` - Fixed per-request cyclic references in retry and validation middleware that caused unbounded memory growth in long-lived processes making repeated API calls.
+* `Aws\GroundStation` - Adds support for Alpha-5 satellite number encoding in the Two-Line Element ephemeris format.
+* `Aws\PaymentCryptographyData` - Adding new BDD representation of endpoint ruleset
+* `Aws\Synthetics` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeDeploy` - Adding new BDD representation of endpoint ruleset
+* `Aws\QBusiness` - Adding new BDD representation of endpoint ruleset
+* `Aws\ARCZonalShift` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudHSM` - Adding new BDD representation of endpoint ruleset
+* `Aws\WorkspacesInstances` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudDirectory` - Adding new BDD representation of endpoint ruleset
+* `Aws\Budgets` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudHSMV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\BackupGateway` - Adding new BDD representation of endpoint ruleset
+* `Aws\Omics` - Add engineSettings to StartRun and GetRun. Add profiles and profileParameterTemplates to GetWorkflow and GetWorkflowVersion.
+* `Aws\PersonalizeEvents` - Adding new BDD representation of endpoint ruleset
+* `Aws\MWAA` - Adding new BDD representation of endpoint ruleset
+* `Aws\EntityResolution` - Adding new BDD representation of endpoint ruleset
+* `Aws\Route53RecoveryCluster` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeBuild` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudTrail` - Adding new BDD representation of endpoint ruleset
+* `Aws\AutoScaling` - Adding new BDD representation of endpoint ruleset
+* `Aws\Athena` - Adding new BDD representation of endpoint ruleset
+* `Aws\WAFV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeCommit` - Adding new BDD representation of endpoint ruleset
+* `Aws\SSMGuiConnect` - Adding new BDD representation of endpoint ruleset
+* `Aws\LexRuntimeV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\RDSDataService` - RDS Data API arrays (longValues, doubleValues, stringValues, booleanValues) in ExecuteStatement responses now correctly support null elements. Runtime change for JS v3 and .NET. Compile-time change for C plus plus, .NET, Kotlin, Rust. No impact for Java, Python, Ruby, PHP, Go.
+* `Aws\Proton` - Adding new BDD representation of endpoint ruleset
+* `Aws\Chime` - Adding new BDD representation of endpoint ruleset
+* `Aws\SESv2` - This release introduces support for Tenant Suppression Lists
+* `Aws\InspectorScan` - Adding new BDD representation of endpoint ruleset
+* `Aws\PCS` - Adding new BDD representation of endpoint ruleset
+* `Aws\Route53Resolver` - Added BatchCreateFirewallRule, BatchUpdateFirewallRule, BatchDeleteFirewallRule, and ListFirewallRuleTypes APIs. Added FirewallRuleType support to Firewall Rule APIs.
+* `Aws\MailManager` - Adding new BDD representation of endpoint ruleset
+* `Aws\NetworkFlowMonitor` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudSearchDomain` - Adding new BDD representation of endpoint ruleset
+* `Aws\drs` - Adding new BDD representation of endpoint ruleset
+* `Aws\ManagedGrafana` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeCatalyst` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockAgentCoreControl` - Reference your own AWS Secrets Manager secrets when configuring credential providers, giving you control over encryption, rotation, and access policies instead of using service-managed secrets.
+* `Aws\QuickSight` - Adds support for creating, updating, describing, listing, and deleting an OAuthClientApplication resource, a new quicksight resource that allows customers to store OAuth configurations to connect to their databases via 3 Legged OAuth.
+* `Aws\ApplicationInsights` - Adding new BDD representation of endpoint ruleset
+* `Aws\LexModelsV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\Bedrock` - Automated Reasoning checks - Added two build workflows for policies. Iterative Refine Policy uses AI to update policy definitions based on test results and feedback. Resolve Policy Ambiguities consolidates ambiguous variables in Automated Reasoning policies, a common source of ambiguous validation.
+* `Aws\DirectoryServiceData` - Adding new BDD representation of endpoint ruleset
+* `Aws\Account` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudSearch` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConnectCampaignsV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConnectContactLens` - Adding new BDD representation of endpoint ruleset
+* `Aws\AutoScalingPlans` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeGuruSecurity` - Adding new BDD representation of endpoint ruleset
+
+## 3.383.0 - 2026-05-28
+
+* `Aws\S3` - Updates `MultipartCopy` to fully align with `CopyObject` metadata directive behavior. When `$config['metadata_directive']` is set to `COPY` (default), source object metadata takes precedence over any matching values provided in `$config['params']`.
+* `Aws\ControlCatalog` - AWS Control Catalog - Added GovernedProviders response field and inclusion filter to GetControl and ListControls APIs to identify and filter by cloud provider. Added ParameterRequirementSummary response field indicating parameter requirements.
+* `Aws\AugmentedAIRuntime` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockRuntime` - Support system role in message
+* `Aws\PrometheusService` - Adding new BDD representation of endpoint ruleset
+* `Aws\Deadline` - Added support for persistent storage on Service-Managed Fleets, allowing customers to configure persistent storage that preserves data across worker sessions which reduces job startup times for workloads with large software installations or asset caches.
+* `Aws\SageMakerRuntime` - Adding new BDD representation of endpoint ruleset
+* `Aws\SocialMessaging` - Adding new BDD representation of endpoint ruleset
+* `Aws\S3Control` - Update the minimum value of MinStorageBytesPercentage in StorageLensPrefixLevel.SelectionCriteria from 0.1 to 1, aligning the model with the documented contract.
+* `Aws\IoTTwinMaker` - Adding new BDD representation of endpoint ruleset
+* `Aws\VerifiedPermissions` - Adding new BDD representation of endpoint ruleset
+* `Aws\CustomerProfiles` - BatchPutProfileObject API adds multiple profile objects to a domain of a given ObjectType in a single API call.
+* `Aws\BedrockAgentCoreControl` - Added Harness support for LiteLLM model configuration for third-party model providers. Added S3 and Git skill source types. Added Responses API format for OpenAI and Bedrock models. Added runtimeUserId parameter to InvokeHarness for end-user identification.
+* `Aws\CostOptimizationHub` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeGuruReviewer` - Adding new BDD representation of endpoint ruleset
+* `Aws\BackupSearch` - Adding new BDD representation of endpoint ruleset
+* `Aws\TimestreamInfluxDB` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoT` - Adds new connectivity-related fields to Fleet Indexing API requests and responses.
+* `Aws\NeptuneGraph` - Adding new BDD representation of endpoint ruleset
+* `Aws\Wickr` - Adding new BDD representation of endpoint ruleset
+* `Aws\TrustedAdvisor` - Adding new BDD representation of endpoint ruleset
+* `Aws\Detective` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudFrontKeyValueStore` - Adding new BDD representation of endpoint ruleset
+* `Aws\GroundStation` - Adding new BDD representation of endpoint ruleset
+* `Aws\AccessAnalyzer` - Adding new BDD representation of endpoint ruleset
+* `Aws\KinesisVideoSignalingChannels` - Adding new BDD representation of endpoint ruleset
+* `Aws\SupplyChain` - Adding new BDD representation of endpoint ruleset
+* `Aws\MigrationHubStrategyRecommendations` - Adding new BDD representation of endpoint ruleset
+* `Aws\AppStream` - Amazon WorkSpaces Applications now supports BYOL (Bring Your Own License). This enables customers to import their own WorkSpaces images and use them in WorkSpaces Applications.
+* `Aws\Keyspaces` - Adding new BDD representation of endpoint ruleset
+* `Aws\Route53RecoveryControlConfig` - Adding new BDD representation of endpoint ruleset
+* `Aws\Braket` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoTDataPlane` - Adding GetConnection, ListSubscriptions, and SendDirectMessage APIs to IoT Data Plane
+* `Aws\KinesisAnalyticsV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\SecurityAgent` - Adding new BDD representation of endpoint ruleset
+* `Aws\SSMIncidents` - Adding new BDD representation of endpoint ruleset
+* `Aws\ChimeSDKMessaging` - Adding new BDD representation of endpoint ruleset
+* `Aws\Artifact` - Adding new BDD representation of endpoint ruleset
+* `Aws\BillingConductor` - Adding new BDD representation of endpoint ruleset
+* `Aws\NetworkMonitor` - Adding new BDD representation of endpoint ruleset
+* `Aws\AmplifyUIBuilder` - Adding new BDD representation of endpoint ruleset
+* `Aws\Signin` - Adding new BDD representation of endpoint ruleset
+* `Aws\GeoRoutes` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeStarconnections` - Adding new BDD representation of endpoint ruleset
+* `Aws\PinpointSMSVoiceV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\ChimeSDKMeetings` - Adding new BDD representation of endpoint ruleset
+* `Aws\MarketplaceReporting` - Adding new BDD representation of endpoint ruleset
+* `Aws\Chatbot` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockAgentCore` - Added Harness support for LiteLLM model configuration for third-party model providers. Added S3 and Git skill source types. Added Responses API format for OpenAI and Bedrock models. Added runtimeUserId and runtimeClientError to InvokeHarness.
+* `Aws\PCS` - This release adds support for configuring scaleDownIdleTimeInSeconds at the compute node group level, allowing customers to set different idle timeouts per node group. Previously this setting was only available at the cluster level.
+* `Aws\LookoutEquipment` - Adding new BDD representation of endpoint ruleset
+* `Aws\IVS` - Adding new BDD representation of endpoint ruleset
+* `Aws\Resiliencehubv2` - This is the initial SDK release for the next generation of Resilience Hub.
+* `Aws\RedshiftDataAPIService` - Adding new BDD representation of endpoint ruleset
+* `Aws\Bedrock` - Add support for ModelPackageArn in Bedrock's CreateCustomModel API
+* `Aws\ARCRegionSwitch` - Adding new BDD representation of endpoint ruleset
+* `Aws\FinSpaceData` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockDataAutomationRuntime` - Adding new BDD representation of endpoint ruleset
+* `Aws\OpenSearchServerless` - Adds support for deletion protection on collections, ability to create NEXTGEN collection groups and autoscaling visibility for NEXTGEN collection groups
+
+## 3.382.2 - 2026-05-27
+
+* `Aws\Api` - Cast generated HTTP header values to strings and validate invalid header values.
+* `Aws\SavingsPlans` - Adding new BDD representation of endpoint ruleset
+* `Aws\ComputeOptimizerAutomation` - Adding new BDD representation of endpoint ruleset
+* `Aws\MainframeModernization` - Adding new BDD representation of endpoint ruleset
+* `Aws\LocationService` - Adding new BDD representation of endpoint ruleset
+* `Aws\Omics` - Adding new BDD representation of endpoint ruleset
+* `Aws\SimpleDBv2` - Adding new BDD representation of endpoint ruleset
+* `Aws\WorkMailMessageFlow` - Adding new BDD representation of endpoint ruleset
+* `Aws\SupportApp` - Adding new BDD representation of endpoint ruleset
+* `Aws\EBS` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoTDeviceAdvisor` - Adding new BDD representation of endpoint ruleset
+* `Aws\MarketplaceDeployment` - Adding new BDD representation of endpoint ruleset
+* `Aws\SageMaker` - Adds shared environment support for Restricted Instance Groups (RIGs) on SageMaker HyperPod, enabling cross-RIG workload scheduling and FSx sharing. This unlocks shared CPU-GPU environments needed for cost-efficient RL training (e.g., Nova Forge). Adds p6 instance support for recommendation jobs
+* `Aws\ECS` - Add support for Neuron device resource requirements for Amazon ECS
+* `Aws\ECRPublic` - Adding new BDD representation of endpoint ruleset
+* `Aws\SecurityIR` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoTThingsGraph` - Adding new BDD representation of endpoint ruleset
+* `Aws\FIS` - Adding new BDD representation of endpoint ruleset
+* `Aws\EKSAuth` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConnectCases` - Adding new BDD representation of endpoint ruleset
+* `Aws\SageMakerFeatureStoreRuntime` - Adding new BDD representation of endpoint ruleset
+* `Aws\DataExchange` - Adding new BDD representation of endpoint ruleset
+* `Aws\Organizations` - AWS Organizations now emits CloudTrail events (AccountJoinedOrganization, AccountDepartedOrganization) to the management account for membership changes, including join and departure method and timestamp.
+* `Aws\mgn` - Adding new BDD representation of endpoint ruleset
+* `Aws\EventBridge` - Adding new BDD representation of endpoint ruleset
+* `Aws\WellArchitected` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockDataAutomation` - Matcher Fallback extends the CustomOutputConfiguration for the Document modality in DataAutomationProjects, enabling a fallback blueprint when no match is found. A FALLBACK match status is returned, improving the matching experience and guaranteeing customers always receive CustomOutputResults.
+* `Aws\PartnerCentralSelling` - Adding new BDD representation of endpoint ruleset
+* `Aws\CloudWatchRUM` - Adding new BDD representation of endpoint ruleset
+* `Aws\finspace` - Adding new BDD representation of endpoint ruleset
+* `Aws\SSMContacts` - Adding new BDD representation of endpoint ruleset
+* `Aws\NovaAct` - Adding new BDD representation of endpoint ruleset
+* `Aws\RTBFabric` - Adding new BDD representation of endpoint ruleset
+* `Aws\MediaLive` - AWS Elemental MediaLive now supports Smart Subtitles, a new caption source that uses AWS Elemental Inference to automatically generate WebVTT and TTML captions from source audio. Available in English, Spanish, French, German, Italian, and Portuguese.
+* `Aws\ElementalInference` - Added support for smart subtitles in Elemental Inference, enabling automatic generation of subtitles for media content. Available in English, Spanish, French, German, Italian, and Portuguese.
+* `Aws\ComputeOptimizer` - Adding new BDD representation of endpoint ruleset
+* `Aws\DevOpsAgent` - Adding new BDD representation of endpoint ruleset
+* `Aws\PcaConnectorAd` - Adding new BDD representation of endpoint ruleset
+* `Aws\LaunchWizard` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoTFleetWise` - Adding new BDD representation of endpoint ruleset
+* `Aws\BCMDashboards` - Adding new BDD representation of endpoint ruleset
+* `Aws\ResourceExplorer2` - Adding new BDD representation of endpoint ruleset
+* `Aws\DocDBElastic` - Adding new BDD representation of endpoint ruleset
+* `Aws\MPA` - Adding new BDD representation of endpoint ruleset
+* `Aws\PartnerCentralBenefits` - Adding new BDD representation of endpoint ruleset
+* `Aws\MemoryDB` - Adding new BDD representation of endpoint ruleset
+* `Aws\Inspector2` - Adding new BDD representation of endpoint ruleset
+* `Aws\WorkSpacesWeb` - Adding new BDD representation of endpoint ruleset
+* `Aws\OpenSearchService` - OpenSearch will now support multi-segment paths in JWKS URLs.
+* `Aws\imagebuilder` - Adding new BDD representation of endpoint ruleset
+* `Aws\SsmSap` - Adding new BDD representation of endpoint ruleset
+* `Aws\VoiceID` - Adding new BDD representation of endpoint ruleset
+* `Aws\PaymentCryptography` - Adding new BDD representation of endpoint ruleset
+
+## 3.382.1 - 2026-05-26
+
+* `Aws\ResourceGroupsTaggingAPI` - The GetResources API now returns MissingTagKeys in ComplianceDetails, listing tag keys defined as required in the ReportRequiredTagBlock block of the effective tag policy that are absent from the resource.
+* `Aws\Billing` - Adding new BDD representation of endpoint ruleset
+* `Aws\Odb` - Adding new BDD representation of endpoint ruleset
+* `Aws\RolesAnywhere` - Adding new BDD representation of endpoint ruleset
+* `Aws\EMRServerless` - Adding new BDD representation of endpoint ruleset
+* `Aws\ControlCatalog` - Adding new BDD representation of endpoint ruleset
+* `Aws\MedicalImaging` - Adding new BDD representation of endpoint ruleset
+* `Aws\ChimeSDKMediaPipelines` - Adding new BDD representation of endpoint ruleset
+* `Aws\CleanRooms` - Adding new BDD representation of endpoint ruleset
+* `Aws\Pipes` - Adding new BDD representation of endpoint ruleset
+* `Aws\Batch` - Increase the maximum value of jobExecutionTimeoutMinutes to support longer job timeouts during compute environment infrastructure updates.
+* `Aws\Route53GlobalResolver` - Adding new BDD representation of endpoint ruleset
+* `Aws\GuardDuty` - Add malware scan support for Continuous Backups, also known as Point-In-Time Recovery Points (PITR).
+* `Aws\AIOps` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockDataAutomation` - Adding new BDD representation of endpoint ruleset
+* `Aws\DevOpsGuru` - Adding new BDD representation of endpoint ruleset
+* `Aws\CodeConnections` - Adding new BDD representation of endpoint ruleset
+* `Aws\MarketplaceAgreement` - Adding new BDD representation of endpoint ruleset
+* `Aws\CleanRoomsML` - Adding new BDD representation of endpoint ruleset
+* `Aws\Scheduler` - Adding new BDD representation of endpoint ruleset
+* `Aws\ApplicationCostProfiler` - Adding new BDD representation of endpoint ruleset
+* `Aws\GreengrassV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\IdentityStore` - Adding new BDD representation of endpoint ruleset
+* `Aws\Budgets` - AWS Budget Name Validation Documentation Updates.
+* `Aws\ResilienceHub` - Adding new BDD representation of endpoint ruleset
+* `Aws\KinesisVideoWebRTCStorage` - Adding new BDD representation of endpoint ruleset
+* `Aws\ConnectHealth` - Adding new BDD representation of endpoint ruleset
+* `Aws\S3Tables` - Adding new BDD representation of endpoint ruleset
+* `Aws\SSMQuickSetup` - Adding new BDD representation of endpoint ruleset
+* `Aws\OSIS` - Adding new BDD representation of endpoint ruleset
+* `Aws\Notifications` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockAgentCoreControl` - Adding new BDD representation of endpoint ruleset
+* `Aws\ChimeSDKIdentity` - Adding new BDD representation of endpoint ruleset
+* `Aws\RedshiftServerless` - Adding new BDD representation of endpoint ruleset
+* `Aws\ivschat` - Adding new BDD representation of endpoint ruleset
+* `Aws\SagemakerEdgeManager` - Adding new BDD representation of endpoint ruleset
+* `Aws\ServiceQuotas` - Adding new BDD representation of endpoint ruleset
+* `Aws\WorkSpacesThinClient` - Adding new BDD representation of endpoint ruleset
+* `Aws\MediaPackageV2` - Adding new BDD representation of endpoint ruleset
+* `Aws\DataZone` - Added resourceConfigurations and allowUserProvidedConfigurations fields to environment blueprint configuration APIs, enabling customers who migrated from V1 to V2 domains to update resource configurations (such as lineage schedules) programmatically via the SDK.
+* `Aws\ObservabilityAdmin` - Adding new BDD representation of endpoint ruleset
+* `Aws\PcaConnectorScep` - Adding new BDD representation of endpoint ruleset
+* `Aws\PartnerCentralChannel` - Adding new BDD representation of endpoint ruleset
+* `Aws\ManagedBlockchainQuery` - Adding new BDD representation of endpoint ruleset
+* `Aws\BedrockAgentCore` - Adding new BDD representation of endpoint ruleset
+* `Aws\SageMakerGeospatial` - Adding new BDD representation of endpoint ruleset
+* `Aws\KeyspacesStreams` - Adding new BDD representation of endpoint ruleset
+* `Aws\AppRunner` - Adding new BDD representation of endpoint ruleset
+* `Aws\BCMDataExports` - Adding new BDD representation of endpoint ruleset
+* `Aws\Backup` - Launching S3 PITR malware scanning support for AWS Backup
+* `Aws\Evs` - Adding new BDD representation of endpoint ruleset
+* `Aws\ServiceDiscovery` - Adding new BDD representation of endpoint ruleset
+* `Aws\IoTManagedIntegrations` - Adding new BDD representation of endpoint ruleset
+
 ## 3.382.0 - 2026-05-22
 
 * `Aws\S3` - Adds `metadata_directive` configuration option to `MultipartCopy`. When set to `'COPY'` (the new default), source object metadata (Metadata, CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentType, Expires) is automatically preserved on the destination object. Set to `'REPLACE'` to suppress automatic metadata copying and provide your own via the `params` option. User-provided values in `params` always take precedence over source metadata.

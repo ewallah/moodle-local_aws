@@ -16,8 +16,14 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionAccessAnalyzer(array $args = [])
  * @method \Aws\Account\AccountClient createAccount(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionAccount(array $args = [])
+ * @method \Aws\AccountAccess\AccountAccessClient createAccountAccess(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionAccountAccess(array $args = [])
  * @method \Aws\Acm\AcmClient createAcm(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionAcm(array $args = [])
+ * @method \Aws\AgentRegistry\AgentRegistryClient createAgentRegistry(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionAgentRegistry(array $args = [])
+ * @method \Aws\AgentRegistryControl\AgentRegistryControlClient createAgentRegistryControl(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionAgentRegistryControl(array $args = [])
  * @method \Aws\Amplify\AmplifyClient createAmplify(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionAmplify(array $args = [])
  * @method \Aws\AmplifyBackend\AmplifyBackendClient createAmplifyBackend(array $args = [])
@@ -386,10 +392,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionInvoicing(array $args = [])
  * @method \Aws\IoTDeviceAdvisor\IoTDeviceAdvisorClient createIoTDeviceAdvisor(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTDeviceAdvisor(array $args = [])
- * @method \Aws\IoTEvents\IoTEventsClient createIoTEvents(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionIoTEvents(array $args = [])
- * @method \Aws\IoTEventsData\IoTEventsDataClient createIoTEventsData(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionIoTEventsData(array $args = [])
  * @method \Aws\IoTFleetWise\IoTFleetWiseClient createIoTFleetWise(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTFleetWise(array $args = [])
  * @method \Aws\IoTJobsDataPlane\IoTJobsDataPlaneClient createIoTJobsDataPlane(array $args = [])
@@ -442,6 +444,10 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionLakeFormation(array $args = [])
  * @method \Aws\Lambda\LambdaClient createLambda(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionLambda(array $args = [])
+ * @method \Aws\LambdaCore\LambdaCoreClient createLambdaCore(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionLambdaCore(array $args = [])
+ * @method \Aws\LambdaMicrovms\LambdaMicrovmsClient createLambdaMicrovms(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionLambdaMicrovms(array $args = [])
  * @method \Aws\LaunchWizard\LaunchWizardClient createLaunchWizard(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionLaunchWizard(array $args = [])
  * @method \Aws\LexModelBuildingService\LexModelBuildingServiceClient createLexModelBuildingService(array $args = [])
@@ -578,14 +584,14 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionPCS(array $args = [])
  * @method \Aws\PI\PIClient createPI(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPI(array $args = [])
- * @method \Aws\Panorama\PanoramaClient createPanorama(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionPanorama(array $args = [])
  * @method \Aws\PartnerCentralAccount\PartnerCentralAccountClient createPartnerCentralAccount(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralAccount(array $args = [])
  * @method \Aws\PartnerCentralBenefits\PartnerCentralBenefitsClient createPartnerCentralBenefits(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralBenefits(array $args = [])
  * @method \Aws\PartnerCentralChannel\PartnerCentralChannelClient createPartnerCentralChannel(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralChannel(array $args = [])
+ * @method \Aws\PartnerCentralRevenueMeasurement\PartnerCentralRevenueMeasurementClient createPartnerCentralRevenueMeasurement(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralRevenueMeasurement(array $args = [])
  * @method \Aws\PartnerCentralSelling\PartnerCentralSellingClient createPartnerCentralSelling(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPartnerCentralSelling(array $args = [])
  * @method \Aws\PaymentCryptography\PaymentCryptographyClient createPaymentCryptography(array $args = [])
@@ -616,6 +622,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionPolly(array $args = [])
  * @method \Aws\Pricing\PricingClient createPricing(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPricing(array $args = [])
+ * @method \Aws\PricingPlanManager\PricingPlanManagerClient createPricingPlanManager(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPricingPlanManager(array $args = [])
  * @method \Aws\PrometheusService\PrometheusServiceClient createPrometheusService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPrometheusService(array $args = [])
  * @method \Aws\Proton\ProtonClient createProton(array $args = [])
@@ -650,6 +658,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionRepostspace(array $args = [])
  * @method \Aws\ResilienceHub\ResilienceHubClient createResilienceHub(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionResilienceHub(array $args = [])
+ * @method \Aws\Resiliencehubv2\Resiliencehubv2Client createResiliencehubv2(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionResiliencehubv2(array $args = [])
  * @method \Aws\ResourceExplorer2\ResourceExplorer2Client createResourceExplorer2(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionResourceExplorer2(array $args = [])
  * @method \Aws\ResourceGroups\ResourceGroupsClient createResourceGroups(array $args = [])
@@ -712,6 +722,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionSageMakerRuntime(array $args = [])
  * @method \Aws\SagemakerEdgeManager\SagemakerEdgeManagerClient createSagemakerEdgeManager(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSagemakerEdgeManager(array $args = [])
+ * @method \Aws\SagemakerJobRuntime\SagemakerJobRuntimeClient createSagemakerJobRuntime(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionSagemakerJobRuntime(array $args = [])
  * @method \Aws\SavingsPlans\SavingsPlansClient createSavingsPlans(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSavingsPlans(array $args = [])
  * @method \Aws\Scheduler\SchedulerClient createScheduler(array $args = [])
@@ -748,8 +760,6 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionSignerData(array $args = [])
  * @method \Aws\Signin\SigninClient createSignin(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSignin(array $args = [])
- * @method \Aws\SimSpaceWeaver\SimSpaceWeaverClient createSimSpaceWeaver(array $args = [])
- * @method \Aws\MultiRegionClient createMultiRegionSimSpaceWeaver(array $args = [])
  * @method \Aws\SimpleDBv2\SimpleDBv2Client createSimpleDBv2(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSimpleDBv2(array $args = [])
  * @method \Aws\SnowBall\SnowBallClient createSnowBall(array $args = [])
@@ -776,6 +786,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionSupport(array $args = [])
  * @method \Aws\SupportApp\SupportAppClient createSupportApp(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSupportApp(array $args = [])
+ * @method \Aws\SupportAuthZ\SupportAuthZClient createSupportAuthZ(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionSupportAuthZ(array $args = [])
  * @method \Aws\Sustainability\SustainabilityClient createSustainability(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionSustainability(array $args = [])
  * @method \Aws\Swf\SwfClient createSwf(array $args = [])
@@ -853,7 +865,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.382.0';
+    const VERSION = '3.393.3';
 
     /** @var array Arguments for creating clients */
     private $args;
@@ -872,7 +884,10 @@ class Sdk
         $this->args = $args;
 
         if (!isset($args['handler']) && !isset($args['http_handler'])) {
-            $this->args['http_handler'] = default_http_handler();
+            $this->args['http_handler'] = default_http_handler(
+                $args['transport_sharing'] ?? null
+            );
+            unset($this->args['transport_sharing']);
         }
     }
 
